@@ -30,6 +30,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         cd test/fixtures/three.graphql
+        ls -al
         make
         ls -al
       env:
