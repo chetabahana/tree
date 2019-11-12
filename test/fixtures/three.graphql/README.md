@@ -21,7 +21,7 @@ A GraphQL query represents the state of a Three.js program at any moment in
 the current context. Objects are created and destroyed when the query changed.
 Input properties are merged into existing objects.
 
-![](assets/screenshot.png)
+[![](assets/screenshot.png)](https://chetabahana.github.io/node/test/fixtures/three.graphql/index.html)
 
 ## features
 
