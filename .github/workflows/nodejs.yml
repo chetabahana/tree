@@ -7,7 +7,7 @@ on:
       - '!master'
       - '!deploy'
       - '!compose'
-      - '!workflows'
+      - '!gh-pages'
       - '!production'
       - '!development'
       - '!Chetabahana'
