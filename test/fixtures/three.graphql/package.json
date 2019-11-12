@@ -21,7 +21,7 @@
     "glob": "^7.0.5",
     "graph": "^0.2.0",
     "graph.ql": "^2.0.0",
-    "three": "^0.110.0"
+    "three": "^0.79.0"
   },
   "devDependencies": {
     "brfs": "^1.4.3",
