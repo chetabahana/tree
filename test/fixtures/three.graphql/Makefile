@@ -2,16 +2,16 @@
 default: build
 
 node_modules:
-	npm install
+    npm install
 
 build: node_modules
-	npm run build
+    npm run build
 
 test: build
-	npm test
+    npm test
 
 editor: build
-	npm start
+    npm start
 
 clean:
-	rm -rf node_modules
+    rm -rf node_modules
