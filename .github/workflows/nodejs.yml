@@ -31,5 +31,6 @@ jobs:
       run: |
         cd test/fixtures/three.graphql
         make
+        ls -al
       env:
         CI: true
