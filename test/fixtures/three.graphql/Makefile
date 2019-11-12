@@ -2,7 +2,8 @@
 default: build
 
 node_modules:
-	npm install
+	npm install --save core-js@^3
+	npm audit fix --force
 
 build: node_modules
 	npm run build
