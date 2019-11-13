@@ -26,7 +26,7 @@
   "devDependencies": {
     "brfs": "^2.0.1",
     "budo": "^11.6.3",
-    "graphiql": "^0.11.11",
+    "graphiql": "^0.11.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   }
