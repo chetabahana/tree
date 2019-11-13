@@ -267,7 +267,7 @@ ready(() => {
   }
 })
 
-},{"./":3,"domready":44,"graphiql":173,"react":535,"react-dom":380,"vm":543}],3:[function(require,module,exports){
+},{"./":3,"domready":44,"graphiql":172,"react":535,"react-dom":380,"vm":543}],3:[function(require,module,exports){
 'use strict'
 
 /**
@@ -335,7 +335,7 @@ function createWrapper(opts, ctx) {
   }
 }
 
-},{"./context":1,"./schema":548,"domready":44,"graphql":218}],4:[function(require,module,exports){
+},{"./context":1,"./schema":548,"domready":44,"graphql":217}],4:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -3747,7 +3747,7 @@ _codemirror2.default.registerHelper('hint', 'graphql', function (editor, options
 
   return results;
 });
-},{"codemirror":40,"graphql-language-service-interface":193}],12:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-interface":192}],12:[function(require,module,exports){
 'use strict';
 
 var _graphql = require('graphql');
@@ -3940,7 +3940,7 @@ function text(into, content, className, options, ref) {
     into.appendChild(document.createTextNode(content));
   }
 }
-},{"./utils/SchemaReference":17,"./utils/getTypeInfo":19,"./utils/info-addon":21,"codemirror":40,"graphql":218}],13:[function(require,module,exports){
+},{"./utils/SchemaReference":17,"./utils/getTypeInfo":19,"./utils/info-addon":21,"codemirror":40,"graphql":217}],13:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -4061,7 +4061,7 @@ _codemirror2.default.registerHelper('lint', 'graphql', function (text, options) 
 
   return results;
 });
-},{"codemirror":40,"graphql-language-service-interface":193}],15:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-interface":192}],15:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -4133,7 +4133,7 @@ function indent(state, textAfter) {
   var level = !levels || levels.length === 0 ? state.indentLevel : levels[levels.length - 1] - (this.electricInput.test(textAfter) ? 1 : 0);
   return level * this.config.indentUnit;
 }
-},{"codemirror":40,"graphql-language-service-parser":202}],16:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-parser":201}],16:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -4246,7 +4246,7 @@ var ParseRules = {
   ObjectValue: [(0, _graphqlLanguageServiceParser.p)('{'), (0, _graphqlLanguageServiceParser.list)('ObjectField', (0, _graphqlLanguageServiceParser.p)(',')), (0, _graphqlLanguageServiceParser.p)('}')],
   ObjectField: [(0, _graphqlLanguageServiceParser.t)('String', 'property'), (0, _graphqlLanguageServiceParser.p)(':'), 'Value']
 };
-},{"codemirror":40,"graphql-language-service-parser":202}],17:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-parser":201}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4321,7 +4321,7 @@ function getTypeReference(typeInfo, type) {
 function isMetaField(fieldDef) {
   return fieldDef.name.slice(0, 2) === '__';
 }
-},{"graphql":218}],18:[function(require,module,exports){
+},{"graphql":217}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4489,7 +4489,7 @@ function find(array, predicate) {
     }
   }
 }
-},{"./forEachState":18,"graphql":218,"graphql/type/introspection":250}],20:[function(require,module,exports){
+},{"./forEachState":18,"graphql":217,"graphql/type/introspection":250}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5399,7 +5399,7 @@ function getTypeInfo(variableToType, tokenState) {
 
   return info;
 }
-},{"../utils/forEachState":18,"../utils/hintList":20,"codemirror":40,"graphql":218}],25:[function(require,module,exports){
+},{"../utils/forEachState":18,"../utils/hintList":20,"codemirror":40,"graphql":217}],25:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -5577,7 +5577,7 @@ function isNullish(value) {
 function mapCat(array, mapper) {
   return Array.prototype.concat.apply([], array.map(mapper));
 }
-},{"../utils/jsonParse":22,"codemirror":40,"graphql":218}],26:[function(require,module,exports){
+},{"../utils/jsonParse":22,"codemirror":40,"graphql":217}],26:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -5703,7 +5703,7 @@ function namedKey(style) {
     }
   };
 }
-},{"codemirror":40,"graphql-language-service-parser":202}],27:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-parser":201}],27:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -23229,7 +23229,7 @@ function getFieldDef(schema, parentType, fieldName) {
   }
   return parentType.getFields()[fieldName];
 }
-},{"../error":74,"../jsutils/find":82,"../jsutils/invariant":83,"../jsutils/isNullish":85,"../language/kinds":91,"../type/definition":98,"../type/directives":99,"../type/introspection":101,"../type/schema":103,"../utilities/typeFromAST":121,"./values":79,"iterall":151}],78:[function(require,module,exports){
+},{"../error":74,"../jsutils/find":82,"../jsutils/invariant":83,"../jsutils/isNullish":85,"../language/kinds":91,"../type/definition":98,"../type/directives":99,"../type/introspection":101,"../type/schema":103,"../utilities/typeFromAST":121,"./values":79,"iterall":309}],78:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23493,7 +23493,7 @@ function coerceValue(type, value) {
 
   return parsed;
 }
-},{"../error":74,"../jsutils/invariant":83,"../jsutils/isInvalid":84,"../jsutils/isNullish":85,"../jsutils/keyMap":86,"../language/kinds":91,"../language/printer":95,"../type/definition":98,"../utilities/isValidJSValue":116,"../utilities/isValidLiteralValue":117,"../utilities/typeFromAST":121,"../utilities/valueFromAST":122,"iterall":151}],80:[function(require,module,exports){
+},{"../error":74,"../jsutils/invariant":83,"../jsutils/isInvalid":84,"../jsutils/isNullish":85,"../jsutils/keyMap":86,"../language/kinds":91,"../language/printer":95,"../type/definition":98,"../utilities/isValidJSValue":116,"../utilities/isValidLiteralValue":117,"../utilities/typeFromAST":121,"../utilities/valueFromAST":122,"iterall":309}],80:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29410,7 +29410,7 @@ function astFromValue(value, type) {
  *  LICENSE file in the root directory of this source tree. An additional grant
  *  of patent rights can be found in the PATENTS file in the same directory.
  */
-},{"../jsutils/invariant":83,"../jsutils/isInvalid":84,"../jsutils/isNullish":85,"../language/kinds":91,"../type/definition":98,"../type/scalars":102,"iterall":151}],107:[function(require,module,exports){
+},{"../jsutils/invariant":83,"../jsutils/isInvalid":84,"../jsutils/isNullish":85,"../language/kinds":91,"../type/definition":98,"../type/scalars":102,"iterall":309}],107:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31422,7 +31422,7 @@ function isValidJSValue(value, type) {
 
   return [];
 }
-},{"../jsutils/invariant":83,"../jsutils/isNullish":85,"../type/definition":98,"iterall":151}],117:[function(require,module,exports){
+},{"../jsutils/invariant":83,"../jsutils/isNullish":85,"../type/definition":98,"iterall":309}],117:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34788,367 +34788,6 @@ var ValidationContext = exports.ValidationContext = function () {
   return ValidationContext;
 }();
 },{"../error":74,"../jsutils/invariant":83,"../language/kinds":91,"../language/visitor":97,"../type/schema":103,"../utilities/TypeInfo":104,"./specifiedRules":149}],151:[function(require,module,exports){
-/**
- * Copyright (c) 2016, Lee Byron
- * All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @ignore
- */
-
-/**
- * [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)
- * is a *protocol* which describes a standard way to produce a sequence of
- * values, typically the values of the Iterable represented by this Iterator.
- *
- * While described by the [ES2015 version of JavaScript](http://www.ecma-international.org/ecma-262/6.0/#sec-iterator-interface)
- * it can be utilized by any version of JavaScript.
- *
- * @typedef {Object} Iterator
- * @template T The type of each iterated value
- * @property {function (): { value: T, done: boolean }} next
- *   A method which produces either the next value in a sequence or a result
- *   where the `done` property is `true` indicating the end of the Iterator.
- */
-
-/**
- * [Iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
- * is a *protocol* which when implemented allows a JavaScript object to define
- * their iteration behavior, such as what values are looped over in a `for..of`
- * loop or `iterall`'s `forEach` function. Many [built-in types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#Builtin_iterables)
- * implement the Iterable protocol, including `Array` and `Map`.
- *
- * While described by the [ES2015 version of JavaScript](http://www.ecma-international.org/ecma-262/6.0/#sec-iterable-interface)
- * it can be utilized by any version of JavaScript.
- *
- * @typedef {Object} Iterable
- * @template T The type of each iterated value
- * @property {function (): Iterator<T>} Symbol.iterator
- *   A method which produces an Iterator for this Iterable.
- */
-
-// In ES2015 (or a polyfilled) environment, this will be Symbol.iterator
-var SYMBOL_ITERATOR = typeof Symbol === 'function' && Symbol.iterator
-
-/**
- * A property name to be used as the name of an Iterable's method responsible
- * for producing an Iterator, referred to as `@@iterator`. Typically represents
- * the value `Symbol.iterator` but falls back to the string `"@@iterator"` when
- * `Symbol.iterator` is not defined.
- *
- * Use `$$iterator` for defining new Iterables instead of `Symbol.iterator`,
- * but do not use it for accessing existing Iterables, instead use
- * `getIterator()` or `isIterable()`.
- *
- * @example
- *
- * var $$iterator = require('iterall').$$iterator
- *
- * function Counter (to) {
- *   this.to = to
- * }
- *
- * Counter.prototype[$$iterator] = function () {
- *   return {
- *     to: this.to,
- *     num: 0,
- *     next () {
- *       if (this.num >= this.to) {
- *         return { value: undefined, done: true }
- *       }
- *       return { value: this.num++, done: false }
- *     }
- *   }
- * }
- *
- * var counter = new Counter(3)
- * for (var number of counter) {
- *   console.log(number) // 0 ... 1 ... 2
- * }
- *
- * @type {Symbol|string}
- */
-var $$iterator = SYMBOL_ITERATOR || '@@iterator'
-exports.$$iterator = $$iterator
-
-/**
- * Returns true if the provided object implements the Iterator protocol via
- * either implementing a `Symbol.iterator` or `"@@iterator"` method.
- *
- * @example
- *
- * var isIterable = require('iterall').isIterable
- * isIterable([ 1, 2, 3 ]) // true
- * isIterable('ABC') // true
- * isIterable({ length: 1, 0: 'Alpha' }) // false
- * isIterable({ key: 'value' }) // false
- * isIterable(new Map()) // true
- *
- * @param obj
- *   A value which might implement the Iterable protocol.
- * @return {boolean} true if Iterable.
- */
-function isIterable (obj) {
-  return !!getIteratorMethod(obj)
-}
-exports.isIterable = isIterable
-
-/**
- * Returns true if the provided object implements the Array-like protocol via
- * defining a positive-integer `length` property.
- *
- * @example
- *
- * var isArrayLike = require('iterall').isArrayLike
- * isArrayLike([ 1, 2, 3 ]) // true
- * isArrayLike('ABC') // true
- * isArrayLike({ length: 1, 0: 'Alpha' }) // true
- * isArrayLike({ key: 'value' }) // false
- * isArrayLike(new Map()) // false
- *
- * @param obj
- *   A value which might implement the Array-like protocol.
- * @return {boolean} true if Array-like.
- */
-function isArrayLike (obj) {
-  var length = obj != null && obj.length
-  return typeof length === 'number' && length >= 0 && length % 1 === 0
-}
-exports.isArrayLike = isArrayLike
-
-/**
- * Returns true if the provided object is an Object (i.e. not a string literal)
- * and is either Iterable or Array-like.
- *
- * This may be used in place of [Array.isArray()][isArray] to determine if an
- * object should be iterated-over. It always excludes string literals and
- * includes Arrays (regardless of if it is Iterable). It also includes other
- * Array-like objects such as NodeList, TypedArray, and Buffer.
- *
- * @example
- *
- * var isCollection = require('iterall').isCollection
- * isCollection([ 1, 2, 3 ]) // true
- * isCollection('ABC') // false
- * isCollection({ length: 1, 0: 'Alpha' }) // true
- * isCollection({ key: 'value' }) // false
- * isCollection(new Map()) // true
- *
- * @example
- *
- * var forEach = require('iterall').forEach
- * if (isCollection(obj)) {
- *   forEach(obj, function (value) {
- *     console.log(value)
- *   })
- * }
- *
- * @param obj
- *   An Object value which might implement the Iterable or Array-like protocols.
- * @return {boolean} true if Iterable or Array-like Object.
- */
-function isCollection (obj) {
-  return Object(obj) === obj && (isArrayLike(obj) || isIterable(obj))
-}
-exports.isCollection = isCollection
-
-/**
- * If the provided object implements the Iterator protocol, its Iterator object
- * is returned. Otherwise returns undefined.
- *
- * @example
- *
- * var getIterator = require('iterall').getIterator
- * var iterator = getIterator([ 1, 2, 3 ])
- * iterator.next() // { value: 1, done: false }
- * iterator.next() // { value: 2, done: false }
- * iterator.next() // { value: 3, done: false }
- * iterator.next() // { value: undefined, done: true }
- *
- * @template T the type of each iterated value
- * @param {Iterable<T>} iterable
- *   An Iterable object which is the source of an Iterator.
- * @return {Iterator<T>} new Iterator instance.
- */
-function getIterator (iterable) {
-  var method = getIteratorMethod(iterable)
-  if (method) {
-    return method.call(iterable)
-  }
-}
-exports.getIterator = getIterator
-
-/**
- * If the provided object implements the Iterator protocol, the method
- * responsible for producing its Iterator object is returned.
- *
- * This is used in rare cases for performance tuning. This method must be called
- * with obj as the contextual this-argument.
- *
- * @example
- *
- * var getIteratorMethod = require('iterall').getIteratorMethod
- * var myArray = [ 1, 2, 3 ]
- * var method = getIteratorMethod(myArray)
- * if (method) {
- *   var iterator = method.call(myArray)
- * }
- *
- * @template T the type of each iterated value
- * @param {Iterable<T>} iterable
- *   An Iterable object which defines an `@@iterator` method.
- * @return {function(): Iterator<T>} `@@iterator` method.
- */
-function getIteratorMethod (iterable) {
-  if (iterable != null) {
-    var method = SYMBOL_ITERATOR && iterable[SYMBOL_ITERATOR] || iterable['@@iterator']
-    if (typeof method === 'function') {
-      return method
-    }
-  }
-}
-exports.getIteratorMethod = getIteratorMethod
-
-/**
- * Given an object which either implements the Iterable protocol or is
- * Array-like, iterate over it, calling the `callback` at each iteration.
- *
- * Use `forEach` where you would expect to use a `for ... of` loop in ES6.
- * However `forEach` adheres to the behavior of [Array#forEach][] described in
- * the ECMAScript specification, skipping over "holes" in Array-likes. It will
- * also delegate to a `forEach` method on `collection` if one is defined,
- * ensuring native performance for `Arrays`.
- *
- * Similar to [Array#forEach][], the `callback` function accepts three
- * arguments, and is provided with `thisArg` as the calling context.
- *
- * Note: providing an infinite Iterator to forEach will produce an error.
- *
- * [Array#forEach]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
- *
- * @example
- *
- * var forEach = require('iterall').forEach
- *
- * forEach(myIterable, function (value, index, iterable) {
- *   console.log(value, index, iterable === myIterable)
- * })
- *
- * @example
- *
- * // ES6:
- * for (let value of myIterable) {
- *   console.log(value)
- * }
- *
- * // Any JavaScript environment:
- * forEach(myIterable, function (value) {
- *   console.log(value)
- * })
- *
- * @template T the type of each iterated value
- * @param {Iterable<T>|{ length: number }} collection
- *   The Iterable or array to iterate over.
- * @param {function(T, number, object)} callback
- *   Function to execute for each iteration, taking up to three arguments
- * @param [thisArg]
- *   Optional. Value to use as `this` when executing `callback`.
- */
-function forEach (collection, callback, thisArg) {
-  if (collection != null) {
-    if (typeof collection.forEach === 'function') {
-      return collection.forEach(callback, thisArg)
-    }
-    var i = 0
-    var iterator = getIterator(collection)
-    if (iterator) {
-      var step
-      while (!(step = iterator.next()).done) {
-        callback.call(thisArg, step.value, i++, collection)
-        // Infinite Iterators could cause forEach to run forever.
-        // After a very large number of iterations, produce an error.
-        /* istanbul ignore if */
-        if (i > 9999999) {
-          throw new TypeError('Near-infinite iteration.')
-        }
-      }
-    } else if (isArrayLike(collection)) {
-      for (; i < collection.length; i++) {
-        if (collection.hasOwnProperty(i)) {
-          callback.call(thisArg, collection[i], i, collection)
-        }
-      }
-    }
-  }
-}
-exports.forEach = forEach
-
-/**
- * Similar to `getIterator()`, this method returns a new Iterator given an
- * Iterable. However it will also create an Iterator for a non-Iterable
- * Array-like collection, such as Array in a non-ES2015 environment.
- *
- * `createIterator` is complimentary to `forEach`, but allows a "pull"-based
- * iteration as opposed to `forEach`'s "push"-based iteration.
- *
- * `createIterator` produces an Iterator for Array-likes with the same behavior
- * as ArrayIteratorPrototype described in the ECMAScript specification, and
- * does *not* skip over "holes".
- *
- * @example
- *
- * var createIterator = require('iterall').createIterator
- *
- * var myArraylike = { length: 3, 0: 'Alpha', 1: 'Bravo', 2: 'Charlie' }
- * var iterator = createIterator(myArraylike)
- * iterator.next() // { value: 'Alpha', done: false }
- * iterator.next() // { value: 'Bravo', done: false }
- * iterator.next() // { value: 'Charlie', done: false }
- * iterator.next() // { value: undefined, done: true }
- *
- * @template T the type of each iterated value
- * @param {Iterable<T>|{ length: number }} collection
- *   An Iterable or Array-like object to produce an Iterator.
- * @return {Iterator<T>} new Iterator instance.
- */
-function createIterator (collection) {
-  if (collection != null) {
-    var iterator = getIterator(collection)
-    if (iterator) {
-      return iterator
-    }
-    if (isArrayLike(collection)) {
-      return new ArrayLikeIterator(collection)
-    }
-  }
-}
-exports.createIterator = createIterator
-
-// When the object provided to `createIterator` is not Iterable but is
-// Array-like, this simple Iterator is created.
-function ArrayLikeIterator (obj) {
-  this._o = obj
-  this._i = 0
-}
-
-// Note: all Iterators are themselves Iterable.
-ArrayLikeIterator.prototype[$$iterator] = function () {
-  return this
-}
-
-// A simple state-machine determines the IteratorResult returned, yielding
-// each value in the Array-like object in order of their indicies.
-ArrayLikeIterator.prototype.next = function () {
-  if (this._o === void 0 || this._i >= this._o.length) {
-    this._o = void 0
-    return { value: void 0, done: true }
-  }
-  return { value: this._o[this._i++], done: false }
-}
-
-},{}],152:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35404,7 +35043,7 @@ var DocExplorer = exports.DocExplorer = function (_React$Component) {
 DocExplorer.propTypes = {
   schema: _propTypes2.default.instanceOf(_graphql.GraphQLSchema)
 };
-},{"./DocExplorer/FieldDoc":155,"./DocExplorer/SchemaDoc":157,"./DocExplorer/SearchBox":158,"./DocExplorer/SearchResults":159,"./DocExplorer/TypeDoc":160,"graphql":218,"prop-types":377,"react":535}],153:[function(require,module,exports){
+},{"./DocExplorer/FieldDoc":154,"./DocExplorer/SchemaDoc":156,"./DocExplorer/SearchBox":157,"./DocExplorer/SearchResults":158,"./DocExplorer/TypeDoc":159,"graphql":217,"prop-types":377,"react":535}],152:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35462,7 +35101,7 @@ Argument.propTypes = {
   onClickType: _propTypes2.default.func.isRequired,
   showDefaultValue: _propTypes2.default.bool
 };
-},{"./DefaultValue":154,"./TypeLink":161,"prop-types":377,"react":535}],154:[function(require,module,exports){
+},{"./DefaultValue":153,"./TypeLink":160,"prop-types":377,"react":535}],153:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35512,7 +35151,7 @@ function DefaultValue(_ref) {
 DefaultValue.propTypes = {
   field: _propTypes2.default.object.isRequired
 };
-},{"graphql":218,"prop-types":377,"react":535}],155:[function(require,module,exports){
+},{"graphql":217,"prop-types":377,"react":535}],154:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35638,7 +35277,7 @@ FieldDoc.propTypes = {
   onClickType: _propTypes2.default.func
 };
 exports.default = FieldDoc;
-},{"./Argument":153,"./MarkdownContent":156,"./TypeLink":161,"prop-types":377,"react":535}],156:[function(require,module,exports){
+},{"./Argument":152,"./MarkdownContent":155,"./TypeLink":160,"prop-types":377,"react":535}],155:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35712,7 +35351,7 @@ MarkdownContent.propTypes = {
   className: _propTypes2.default.string
 };
 exports.default = MarkdownContent;
-},{"markdown-it":312,"prop-types":377,"react":535}],157:[function(require,module,exports){
+},{"markdown-it":312,"prop-types":377,"react":535}],156:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35838,7 +35477,7 @@ SchemaDoc.propTypes = {
   onClickType: _propTypes2.default.func
 };
 exports.default = SchemaDoc;
-},{"./MarkdownContent":156,"./TypeLink":161,"prop-types":377,"react":535}],158:[function(require,module,exports){
+},{"./MarkdownContent":155,"./TypeLink":160,"prop-types":377,"react":535}],157:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35927,7 +35566,7 @@ SearchBox.propTypes = {
   onSearch: _propTypes2.default.func
 };
 exports.default = SearchBox;
-},{"../../utility/debounce":177,"prop-types":377,"react":535}],159:[function(require,module,exports){
+},{"../../utility/debounce":176,"prop-types":377,"react":535}],158:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36160,7 +35799,7 @@ function isMatch(sourceText, searchValue) {
     return sourceText.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
   }
 }
-},{"./Argument":153,"./TypeLink":161,"prop-types":377,"react":535}],160:[function(require,module,exports){
+},{"./Argument":152,"./TypeLink":160,"prop-types":377,"react":535}],159:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36471,7 +36110,7 @@ function EnumValue(_ref2) {
 EnumValue.propTypes = {
   value: _propTypes2.default.object
 };
-},{"./Argument":153,"./DefaultValue":154,"./MarkdownContent":156,"./TypeLink":161,"graphql":218,"prop-types":377,"react":535}],161:[function(require,module,exports){
+},{"./Argument":152,"./DefaultValue":153,"./MarkdownContent":155,"./TypeLink":160,"graphql":217,"prop-types":377,"react":535}],160:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36561,7 +36200,7 @@ function renderType(type, _onClick) {
     type.name
   );
 }
-},{"graphql":218,"prop-types":377,"react":535}],162:[function(require,module,exports){
+},{"graphql":217,"prop-types":377,"react":535}],161:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36732,7 +36371,7 @@ ExecuteButton.propTypes = {
   isRunning: _propTypes2.default.bool,
   operations: _propTypes2.default.array
 };
-},{"prop-types":377,"react":535}],163:[function(require,module,exports){
+},{"prop-types":377,"react":535}],162:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -37871,7 +37510,7 @@ function isObservable(value) {
   return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && typeof value.subscribe === 'function';
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../utility/CodeMirrorSizer":174,"../utility/StorageAPI":176,"../utility/debounce":177,"../utility/elementPosition":178,"../utility/fillLeafs":179,"../utility/find":180,"../utility/getQueryFacts":181,"../utility/getSelectedOperationName":182,"../utility/introspectionQueries":183,"./DocExplorer":152,"./ExecuteButton":162,"./QueryEditor":165,"./QueryHistory":166,"./ResultViewer":167,"./ToolbarButton":168,"./ToolbarGroup":169,"./ToolbarMenu":170,"./ToolbarSelect":171,"./VariableEditor":172,"graphql":218,"prop-types":377,"react":535,"react-dom":380}],164:[function(require,module,exports){
+},{"../utility/CodeMirrorSizer":173,"../utility/StorageAPI":175,"../utility/debounce":176,"../utility/elementPosition":177,"../utility/fillLeafs":178,"../utility/find":179,"../utility/getQueryFacts":180,"../utility/getSelectedOperationName":181,"../utility/introspectionQueries":182,"./DocExplorer":151,"./ExecuteButton":161,"./QueryEditor":164,"./QueryHistory":165,"./ResultViewer":166,"./ToolbarButton":167,"./ToolbarGroup":168,"./ToolbarMenu":169,"./ToolbarSelect":170,"./VariableEditor":171,"graphql":217,"prop-types":377,"react":535,"react-dom":380}],163:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -37987,7 +37626,7 @@ HistoryQuery.propTypes = {
   variables: _propTypes2.default.string
 };
 exports.default = HistoryQuery;
-},{"prop-types":377,"react":535}],165:[function(require,module,exports){
+},{"prop-types":377,"react":535}],164:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38288,7 +37927,7 @@ QueryEditor.propTypes = {
   onRunQuery: _propTypes2.default.func,
   editorTheme: _propTypes2.default.string
 };
-},{"../utility/normalizeWhitespace":184,"../utility/onHasCompletion":185,"codemirror":40,"codemirror-graphql/hint":11,"codemirror-graphql/info":12,"codemirror-graphql/jump":13,"codemirror-graphql/lint":14,"codemirror-graphql/mode":15,"codemirror/addon/comment/comment":27,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"graphql":218,"markdown-it":312,"prop-types":377,"react":535}],166:[function(require,module,exports){
+},{"../utility/normalizeWhitespace":183,"../utility/onHasCompletion":184,"codemirror":40,"codemirror-graphql/hint":11,"codemirror-graphql/info":12,"codemirror-graphql/jump":13,"codemirror-graphql/lint":14,"codemirror-graphql/mode":15,"codemirror/addon/comment/comment":27,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"graphql":217,"markdown-it":312,"prop-types":377,"react":535}],165:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38464,7 +38103,7 @@ var _initialiseProps = function _initialiseProps() {
     _this3.setState({ queries: queries });
   };
 };
-},{"../utility/QueryStore":175,"./HistoryQuery":164,"graphql":218,"prop-types":377,"react":535}],167:[function(require,module,exports){
+},{"../utility/QueryStore":174,"./HistoryQuery":163,"graphql":217,"prop-types":377,"react":535}],166:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38629,7 +38268,7 @@ ResultViewer.propTypes = {
   editorTheme: _propTypes2.default.string,
   ResultsTooltip: _propTypes2.default.any
 };
-},{"codemirror":40,"codemirror-graphql/results/mode":16,"codemirror-graphql/utils/info-addon":21,"codemirror/addon/dialog/dialog":28,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":377,"react":535,"react-dom":380}],168:[function(require,module,exports){
+},{"codemirror":40,"codemirror-graphql/results/mode":16,"codemirror-graphql/utils/info-addon":21,"codemirror/addon/dialog/dialog":28,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":377,"react":535,"react-dom":380}],167:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38718,7 +38357,7 @@ ToolbarButton.propTypes = {
 function preventDefault(e) {
   e.preventDefault();
 }
-},{"prop-types":377,"react":535}],169:[function(require,module,exports){
+},{"prop-types":377,"react":535}],168:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38752,7 +38391,7 @@ function ToolbarGroup(_ref) {
    *  This source code is licensed under the license found in the
    *  LICENSE file in the root directory of this source tree.
    */
-},{"react":535}],170:[function(require,module,exports){
+},{"react":535}],169:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38907,7 +38546,7 @@ ToolbarMenuItem.propTypes = {
 function preventDefault(e) {
   e.preventDefault();
 }
-},{"prop-types":377,"react":535}],171:[function(require,module,exports){
+},{"prop-types":377,"react":535}],170:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39081,7 +38720,7 @@ ToolbarSelectOption.propTypes = {
 function preventDefault(e) {
   e.preventDefault();
 }
-},{"prop-types":377,"react":535}],172:[function(require,module,exports){
+},{"prop-types":377,"react":535}],171:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39337,7 +38976,7 @@ VariableEditor.propTypes = {
   onRunQuery: _propTypes2.default.func,
   editorTheme: _propTypes2.default.string
 };
-},{"../utility/onHasCompletion":185,"codemirror":40,"codemirror-graphql/variables/hint":24,"codemirror-graphql/variables/lint":25,"codemirror-graphql/variables/mode":26,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":377,"react":535}],173:[function(require,module,exports){
+},{"../utility/onHasCompletion":184,"codemirror":40,"codemirror-graphql/variables/hint":24,"codemirror-graphql/variables/lint":25,"codemirror-graphql/variables/mode":26,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":377,"react":535}],172:[function(require,module,exports){
 'use strict';
 
 /**
@@ -39350,7 +38989,7 @@ VariableEditor.propTypes = {
 
 // The primary React component to use.
 module.exports = require('./components/GraphiQL').GraphiQL;
-},{"./components/GraphiQL":163}],174:[function(require,module,exports){
+},{"./components/GraphiQL":162}],173:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39399,7 +39038,7 @@ var CodeMirrorSizer = function () {
 }();
 
 exports.default = CodeMirrorSizer;
-},{}],175:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39481,7 +39120,7 @@ var QueryStore = function () {
 }();
 
 exports.default = QueryStore;
-},{}],176:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39562,7 +39201,7 @@ function isStorageAvailable(storage, key, value) {
     storage.length !== 0;
   }
 }
-},{}],177:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39594,7 +39233,7 @@ function debounce(duration, fn) {
     }, duration);
   };
 }
-},{}],178:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39633,7 +39272,7 @@ function getTop(initialElem) {
   }
   return pt;
 }
-},{}],179:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39815,7 +39454,7 @@ function getIndentation(str, index) {
   }
   return str.substring(indentStart, indentEnd);
 }
-},{"graphql":218}],180:[function(require,module,exports){
+},{"graphql":217}],179:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39839,7 +39478,7 @@ function find(list, predicate) {
     }
   }
 }
-},{}],181:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39912,7 +39551,7 @@ function collectVariables(schema, documentAST) {
   });
   return variableToType;
 }
-},{"graphql":218}],182:[function(require,module,exports){
+},{"graphql":217}],181:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39959,7 +39598,7 @@ function getSelectedOperationName(prevOperations, prevSelectedOperationName, ope
   // Use the first operation.
   return names[0];
 }
-},{}],183:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39980,7 +39619,7 @@ Object.defineProperty(exports, 'introspectionQuery', {
 // query which includes the `subscriptionType` field as the stock introspection
 // query does. This backup query removes that field.
 var introspectionQuerySansSubscriptions = exports.introspectionQuerySansSubscriptions = '\n  query IntrospectionQuery {\n    __schema {\n      queryType { name }\n      mutationType { name }\n      types {\n        ...FullType\n      }\n      directives {\n        name\n        description\n        locations\n        args {\n          ...InputValue\n        }\n      }\n    }\n  }\n\n  fragment FullType on __Type {\n    kind\n    name\n    description\n    fields(includeDeprecated: true) {\n      name\n      description\n      args {\n        ...InputValue\n      }\n      type {\n        ...TypeRef\n      }\n      isDeprecated\n      deprecationReason\n    }\n    inputFields {\n      ...InputValue\n    }\n    interfaces {\n      ...TypeRef\n    }\n    enumValues(includeDeprecated: true) {\n      name\n      description\n      isDeprecated\n      deprecationReason\n    }\n    possibleTypes {\n      ...TypeRef\n    }\n  }\n\n  fragment InputValue on __InputValue {\n    name\n    description\n    type { ...TypeRef }\n    defaultValue\n  }\n\n  fragment TypeRef on __Type {\n    kind\n    name\n    ofType {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n';
-},{"graphql":218}],184:[function(require,module,exports){
+},{"graphql":217}],183:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40006,7 +39645,7 @@ var sanitizeRegex = new RegExp('[' + invalidCharacters.join('|') + ']', 'g');
 function normalizeWhitespace(line) {
   return line.replace(sanitizeRegex, ' ');
 }
-},{}],185:[function(require,module,exports){
+},{}],184:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40103,7 +39742,7 @@ function renderType(type) {
   }
   return '<a class="typeName">' + type.name + '</a>';
 }
-},{"codemirror":40,"graphql":218,"markdown-it":312}],186:[function(require,module,exports){
+},{"codemirror":40,"graphql":217,"markdown-it":312}],185:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40486,7 +40125,7 @@ var GraphQLLanguageService = exports.GraphQLLanguageService = function () {
 
   return GraphQLLanguageService;
 }();
-},{"./getAutocompleteSuggestions":188,"./getDefinition":189,"./getDiagnostics":190,"./getHoverInformation":191,"graphql":218,"graphql-language-service-utils":206}],187:[function(require,module,exports){
+},{"./getAutocompleteSuggestions":187,"./getDefinition":188,"./getDiagnostics":189,"./getHoverInformation":190,"graphql":217,"graphql-language-service-utils":205}],186:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40676,7 +40315,7 @@ function lexicalDistance(a, b) {
 
   return d[aLength][bLength];
 }
-},{"graphql":218,"graphql/type/introspection":250}],188:[function(require,module,exports){
+},{"graphql":217,"graphql/type/introspection":250}],187:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41212,7 +40851,7 @@ function find(array, predicate) {
   }
   return null;
 }
-},{"./autocompleteUtils":187,"graphql":218,"graphql-language-service-parser":197}],189:[function(require,module,exports){
+},{"./autocompleteUtils":186,"graphql":217,"graphql-language-service-parser":196}],188:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -41375,7 +41014,7 @@ function getDefinitionForNodeDefinition(path, text, definition) {
   };
 }
 }).call(this,require('_process'))
-},{"_process":372,"assert":4,"graphql-language-service-utils":206}],190:[function(require,module,exports){
+},{"_process":372,"assert":4,"graphql-language-service-utils":205}],189:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41523,7 +41162,7 @@ function getLocation(node) {
   (0, _assert2.default)(location, 'Expected ASTNode to have a location.');
   return location;
 }
-},{"assert":4,"graphql":218,"graphql-language-service-parser":197,"graphql-language-service-utils":206}],191:[function(require,module,exports){
+},{"assert":4,"graphql":217,"graphql-language-service-parser":196,"graphql-language-service-utils":205}],190:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41696,7 +41335,7 @@ function renderDeprecation(into, options, def) {
 function text(into, content) {
   into.push(content);
 }
-},{"./getAutocompleteSuggestions":188,"graphql":218}],192:[function(require,module,exports){
+},{"./getAutocompleteSuggestions":187,"graphql":217}],191:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41816,7 +41455,7 @@ function concatMap(arr, fn) {
   }
   return res;
 }
-},{"graphql":218,"graphql-language-service-utils":206}],193:[function(require,module,exports){
+},{"graphql":217,"graphql-language-service-utils":205}],192:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41927,7 +41566,7 @@ Object.defineProperty(exports, 'GraphQLLanguageService', {
     return _GraphQLLanguageService.GraphQLLanguageService;
   }
 });
-},{"./GraphQLLanguageService":186,"./autocompleteUtils":187,"./getAutocompleteSuggestions":188,"./getDefinition":189,"./getDiagnostics":190,"./getHoverInformation":191,"./getOutline":192}],194:[function(require,module,exports){
+},{"./GraphQLLanguageService":185,"./autocompleteUtils":186,"./getAutocompleteSuggestions":187,"./getDefinition":188,"./getDiagnostics":189,"./getHoverInformation":190,"./getOutline":191}],193:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class CharacterStream {
@@ -42047,7 +41686,7 @@ class CharacterStream {
 }
 exports.default = CharacterStream;
 
-},{}],195:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function opt(ofRule) {
@@ -42083,7 +41722,7 @@ function p(value, style) {
 }
 exports.p = p;
 
-},{}],196:[function(require,module,exports){
+},{}],195:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const RuleHelpers_1 = require("./RuleHelpers");
@@ -42350,7 +41989,7 @@ function type(style) {
     };
 }
 
-},{"./RuleHelpers":195}],197:[function(require,module,exports){
+},{"./RuleHelpers":194}],196:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var CharacterStream_1 = require("./CharacterStream");
@@ -42368,7 +42007,7 @@ exports.t = RuleHelpers_1.t;
 var onlineParser_1 = require("./onlineParser");
 exports.onlineParser = onlineParser_1.default;
 
-},{"./CharacterStream":194,"./RuleHelpers":195,"./Rules":196,"./onlineParser":198}],198:[function(require,module,exports){
+},{"./CharacterStream":193,"./RuleHelpers":194,"./Rules":195,"./onlineParser":197}],197:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Rules_1 = require("./Rules");
@@ -42573,7 +42212,7 @@ function lex(lexRules, stream) {
     }
 }
 
-},{"./Rules":196}],199:[function(require,module,exports){
+},{"./Rules":195}],198:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42761,7 +42400,7 @@ var CharacterStream = function () {
  */
 
 exports.default = CharacterStream;
-},{}],200:[function(require,module,exports){
+},{}],199:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42827,7 +42466,7 @@ function p(value, style) {
     }
   };
 }
-},{}],201:[function(require,module,exports){
+},{}],200:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43042,7 +42681,7 @@ function type(style) {
     }
   };
 }
-},{"./RuleHelpers":200}],202:[function(require,module,exports){
+},{"./RuleHelpers":199}],201:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43122,7 +42761,7 @@ Object.defineProperty(exports, 'onlineParser', {
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./CharacterStream":199,"./RuleHelpers":200,"./Rules":201,"./onlineParser":203}],203:[function(require,module,exports){
+},{"./CharacterStream":198,"./RuleHelpers":199,"./Rules":200,"./onlineParser":202}],202:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43419,7 +43058,7 @@ function lex(lexRules, stream) {
     }
   }
 }
-},{"./Rules":201}],204:[function(require,module,exports){
+},{"./Rules":200}],203:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43509,7 +43148,7 @@ function locToRange(text, loc) {
   var end = offsetToPosition(text, loc.end);
   return new Range(start, end);
 }
-},{}],205:[function(require,module,exports){
+},{}],204:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43560,7 +43199,7 @@ function pointToOffset(text, point) {
     return a + b;
   }, 0);
 }
-},{"./Range":204,"graphql":218}],206:[function(require,module,exports){
+},{"./Range":203,"graphql":217}],205:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43617,7 +43256,7 @@ Object.defineProperty(exports, 'validateWithCustomRules', {
     return _validateWithCustomRules.validateWithCustomRules;
   }
 });
-},{"./Range":204,"./getASTNodeAtPosition":205,"./validateWithCustomRules":207}],207:[function(require,module,exports){
+},{"./Range":203,"./getASTNodeAtPosition":204,"./validateWithCustomRules":206}],206:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43679,7 +43318,7 @@ function validateWithCustomRules(schema, ast, customRules, isRelayCompatMode) {
    *
    *  
    */
-},{"graphql":218,"graphql/validation/rules/ExecutableDefinitions":279,"graphql/validation/rules/KnownFragmentNames":284,"graphql/validation/rules/NoUnusedFragments":289}],208:[function(require,module,exports){
+},{"graphql":217,"graphql/validation/rules/ExecutableDefinitions":279,"graphql/validation/rules/KnownFragmentNames":284,"graphql/validation/rules/NoUnusedFragments":289}],207:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43816,7 +43455,7 @@ GraphQLError.prototype = Object.create(Error.prototype, {
     }
   }
 });
-},{"../language/location":239,"./printError":212}],209:[function(require,module,exports){
+},{"../language/location":238,"./printError":211}],208:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43852,7 +43491,7 @@ function formatError(error) {
     path: error.path
   });
 }
-},{"../jsutils/invariant":221}],210:[function(require,module,exports){
+},{"../jsutils/invariant":220}],209:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43903,7 +43542,7 @@ Object.defineProperty(exports, 'formatError', {
     return _formatError.formatError;
   }
 });
-},{"./GraphQLError":208,"./formatError":209,"./locatedError":211,"./printError":212,"./syntaxError":213}],211:[function(require,module,exports){
+},{"./GraphQLError":207,"./formatError":208,"./locatedError":210,"./printError":211,"./syntaxError":212}],210:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43935,7 +43574,7 @@ function locatedError(originalError, nodes, path) {
    *
    *  strict
    */
-},{"./GraphQLError":208}],212:[function(require,module,exports){
+},{"./GraphQLError":207}],211:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44006,7 +43645,7 @@ function whitespace(len) {
 function lpad(len, str) {
   return whitespace(len - str.length) + str;
 }
-},{"../language/location":239}],213:[function(require,module,exports){
+},{"../language/location":238}],212:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44032,7 +43671,7 @@ var _GraphQLError = require('./GraphQLError');
 function syntaxError(source, position, description) {
   return new _GraphQLError.GraphQLError('Syntax Error: ' + description, undefined, source, [position]);
 }
-},{"./GraphQLError":208}],214:[function(require,module,exports){
+},{"./GraphQLError":207}],213:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44906,7 +44545,7 @@ function getFieldDef(schema, parentType, fieldName) {
   }
   return parentType.getFields()[fieldName];
 }
-},{"../error":210,"../jsutils/invariant":221,"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/isPromise":224,"../jsutils/memoize3":227,"../jsutils/promiseForObject":230,"../jsutils/promiseReduce":231,"../language/kinds":237,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/schema":252,"../type/validate":253,"../utilities/typeFromAST":274,"./values":216,"iterall":309}],215:[function(require,module,exports){
+},{"../error":209,"../jsutils/invariant":220,"../jsutils/isInvalid":221,"../jsutils/isNullish":222,"../jsutils/isPromise":223,"../jsutils/memoize3":226,"../jsutils/promiseForObject":229,"../jsutils/promiseReduce":230,"../language/kinds":236,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/schema":252,"../type/validate":253,"../utilities/typeFromAST":274,"./values":215,"iterall":243}],214:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44942,7 +44581,7 @@ Object.defineProperty(exports, 'getDirectiveValues', {
     return _values.getDirectiveValues;
   }
 });
-},{"./execute":214,"./values":216}],216:[function(require,module,exports){
+},{"./execute":213,"./values":215}],215:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -45112,7 +44751,7 @@ function getDirectiveValues(directiveDef, node, variableValues) {
     return getArgumentValues(directiveDef, directiveNode, variableValues);
   }
 }
-},{"../error":210,"../jsutils/find":219,"../jsutils/isInvalid":222,"../jsutils/keyMap":225,"../language/kinds":237,"../language/printer":241,"../type/definition":247,"../utilities/coerceValue":259,"../utilities/typeFromAST":274,"../utilities/valueFromAST":275}],217:[function(require,module,exports){
+},{"../error":209,"../jsutils/find":218,"../jsutils/isInvalid":221,"../jsutils/keyMap":224,"../language/kinds":236,"../language/printer":240,"../type/definition":247,"../utilities/coerceValue":259,"../utilities/typeFromAST":274,"../utilities/valueFromAST":275}],216:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -45226,7 +44865,7 @@ function graphqlImpl(schema, source, rootValue, contextValue, variableValues, op
   // Execute
   return (0, _execute.execute)(schema, document, rootValue, contextValue, variableValues, operationName, fieldResolver);
 }
-},{"./execution/execute":214,"./language/parser":240,"./type/validate":253,"./validation/validate":307}],218:[function(require,module,exports){
+},{"./execution/execute":213,"./language/parser":239,"./type/validate":253,"./validation/validate":307}],217:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46240,7 +45879,7 @@ Object.defineProperty(exports, 'findDeprecatedUsages', {
     return _utilities.findDeprecatedUsages;
   }
 });
-},{"./error":210,"./execution":215,"./graphql":217,"./language":236,"./subscription":244,"./type":249,"./utilities":265,"./validation":278}],219:[function(require,module,exports){
+},{"./error":209,"./execution":214,"./graphql":216,"./language":235,"./subscription":244,"./type":249,"./utilities":265,"./validation":278}],218:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46263,7 +45902,7 @@ function find(list, predicate) {
     }
   }
 }
-},{}],220:[function(require,module,exports){
+},{}],219:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -46300,7 +45939,7 @@ function instanceOf(value, constructor) {
  * constructors are detected.
  */
 }).call(this,require('_process'))
-},{"_process":372}],221:[function(require,module,exports){
+},{"_process":372}],220:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46322,7 +45961,7 @@ function invariant(condition, message) {
     throw new Error(message);
   }
 }
-},{}],222:[function(require,module,exports){
+},{}],221:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46344,7 +45983,7 @@ exports.default = isInvalid;
 function isInvalid(value) {
   return value === undefined || value !== value;
 }
-},{}],223:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46366,7 +46005,7 @@ exports.default = isNullish;
 function isNullish(value) {
   return value === null || value === undefined || value !== value;
 }
-},{}],224:[function(require,module,exports){
+},{}],223:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46391,7 +46030,7 @@ function isPromise(value) {
  * Returns true if the value acts like a Promise, i.e. has a "then" function,
  * otherwise returns false.
  */
-},{}],225:[function(require,module,exports){
+},{}],224:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46435,7 +46074,7 @@ function keyMap(list, keyFn) {
    *
    *  strict
    */
-},{}],226:[function(require,module,exports){
+},{}],225:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46473,7 +46112,7 @@ function keyValMap(list, keyFn, valFn) {
    *
    *  strict
    */
-},{}],227:[function(require,module,exports){
+},{}],226:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46522,7 +46161,7 @@ function memoize3(fn) {
   }
   return memoized;
 }
-},{}],228:[function(require,module,exports){
+},{}],227:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46547,7 +46186,7 @@ var objectValues = Object.values || function (obj) {
   });
 };
 exports.default = objectValues;
-},{}],229:[function(require,module,exports){
+},{}],228:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46574,7 +46213,7 @@ function orList(items) {
     return list + (selected.length > 2 ? ', ' : ' ') + (index === selected.length - 1 ? 'or ' : '') + quoted;
   });
 }
-},{}],230:[function(require,module,exports){
+},{}],229:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46609,7 +46248,7 @@ function promiseForObject(object) {
    *
    *  strict
    */
-},{}],231:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46644,7 +46283,7 @@ function promiseReduce(values, callback, initialValue) {
    *
    *  strict
    */
-},{"./isPromise":224}],232:[function(require,module,exports){
+},{"./isPromise":223}],231:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46673,7 +46312,7 @@ function quotedOrList(items) {
    *
    *  strict
    */
-},{"./orList":229}],233:[function(require,module,exports){
+},{"./orList":228}],232:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46767,7 +46406,7 @@ function lexicalDistance(aStr, bStr) {
 
   return d[aLength][bLength];
 }
-},{}],234:[function(require,module,exports){
+},{}],233:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46835,7 +46474,7 @@ function leadingWhitespace(str) {
 function isBlank(str) {
   return leadingWhitespace(str) === str.length;
 }
-},{}],235:[function(require,module,exports){
+},{}],234:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46879,7 +46518,7 @@ var DirectiveLocation = exports.DirectiveLocation = Object.freeze({
 /**
  * The enum type representing the directive location values.
  */
-},{}],236:[function(require,module,exports){
+},{}],235:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46999,7 +46638,7 @@ Object.defineProperty(exports, 'DirectiveLocation', {
     return _directiveLocation.DirectiveLocation;
   }
 });
-},{"./directiveLocation":235,"./kinds":237,"./lexer":238,"./location":239,"./parser":240,"./printer":241,"./source":242,"./visitor":243}],237:[function(require,module,exports){
+},{"./directiveLocation":234,"./kinds":236,"./lexer":237,"./location":238,"./parser":239,"./printer":240,"./source":241,"./visitor":242}],236:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47084,7 +46723,7 @@ var Kind = exports.Kind = Object.freeze({
 /**
  * The enum type representing the possible kind values of AST nodes.
  */
-},{}],238:[function(require,module,exports){
+},{}],237:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47685,7 +47324,7 @@ function readName(source, start, line, col, prev) {
   }
   return new Tok(TokenKind.NAME, start, position, line, col, prev, slice.call(body, start, position));
 }
-},{"../error":210,"./blockStringValue":234}],239:[function(require,module,exports){
+},{"../error":209,"./blockStringValue":233}],238:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47722,7 +47361,7 @@ function getLocation(source, position) {
 /**
  * Represents a location in a Source.
  */
-},{}],240:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49076,7 +48715,7 @@ function many(lexer, openKind, parseFn, closeKind) {
   }
   return nodes;
 }
-},{"../error":210,"./directiveLocation":235,"./kinds":237,"./lexer":238,"./source":242}],241:[function(require,module,exports){
+},{"../error":209,"./directiveLocation":234,"./kinds":236,"./lexer":237,"./source":241}],240:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49416,7 +49055,7 @@ function printBlockString(value, isDescription) {
   var escaped = value.replace(/"""/g, '\\"""');
   return (value[0] === ' ' || value[0] === '\t') && value.indexOf('\n') === -1 ? '"""' + escaped.replace(/"$/, '"\n') + '"""' : '"""\n' + (isDescription ? escaped : indent(escaped)) + '\n"""';
 }
-},{"./visitor":243}],242:[function(require,module,exports){
+},{"./visitor":242}],241:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49456,7 +49095,7 @@ var Source = exports.Source = function Source(body, name, locationOffset) {
   !(this.locationOffset.line > 0) ? (0, _invariant2.default)(0, 'line in locationOffset is 1-indexed and must be positive') : void 0;
   !(this.locationOffset.column > 0) ? (0, _invariant2.default)(0, 'column in locationOffset is 1-indexed and must be positive') : void 0;
 };
-},{"../jsutils/invariant":221}],243:[function(require,module,exports){
+},{"../jsutils/invariant":220}],242:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49875,6 +49514,188 @@ function getVisitFn(visitor, kind, isLeaving) {
     }
   }
 }
+},{}],243:[function(require,module,exports){
+'use strict';
+
+exports.isIterable = isIterable;
+exports.isArrayLike = isArrayLike;
+exports.isCollection = isCollection;
+exports.getIterator = getIterator;
+exports.getIteratorMethod = getIteratorMethod;
+exports.createIterator = createIterator;
+exports.forEach = forEach;
+exports.isAsyncIterable = isAsyncIterable;
+exports.getAsyncIterator = getAsyncIterator;
+exports.getAsyncIteratorMethod = getAsyncIteratorMethod;
+exports.createAsyncIterator = createAsyncIterator;
+exports.forAwaitEach = forAwaitEach;
+
+var SYMBOL = typeof Symbol === 'function' ? Symbol : void 0;
+
+var SYMBOL_ITERATOR = SYMBOL && SYMBOL.iterator;
+
+var $$iterator = exports.$$iterator = SYMBOL_ITERATOR || '@@iterator';
+
+function isIterable(obj) {
+  return !!getIteratorMethod(obj);
+}
+
+function isArrayLike(obj) {
+  var length = obj != null && obj.length;
+  return typeof length === 'number' && length >= 0 && length % 1 === 0;
+}
+
+function isCollection(obj) {
+  return Object(obj) === obj && (isArrayLike(obj) || isIterable(obj));
+}
+
+function getIterator(iterable) {
+  var method = getIteratorMethod(iterable);
+  if (method) {
+    return method.call(iterable);
+  }
+}
+
+function getIteratorMethod(iterable) {
+  if (iterable != null) {
+    var method = SYMBOL_ITERATOR && iterable[SYMBOL_ITERATOR] || iterable['@@iterator'];
+    if (typeof method === 'function') {
+      return method;
+    }
+  }
+}
+
+function createIterator(collection) {
+  if (collection != null) {
+    var iterator = getIterator(collection);
+    if (iterator) {
+      return iterator;
+    }
+    if (isArrayLike(collection)) {
+      return new ArrayLikeIterator(collection);
+    }
+  }
+}
+
+function ArrayLikeIterator(obj) {
+  this._o = obj;
+  this._i = 0;
+}
+
+ArrayLikeIterator.prototype[$$iterator] = function () {
+  return this;
+};
+
+ArrayLikeIterator.prototype.next = function () {
+  if (this._o === void 0 || this._i >= this._o.length) {
+    this._o = void 0;
+    return { value: void 0, done: true };
+  }
+  return { value: this._o[this._i++], done: false };
+};
+
+function forEach(collection, callback, thisArg) {
+  if (collection != null) {
+    if (typeof collection.forEach === 'function') {
+      return collection.forEach(callback, thisArg);
+    }
+    var i = 0;
+    var iterator = getIterator(collection);
+    if (iterator) {
+      var step;
+      while (!(step = iterator.next()).done) {
+        callback.call(thisArg, step.value, i++, collection);
+
+        if (i > 9999999) {
+          throw new TypeError('Near-infinite iteration.');
+        }
+      }
+    } else if (isArrayLike(collection)) {
+      for (; i < collection.length; i++) {
+        if (collection.hasOwnProperty(i)) {
+          callback.call(thisArg, collection[i], i, collection);
+        }
+      }
+    }
+  }
+}
+
+var SYMBOL_ASYNC_ITERATOR = SYMBOL && SYMBOL.asyncIterator;
+
+var $$asyncIterator = exports.$$asyncIterator = SYMBOL_ASYNC_ITERATOR || '@@asyncIterator';
+
+function isAsyncIterable(obj) {
+  return !!getAsyncIteratorMethod(obj);
+}
+
+function getAsyncIterator(asyncIterable) {
+  var method = getAsyncIteratorMethod(asyncIterable);
+  if (method) {
+    return method.call(asyncIterable);
+  }
+}
+
+function getAsyncIteratorMethod(asyncIterable) {
+  if (asyncIterable != null) {
+    var method = SYMBOL_ASYNC_ITERATOR && asyncIterable[SYMBOL_ASYNC_ITERATOR] || asyncIterable['@@asyncIterator'];
+    if (typeof method === 'function') {
+      return method;
+    }
+  }
+}
+
+function createAsyncIterator(source) {
+  if (source != null) {
+    var asyncIterator = getAsyncIterator(source);
+    if (asyncIterator) {
+      return asyncIterator;
+    }
+    var iterator = createIterator(source);
+    if (iterator) {
+      return new AsyncFromSyncIterator(iterator);
+    }
+  }
+}
+
+function AsyncFromSyncIterator(iterator) {
+  this._i = iterator;
+}
+
+AsyncFromSyncIterator.prototype[$$asyncIterator] = function () {
+  return this;
+};
+
+AsyncFromSyncIterator.prototype.next = function () {
+  var step = this._i.next();
+  return Promise.resolve(step.value).then(function (value) {
+    return { value: value, done: step.done };
+  });
+};
+
+function forAwaitEach(source, callback, thisArg) {
+  var asyncIterator = createAsyncIterator(source);
+  if (asyncIterator) {
+    var i = 0;
+    return new Promise(function (resolve, reject) {
+      function next() {
+        asyncIterator.next().then(function (step) {
+          if (!step.done) {
+            Promise.resolve(callback.call(thisArg, step.value, i++, source)).then(next).catch(reject);
+          } else {
+            resolve();
+          }
+
+          return null;
+        }).catch(reject);
+
+        return null;
+      }
+      next();
+    });
+  }
+}
+
+
 },{}],244:[function(require,module,exports){
 'use strict';
 
@@ -49977,7 +49798,7 @@ function asyncMapValue(value, callback) {
 function iteratorResult(value) {
   return { value: value, done: false };
 }
-},{"iterall":309}],246:[function(require,module,exports){
+},{"iterall":243}],246:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -50151,7 +49972,7 @@ function createSourceEventStream(schema, document, rootValue, contextValue, vari
     return Promise.reject(error);
   }
 }
-},{"../error/GraphQLError":208,"../error/locatedError":211,"../execution/execute":214,"../type/schema":252,"./mapAsyncIterator":245,"iterall":309}],247:[function(require,module,exports){
+},{"../error/GraphQLError":207,"../error/locatedError":210,"../execution/execute":213,"../type/schema":252,"./mapAsyncIterator":245,"iterall":243}],247:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -51017,7 +50838,7 @@ var GraphQLInputObjectType = exports.GraphQLInputObjectType = function () {
 
 GraphQLInputObjectType.prototype.toJSON = GraphQLInputObjectType.prototype.toString;
 GraphQLInputObjectType.prototype.inspect = GraphQLInputObjectType.prototype.toString;
-},{"../jsutils/instanceOf":220,"../jsutils/invariant":221,"../jsutils/isInvalid":222,"../language/kinds":237,"../utilities/valueFromASTUntyped":276}],248:[function(require,module,exports){
+},{"../jsutils/instanceOf":219,"../jsutils/invariant":220,"../jsutils/isInvalid":221,"../language/kinds":236,"../utilities/valueFromASTUntyped":276}],248:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -51156,7 +50977,7 @@ function isSpecifiedDirective(directive) {
     return specifiedDirective.name === directive.name;
   });
 }
-},{"../jsutils/instanceOf":220,"../jsutils/invariant":221,"../language/directiveLocation":235,"./definition":247,"./scalars":251}],249:[function(require,module,exports){
+},{"../jsutils/instanceOf":219,"../jsutils/invariant":220,"../language/directiveLocation":234,"./definition":247,"./scalars":251}],249:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -52105,7 +51926,7 @@ function isIntrospectionType(type) {
   // a simple expression.
   type.name === __Schema.name || type.name === __Directive.name || type.name === __DirectiveLocation.name || type.name === __Type.name || type.name === __Field.name || type.name === __InputValue.name || type.name === __EnumValue.name || type.name === __TypeKind.name);
 }
-},{"../jsutils/isInvalid":222,"../jsutils/objectValues":228,"../language/directiveLocation":235,"../language/printer":241,"../utilities/astFromValue":256,"./definition":247,"./scalars":251}],251:[function(require,module,exports){
+},{"../jsutils/isInvalid":221,"../jsutils/objectValues":227,"../language/directiveLocation":234,"../language/printer":240,"../utilities/astFromValue":256,"./definition":247,"./scalars":251}],251:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -52232,7 +52053,7 @@ function isSpecifiedScalarType(type) {
   // a simple expression.
   type.name === GraphQLString.name || type.name === GraphQLInt.name || type.name === GraphQLFloat.name || type.name === GraphQLBoolean.name || type.name === GraphQLID.name);
 }
-},{"../language/kinds":237,"./definition":247}],252:[function(require,module,exports){
+},{"../language/kinds":236,"./definition":247}],252:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -52493,7 +52314,7 @@ function typeMapDirectiveReducer(map, directive) {
     return typeMapReducer(_map, arg.type);
   }, map);
 }
-},{"../jsutils/find":219,"../jsutils/instanceOf":220,"../jsutils/invariant":221,"../jsutils/objectValues":228,"./definition":247,"./directives":248,"./introspection":250}],253:[function(require,module,exports){
+},{"../jsutils/find":218,"../jsutils/instanceOf":219,"../jsutils/invariant":220,"../jsutils/objectValues":227,"./definition":247,"./directives":248,"./introspection":250}],253:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53010,7 +52831,7 @@ function getEnumValueNodes(enumType, valueName) {
     return value.name.value === valueName;
   });
 }
-},{"../error/GraphQLError":208,"../jsutils/find":219,"../jsutils/invariant":221,"../jsutils/objectValues":228,"../utilities/assertValidName":255,"../utilities/typeComparators":273,"./definition":247,"./directives":248,"./introspection":250,"./schema":252}],254:[function(require,module,exports){
+},{"../error/GraphQLError":207,"../jsutils/find":218,"../jsutils/invariant":220,"../jsutils/objectValues":227,"../utilities/assertValidName":255,"../utilities/typeComparators":273,"./definition":247,"./directives":248,"./introspection":250,"./schema":252}],254:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53271,7 +53092,7 @@ function getFieldDef(schema, parentType, fieldNode) {
     return parentType.getFields()[name];
   }
 }
-},{"../jsutils/find":219,"../language/kinds":237,"../type/definition":247,"../type/introspection":250,"./typeFromAST":274}],255:[function(require,module,exports){
+},{"../jsutils/find":218,"../language/kinds":236,"../type/definition":247,"../type/introspection":250,"./typeFromAST":274}],255:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53322,7 +53143,7 @@ function isValidNameError(name, node) {
     return new _GraphQLError.GraphQLError('Names must match /^[_a-zA-Z][_a-zA-Z0-9]*$/ but "' + name + '" does not.', node);
   }
 }
-},{"../error/GraphQLError":208,"../jsutils/invariant":221}],256:[function(require,module,exports){
+},{"../error/GraphQLError":207,"../jsutils/invariant":220}],256:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53485,7 +53306,7 @@ function astFromValue(value, type) {
  *   - NegativeSign? NonZeroDigit ( Digit+ )?
  */
 var integerStringRegExp = /^-?(0|[1-9][0-9]*)$/;
-},{"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/objectValues":228,"../language/kinds":237,"../type/definition":247,"../type/scalars":251,"iterall":309}],257:[function(require,module,exports){
+},{"../jsutils/isInvalid":221,"../jsutils/isNullish":222,"../jsutils/objectValues":227,"../language/kinds":236,"../type/definition":247,"../type/scalars":251,"iterall":243}],257:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53934,7 +53755,7 @@ function getLeadingCommentBlock(node) {
 function buildSchema(source, options) {
   return buildASTSchema((0, _parser.parse)(source, options), options);
 }
-},{"../execution/values":216,"../jsutils/keyMap":225,"../jsutils/keyValMap":226,"../language/blockStringValue":234,"../language/kinds":237,"../language/lexer":238,"../language/parser":240,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252,"./valueFromAST":275}],258:[function(require,module,exports){
+},{"../execution/values":215,"../jsutils/keyMap":224,"../jsutils/keyValMap":225,"../language/blockStringValue":233,"../language/kinds":236,"../language/lexer":237,"../language/parser":239,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252,"./valueFromAST":275}],258:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54243,7 +54064,7 @@ function buildClientSchema(introspection, options) {
    *
    *  strict
    */
-},{"../jsutils/invariant":221,"../jsutils/keyMap":225,"../jsutils/keyValMap":226,"../language/directiveLocation":235,"../language/parser":240,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252,"./valueFromAST":275}],259:[function(require,module,exports){
+},{"../jsutils/invariant":220,"../jsutils/keyMap":224,"../jsutils/keyValMap":225,"../language/directiveLocation":234,"../language/parser":239,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252,"./valueFromAST":275}],259:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54437,7 +54258,7 @@ function printPath(path) {
 }
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
-},{"../error":210,"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/orList":229,"../jsutils/suggestionList":233,"../type/definition":247,"iterall":309}],260:[function(require,module,exports){
+},{"../error":209,"../jsutils/isInvalid":221,"../jsutils/isNullish":222,"../jsutils/orList":228,"../jsutils/suggestionList":232,"../type/definition":247,"iterall":243}],260:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54801,7 +54622,7 @@ function checkExtensionNode(type, node) {
       break;
   }
 }
-},{"../error/GraphQLError":208,"../jsutils/invariant":221,"../jsutils/keyMap":225,"../jsutils/objectValues":228,"../language/kinds":237,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/schema":252,"./buildASTSchema":257}],262:[function(require,module,exports){
+},{"../error/GraphQLError":207,"../jsutils/invariant":220,"../jsutils/keyMap":224,"../jsutils/objectValues":227,"../language/kinds":236,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/schema":252,"./buildASTSchema":257}],262:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55495,7 +55316,7 @@ function getArgumentMapForDirective(directive) {
     return arg.name;
   });
 }
-},{"../jsutils/keyMap":225,"../type/definition":247,"../type/directives":248,"../type/schema":252}],263:[function(require,module,exports){
+},{"../jsutils/keyMap":224,"../type/definition":247,"../type/directives":248,"../type/schema":252}],263:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55554,7 +55375,7 @@ function findDeprecatedUsages(schema, ast) {
    *
    *  strict
    */
-},{"../error/GraphQLError":208,"../language/visitor":243,"../type/definition":247,"../type/schema":252,"./TypeInfo":254}],264:[function(require,module,exports){
+},{"../error/GraphQLError":207,"../language/visitor":242,"../type/definition":247,"../type/schema":252,"./TypeInfo":254}],264:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55596,7 +55417,7 @@ function getOperationAST(documentAST, operationName) {
    *
    *  strict
    */
-},{"../language/kinds":237}],265:[function(require,module,exports){
+},{"../language/kinds":236}],265:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55910,7 +55731,7 @@ function introspectionFromSchema(schema, options) {
    *
    *  strict
    */
-},{"../execution/execute":214,"../jsutils/invariant":221,"../language/parser":240,"../type/schema":252,"./introspectionQuery":267}],267:[function(require,module,exports){
+},{"../execution/execute":213,"../jsutils/invariant":220,"../language/parser":239,"../type/schema":252,"./introspectionQuery":267}],267:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56005,7 +55826,7 @@ function isValidLiteralValue(type, valueNode) {
   (0, _visitor.visit)(valueNode, (0, _visitor.visitWithTypeInfo)(typeInfo, visitor));
   return context.getErrors();
 }
-},{"../language/kinds":237,"../language/visitor":243,"../type/schema":252,"../validation/ValidationContext":277,"../validation/rules/ValuesOfCorrectType":302,"./TypeInfo":254}],270:[function(require,module,exports){
+},{"../language/kinds":236,"../language/visitor":242,"../type/schema":252,"../validation/ValidationContext":277,"../validation/rules/ValuesOfCorrectType":302,"./TypeInfo":254}],270:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56249,7 +56070,7 @@ function sortBy(array, mapToKey) {
     return key1.localeCompare(key2);
   });
 }
-},{"../jsutils/keyValMap":226,"../jsutils/objectValues":228,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252}],271:[function(require,module,exports){
+},{"../jsutils/keyValMap":225,"../jsutils/objectValues":227,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252}],271:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56570,7 +56391,7 @@ function breakLine(line, maxLen) {
   }
   return sublines;
 }
-},{"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/objectValues":228,"../language/printer":241,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../utilities/astFromValue":256}],272:[function(require,module,exports){
+},{"../jsutils/isInvalid":221,"../jsutils/isNullish":222,"../jsutils/objectValues":227,"../language/printer":240,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../utilities/astFromValue":256}],272:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56664,7 +56485,7 @@ function collectTransitiveDependencies(collected, depGraph, fromName) {
     });
   }
 }
-},{"../language/visitor":243}],273:[function(require,module,exports){
+},{"../language/visitor":242}],273:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56833,7 +56654,7 @@ function typeFromAST(schema, typeNode) {
   /* istanbul ignore next */
   throw new Error('Unexpected type kind: ' + typeNode.kind + '.');
 }
-},{"../language/kinds":237,"../type/definition":247}],275:[function(require,module,exports){
+},{"../language/kinds":236,"../type/definition":247}],275:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57014,7 +56835,7 @@ function valueFromAST(valueNode, type, variables) {
 function isMissingVariable(valueNode, variables) {
   return valueNode.kind === _kinds.Kind.VARIABLE && (!variables || (0, _isInvalid2.default)(variables[valueNode.name.value]));
 }
-},{"../jsutils/isInvalid":222,"../jsutils/keyMap":225,"../jsutils/objectValues":228,"../language/kinds":237,"../type/definition":247}],276:[function(require,module,exports){
+},{"../jsutils/isInvalid":221,"../jsutils/keyMap":224,"../jsutils/objectValues":227,"../language/kinds":236,"../type/definition":247}],276:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57086,7 +56907,7 @@ function valueFromASTUntyped(valueNode, variables) {
    *
    *  strict
    */
-},{"../jsutils/isInvalid":222,"../jsutils/keyValMap":226,"../language/kinds":237}],277:[function(require,module,exports){
+},{"../jsutils/isInvalid":221,"../jsutils/keyValMap":225,"../language/kinds":236}],277:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57271,7 +57092,7 @@ var ValidationContext = function () {
 }();
 
 exports.default = ValidationContext;
-},{"../error":210,"../language/kinds":237,"../language/visitor":243,"../type/schema":252,"../utilities/TypeInfo":254}],278:[function(require,module,exports){
+},{"../error":209,"../language/kinds":236,"../language/visitor":242,"../type/schema":252,"../utilities/TypeInfo":254}],278:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57584,7 +57405,7 @@ function ExecutableDefinitions(context) {
     }
   };
 }
-},{"../../error":210,"../../language/kinds":237}],280:[function(require,module,exports){
+},{"../../error":209,"../../language/kinds":236}],280:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57706,7 +57527,7 @@ function getSuggestedFieldNames(schema, type, fieldName) {
   // Otherwise, must be a Union type, which does not define fields.
   return [];
 }
-},{"../../error":210,"../../jsutils/quotedOrList":232,"../../jsutils/suggestionList":233,"../../type/definition":247}],281:[function(require,module,exports){
+},{"../../error":209,"../../jsutils/quotedOrList":231,"../../jsutils/suggestionList":232,"../../type/definition":247}],281:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57765,7 +57586,7 @@ function FragmentsOnCompositeTypes(context) {
     }
   };
 }
-},{"../../error":210,"../../language/printer":241,"../../type/definition":247,"../../utilities/typeFromAST":274}],282:[function(require,module,exports){
+},{"../../error":209,"../../language/printer":240,"../../type/definition":247,"../../utilities/typeFromAST":274}],282:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57844,7 +57665,7 @@ function KnownArgumentNames(context) {
     }
   };
 }
-},{"../../error":210,"../../jsutils/quotedOrList":232,"../../jsutils/suggestionList":233,"../../language/kinds":237}],283:[function(require,module,exports){
+},{"../../error":209,"../../jsutils/quotedOrList":231,"../../jsutils/suggestionList":232,"../../language/kinds":236}],283:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57957,7 +57778,7 @@ function getDirectiveLocationForASTPath(ancestors) {
     }
   }
 }
-},{"../../error":210,"../../jsutils/find":219,"../../language/directiveLocation":235,"../../language/kinds":237}],284:[function(require,module,exports){
+},{"../../error":209,"../../jsutils/find":218,"../../language/directiveLocation":234,"../../language/kinds":236}],284:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57998,7 +57819,7 @@ function KnownFragmentNames(context) {
     }
   };
 }
-},{"../../error":210}],285:[function(require,module,exports){
+},{"../../error":209}],285:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58069,7 +57890,7 @@ function KnownTypeNames(context) {
     }
   };
 }
-},{"../../error":210,"../../jsutils/quotedOrList":232,"../../jsutils/suggestionList":233}],286:[function(require,module,exports){
+},{"../../error":209,"../../jsutils/quotedOrList":231,"../../jsutils/suggestionList":232}],286:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58116,7 +57937,7 @@ function LoneAnonymousOperation(context) {
     }
   };
 }
-},{"../../error":210,"../../language/kinds":237}],287:[function(require,module,exports){
+},{"../../error":209,"../../language/kinds":236}],287:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58203,7 +58024,7 @@ function NoFragmentCycles(context) {
     spreadPathIndexByName[fragmentName] = undefined;
   }
 }
-},{"../../error":210}],288:[function(require,module,exports){
+},{"../../error":209}],288:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58259,7 +58080,7 @@ function NoUndefinedVariables(context) {
     }
   };
 }
-},{"../../error":210}],289:[function(require,module,exports){
+},{"../../error":209}],289:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58322,7 +58143,7 @@ function NoUnusedFragments(context) {
     }
   };
 }
-},{"../../error":210}],290:[function(require,module,exports){
+},{"../../error":209}],290:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58384,7 +58205,7 @@ function NoUnusedVariables(context) {
     }
   };
 }
-},{"../../error":210}],291:[function(require,module,exports){
+},{"../../error":209}],291:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58957,7 +58778,7 @@ function _pairSetAdd(data, a, b, areMutuallyExclusive) {
   }
   map[b] = areMutuallyExclusive;
 }
-},{"../../error":210,"../../jsutils/find":219,"../../language/kinds":237,"../../language/printer":241,"../../type/definition":247,"../../utilities/typeFromAST":274}],292:[function(require,module,exports){
+},{"../../error":209,"../../jsutils/find":218,"../../language/kinds":236,"../../language/printer":240,"../../type/definition":247,"../../utilities/typeFromAST":274}],292:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59026,7 +58847,7 @@ function getFragmentType(context, name) {
     }
   }
 }
-},{"../../error":210,"../../type/definition":247,"../../utilities/typeComparators":273,"../../utilities/typeFromAST":274}],293:[function(require,module,exports){
+},{"../../error":209,"../../type/definition":247,"../../utilities/typeComparators":273,"../../utilities/typeFromAST":274}],293:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59114,7 +58935,7 @@ function ProvidedNonNullArguments(context) {
     }
   };
 }
-},{"../../error":210,"../../jsutils/keyMap":225,"../../type/definition":247}],294:[function(require,module,exports){
+},{"../../error":209,"../../jsutils/keyMap":224,"../../type/definition":247}],294:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59166,7 +58987,7 @@ function ScalarLeafs(context) {
     }
   };
 }
-},{"../../error":210,"../../type/definition":247}],295:[function(require,module,exports){
+},{"../../error":209,"../../type/definition":247}],295:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59206,7 +59027,7 @@ function SingleFieldSubscriptions(context) {
     }
   };
 }
-},{"../../error":210}],296:[function(require,module,exports){
+},{"../../error":209}],296:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59256,7 +59077,7 @@ function UniqueArgumentNames(context) {
     }
   };
 }
-},{"../../error":210}],297:[function(require,module,exports){
+},{"../../error":209}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59308,7 +59129,7 @@ function UniqueDirectivesPerLocation(context) {
     }
   };
 }
-},{"../../error":210}],298:[function(require,module,exports){
+},{"../../error":209}],298:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59354,7 +59175,7 @@ function UniqueFragmentNames(context) {
     }
   };
 }
-},{"../../error":210}],299:[function(require,module,exports){
+},{"../../error":209}],299:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59409,7 +59230,7 @@ function UniqueInputFieldNames(context) {
     }
   };
 }
-},{"../../error":210}],300:[function(require,module,exports){
+},{"../../error":209}],300:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59458,7 +59279,7 @@ function UniqueOperationNames(context) {
     }
   };
 }
-},{"../../error":210}],301:[function(require,module,exports){
+},{"../../error":209}],301:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59503,7 +59324,7 @@ function UniqueVariableNames(context) {
     }
   };
 }
-},{"../../error":210}],302:[function(require,module,exports){
+},{"../../error":209}],302:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59675,7 +59496,7 @@ function enumTypeSuggestion(type, node) {
     }
   }
 }
-},{"../../error":210,"../../jsutils/isInvalid":222,"../../jsutils/keyMap":225,"../../jsutils/orList":229,"../../jsutils/suggestionList":233,"../../language/printer":241,"../../type/definition":247}],303:[function(require,module,exports){
+},{"../../error":209,"../../jsutils/isInvalid":221,"../../jsutils/keyMap":224,"../../jsutils/orList":228,"../../jsutils/suggestionList":232,"../../language/printer":240,"../../type/definition":247}],303:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59724,7 +59545,7 @@ function VariablesAreInputTypes(context) {
     }
   };
 }
-},{"../../error":210,"../../language/printer":241,"../../type/definition":247,"../../utilities/typeFromAST":274}],304:[function(require,module,exports){
+},{"../../error":209,"../../language/printer":240,"../../type/definition":247,"../../utilities/typeFromAST":274}],304:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59776,7 +59597,7 @@ function VariablesDefaultValueAllowed(context) {
     }
   };
 }
-},{"../../error":210,"../../type/definition":247}],305:[function(require,module,exports){
+},{"../../error":209,"../../type/definition":247}],305:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59851,7 +59672,7 @@ function VariablesInAllowedPosition(context) {
 function effectiveType(varType, varDef) {
   return !varDef.defaultValue || (0, _definition.isNonNullType)(varType) ? varType : (0, _definition.GraphQLNonNull)(varType);
 }
-},{"../../error":210,"../../type/definition":247,"../../utilities/typeComparators":273,"../../utilities/typeFromAST":274}],306:[function(require,module,exports){
+},{"../../error":209,"../../type/definition":247,"../../utilities/typeComparators":273,"../../utilities/typeFromAST":274}],306:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -60084,7 +59905,7 @@ function visitUsingRules(schema, typeInfo, documentAST, rules) {
   (0, _visitor.visit)(documentAST, (0, _visitor.visitWithTypeInfo)(typeInfo, (0, _visitor.visitInParallel)(visitors)));
   return context.getErrors();
 }
-},{"../error":210,"../jsutils/invariant":221,"../language/visitor":243,"../type/schema":252,"../type/validate":253,"../utilities/TypeInfo":254,"./ValidationContext":277,"./specifiedRules":306}],308:[function(require,module,exports){
+},{"../error":209,"../jsutils/invariant":220,"../language/visitor":242,"../type/schema":252,"../type/validate":253,"../utilities/TypeInfo":254,"./ValidationContext":277,"./specifiedRules":306}],308:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -60171,186 +59992,365 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 },{}],309:[function(require,module,exports){
-'use strict';
+/**
+ * Copyright (c) 2016, Lee Byron
+ * All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @ignore
+ */
 
-exports.isIterable = isIterable;
-exports.isArrayLike = isArrayLike;
-exports.isCollection = isCollection;
-exports.getIterator = getIterator;
-exports.getIteratorMethod = getIteratorMethod;
-exports.createIterator = createIterator;
-exports.forEach = forEach;
-exports.isAsyncIterable = isAsyncIterable;
-exports.getAsyncIterator = getAsyncIterator;
-exports.getAsyncIteratorMethod = getAsyncIteratorMethod;
-exports.createAsyncIterator = createAsyncIterator;
-exports.forAwaitEach = forAwaitEach;
+/**
+ * [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)
+ * is a *protocol* which describes a standard way to produce a sequence of
+ * values, typically the values of the Iterable represented by this Iterator.
+ *
+ * While described by the [ES2015 version of JavaScript](http://www.ecma-international.org/ecma-262/6.0/#sec-iterator-interface)
+ * it can be utilized by any version of JavaScript.
+ *
+ * @typedef {Object} Iterator
+ * @template T The type of each iterated value
+ * @property {function (): { value: T, done: boolean }} next
+ *   A method which produces either the next value in a sequence or a result
+ *   where the `done` property is `true` indicating the end of the Iterator.
+ */
 
-var SYMBOL = typeof Symbol === 'function' ? Symbol : void 0;
+/**
+ * [Iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
+ * is a *protocol* which when implemented allows a JavaScript object to define
+ * their iteration behavior, such as what values are looped over in a `for..of`
+ * loop or `iterall`'s `forEach` function. Many [built-in types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#Builtin_iterables)
+ * implement the Iterable protocol, including `Array` and `Map`.
+ *
+ * While described by the [ES2015 version of JavaScript](http://www.ecma-international.org/ecma-262/6.0/#sec-iterable-interface)
+ * it can be utilized by any version of JavaScript.
+ *
+ * @typedef {Object} Iterable
+ * @template T The type of each iterated value
+ * @property {function (): Iterator<T>} Symbol.iterator
+ *   A method which produces an Iterator for this Iterable.
+ */
 
-var SYMBOL_ITERATOR = SYMBOL && SYMBOL.iterator;
+// In ES2015 (or a polyfilled) environment, this will be Symbol.iterator
+var SYMBOL_ITERATOR = typeof Symbol === 'function' && Symbol.iterator
 
-var $$iterator = exports.$$iterator = SYMBOL_ITERATOR || '@@iterator';
+/**
+ * A property name to be used as the name of an Iterable's method responsible
+ * for producing an Iterator, referred to as `@@iterator`. Typically represents
+ * the value `Symbol.iterator` but falls back to the string `"@@iterator"` when
+ * `Symbol.iterator` is not defined.
+ *
+ * Use `$$iterator` for defining new Iterables instead of `Symbol.iterator`,
+ * but do not use it for accessing existing Iterables, instead use
+ * `getIterator()` or `isIterable()`.
+ *
+ * @example
+ *
+ * var $$iterator = require('iterall').$$iterator
+ *
+ * function Counter (to) {
+ *   this.to = to
+ * }
+ *
+ * Counter.prototype[$$iterator] = function () {
+ *   return {
+ *     to: this.to,
+ *     num: 0,
+ *     next () {
+ *       if (this.num >= this.to) {
+ *         return { value: undefined, done: true }
+ *       }
+ *       return { value: this.num++, done: false }
+ *     }
+ *   }
+ * }
+ *
+ * var counter = new Counter(3)
+ * for (var number of counter) {
+ *   console.log(number) // 0 ... 1 ... 2
+ * }
+ *
+ * @type {Symbol|string}
+ */
+var $$iterator = SYMBOL_ITERATOR || '@@iterator'
+exports.$$iterator = $$iterator
 
-function isIterable(obj) {
-  return !!getIteratorMethod(obj);
+/**
+ * Returns true if the provided object implements the Iterator protocol via
+ * either implementing a `Symbol.iterator` or `"@@iterator"` method.
+ *
+ * @example
+ *
+ * var isIterable = require('iterall').isIterable
+ * isIterable([ 1, 2, 3 ]) // true
+ * isIterable('ABC') // true
+ * isIterable({ length: 1, 0: 'Alpha' }) // false
+ * isIterable({ key: 'value' }) // false
+ * isIterable(new Map()) // true
+ *
+ * @param obj
+ *   A value which might implement the Iterable protocol.
+ * @return {boolean} true if Iterable.
+ */
+function isIterable (obj) {
+  return !!getIteratorMethod(obj)
 }
+exports.isIterable = isIterable
 
-function isArrayLike(obj) {
-  var length = obj != null && obj.length;
-  return typeof length === 'number' && length >= 0 && length % 1 === 0;
+/**
+ * Returns true if the provided object implements the Array-like protocol via
+ * defining a positive-integer `length` property.
+ *
+ * @example
+ *
+ * var isArrayLike = require('iterall').isArrayLike
+ * isArrayLike([ 1, 2, 3 ]) // true
+ * isArrayLike('ABC') // true
+ * isArrayLike({ length: 1, 0: 'Alpha' }) // true
+ * isArrayLike({ key: 'value' }) // false
+ * isArrayLike(new Map()) // false
+ *
+ * @param obj
+ *   A value which might implement the Array-like protocol.
+ * @return {boolean} true if Array-like.
+ */
+function isArrayLike (obj) {
+  var length = obj != null && obj.length
+  return typeof length === 'number' && length >= 0 && length % 1 === 0
 }
+exports.isArrayLike = isArrayLike
 
-function isCollection(obj) {
-  return Object(obj) === obj && (isArrayLike(obj) || isIterable(obj));
+/**
+ * Returns true if the provided object is an Object (i.e. not a string literal)
+ * and is either Iterable or Array-like.
+ *
+ * This may be used in place of [Array.isArray()][isArray] to determine if an
+ * object should be iterated-over. It always excludes string literals and
+ * includes Arrays (regardless of if it is Iterable). It also includes other
+ * Array-like objects such as NodeList, TypedArray, and Buffer.
+ *
+ * @example
+ *
+ * var isCollection = require('iterall').isCollection
+ * isCollection([ 1, 2, 3 ]) // true
+ * isCollection('ABC') // false
+ * isCollection({ length: 1, 0: 'Alpha' }) // true
+ * isCollection({ key: 'value' }) // false
+ * isCollection(new Map()) // true
+ *
+ * @example
+ *
+ * var forEach = require('iterall').forEach
+ * if (isCollection(obj)) {
+ *   forEach(obj, function (value) {
+ *     console.log(value)
+ *   })
+ * }
+ *
+ * @param obj
+ *   An Object value which might implement the Iterable or Array-like protocols.
+ * @return {boolean} true if Iterable or Array-like Object.
+ */
+function isCollection (obj) {
+  return Object(obj) === obj && (isArrayLike(obj) || isIterable(obj))
 }
+exports.isCollection = isCollection
 
-function getIterator(iterable) {
-  var method = getIteratorMethod(iterable);
+/**
+ * If the provided object implements the Iterator protocol, its Iterator object
+ * is returned. Otherwise returns undefined.
+ *
+ * @example
+ *
+ * var getIterator = require('iterall').getIterator
+ * var iterator = getIterator([ 1, 2, 3 ])
+ * iterator.next() // { value: 1, done: false }
+ * iterator.next() // { value: 2, done: false }
+ * iterator.next() // { value: 3, done: false }
+ * iterator.next() // { value: undefined, done: true }
+ *
+ * @template T the type of each iterated value
+ * @param {Iterable<T>} iterable
+ *   An Iterable object which is the source of an Iterator.
+ * @return {Iterator<T>} new Iterator instance.
+ */
+function getIterator (iterable) {
+  var method = getIteratorMethod(iterable)
   if (method) {
-    return method.call(iterable);
+    return method.call(iterable)
   }
 }
+exports.getIterator = getIterator
 
-function getIteratorMethod(iterable) {
+/**
+ * If the provided object implements the Iterator protocol, the method
+ * responsible for producing its Iterator object is returned.
+ *
+ * This is used in rare cases for performance tuning. This method must be called
+ * with obj as the contextual this-argument.
+ *
+ * @example
+ *
+ * var getIteratorMethod = require('iterall').getIteratorMethod
+ * var myArray = [ 1, 2, 3 ]
+ * var method = getIteratorMethod(myArray)
+ * if (method) {
+ *   var iterator = method.call(myArray)
+ * }
+ *
+ * @template T the type of each iterated value
+ * @param {Iterable<T>} iterable
+ *   An Iterable object which defines an `@@iterator` method.
+ * @return {function(): Iterator<T>} `@@iterator` method.
+ */
+function getIteratorMethod (iterable) {
   if (iterable != null) {
-    var method = SYMBOL_ITERATOR && iterable[SYMBOL_ITERATOR] || iterable['@@iterator'];
+    var method = SYMBOL_ITERATOR && iterable[SYMBOL_ITERATOR] || iterable['@@iterator']
     if (typeof method === 'function') {
-      return method;
+      return method
     }
   }
 }
+exports.getIteratorMethod = getIteratorMethod
 
-function createIterator(collection) {
-  if (collection != null) {
-    var iterator = getIterator(collection);
-    if (iterator) {
-      return iterator;
-    }
-    if (isArrayLike(collection)) {
-      return new ArrayLikeIterator(collection);
-    }
-  }
-}
-
-function ArrayLikeIterator(obj) {
-  this._o = obj;
-  this._i = 0;
-}
-
-ArrayLikeIterator.prototype[$$iterator] = function () {
-  return this;
-};
-
-ArrayLikeIterator.prototype.next = function () {
-  if (this._o === void 0 || this._i >= this._o.length) {
-    this._o = void 0;
-    return { value: void 0, done: true };
-  }
-  return { value: this._o[this._i++], done: false };
-};
-
-function forEach(collection, callback, thisArg) {
+/**
+ * Given an object which either implements the Iterable protocol or is
+ * Array-like, iterate over it, calling the `callback` at each iteration.
+ *
+ * Use `forEach` where you would expect to use a `for ... of` loop in ES6.
+ * However `forEach` adheres to the behavior of [Array#forEach][] described in
+ * the ECMAScript specification, skipping over "holes" in Array-likes. It will
+ * also delegate to a `forEach` method on `collection` if one is defined,
+ * ensuring native performance for `Arrays`.
+ *
+ * Similar to [Array#forEach][], the `callback` function accepts three
+ * arguments, and is provided with `thisArg` as the calling context.
+ *
+ * Note: providing an infinite Iterator to forEach will produce an error.
+ *
+ * [Array#forEach]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+ *
+ * @example
+ *
+ * var forEach = require('iterall').forEach
+ *
+ * forEach(myIterable, function (value, index, iterable) {
+ *   console.log(value, index, iterable === myIterable)
+ * })
+ *
+ * @example
+ *
+ * // ES6:
+ * for (let value of myIterable) {
+ *   console.log(value)
+ * }
+ *
+ * // Any JavaScript environment:
+ * forEach(myIterable, function (value) {
+ *   console.log(value)
+ * })
+ *
+ * @template T the type of each iterated value
+ * @param {Iterable<T>|{ length: number }} collection
+ *   The Iterable or array to iterate over.
+ * @param {function(T, number, object)} callback
+ *   Function to execute for each iteration, taking up to three arguments
+ * @param [thisArg]
+ *   Optional. Value to use as `this` when executing `callback`.
+ */
+function forEach (collection, callback, thisArg) {
   if (collection != null) {
     if (typeof collection.forEach === 'function') {
-      return collection.forEach(callback, thisArg);
+      return collection.forEach(callback, thisArg)
     }
-    var i = 0;
-    var iterator = getIterator(collection);
+    var i = 0
+    var iterator = getIterator(collection)
     if (iterator) {
-      var step;
+      var step
       while (!(step = iterator.next()).done) {
-        callback.call(thisArg, step.value, i++, collection);
-
+        callback.call(thisArg, step.value, i++, collection)
+        // Infinite Iterators could cause forEach to run forever.
+        // After a very large number of iterations, produce an error.
+        /* istanbul ignore if */
         if (i > 9999999) {
-          throw new TypeError('Near-infinite iteration.');
+          throw new TypeError('Near-infinite iteration.')
         }
       }
     } else if (isArrayLike(collection)) {
       for (; i < collection.length; i++) {
         if (collection.hasOwnProperty(i)) {
-          callback.call(thisArg, collection[i], i, collection);
+          callback.call(thisArg, collection[i], i, collection)
         }
       }
     }
   }
 }
+exports.forEach = forEach
 
-var SYMBOL_ASYNC_ITERATOR = SYMBOL && SYMBOL.asyncIterator;
-
-var $$asyncIterator = exports.$$asyncIterator = SYMBOL_ASYNC_ITERATOR || '@@asyncIterator';
-
-function isAsyncIterable(obj) {
-  return !!getAsyncIteratorMethod(obj);
-}
-
-function getAsyncIterator(asyncIterable) {
-  var method = getAsyncIteratorMethod(asyncIterable);
-  if (method) {
-    return method.call(asyncIterable);
-  }
-}
-
-function getAsyncIteratorMethod(asyncIterable) {
-  if (asyncIterable != null) {
-    var method = SYMBOL_ASYNC_ITERATOR && asyncIterable[SYMBOL_ASYNC_ITERATOR] || asyncIterable['@@asyncIterator'];
-    if (typeof method === 'function') {
-      return method;
-    }
-  }
-}
-
-function createAsyncIterator(source) {
-  if (source != null) {
-    var asyncIterator = getAsyncIterator(source);
-    if (asyncIterator) {
-      return asyncIterator;
-    }
-    var iterator = createIterator(source);
+/**
+ * Similar to `getIterator()`, this method returns a new Iterator given an
+ * Iterable. However it will also create an Iterator for a non-Iterable
+ * Array-like collection, such as Array in a non-ES2015 environment.
+ *
+ * `createIterator` is complimentary to `forEach`, but allows a "pull"-based
+ * iteration as opposed to `forEach`'s "push"-based iteration.
+ *
+ * `createIterator` produces an Iterator for Array-likes with the same behavior
+ * as ArrayIteratorPrototype described in the ECMAScript specification, and
+ * does *not* skip over "holes".
+ *
+ * @example
+ *
+ * var createIterator = require('iterall').createIterator
+ *
+ * var myArraylike = { length: 3, 0: 'Alpha', 1: 'Bravo', 2: 'Charlie' }
+ * var iterator = createIterator(myArraylike)
+ * iterator.next() // { value: 'Alpha', done: false }
+ * iterator.next() // { value: 'Bravo', done: false }
+ * iterator.next() // { value: 'Charlie', done: false }
+ * iterator.next() // { value: undefined, done: true }
+ *
+ * @template T the type of each iterated value
+ * @param {Iterable<T>|{ length: number }} collection
+ *   An Iterable or Array-like object to produce an Iterator.
+ * @return {Iterator<T>} new Iterator instance.
+ */
+function createIterator (collection) {
+  if (collection != null) {
+    var iterator = getIterator(collection)
     if (iterator) {
-      return new AsyncFromSyncIterator(iterator);
+      return iterator
+    }
+    if (isArrayLike(collection)) {
+      return new ArrayLikeIterator(collection)
     }
   }
 }
+exports.createIterator = createIterator
 
-function AsyncFromSyncIterator(iterator) {
-  this._i = iterator;
+// When the object provided to `createIterator` is not Iterable but is
+// Array-like, this simple Iterator is created.
+function ArrayLikeIterator (obj) {
+  this._o = obj
+  this._i = 0
 }
 
-AsyncFromSyncIterator.prototype[$$asyncIterator] = function () {
-  return this;
-};
+// Note: all Iterators are themselves Iterable.
+ArrayLikeIterator.prototype[$$iterator] = function () {
+  return this
+}
 
-AsyncFromSyncIterator.prototype.next = function () {
-  var step = this._i.next();
-  return Promise.resolve(step.value).then(function (value) {
-    return { value: value, done: step.done };
-  });
-};
-
-function forAwaitEach(source, callback, thisArg) {
-  var asyncIterator = createAsyncIterator(source);
-  if (asyncIterator) {
-    var i = 0;
-    return new Promise(function (resolve, reject) {
-      function next() {
-        asyncIterator.next().then(function (step) {
-          if (!step.done) {
-            Promise.resolve(callback.call(thisArg, step.value, i++, source)).then(next).catch(reject);
-          } else {
-            resolve();
-          }
-
-          return null;
-        }).catch(reject);
-
-        return null;
-      }
-      next();
-    });
+// A simple state-machine determines the IteratorResult returned, yielding
+// each value in the Array-like object in order of their indicies.
+ArrayLikeIterator.prototype.next = function () {
+  if (this._o === void 0 || this._i >= this._o.length) {
+    this._o = void 0
+    return { value: void 0, done: true }
   }
+  return { value: this._o[this._i++], done: false }
 }
-
 
 },{}],310:[function(require,module,exports){
 'use strict';
