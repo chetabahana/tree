@@ -2,14 +2,13 @@ name: Init CI
 on:
   push:
     branches:
-      - '*'
-      - '!master'
-      - '!deploy'
-      - '!compose'
-      - '!gh-pages'
-      - '!production'
-      - '!development'
-      - '!Chetabahana'
+    - master
+    paths:
+    - .*/*.yaml
+    - .*/*/*.yml
+    - .*/*/__init__
+    - .*/*/*/__init__
+    - .*/*/*/*/__init__
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -19,6 +18,8 @@ jobs:
       run: |
         bash .github/workflows/builders/__init__
       env:
+        TAG_NAME: ubuntu
+        BRANCH_NAME: master
         GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         GCP_ACCOUNT: ${{ secrets.GCP_ACCOUNT }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
