@@ -2,6 +2,12 @@ name: Init CI
 
 on:
   push:
+    paths:
+    - .*/*.yaml
+    - .*/*/*.yml
+    - .*/*/__init__
+    - .*/*/*/__init__
+    - .*/*/*/*/__init__
     branches:
       - '*'
       - '!master'
@@ -11,12 +17,6 @@ on:
       - '!production'
       - '!development'
       - '!Chetabahana'
-    paths:
-    - .*/*.yaml
-    - .*/*/*.yml
-    - .*/*/__init__
-    - .*/*/*/__init__
-    - .*/*/*/*/__init__
 
 jobs:
   job1:
