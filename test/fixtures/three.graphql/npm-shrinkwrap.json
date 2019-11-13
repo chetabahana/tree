@@ -2282,18 +2282,11 @@
       }
     },
     "graphql": {
-      "version": "0.6.2",
-      "resolved": "https://registry.npmjs.org/graphql/-/graphql-0.6.2.tgz",
-      "integrity": "sha1-Gc3LF+WGLWQ5agaE+S975k6Q568=",
+      "version": "0.9.6",
+      "resolved": "https://registry.npmjs.org/graphql/-/graphql-0.9.6.tgz",
+      "integrity": "sha1-UUQh6dIlwp38j9MFRZq65YgV7yw=",
       "requires": {
-        "iterall": "1.0.2"
-      },
-      "dependencies": {
-        "iterall": {
-          "version": "1.0.2",
-          "resolved": "https://registry.npmjs.org/iterall/-/iterall-1.0.2.tgz",
-          "integrity": "sha1-QaLpbOntpeYcdn7l3DEjc7sEbpE="
-        }
+        "iterall": "^1.0.0"
       }
     },
     "has": {
