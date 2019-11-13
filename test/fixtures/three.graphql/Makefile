@@ -1,7 +1,7 @@
 default: build
 
 node_modules:
-	npm install --save core-js@^3
+	npm install browserify -g --save core-js@^3
 
 build: node_modules
 	npm run build
