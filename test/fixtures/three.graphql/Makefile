@@ -2,7 +2,7 @@
 default: build
 
 node_modules:
-	npm i -f 
+	npm install --no-optional 
 
 build: node_modules
 	npm run build
