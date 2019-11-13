@@ -17,7 +17,7 @@ exports.Color = {
 import { GraphQLScalarType } from 'graphql';
 import { makeExecutableSchema } from 'graphql-tools';
 
-exports.Color = new GraphQLScalarType({
+const Color = new GraphQLScalarType({
   name: 'Color',
   description: 'Description of my custom scalar type',
   serialize(value) {
