@@ -1,7 +1,7 @@
 default: build
 
 node_modules:
-	npm audit fix
+	npm dedupe
 
 build: node_modules
 	npm run build
