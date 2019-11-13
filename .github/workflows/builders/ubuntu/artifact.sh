@@ -31,7 +31,7 @@ echo -e "\n$hr\nFILE SYSTEM\n$hr"
 df -h
 
 echo -e "\n$hr\nALL REPOSITORY\n$hr"
-pwd
+echo /
 ls -al /
 
 echo -e "\n$hr\nCURRENT REPOSITORY\n$hr"
