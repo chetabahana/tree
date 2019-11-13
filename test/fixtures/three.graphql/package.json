@@ -22,8 +22,8 @@
     "domready": "^1.0.8",
     "glob": "^7.0.5",
     "graph": "^0.2.0",
-    "graphql": "^0.10.5",
     "graph.ql": "^2.0.0",
+    "graphql": "^0.10.5",
     "three": "^0.79.0"
   },
   "devDependencies": {
