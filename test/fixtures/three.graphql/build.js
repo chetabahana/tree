@@ -3719,7 +3719,7 @@ _codemirror2.default.registerHelper('hint', 'graphql', function (editor, options
 
   return results;
 });
-},{"./utils/getHintsAtPosition":19,"codemirror":38}],12:[function(require,module,exports){
+},{"./utils/getHintsAtPosition":18,"codemirror":37}],12:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -3790,7 +3790,7 @@ function errorAnnotations(editor, error) {
 function mapCat(array, mapper) {
   return Array.prototype.concat.apply([], array.map(mapper));
 }
-},{"codemirror":38,"graphql":95}],13:[function(require,module,exports){
+},{"codemirror":37,"graphql":95}],13:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -3864,121 +3864,7 @@ function indent(state, textAfter) {
   var level = !levels || levels.length === 0 ? state.indentLevel : levels[levels.length - 1] - (this.electricInput.test(textAfter) ? 1 : 0);
   return level * this.config.indentUnit;
 }
-},{"./utils/Rules":17,"./utils/onlineParser":23,"codemirror":38}],14:[function(require,module,exports){
-'use strict';
-
-var _codemirror = require('codemirror');
-
-var _codemirror2 = _interopRequireDefault(_codemirror);
-
-var _onlineParser = require('../utils/onlineParser');
-
-var _onlineParser2 = _interopRequireDefault(_onlineParser);
-
-var _RuleHelpers = require('../utils/RuleHelpers');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * This mode defines JSON, but provides a data-laden parser state to enable
- * better code intelligence.
- */
-_codemirror2.default.defineMode('graphql-results', function (config) {
-  var parser = (0, _onlineParser2.default)({
-    eatWhitespace: function eatWhitespace(stream) {
-      return stream.eatSpace();
-    },
-    LexRules: LexRules,
-    ParseRules: ParseRules,
-    editorConfig: { tabSize: config.tabSize }
-  });
-
-  return {
-    config: config,
-    startState: parser.startState,
-    token: parser.token,
-    indent: indent,
-    electricInput: /^\s*[}\]]/,
-    fold: 'brace',
-    closeBrackets: {
-      pairs: '[]{}""',
-      explode: '[]{}'
-    }
-  };
-}); /**
-     *  Copyright (c) 2015, Facebook, Inc.
-     *  All rights reserved.
-     *
-     *  This source code is licensed under the BSD-style license found in the
-     *  LICENSE file in the root directory of this source tree. An additional grant
-     *  of patent rights can be found in the PATENTS file in the same directory.
-     */
-
-function indent(state, textAfter) {
-  var levels = state.levels;
-  // If there is no stack of levels, use the current level.
-  // Otherwise, use the top level, pre-emptively dedenting for close braces.
-  var level = !levels || levels.length === 0 ? state.indentLevel : levels[levels.length - 1] - (this.electricInput.test(textAfter) ? 1 : 0);
-  return level * this.config.indentUnit;
-}
-
-/**
- * The lexer rules. These are exactly as described by the spec.
- */
-var LexRules = {
-  // All Punctuation used in JSON.
-  Punctuation: /^\[|]|\{|\}|:|,/,
-
-  // JSON Number.
-  Number: /^-?(?:0|(?:[1-9][0-9]*))(?:\.[0-9]*)?(?:[eE][+-]?[0-9]+)?/,
-
-  // JSON String.
-  String: /^"(?:[^"\\]|\\(?:"|\/|\\|b|f|n|r|t|u[0-9a-fA-F]{4}))*"?/,
-
-  // JSON literal keywords.
-  Keyword: /^true|false|null/
-};
-
-/**
- * The parser rules for JSON.
- */
-var ParseRules = {
-  Document: [(0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('Entry', (0, _RuleHelpers.p)(',')), (0, _RuleHelpers.p)('}')],
-  Entry: [(0, _RuleHelpers.t)('String', 'def'), (0, _RuleHelpers.p)(':'), 'Value'],
-  Value: function Value(token) {
-    switch (token.kind) {
-      case 'Number':
-        return 'NumberValue';
-      case 'String':
-        return 'StringValue';
-      case 'Punctuation':
-        switch (token.value) {
-          case '[':
-            return 'ListValue';
-          case '{':
-            return 'ObjectValue';
-        }
-        return null;
-      case 'Keyword':
-        switch (token.value) {
-          case 'true':case 'false':
-            return 'BooleanValue';
-          case 'null':
-            return 'NullValue';
-        }
-        return null;
-    }
-  },
-
-  NumberValue: [(0, _RuleHelpers.t)('Number', 'number')],
-  StringValue: [(0, _RuleHelpers.t)('String', 'string')],
-  BooleanValue: [(0, _RuleHelpers.t)('Keyword', 'builtin')],
-  NullValue: [(0, _RuleHelpers.t)('Keyword', 'keyword')],
-  ListValue: [(0, _RuleHelpers.p)('['), (0, _RuleHelpers.list)('Value', (0, _RuleHelpers.p)(',')), (0, _RuleHelpers.p)(']')],
-  ObjectValue: [(0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('ObjectField', (0, _RuleHelpers.p)(',')), (0, _RuleHelpers.p)('}')],
-  ObjectField: [(0, _RuleHelpers.t)('String', 'property'), (0, _RuleHelpers.p)(':'), 'Value']
-};
-},{"../utils/RuleHelpers":16,"../utils/onlineParser":23,"codemirror":38}],15:[function(require,module,exports){
+},{"./utils/Rules":16,"./utils/onlineParser":22,"codemirror":37}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4155,7 +4041,7 @@ var CharacterStream = function () {
 }();
 
 exports.default = CharacterStream;
-},{}],16:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4213,7 +4099,7 @@ function p(value, style) {
     }
   };
 }
-},{}],17:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4419,7 +4305,7 @@ function type(style) {
     }
   };
 }
-},{"../utils/RuleHelpers":16}],18:[function(require,module,exports){
+},{"../utils/RuleHelpers":15}],17:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4447,7 +4333,7 @@ function forEachState(stack, fn) {
     fn(reverseStateStack[i]);
   }
 }
-},{}],19:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4847,7 +4733,7 @@ function getFieldDef(schema, type, fieldName) {
     return type.getFields()[fieldName];
   }
 }
-},{"./Rules":17,"./forEachState":18,"./hintList":20,"./objectValues":22,"./runParser":24,"graphql":95,"graphql/type/introspection":115}],20:[function(require,module,exports){
+},{"./Rules":16,"./forEachState":17,"./hintList":19,"./objectValues":21,"./runParser":23,"graphql":95,"graphql/type/introspection":115}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4960,7 +4846,7 @@ function lexicalDistance(a, b) {
 
   return d[aLength][bLength];
 }
-},{}],21:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5267,7 +5153,7 @@ function readDigits() {
     ch();
   } while (code >= 48 && code <= 57); // 0 - 9
 }
-},{}],22:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5292,7 +5178,7 @@ function objectValues(object) {
   }
   return values;
 }
-},{}],23:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5561,7 +5447,7 @@ function lex(LexRules, stream) {
     }
   }
 }
-},{}],24:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5601,7 +5487,7 @@ function runParser(sourceText, parserOptions, callbackFn) {
     }
   });
 }
-},{"./CharacterStream":15,"./onlineParser":23}],25:[function(require,module,exports){
+},{"./CharacterStream":14,"./onlineParser":22}],24:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -5768,7 +5654,7 @@ function getTypeInfo(variableToType, tokenState) {
 
   return info;
 }
-},{"../utils/forEachState":18,"../utils/hintList":20,"codemirror":38,"graphql":95}],26:[function(require,module,exports){
+},{"../utils/forEachState":17,"../utils/hintList":19,"codemirror":37,"graphql":95}],25:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -5962,7 +5848,7 @@ function isNullish(value) {
 function mapCat(array, mapper) {
   return Array.prototype.concat.apply([], array.map(mapper));
 }
-},{"../utils/jsonParse":21,"codemirror":38,"graphql":95}],27:[function(require,module,exports){
+},{"../utils/jsonParse":20,"codemirror":37,"graphql":95}],26:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -6089,7 +5975,7 @@ function namedKey(style) {
     }
   };
 }
-},{"../utils/RuleHelpers":16,"../utils/onlineParser":23,"codemirror":38}],28:[function(require,module,exports){
+},{"../utils/RuleHelpers":15,"../utils/onlineParser":22,"codemirror":37}],27:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -6300,7 +6186,7 @@ function namedKey(style) {
   });
 });
 
-},{"../../lib/codemirror":38}],29:[function(require,module,exports){
+},{"../../lib/codemirror":37}],28:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -6493,7 +6379,7 @@ function namedKey(style) {
   }
 });
 
-},{"../../lib/codemirror":38}],30:[function(require,module,exports){
+},{"../../lib/codemirror":37}],29:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -6645,7 +6531,7 @@ function namedKey(style) {
   });
 });
 
-},{"../../lib/codemirror":38}],31:[function(require,module,exports){
+},{"../../lib/codemirror":37}],30:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -6752,7 +6638,7 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
 
 });
 
-},{"../../lib/codemirror":38}],32:[function(require,module,exports){
+},{"../../lib/codemirror":37}],31:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -6906,7 +6792,7 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
   });
 });
 
-},{"../../lib/codemirror":38}],33:[function(require,module,exports){
+},{"../../lib/codemirror":37}],32:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -7071,7 +6957,7 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
   }
 });
 
-},{"../../lib/codemirror":38,"./foldcode":32}],34:[function(require,module,exports){
+},{"../../lib/codemirror":37,"./foldcode":31}],33:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -7533,7 +7419,7 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
   CodeMirror.defineOption("hintOptions", null);
 });
 
-},{"../../lib/codemirror":38}],35:[function(require,module,exports){
+},{"../../lib/codemirror":37}],34:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -7787,7 +7673,7 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
   });
 });
 
-},{"../../lib/codemirror":38}],36:[function(require,module,exports){
+},{"../../lib/codemirror":37}],35:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -8082,7 +7968,7 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
   })
 });
 
-},{"../../lib/codemirror":38}],37:[function(require,module,exports){
+},{"../../lib/codemirror":37}],36:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -8775,7 +8661,7 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
   keyMap.sublime = mac ? keyMap.macSublime : keyMap.pcSublime;
 });
 
-},{"../addon/edit/matchbrackets":30,"../addon/search/searchcursor":36,"../lib/codemirror":38}],38:[function(require,module,exports){
+},{"../addon/edit/matchbrackets":29,"../addon/search/searchcursor":35,"../lib/codemirror":37}],37:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -18560,7 +18446,939 @@ CodeMirror.registerHelper("fold", "include", function(cm, start) {
 
 })));
 
-},{}],39:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
+// CodeMirror, copyright (c) by Marijn Haverbeke and others
+// Distributed under an MIT license: https://codemirror.net/LICENSE
+
+(function(mod) {
+  if (typeof exports == "object" && typeof module == "object") // CommonJS
+    mod(require("../../lib/codemirror"));
+  else if (typeof define == "function" && define.amd) // AMD
+    define(["../../lib/codemirror"], mod);
+  else // Plain browser env
+    mod(CodeMirror);
+})(function(CodeMirror) {
+"use strict";
+
+CodeMirror.defineMode("javascript", function(config, parserConfig) {
+  var indentUnit = config.indentUnit;
+  var statementIndent = parserConfig.statementIndent;
+  var jsonldMode = parserConfig.jsonld;
+  var jsonMode = parserConfig.json || jsonldMode;
+  var isTS = parserConfig.typescript;
+  var wordRE = parserConfig.wordCharacters || /[\w$\xa1-\uffff]/;
+
+  // Tokenizer
+
+  var keywords = function(){
+    function kw(type) {return {type: type, style: "keyword"};}
+    var A = kw("keyword a"), B = kw("keyword b"), C = kw("keyword c"), D = kw("keyword d");
+    var operator = kw("operator"), atom = {type: "atom", style: "atom"};
+
+    return {
+      "if": kw("if"), "while": A, "with": A, "else": B, "do": B, "try": B, "finally": B,
+      "return": D, "break": D, "continue": D, "new": kw("new"), "delete": C, "void": C, "throw": C,
+      "debugger": kw("debugger"), "var": kw("var"), "const": kw("var"), "let": kw("var"),
+      "function": kw("function"), "catch": kw("catch"),
+      "for": kw("for"), "switch": kw("switch"), "case": kw("case"), "default": kw("default"),
+      "in": operator, "typeof": operator, "instanceof": operator,
+      "true": atom, "false": atom, "null": atom, "undefined": atom, "NaN": atom, "Infinity": atom,
+      "this": kw("this"), "class": kw("class"), "super": kw("atom"),
+      "yield": C, "export": kw("export"), "import": kw("import"), "extends": C,
+      "await": C
+    };
+  }();
+
+  var isOperatorChar = /[+\-*&%=<>!?|~^@]/;
+  var isJsonldKeyword = /^@(context|id|value|language|type|container|list|set|reverse|index|base|vocab|graph)"/;
+
+  function readRegexp(stream) {
+    var escaped = false, next, inSet = false;
+    while ((next = stream.next()) != null) {
+      if (!escaped) {
+        if (next == "/" && !inSet) return;
+        if (next == "[") inSet = true;
+        else if (inSet && next == "]") inSet = false;
+      }
+      escaped = !escaped && next == "\\";
+    }
+  }
+
+  // Used as scratch variables to communicate multiple values without
+  // consing up tons of objects.
+  var type, content;
+  function ret(tp, style, cont) {
+    type = tp; content = cont;
+    return style;
+  }
+  function tokenBase(stream, state) {
+    var ch = stream.next();
+    if (ch == '"' || ch == "'") {
+      state.tokenize = tokenString(ch);
+      return state.tokenize(stream, state);
+    } else if (ch == "." && stream.match(/^\d[\d_]*(?:[eE][+\-]?[\d_]+)?/)) {
+      return ret("number", "number");
+    } else if (ch == "." && stream.match("..")) {
+      return ret("spread", "meta");
+    } else if (/[\[\]{}\(\),;\:\.]/.test(ch)) {
+      return ret(ch);
+    } else if (ch == "=" && stream.eat(">")) {
+      return ret("=>", "operator");
+    } else if (ch == "0" && stream.match(/^(?:x[\dA-Fa-f_]+|o[0-7_]+|b[01_]+)n?/)) {
+      return ret("number", "number");
+    } else if (/\d/.test(ch)) {
+      stream.match(/^[\d_]*(?:n|(?:\.[\d_]*)?(?:[eE][+\-]?[\d_]+)?)?/);
+      return ret("number", "number");
+    } else if (ch == "/") {
+      if (stream.eat("*")) {
+        state.tokenize = tokenComment;
+        return tokenComment(stream, state);
+      } else if (stream.eat("/")) {
+        stream.skipToEnd();
+        return ret("comment", "comment");
+      } else if (expressionAllowed(stream, state, 1)) {
+        readRegexp(stream);
+        stream.match(/^\b(([gimyus])(?![gimyus]*\2))+\b/);
+        return ret("regexp", "string-2");
+      } else {
+        stream.eat("=");
+        return ret("operator", "operator", stream.current());
+      }
+    } else if (ch == "`") {
+      state.tokenize = tokenQuasi;
+      return tokenQuasi(stream, state);
+    } else if (ch == "#") {
+      stream.skipToEnd();
+      return ret("error", "error");
+    } else if (ch == "<" && stream.match("!--") || ch == "-" && stream.match("->")) {
+      stream.skipToEnd()
+      return ret("comment", "comment")
+    } else if (isOperatorChar.test(ch)) {
+      if (ch != ">" || !state.lexical || state.lexical.type != ">") {
+        if (stream.eat("=")) {
+          if (ch == "!" || ch == "=") stream.eat("=")
+        } else if (/[<>*+\-]/.test(ch)) {
+          stream.eat(ch)
+          if (ch == ">") stream.eat(ch)
+        }
+      }
+      return ret("operator", "operator", stream.current());
+    } else if (wordRE.test(ch)) {
+      stream.eatWhile(wordRE);
+      var word = stream.current()
+      if (state.lastType != ".") {
+        if (keywords.propertyIsEnumerable(word)) {
+          var kw = keywords[word]
+          return ret(kw.type, kw.style, word)
+        }
+        if (word == "async" && stream.match(/^(\s|\/\*.*?\*\/)*[\[\(\w]/, false))
+          return ret("async", "keyword", word)
+      }
+      return ret("variable", "variable", word)
+    }
+  }
+
+  function tokenString(quote) {
+    return function(stream, state) {
+      var escaped = false, next;
+      if (jsonldMode && stream.peek() == "@" && stream.match(isJsonldKeyword)){
+        state.tokenize = tokenBase;
+        return ret("jsonld-keyword", "meta");
+      }
+      while ((next = stream.next()) != null) {
+        if (next == quote && !escaped) break;
+        escaped = !escaped && next == "\\";
+      }
+      if (!escaped) state.tokenize = tokenBase;
+      return ret("string", "string");
+    };
+  }
+
+  function tokenComment(stream, state) {
+    var maybeEnd = false, ch;
+    while (ch = stream.next()) {
+      if (ch == "/" && maybeEnd) {
+        state.tokenize = tokenBase;
+        break;
+      }
+      maybeEnd = (ch == "*");
+    }
+    return ret("comment", "comment");
+  }
+
+  function tokenQuasi(stream, state) {
+    var escaped = false, next;
+    while ((next = stream.next()) != null) {
+      if (!escaped && (next == "`" || next == "$" && stream.eat("{"))) {
+        state.tokenize = tokenBase;
+        break;
+      }
+      escaped = !escaped && next == "\\";
+    }
+    return ret("quasi", "string-2", stream.current());
+  }
+
+  var brackets = "([{}])";
+  // This is a crude lookahead trick to try and notice that we're
+  // parsing the argument patterns for a fat-arrow function before we
+  // actually hit the arrow token. It only works if the arrow is on
+  // the same line as the arguments and there's no strange noise
+  // (comments) in between. Fallback is to only notice when we hit the
+  // arrow, and not declare the arguments as locals for the arrow
+  // body.
+  function findFatArrow(stream, state) {
+    if (state.fatArrowAt) state.fatArrowAt = null;
+    var arrow = stream.string.indexOf("=>", stream.start);
+    if (arrow < 0) return;
+
+    if (isTS) { // Try to skip TypeScript return type declarations after the arguments
+      var m = /:\s*(?:\w+(?:<[^>]*>|\[\])?|\{[^}]*\})\s*$/.exec(stream.string.slice(stream.start, arrow))
+      if (m) arrow = m.index
+    }
+
+    var depth = 0, sawSomething = false;
+    for (var pos = arrow - 1; pos >= 0; --pos) {
+      var ch = stream.string.charAt(pos);
+      var bracket = brackets.indexOf(ch);
+      if (bracket >= 0 && bracket < 3) {
+        if (!depth) { ++pos; break; }
+        if (--depth == 0) { if (ch == "(") sawSomething = true; break; }
+      } else if (bracket >= 3 && bracket < 6) {
+        ++depth;
+      } else if (wordRE.test(ch)) {
+        sawSomething = true;
+      } else if (/["'\/`]/.test(ch)) {
+        for (;; --pos) {
+          if (pos == 0) return
+          var next = stream.string.charAt(pos - 1)
+          if (next == ch && stream.string.charAt(pos - 2) != "\\") { pos--; break }
+        }
+      } else if (sawSomething && !depth) {
+        ++pos;
+        break;
+      }
+    }
+    if (sawSomething && !depth) state.fatArrowAt = pos;
+  }
+
+  // Parser
+
+  var atomicTypes = {"atom": true, "number": true, "variable": true, "string": true, "regexp": true, "this": true, "jsonld-keyword": true};
+
+  function JSLexical(indented, column, type, align, prev, info) {
+    this.indented = indented;
+    this.column = column;
+    this.type = type;
+    this.prev = prev;
+    this.info = info;
+    if (align != null) this.align = align;
+  }
+
+  function inScope(state, varname) {
+    for (var v = state.localVars; v; v = v.next)
+      if (v.name == varname) return true;
+    for (var cx = state.context; cx; cx = cx.prev) {
+      for (var v = cx.vars; v; v = v.next)
+        if (v.name == varname) return true;
+    }
+  }
+
+  function parseJS(state, style, type, content, stream) {
+    var cc = state.cc;
+    // Communicate our context to the combinators.
+    // (Less wasteful than consing up a hundred closures on every call.)
+    cx.state = state; cx.stream = stream; cx.marked = null, cx.cc = cc; cx.style = style;
+
+    if (!state.lexical.hasOwnProperty("align"))
+      state.lexical.align = true;
+
+    while(true) {
+      var combinator = cc.length ? cc.pop() : jsonMode ? expression : statement;
+      if (combinator(type, content)) {
+        while(cc.length && cc[cc.length - 1].lex)
+          cc.pop()();
+        if (cx.marked) return cx.marked;
+        if (type == "variable" && inScope(state, content)) return "variable-2";
+        return style;
+      }
+    }
+  }
+
+  // Combinator utils
+
+  var cx = {state: null, column: null, marked: null, cc: null};
+  function pass() {
+    for (var i = arguments.length - 1; i >= 0; i--) cx.cc.push(arguments[i]);
+  }
+  function cont() {
+    pass.apply(null, arguments);
+    return true;
+  }
+  function inList(name, list) {
+    for (var v = list; v; v = v.next) if (v.name == name) return true
+    return false;
+  }
+  function register(varname) {
+    var state = cx.state;
+    cx.marked = "def";
+    if (state.context) {
+      if (state.lexical.info == "var" && state.context && state.context.block) {
+        // FIXME function decls are also not block scoped
+        var newContext = registerVarScoped(varname, state.context)
+        if (newContext != null) {
+          state.context = newContext
+          return
+        }
+      } else if (!inList(varname, state.localVars)) {
+        state.localVars = new Var(varname, state.localVars)
+        return
+      }
+    }
+    // Fall through means this is global
+    if (parserConfig.globalVars && !inList(varname, state.globalVars))
+      state.globalVars = new Var(varname, state.globalVars)
+  }
+  function registerVarScoped(varname, context) {
+    if (!context) {
+      return null
+    } else if (context.block) {
+      var inner = registerVarScoped(varname, context.prev)
+      if (!inner) return null
+      if (inner == context.prev) return context
+      return new Context(inner, context.vars, true)
+    } else if (inList(varname, context.vars)) {
+      return context
+    } else {
+      return new Context(context.prev, new Var(varname, context.vars), false)
+    }
+  }
+
+  function isModifier(name) {
+    return name == "public" || name == "private" || name == "protected" || name == "abstract" || name == "readonly"
+  }
+
+  // Combinators
+
+  function Context(prev, vars, block) { this.prev = prev; this.vars = vars; this.block = block }
+  function Var(name, next) { this.name = name; this.next = next }
+
+  var defaultVars = new Var("this", new Var("arguments", null))
+  function pushcontext() {
+    cx.state.context = new Context(cx.state.context, cx.state.localVars, false)
+    cx.state.localVars = defaultVars
+  }
+  function pushblockcontext() {
+    cx.state.context = new Context(cx.state.context, cx.state.localVars, true)
+    cx.state.localVars = null
+  }
+  function popcontext() {
+    cx.state.localVars = cx.state.context.vars
+    cx.state.context = cx.state.context.prev
+  }
+  popcontext.lex = true
+  function pushlex(type, info) {
+    var result = function() {
+      var state = cx.state, indent = state.indented;
+      if (state.lexical.type == "stat") indent = state.lexical.indented;
+      else for (var outer = state.lexical; outer && outer.type == ")" && outer.align; outer = outer.prev)
+        indent = outer.indented;
+      state.lexical = new JSLexical(indent, cx.stream.column(), type, null, state.lexical, info);
+    };
+    result.lex = true;
+    return result;
+  }
+  function poplex() {
+    var state = cx.state;
+    if (state.lexical.prev) {
+      if (state.lexical.type == ")")
+        state.indented = state.lexical.indented;
+      state.lexical = state.lexical.prev;
+    }
+  }
+  poplex.lex = true;
+
+  function expect(wanted) {
+    function exp(type) {
+      if (type == wanted) return cont();
+      else if (wanted == ";" || type == "}" || type == ")" || type == "]") return pass();
+      else return cont(exp);
+    };
+    return exp;
+  }
+
+  function statement(type, value) {
+    if (type == "var") return cont(pushlex("vardef", value), vardef, expect(";"), poplex);
+    if (type == "keyword a") return cont(pushlex("form"), parenExpr, statement, poplex);
+    if (type == "keyword b") return cont(pushlex("form"), statement, poplex);
+    if (type == "keyword d") return cx.stream.match(/^\s*$/, false) ? cont() : cont(pushlex("stat"), maybeexpression, expect(";"), poplex);
+    if (type == "debugger") return cont(expect(";"));
+    if (type == "{") return cont(pushlex("}"), pushblockcontext, block, poplex, popcontext);
+    if (type == ";") return cont();
+    if (type == "if") {
+      if (cx.state.lexical.info == "else" && cx.state.cc[cx.state.cc.length - 1] == poplex)
+        cx.state.cc.pop()();
+      return cont(pushlex("form"), parenExpr, statement, poplex, maybeelse);
+    }
+    if (type == "function") return cont(functiondef);
+    if (type == "for") return cont(pushlex("form"), forspec, statement, poplex);
+    if (type == "class" || (isTS && value == "interface")) {
+      cx.marked = "keyword"
+      return cont(pushlex("form", type == "class" ? type : value), className, poplex)
+    }
+    if (type == "variable") {
+      if (isTS && value == "declare") {
+        cx.marked = "keyword"
+        return cont(statement)
+      } else if (isTS && (value == "module" || value == "enum" || value == "type") && cx.stream.match(/^\s*\w/, false)) {
+        cx.marked = "keyword"
+        if (value == "enum") return cont(enumdef);
+        else if (value == "type") return cont(typename, expect("operator"), typeexpr, expect(";"));
+        else return cont(pushlex("form"), pattern, expect("{"), pushlex("}"), block, poplex, poplex)
+      } else if (isTS && value == "namespace") {
+        cx.marked = "keyword"
+        return cont(pushlex("form"), expression, statement, poplex)
+      } else if (isTS && value == "abstract") {
+        cx.marked = "keyword"
+        return cont(statement)
+      } else {
+        return cont(pushlex("stat"), maybelabel);
+      }
+    }
+    if (type == "switch") return cont(pushlex("form"), parenExpr, expect("{"), pushlex("}", "switch"), pushblockcontext,
+                                      block, poplex, poplex, popcontext);
+    if (type == "case") return cont(expression, expect(":"));
+    if (type == "default") return cont(expect(":"));
+    if (type == "catch") return cont(pushlex("form"), pushcontext, maybeCatchBinding, statement, poplex, popcontext);
+    if (type == "export") return cont(pushlex("stat"), afterExport, poplex);
+    if (type == "import") return cont(pushlex("stat"), afterImport, poplex);
+    if (type == "async") return cont(statement)
+    if (value == "@") return cont(expression, statement)
+    return pass(pushlex("stat"), expression, expect(";"), poplex);
+  }
+  function maybeCatchBinding(type) {
+    if (type == "(") return cont(funarg, expect(")"))
+  }
+  function expression(type, value) {
+    return expressionInner(type, value, false);
+  }
+  function expressionNoComma(type, value) {
+    return expressionInner(type, value, true);
+  }
+  function parenExpr(type) {
+    if (type != "(") return pass()
+    return cont(pushlex(")"), expression, expect(")"), poplex)
+  }
+  function expressionInner(type, value, noComma) {
+    if (cx.state.fatArrowAt == cx.stream.start) {
+      var body = noComma ? arrowBodyNoComma : arrowBody;
+      if (type == "(") return cont(pushcontext, pushlex(")"), commasep(funarg, ")"), poplex, expect("=>"), body, popcontext);
+      else if (type == "variable") return pass(pushcontext, pattern, expect("=>"), body, popcontext);
+    }
+
+    var maybeop = noComma ? maybeoperatorNoComma : maybeoperatorComma;
+    if (atomicTypes.hasOwnProperty(type)) return cont(maybeop);
+    if (type == "function") return cont(functiondef, maybeop);
+    if (type == "class" || (isTS && value == "interface")) { cx.marked = "keyword"; return cont(pushlex("form"), classExpression, poplex); }
+    if (type == "keyword c" || type == "async") return cont(noComma ? expressionNoComma : expression);
+    if (type == "(") return cont(pushlex(")"), maybeexpression, expect(")"), poplex, maybeop);
+    if (type == "operator" || type == "spread") return cont(noComma ? expressionNoComma : expression);
+    if (type == "[") return cont(pushlex("]"), arrayLiteral, poplex, maybeop);
+    if (type == "{") return contCommasep(objprop, "}", null, maybeop);
+    if (type == "quasi") return pass(quasi, maybeop);
+    if (type == "new") return cont(maybeTarget(noComma));
+    if (type == "import") return cont(expression);
+    return cont();
+  }
+  function maybeexpression(type) {
+    if (type.match(/[;\}\)\],]/)) return pass();
+    return pass(expression);
+  }
+
+  function maybeoperatorComma(type, value) {
+    if (type == ",") return cont(expression);
+    return maybeoperatorNoComma(type, value, false);
+  }
+  function maybeoperatorNoComma(type, value, noComma) {
+    var me = noComma == false ? maybeoperatorComma : maybeoperatorNoComma;
+    var expr = noComma == false ? expression : expressionNoComma;
+    if (type == "=>") return cont(pushcontext, noComma ? arrowBodyNoComma : arrowBody, popcontext);
+    if (type == "operator") {
+      if (/\+\+|--/.test(value) || isTS && value == "!") return cont(me);
+      if (isTS && value == "<" && cx.stream.match(/^([^>]|<.*?>)*>\s*\(/, false))
+        return cont(pushlex(">"), commasep(typeexpr, ">"), poplex, me);
+      if (value == "?") return cont(expression, expect(":"), expr);
+      return cont(expr);
+    }
+    if (type == "quasi") { return pass(quasi, me); }
+    if (type == ";") return;
+    if (type == "(") return contCommasep(expressionNoComma, ")", "call", me);
+    if (type == ".") return cont(property, me);
+    if (type == "[") return cont(pushlex("]"), maybeexpression, expect("]"), poplex, me);
+    if (isTS && value == "as") { cx.marked = "keyword"; return cont(typeexpr, me) }
+    if (type == "regexp") {
+      cx.state.lastType = cx.marked = "operator"
+      cx.stream.backUp(cx.stream.pos - cx.stream.start - 1)
+      return cont(expr)
+    }
+  }
+  function quasi(type, value) {
+    if (type != "quasi") return pass();
+    if (value.slice(value.length - 2) != "${") return cont(quasi);
+    return cont(expression, continueQuasi);
+  }
+  function continueQuasi(type) {
+    if (type == "}") {
+      cx.marked = "string-2";
+      cx.state.tokenize = tokenQuasi;
+      return cont(quasi);
+    }
+  }
+  function arrowBody(type) {
+    findFatArrow(cx.stream, cx.state);
+    return pass(type == "{" ? statement : expression);
+  }
+  function arrowBodyNoComma(type) {
+    findFatArrow(cx.stream, cx.state);
+    return pass(type == "{" ? statement : expressionNoComma);
+  }
+  function maybeTarget(noComma) {
+    return function(type) {
+      if (type == ".") return cont(noComma ? targetNoComma : target);
+      else if (type == "variable" && isTS) return cont(maybeTypeArgs, noComma ? maybeoperatorNoComma : maybeoperatorComma)
+      else return pass(noComma ? expressionNoComma : expression);
+    };
+  }
+  function target(_, value) {
+    if (value == "target") { cx.marked = "keyword"; return cont(maybeoperatorComma); }
+  }
+  function targetNoComma(_, value) {
+    if (value == "target") { cx.marked = "keyword"; return cont(maybeoperatorNoComma); }
+  }
+  function maybelabel(type) {
+    if (type == ":") return cont(poplex, statement);
+    return pass(maybeoperatorComma, expect(";"), poplex);
+  }
+  function property(type) {
+    if (type == "variable") {cx.marked = "property"; return cont();}
+  }
+  function objprop(type, value) {
+    if (type == "async") {
+      cx.marked = "property";
+      return cont(objprop);
+    } else if (type == "variable" || cx.style == "keyword") {
+      cx.marked = "property";
+      if (value == "get" || value == "set") return cont(getterSetter);
+      var m // Work around fat-arrow-detection complication for detecting typescript typed arrow params
+      if (isTS && cx.state.fatArrowAt == cx.stream.start && (m = cx.stream.match(/^\s*:\s*/, false)))
+        cx.state.fatArrowAt = cx.stream.pos + m[0].length
+      return cont(afterprop);
+    } else if (type == "number" || type == "string") {
+      cx.marked = jsonldMode ? "property" : (cx.style + " property");
+      return cont(afterprop);
+    } else if (type == "jsonld-keyword") {
+      return cont(afterprop);
+    } else if (isTS && isModifier(value)) {
+      cx.marked = "keyword"
+      return cont(objprop)
+    } else if (type == "[") {
+      return cont(expression, maybetype, expect("]"), afterprop);
+    } else if (type == "spread") {
+      return cont(expressionNoComma, afterprop);
+    } else if (value == "*") {
+      cx.marked = "keyword";
+      return cont(objprop);
+    } else if (type == ":") {
+      return pass(afterprop)
+    }
+  }
+  function getterSetter(type) {
+    if (type != "variable") return pass(afterprop);
+    cx.marked = "property";
+    return cont(functiondef);
+  }
+  function afterprop(type) {
+    if (type == ":") return cont(expressionNoComma);
+    if (type == "(") return pass(functiondef);
+  }
+  function commasep(what, end, sep) {
+    function proceed(type, value) {
+      if (sep ? sep.indexOf(type) > -1 : type == ",") {
+        var lex = cx.state.lexical;
+        if (lex.info == "call") lex.pos = (lex.pos || 0) + 1;
+        return cont(function(type, value) {
+          if (type == end || value == end) return pass()
+          return pass(what)
+        }, proceed);
+      }
+      if (type == end || value == end) return cont();
+      if (sep && sep.indexOf(";") > -1) return pass(what)
+      return cont(expect(end));
+    }
+    return function(type, value) {
+      if (type == end || value == end) return cont();
+      return pass(what, proceed);
+    };
+  }
+  function contCommasep(what, end, info) {
+    for (var i = 3; i < arguments.length; i++)
+      cx.cc.push(arguments[i]);
+    return cont(pushlex(end, info), commasep(what, end), poplex);
+  }
+  function block(type) {
+    if (type == "}") return cont();
+    return pass(statement, block);
+  }
+  function maybetype(type, value) {
+    if (isTS) {
+      if (type == ":") return cont(typeexpr);
+      if (value == "?") return cont(maybetype);
+    }
+  }
+  function maybetypeOrIn(type, value) {
+    if (isTS && (type == ":" || value == "in")) return cont(typeexpr)
+  }
+  function mayberettype(type) {
+    if (isTS && type == ":") {
+      if (cx.stream.match(/^\s*\w+\s+is\b/, false)) return cont(expression, isKW, typeexpr)
+      else return cont(typeexpr)
+    }
+  }
+  function isKW(_, value) {
+    if (value == "is") {
+      cx.marked = "keyword"
+      return cont()
+    }
+  }
+  function typeexpr(type, value) {
+    if (value == "keyof" || value == "typeof" || value == "infer") {
+      cx.marked = "keyword"
+      return cont(value == "typeof" ? expressionNoComma : typeexpr)
+    }
+    if (type == "variable" || value == "void") {
+      cx.marked = "type"
+      return cont(afterType)
+    }
+    if (value == "|" || value == "&") return cont(typeexpr)
+    if (type == "string" || type == "number" || type == "atom") return cont(afterType);
+    if (type == "[") return cont(pushlex("]"), commasep(typeexpr, "]", ","), poplex, afterType)
+    if (type == "{") return cont(pushlex("}"), commasep(typeprop, "}", ",;"), poplex, afterType)
+    if (type == "(") return cont(commasep(typearg, ")"), maybeReturnType, afterType)
+    if (type == "<") return cont(commasep(typeexpr, ">"), typeexpr)
+  }
+  function maybeReturnType(type) {
+    if (type == "=>") return cont(typeexpr)
+  }
+  function typeprop(type, value) {
+    if (type == "variable" || cx.style == "keyword") {
+      cx.marked = "property"
+      return cont(typeprop)
+    } else if (value == "?" || type == "number" || type == "string") {
+      return cont(typeprop)
+    } else if (type == ":") {
+      return cont(typeexpr)
+    } else if (type == "[") {
+      return cont(expect("variable"), maybetypeOrIn, expect("]"), typeprop)
+    } else if (type == "(") {
+      return pass(functiondecl, typeprop)
+    }
+  }
+  function typearg(type, value) {
+    if (type == "variable" && cx.stream.match(/^\s*[?:]/, false) || value == "?") return cont(typearg)
+    if (type == ":") return cont(typeexpr)
+    if (type == "spread") return cont(typearg)
+    return pass(typeexpr)
+  }
+  function afterType(type, value) {
+    if (value == "<") return cont(pushlex(">"), commasep(typeexpr, ">"), poplex, afterType)
+    if (value == "|" || type == "." || value == "&") return cont(typeexpr)
+    if (type == "[") return cont(typeexpr, expect("]"), afterType)
+    if (value == "extends" || value == "implements") { cx.marked = "keyword"; return cont(typeexpr) }
+    if (value == "?") return cont(typeexpr, expect(":"), typeexpr)
+  }
+  function maybeTypeArgs(_, value) {
+    if (value == "<") return cont(pushlex(">"), commasep(typeexpr, ">"), poplex, afterType)
+  }
+  function typeparam() {
+    return pass(typeexpr, maybeTypeDefault)
+  }
+  function maybeTypeDefault(_, value) {
+    if (value == "=") return cont(typeexpr)
+  }
+  function vardef(_, value) {
+    if (value == "enum") {cx.marked = "keyword"; return cont(enumdef)}
+    return pass(pattern, maybetype, maybeAssign, vardefCont);
+  }
+  function pattern(type, value) {
+    if (isTS && isModifier(value)) { cx.marked = "keyword"; return cont(pattern) }
+    if (type == "variable") { register(value); return cont(); }
+    if (type == "spread") return cont(pattern);
+    if (type == "[") return contCommasep(eltpattern, "]");
+    if (type == "{") return contCommasep(proppattern, "}");
+  }
+  function proppattern(type, value) {
+    if (type == "variable" && !cx.stream.match(/^\s*:/, false)) {
+      register(value);
+      return cont(maybeAssign);
+    }
+    if (type == "variable") cx.marked = "property";
+    if (type == "spread") return cont(pattern);
+    if (type == "}") return pass();
+    if (type == "[") return cont(expression, expect(']'), expect(':'), proppattern);
+    return cont(expect(":"), pattern, maybeAssign);
+  }
+  function eltpattern() {
+    return pass(pattern, maybeAssign)
+  }
+  function maybeAssign(_type, value) {
+    if (value == "=") return cont(expressionNoComma);
+  }
+  function vardefCont(type) {
+    if (type == ",") return cont(vardef);
+  }
+  function maybeelse(type, value) {
+    if (type == "keyword b" && value == "else") return cont(pushlex("form", "else"), statement, poplex);
+  }
+  function forspec(type, value) {
+    if (value == "await") return cont(forspec);
+    if (type == "(") return cont(pushlex(")"), forspec1, poplex);
+  }
+  function forspec1(type) {
+    if (type == "var") return cont(vardef, forspec2);
+    if (type == "variable") return cont(forspec2);
+    return pass(forspec2)
+  }
+  function forspec2(type, value) {
+    if (type == ")") return cont()
+    if (type == ";") return cont(forspec2)
+    if (value == "in" || value == "of") { cx.marked = "keyword"; return cont(expression, forspec2) }
+    return pass(expression, forspec2)
+  }
+  function functiondef(type, value) {
+    if (value == "*") {cx.marked = "keyword"; return cont(functiondef);}
+    if (type == "variable") {register(value); return cont(functiondef);}
+    if (type == "(") return cont(pushcontext, pushlex(")"), commasep(funarg, ")"), poplex, mayberettype, statement, popcontext);
+    if (isTS && value == "<") return cont(pushlex(">"), commasep(typeparam, ">"), poplex, functiondef)
+  }
+  function functiondecl(type, value) {
+    if (value == "*") {cx.marked = "keyword"; return cont(functiondecl);}
+    if (type == "variable") {register(value); return cont(functiondecl);}
+    if (type == "(") return cont(pushcontext, pushlex(")"), commasep(funarg, ")"), poplex, mayberettype, popcontext);
+    if (isTS && value == "<") return cont(pushlex(">"), commasep(typeparam, ">"), poplex, functiondecl)
+  }
+  function typename(type, value) {
+    if (type == "keyword" || type == "variable") {
+      cx.marked = "type"
+      return cont(typename)
+    } else if (value == "<") {
+      return cont(pushlex(">"), commasep(typeparam, ">"), poplex)
+    }
+  }
+  function funarg(type, value) {
+    if (value == "@") cont(expression, funarg)
+    if (type == "spread") return cont(funarg);
+    if (isTS && isModifier(value)) { cx.marked = "keyword"; return cont(funarg); }
+    if (isTS && type == "this") return cont(maybetype, maybeAssign)
+    return pass(pattern, maybetype, maybeAssign);
+  }
+  function classExpression(type, value) {
+    // Class expressions may have an optional name.
+    if (type == "variable") return className(type, value);
+    return classNameAfter(type, value);
+  }
+  function className(type, value) {
+    if (type == "variable") {register(value); return cont(classNameAfter);}
+  }
+  function classNameAfter(type, value) {
+    if (value == "<") return cont(pushlex(">"), commasep(typeparam, ">"), poplex, classNameAfter)
+    if (value == "extends" || value == "implements" || (isTS && type == ",")) {
+      if (value == "implements") cx.marked = "keyword";
+      return cont(isTS ? typeexpr : expression, classNameAfter);
+    }
+    if (type == "{") return cont(pushlex("}"), classBody, poplex);
+  }
+  function classBody(type, value) {
+    if (type == "async" ||
+        (type == "variable" &&
+         (value == "static" || value == "get" || value == "set" || (isTS && isModifier(value))) &&
+         cx.stream.match(/^\s+[\w$\xa1-\uffff]/, false))) {
+      cx.marked = "keyword";
+      return cont(classBody);
+    }
+    if (type == "variable" || cx.style == "keyword") {
+      cx.marked = "property";
+      return cont(isTS ? classfield : functiondef, classBody);
+    }
+    if (type == "number" || type == "string") return cont(isTS ? classfield : functiondef, classBody);
+    if (type == "[")
+      return cont(expression, maybetype, expect("]"), isTS ? classfield : functiondef, classBody)
+    if (value == "*") {
+      cx.marked = "keyword";
+      return cont(classBody);
+    }
+    if (isTS && type == "(") return pass(functiondecl, classBody)
+    if (type == ";" || type == ",") return cont(classBody);
+    if (type == "}") return cont();
+    if (value == "@") return cont(expression, classBody)
+  }
+  function classfield(type, value) {
+    if (value == "?") return cont(classfield)
+    if (type == ":") return cont(typeexpr, maybeAssign)
+    if (value == "=") return cont(expressionNoComma)
+    var context = cx.state.lexical.prev, isInterface = context && context.info == "interface"
+    return pass(isInterface ? functiondecl : functiondef)
+  }
+  function afterExport(type, value) {
+    if (value == "*") { cx.marked = "keyword"; return cont(maybeFrom, expect(";")); }
+    if (value == "default") { cx.marked = "keyword"; return cont(expression, expect(";")); }
+    if (type == "{") return cont(commasep(exportField, "}"), maybeFrom, expect(";"));
+    return pass(statement);
+  }
+  function exportField(type, value) {
+    if (value == "as") { cx.marked = "keyword"; return cont(expect("variable")); }
+    if (type == "variable") return pass(expressionNoComma, exportField);
+  }
+  function afterImport(type) {
+    if (type == "string") return cont();
+    if (type == "(") return pass(expression);
+    return pass(importSpec, maybeMoreImports, maybeFrom);
+  }
+  function importSpec(type, value) {
+    if (type == "{") return contCommasep(importSpec, "}");
+    if (type == "variable") register(value);
+    if (value == "*") cx.marked = "keyword";
+    return cont(maybeAs);
+  }
+  function maybeMoreImports(type) {
+    if (type == ",") return cont(importSpec, maybeMoreImports)
+  }
+  function maybeAs(_type, value) {
+    if (value == "as") { cx.marked = "keyword"; return cont(importSpec); }
+  }
+  function maybeFrom(_type, value) {
+    if (value == "from") { cx.marked = "keyword"; return cont(expression); }
+  }
+  function arrayLiteral(type) {
+    if (type == "]") return cont();
+    return pass(commasep(expressionNoComma, "]"));
+  }
+  function enumdef() {
+    return pass(pushlex("form"), pattern, expect("{"), pushlex("}"), commasep(enummember, "}"), poplex, poplex)
+  }
+  function enummember() {
+    return pass(pattern, maybeAssign);
+  }
+
+  function isContinuedStatement(state, textAfter) {
+    return state.lastType == "operator" || state.lastType == "," ||
+      isOperatorChar.test(textAfter.charAt(0)) ||
+      /[,.]/.test(textAfter.charAt(0));
+  }
+
+  function expressionAllowed(stream, state, backUp) {
+    return state.tokenize == tokenBase &&
+      /^(?:operator|sof|keyword [bcd]|case|new|export|default|spread|[\[{}\(,;:]|=>)$/.test(state.lastType) ||
+      (state.lastType == "quasi" && /\{\s*$/.test(stream.string.slice(0, stream.pos - (backUp || 0))))
+  }
+
+  // Interface
+
+  return {
+    startState: function(basecolumn) {
+      var state = {
+        tokenize: tokenBase,
+        lastType: "sof",
+        cc: [],
+        lexical: new JSLexical((basecolumn || 0) - indentUnit, 0, "block", false),
+        localVars: parserConfig.localVars,
+        context: parserConfig.localVars && new Context(null, null, false),
+        indented: basecolumn || 0
+      };
+      if (parserConfig.globalVars && typeof parserConfig.globalVars == "object")
+        state.globalVars = parserConfig.globalVars;
+      return state;
+    },
+
+    token: function(stream, state) {
+      if (stream.sol()) {
+        if (!state.lexical.hasOwnProperty("align"))
+          state.lexical.align = false;
+        state.indented = stream.indentation();
+        findFatArrow(stream, state);
+      }
+      if (state.tokenize != tokenComment && stream.eatSpace()) return null;
+      var style = state.tokenize(stream, state);
+      if (type == "comment") return style;
+      state.lastType = type == "operator" && (content == "++" || content == "--") ? "incdec" : type;
+      return parseJS(state, style, type, content, stream);
+    },
+
+    indent: function(state, textAfter) {
+      if (state.tokenize == tokenComment) return CodeMirror.Pass;
+      if (state.tokenize != tokenBase) return 0;
+      var firstChar = textAfter && textAfter.charAt(0), lexical = state.lexical, top
+      // Kludge to prevent 'maybelse' from blocking lexical scope pops
+      if (!/^\s*else\b/.test(textAfter)) for (var i = state.cc.length - 1; i >= 0; --i) {
+        var c = state.cc[i];
+        if (c == poplex) lexical = lexical.prev;
+        else if (c != maybeelse) break;
+      }
+      while ((lexical.type == "stat" || lexical.type == "form") &&
+             (firstChar == "}" || ((top = state.cc[state.cc.length - 1]) &&
+                                   (top == maybeoperatorComma || top == maybeoperatorNoComma) &&
+                                   !/^[,\.=+\-*:?[\(]/.test(textAfter))))
+        lexical = lexical.prev;
+      if (statementIndent && lexical.type == ")" && lexical.prev.type == "stat")
+        lexical = lexical.prev;
+      var type = lexical.type, closing = firstChar == type;
+
+      if (type == "vardef") return lexical.indented + (state.lastType == "operator" || state.lastType == "," ? lexical.info.length + 1 : 0);
+      else if (type == "form" && firstChar == "{") return lexical.indented;
+      else if (type == "form") return lexical.indented + indentUnit;
+      else if (type == "stat")
+        return lexical.indented + (isContinuedStatement(state, textAfter) ? statementIndent || indentUnit : 0);
+      else if (lexical.info == "switch" && !closing && parserConfig.doubleIndentSwitch != false)
+        return lexical.indented + (/^(?:case|default)\b/.test(textAfter) ? indentUnit : 2 * indentUnit);
+      else if (lexical.align) return lexical.column + (closing ? 0 : 1);
+      else return lexical.indented + (closing ? 0 : indentUnit);
+    },
+
+    electricInput: /^\s*(?:case .*?:|default:|\{|\})$/,
+    blockCommentStart: jsonMode ? null : "/*",
+    blockCommentEnd: jsonMode ? null : "*/",
+    blockCommentContinue: jsonMode ? null : " * ",
+    lineComment: jsonMode ? null : "//",
+    fold: "brace",
+    closeBrackets: "()[]{}''\"\"``",
+
+    helperType: jsonMode ? "json" : "javascript",
+    jsonldMode: jsonldMode,
+    jsonMode: jsonMode,
+
+    expressionAllowed: expressionAllowed,
+
+    skipExpression: function(state) {
+      var top = state.cc[state.cc.length - 1]
+      if (top == expression || top == expressionNoComma) state.cc.pop()
+    }
+  };
+});
+
+CodeMirror.registerHelper("wordChars", "javascript", /[\w$]/);
+
+CodeMirror.defineMIME("text/javascript", "javascript");
+CodeMirror.defineMIME("text/ecmascript", "javascript");
+CodeMirror.defineMIME("application/javascript", "javascript");
+CodeMirror.defineMIME("application/x-javascript", "javascript");
+CodeMirror.defineMIME("application/ecmascript", "javascript");
+CodeMirror.defineMIME("application/json", {name: "javascript", json: true});
+CodeMirror.defineMIME("application/x-json", {name: "javascript", json: true});
+CodeMirror.defineMIME("application/ld+json", {name: "javascript", jsonld: true});
+CodeMirror.defineMIME("text/typescript", { name: "javascript", typescript: true });
+CodeMirror.defineMIME("application/typescript", { name: "javascript", typescript: true });
+
+});
+
+},{"../../lib/codemirror":37}],39:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -22116,13 +22934,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *     top bar. Typically this will be a "close" button for temporary explorer.
  *
  */
+
 var DocExplorer = exports.DocExplorer = function (_React$Component) {
   _inherits(DocExplorer, _React$Component);
 
   function DocExplorer() {
     _classCallCheck(this, DocExplorer);
 
-    var _this = _possibleConstructorReturn(this, (DocExplorer.__proto__ || Object.getPrototypeOf(DocExplorer)).call(this));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(DocExplorer).call(this));
 
     _this.handleNavBackClick = function () {
       _this.setState({ navStack: _this.state.navStack.slice(0, -1) });
@@ -22284,7 +23103,7 @@ var SearchBox = function (_React$Component2) {
   function SearchBox(props) {
     _classCallCheck(this, SearchBox);
 
-    var _this2 = _possibleConstructorReturn(this, (SearchBox.__proto__ || Object.getPrototypeOf(SearchBox)).call(this, props));
+    var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(SearchBox).call(this, props));
 
     _this2.handleChange = function (event) {
       _this2.setState({ value: event.target.value });
@@ -22341,7 +23160,7 @@ var SearchDoc = function (_React$Component3) {
   function SearchDoc() {
     _classCallCheck(this, SearchDoc);
 
-    return _possibleConstructorReturn(this, (SearchDoc.__proto__ || Object.getPrototypeOf(SearchDoc)).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(SearchDoc).apply(this, arguments));
   }
 
   _createClass(SearchDoc, [{
@@ -22533,7 +23352,7 @@ var SchemaDoc = function (_React$Component4) {
   function SchemaDoc() {
     _classCallCheck(this, SchemaDoc);
 
-    return _possibleConstructorReturn(this, (SchemaDoc.__proto__ || Object.getPrototypeOf(SchemaDoc)).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(SchemaDoc).apply(this, arguments));
   }
 
   _createClass(SchemaDoc, [{
@@ -22552,7 +23371,7 @@ var SchemaDoc = function (_React$Component4) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(MarkdownContent, {
+        _react2.default.createElement(Description, {
           className: 'doc-type-description',
           markdown: 'A GraphQL schema provides a root type for each kind of operation.'
         }),
@@ -22622,7 +23441,7 @@ var TypeDoc = function (_React$Component5) {
   function TypeDoc() {
     _classCallCheck(this, TypeDoc);
 
-    return _possibleConstructorReturn(this, (TypeDoc.__proto__ || Object.getPrototypeOf(TypeDoc)).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(TypeDoc).apply(this, arguments));
   }
 
   _createClass(TypeDoc, [{
@@ -22725,12 +23544,7 @@ var TypeDoc = function (_React$Component5) {
                   argsDef
                 ), ')'],
                 ': ',
-                _react2.default.createElement(TypeLink, { type: field.type, onClick: onClickType }),
-                field.isDeprecated && _react2.default.createElement(
-                  'span',
-                  { className: 'doc-alert-text' },
-                  ' (DEPRECATED)'
-                )
+                _react2.default.createElement(TypeLink, { type: field.type, onClick: onClickType })
               );
             })
           );
@@ -22754,20 +23568,11 @@ var TypeDoc = function (_React$Component5) {
               _react2.default.createElement(
                 'div',
                 { className: 'enum-value' },
-                value.name,
-                value.isDeprecated && _react2.default.createElement(
-                  'span',
-                  { className: 'doc-alert-text' },
-                  ' (DEPRECATED)'
-                )
+                value.name
               ),
-              _react2.default.createElement(MarkdownContent, {
+              _react2.default.createElement(Description, {
                 className: 'doc-value-description',
                 markdown: value.description
-              }),
-              value.deprecationReason && _react2.default.createElement(MarkdownContent, {
-                className: 'doc-alert-text',
-                markdown: value.deprecationReason
               })
             );
           })
@@ -22777,7 +23582,7 @@ var TypeDoc = function (_React$Component5) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(MarkdownContent, {
+        _react2.default.createElement(Description, {
           className: 'doc-type-description',
           markdown: type.description || 'No Description'
         }),
@@ -22808,7 +23613,7 @@ var FieldDoc = function (_React$Component6) {
   function FieldDoc() {
     _classCallCheck(this, FieldDoc);
 
-    return _possibleConstructorReturn(this, (FieldDoc.__proto__ || Object.getPrototypeOf(FieldDoc)).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(FieldDoc).apply(this, arguments));
   }
 
   _createClass(FieldDoc, [{
@@ -22848,7 +23653,7 @@ var FieldDoc = function (_React$Component6) {
                 ': ',
                 _react2.default.createElement(TypeLink, { type: arg.type, onClick: _this8.props.onClickType })
               ),
-              _react2.default.createElement(MarkdownContent, {
+              _react2.default.createElement(Description, {
                 className: 'doc-value-description',
                 markdown: arg.description
               })
@@ -22860,13 +23665,9 @@ var FieldDoc = function (_React$Component6) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(MarkdownContent, {
+        _react2.default.createElement(Description, {
           className: 'doc-type-description',
           markdown: field.description || 'No Description'
-        }),
-        field.deprecationReason && _react2.default.createElement(MarkdownContent, {
-          className: 'doc-alert-text',
-          markdown: field.deprecationReason
         }),
         _react2.default.createElement(
           'div',
@@ -22900,7 +23701,7 @@ var TypeLink = function (_React$Component7) {
   function TypeLink() {
     _classCallCheck(this, TypeLink);
 
-    return _possibleConstructorReturn(this, (TypeLink.__proto__ || Object.getPrototypeOf(TypeLink)).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(TypeLink).apply(this, arguments));
   }
 
   _createClass(TypeLink, [{
@@ -22951,18 +23752,18 @@ function renderType(type, _onClick) {
   );
 }
 
-// Renders arbitrary markdown content
+// Renders a description
 
-var MarkdownContent = function (_React$Component8) {
-  _inherits(MarkdownContent, _React$Component8);
+var Description = function (_React$Component8) {
+  _inherits(Description, _React$Component8);
 
-  function MarkdownContent() {
-    _classCallCheck(this, MarkdownContent);
+  function Description() {
+    _classCallCheck(this, Description);
 
-    return _possibleConstructorReturn(this, (MarkdownContent.__proto__ || Object.getPrototypeOf(MarkdownContent)).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(Description).apply(this, arguments));
   }
 
-  _createClass(MarkdownContent, [{
+  _createClass(Description, [{
     key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps) {
       return this.props.markdown !== nextProps.markdown;
@@ -22983,10 +23784,10 @@ var MarkdownContent = function (_React$Component8) {
     }
   }]);
 
-  return MarkdownContent;
+  return Description;
 }(_react2.default.Component);
 
-MarkdownContent.propTypes = {
+Description.propTypes = {
   markdown: _react.PropTypes.string,
   className: _react.PropTypes.string
 };
@@ -23024,13 +23825,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * What a nice round shiny button. Shows a drop-down when there are multiple
  * queries to run.
  */
+
 var ExecuteButton = exports.ExecuteButton = function (_React$Component) {
   _inherits(ExecuteButton, _React$Component);
 
   function ExecuteButton(props) {
     _classCallCheck(this, ExecuteButton);
 
-    var _this = _possibleConstructorReturn(this, (ExecuteButton.__proto__ || Object.getPrototypeOf(ExecuteButton)).call(this, props));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ExecuteButton).call(this, props));
 
     _this._onClick = function () {
       if (_this.props.isRunning) {
@@ -23056,11 +23858,7 @@ var ExecuteButton = exports.ExecuteButton = function (_React$Component) {
         } else {
           document.removeEventListener('mouseup', _onMouseUp);
           _onMouseUp = null;
-          var isOptionsMenuClicked = downTarget.parentNode.compareDocumentPosition(upEvent.target) & Node.DOCUMENT_POSITION_CONTAINED_BY;
-          if (!isOptionsMenuClicked) {
-            // menu calls setState if it was clicked
-            _this.setState({ optionsOpen: false });
-          }
+          _this.setState({ optionsOpen: false });
         }
       };
 
@@ -23301,6 +24099,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *
  * [Storage]: https://developer.mozilla.org/en-US/docs/Web/API/Storage
  */
+
 var GraphiQL = exports.GraphiQL = function (_React$Component) {
   _inherits(GraphiQL, _React$Component);
 
@@ -23308,7 +24107,8 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
     _classCallCheck(this, GraphiQL);
 
     // Ensure props are correct
-    var _this = _possibleConstructorReturn(this, (GraphiQL.__proto__ || Object.getPrototypeOf(GraphiQL)).call(this, props));
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(GraphiQL).call(this, props));
 
     _initialiseProps.call(_this);
 
@@ -23368,6 +24168,9 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
 
       // Utility for keeping CodeMirror correctly sized.
       this.codeMirrorSizer = new _CodeMirrorSizer2.default();
+
+      // Add shortcut for running a query.
+      document.addEventListener('keydown', this._keyHandler, true);
     }
   }, {
     key: 'componentWillReceiveProps',
@@ -23425,6 +24228,8 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
       this._storageSet('editorFlex', this.state.editorFlex);
       this._storageSet('variableEditorHeight', this.state.variableEditorHeight);
       this._storageSet('docExplorerWidth', this.state.docExplorerWidth);
+
+      document.removeEventListener('keydown', this._keyHandler, true);
     }
   }, {
     key: 'render',
@@ -23462,7 +24267,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'graphiql-container' },
+        { id: 'graphiql-container' },
         _react2.default.createElement(
           'div',
           { className: 'editorWrap' },
@@ -23512,8 +24317,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
                 schema: this.state.schema,
                 value: this.state.query,
                 onEdit: this.handleEditQuery,
-                onHintInformationRender: this.handleHintInformationRender,
-                onRunQuery: this.handleEditorRunQuery
+                onHintInformationRender: this.handleHintInformationRender
               }),
               _react2.default.createElement(
                 'div',
@@ -23533,8 +24337,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
                   value: this.state.variables,
                   variableToType: this.state.variableToType,
                   onEdit: this.handleEditVariables,
-                  onHintInformationRender: this.handleHintInformationRender,
-                  onRunQuery: this.handleEditorRunQuery
+                  onHintInformationRender: this.handleHintInformationRender
                 })
               )
             ),
@@ -23687,7 +24490,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
           _this4.setState({ response: responseString });
         }
       }).catch(function (error) {
-        _this4.setState({ response: error && String(error.stack || error) });
+        _this4.setState({ response: error && (error.stack || String(error)) });
       });
     }
   }, {
@@ -23716,7 +24519,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
         fetch.then(cb).catch(function (error) {
           _this5.setState({
             isWaitingForResponse: false,
-            response: error && String(error.stack || error)
+            response: error && (error.stack || String(error))
           });
         });
       } else if (isObservable(fetch)) {
@@ -23728,7 +24531,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
           error: function error(_error) {
             _this5.setState({
               isWaitingForResponse: false,
-              response: _error && String(_error.stack || _error),
+              response: _error && (_error.stack || String(_error)),
               subscription: null
             });
           },
@@ -23880,6 +24683,14 @@ var _initialiseProps = function _initialiseProps() {
     return;
   };
 
+  this._keyHandler = function (event) {
+    // "Run Query" event.
+    if ((event.metaKey || event.ctrlKey) && event.keyCode === 13) {
+      event.preventDefault();
+      _this6._runQueryAtCursor();
+    }
+  };
+
   this.handlePrettifyQuery = function () {
     var query = (0, _graphql.print)((0, _graphql.parse)(_this6.state.query));
     var editor = _this6.queryEditorComponent.getCodeMirror();
@@ -23929,10 +24740,6 @@ var _initialiseProps = function _initialiseProps() {
       elem.removeEventListener('DOMNodeRemoved', _onRemoveFn);
       elem.removeEventListener('click', _this6._onClickHintInformation);
     });
-  };
-
-  this.handleEditorRunQuery = function () {
-    _this6._runQueryAtCursor();
   };
 
   this._onClickHintInformation = function (event) {
@@ -24175,7 +24982,33 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _codemirror = require('codemirror');
+
+var _codemirror2 = _interopRequireDefault(_codemirror);
+
 var _graphql = require('graphql');
+
+require('codemirror/addon/hint/show-hint');
+
+require('codemirror/addon/comment/comment');
+
+require('codemirror/addon/edit/matchbrackets');
+
+require('codemirror/addon/edit/closebrackets');
+
+require('codemirror/addon/fold/foldgutter');
+
+require('codemirror/addon/fold/brace-fold');
+
+require('codemirror/addon/lint/lint');
+
+require('codemirror/keymap/sublime');
+
+require('codemirror-graphql/hint');
+
+require('codemirror-graphql/lint');
+
+require('codemirror-graphql/mode');
 
 var _onHasCompletion = require('../utility/onHasCompletion');
 
@@ -24207,6 +25040,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *   - onEdit: A function called when the editor changes, given the edited text.
  *
  */
+
 var QueryEditor = exports.QueryEditor = function (_React$Component) {
   _inherits(QueryEditor, _React$Component);
 
@@ -24216,7 +25050,8 @@ var QueryEditor = exports.QueryEditor = function (_React$Component) {
     // Keep a cached version of the value, this cache will be updated when the
     // editor is updated, which can later be used to protect the editor from
     // unnecessary updates during the update lifecycle.
-    var _this = _possibleConstructorReturn(this, (QueryEditor.__proto__ || Object.getPrototypeOf(QueryEditor)).call(this));
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(QueryEditor).call(this));
 
     _this._onKeyUp = function (cm, event) {
       var code = event.keyCode;
@@ -24252,22 +25087,7 @@ var QueryEditor = exports.QueryEditor = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      // Lazily require to ensure requiring GraphiQL outside of a Browser context
-      // does not produce an error.
-      var CodeMirror = require('codemirror');
-      require('codemirror/addon/hint/show-hint');
-      require('codemirror/addon/comment/comment');
-      require('codemirror/addon/edit/matchbrackets');
-      require('codemirror/addon/edit/closebrackets');
-      require('codemirror/addon/fold/foldgutter');
-      require('codemirror/addon/fold/brace-fold');
-      require('codemirror/addon/lint/lint');
-      require('codemirror/keymap/sublime');
-      require('codemirror-graphql/hint');
-      require('codemirror-graphql/lint');
-      require('codemirror-graphql/mode');
-
-      this.editor = CodeMirror(_reactDom2.default.findDOMNode(this), {
+      this.editor = (0, _codemirror2.default)(_reactDom2.default.findDOMNode(this), {
         value: this.props.value || '',
         lineNumbers: true,
         tabSize: 2,
@@ -24303,17 +25123,6 @@ var QueryEditor = exports.QueryEditor = function (_React$Component) {
             return _this2.editor.showHint({ completeSingle: true });
           },
 
-          'Cmd-Enter': function CmdEnter() {
-            if (_this2.props.onRunQuery) {
-              _this2.props.onRunQuery();
-            }
-          },
-          'Ctrl-Enter': function CtrlEnter() {
-            if (_this2.props.onRunQuery) {
-              _this2.props.onRunQuery();
-            }
-          },
-
           // Editor improvements
           'Ctrl-Left': 'goSubwordLeft',
           'Ctrl-Right': 'goSubwordRight',
@@ -24329,8 +25138,6 @@ var QueryEditor = exports.QueryEditor = function (_React$Component) {
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps) {
-      var CodeMirror = require('codemirror');
-
       // Ensure the changes caused by this update are not interpretted as
       // user-input changes which could otherwise result in an infinite
       // event loop.
@@ -24338,7 +25145,7 @@ var QueryEditor = exports.QueryEditor = function (_React$Component) {
       if (this.props.schema !== prevProps.schema) {
         this.editor.options.lint.schema = this.props.schema;
         this.editor.options.hintOptions.schema = this.props.schema;
-        CodeMirror.signal(this.editor, 'change', this.editor);
+        _codemirror2.default.signal(this.editor, 'change', this.editor);
       }
       if (this.props.value !== prevProps.value && this.props.value !== this.cachedValue) {
         this.cachedValue = this.props.value;
@@ -24385,10 +25192,9 @@ QueryEditor.propTypes = {
   schema: _react.PropTypes.instanceOf(_graphql.GraphQLSchema),
   value: _react.PropTypes.string,
   onEdit: _react.PropTypes.func,
-  onHintInformationRender: _react.PropTypes.func,
-  onRunQuery: _react.PropTypes.func
+  onHintInformationRender: _react.PropTypes.func
 };
-},{"../utility/onHasCompletion":85,"codemirror":38,"codemirror-graphql/hint":11,"codemirror-graphql/lint":12,"codemirror-graphql/mode":13,"codemirror/addon/comment/comment":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/keymap/sublime":37,"graphql":95,"react":331,"react-dom":176}],73:[function(require,module,exports){
+},{"../utility/onHasCompletion":85,"codemirror":37,"codemirror-graphql/hint":11,"codemirror-graphql/lint":12,"codemirror-graphql/mode":13,"codemirror/addon/comment/comment":27,"codemirror/addon/edit/closebrackets":28,"codemirror/addon/edit/matchbrackets":29,"codemirror/addon/fold/brace-fold":30,"codemirror/addon/fold/foldgutter":32,"codemirror/addon/hint/show-hint":33,"codemirror/addon/lint/lint":34,"codemirror/keymap/sublime":36,"graphql":95,"react":331,"react-dom":176}],73:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24405,6 +25211,18 @@ var _react2 = _interopRequireDefault(_react);
 var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _codemirror = require('codemirror');
+
+var _codemirror2 = _interopRequireDefault(_codemirror);
+
+require('codemirror/addon/fold/foldgutter');
+
+require('codemirror/addon/fold/brace-fold');
+
+require('codemirror/keymap/sublime');
+
+require('codemirror/mode/javascript/javascript');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24430,32 +25248,28 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *   - value: The text of the editor.
  *
  */
+
 var ResultViewer = exports.ResultViewer = function (_React$Component) {
   _inherits(ResultViewer, _React$Component);
 
   function ResultViewer() {
     _classCallCheck(this, ResultViewer);
 
-    return _possibleConstructorReturn(this, (ResultViewer.__proto__ || Object.getPrototypeOf(ResultViewer)).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(ResultViewer).apply(this, arguments));
   }
 
   _createClass(ResultViewer, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      // Lazily require to ensure requiring GraphiQL outside of a Browser context
-      // does not produce an error.
-      var CodeMirror = require('codemirror');
-      require('codemirror/addon/fold/foldgutter');
-      require('codemirror/addon/fold/brace-fold');
-      require('codemirror/keymap/sublime');
-      require('codemirror-graphql/results/mode');
-
-      this.viewer = CodeMirror(_reactDom2.default.findDOMNode(this), {
+      this.viewer = (0, _codemirror2.default)(_reactDom2.default.findDOMNode(this), {
         lineWrapping: true,
         value: this.props.value || '',
         readOnly: true,
         theme: 'graphiql',
-        mode: 'graphql-results',
+        mode: {
+          name: 'javascript',
+          json: true
+        },
         keyMap: 'sublime',
         foldGutter: {
           minFoldSize: 4
@@ -24509,7 +25323,7 @@ var ResultViewer = exports.ResultViewer = function (_React$Component) {
 ResultViewer.propTypes = {
   value: _react.PropTypes.string
 };
-},{"codemirror":38,"codemirror-graphql/results/mode":14,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/keymap/sublime":37,"react":331,"react-dom":176}],74:[function(require,module,exports){
+},{"codemirror":37,"codemirror/addon/fold/brace-fold":30,"codemirror/addon/fold/foldgutter":32,"codemirror/keymap/sublime":36,"codemirror/mode/javascript/javascript":38,"react":331,"react-dom":176}],74:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24542,13 +25356,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *
  * A button to use within the Toolbar.
  */
+
 var ToolbarButton = exports.ToolbarButton = function (_React$Component) {
   _inherits(ToolbarButton, _React$Component);
 
   function ToolbarButton(props) {
     _classCallCheck(this, ToolbarButton);
 
-    var _this = _possibleConstructorReturn(this, (ToolbarButton.__proto__ || Object.getPrototypeOf(ToolbarButton)).call(this, props));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ToolbarButton).call(this, props));
 
     _this.handleClick = function (e) {
       e.preventDefault();
@@ -24606,6 +25421,30 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _codemirror = require('codemirror');
+
+var _codemirror2 = _interopRequireDefault(_codemirror);
+
+require('codemirror/addon/hint/show-hint');
+
+require('codemirror/addon/edit/matchbrackets');
+
+require('codemirror/addon/edit/closebrackets');
+
+require('codemirror/addon/fold/brace-fold');
+
+require('codemirror/addon/fold/foldgutter');
+
+require('codemirror/addon/lint/lint');
+
+require('codemirror/keymap/sublime');
+
+require('codemirror-graphql/variables/hint');
+
+require('codemirror-graphql/variables/lint');
+
+require('codemirror-graphql/variables/mode');
+
 var _onHasCompletion = require('../utility/onHasCompletion');
 
 var _onHasCompletion2 = _interopRequireDefault(_onHasCompletion);
@@ -24636,6 +25475,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *   - onEdit: A function called when the editor changes, given the edited text.
  *
  */
+
 var VariableEditor = exports.VariableEditor = function (_React$Component) {
   _inherits(VariableEditor, _React$Component);
 
@@ -24645,7 +25485,8 @@ var VariableEditor = exports.VariableEditor = function (_React$Component) {
     // Keep a cached version of the value, this cache will be updated when the
     // editor is updated, which can later be used to protect the editor from
     // unnecessary updates during the update lifecycle.
-    var _this = _possibleConstructorReturn(this, (VariableEditor.__proto__ || Object.getPrototypeOf(VariableEditor)).call(this));
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(VariableEditor).call(this));
 
     _this._onKeyUp = function (cm, event) {
       var code = event.keyCode;
@@ -24680,21 +25521,7 @@ var VariableEditor = exports.VariableEditor = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      // Lazily require to ensure requiring GraphiQL outside of a Browser context
-      // does not produce an error.
-      var CodeMirror = require('codemirror');
-      require('codemirror/addon/hint/show-hint');
-      require('codemirror/addon/edit/matchbrackets');
-      require('codemirror/addon/edit/closebrackets');
-      require('codemirror/addon/fold/brace-fold');
-      require('codemirror/addon/fold/foldgutter');
-      require('codemirror/addon/lint/lint');
-      require('codemirror/keymap/sublime');
-      require('codemirror-graphql/variables/hint');
-      require('codemirror-graphql/variables/lint');
-      require('codemirror-graphql/variables/mode');
-
-      this.editor = CodeMirror(_reactDom2.default.findDOMNode(this), {
+      this.editor = (0, _codemirror2.default)(_reactDom2.default.findDOMNode(this), {
         value: this.props.value || '',
         lineNumbers: true,
         tabSize: 2,
@@ -24728,17 +25555,6 @@ var VariableEditor = exports.VariableEditor = function (_React$Component) {
             return _this2.editor.showHint({ completeSingle: false });
           },
 
-          'Cmd-Enter': function CmdEnter() {
-            if (_this2.props.onRunQuery) {
-              _this2.props.onRunQuery();
-            }
-          },
-          'Ctrl-Enter': function CtrlEnter() {
-            if (_this2.props.onRunQuery) {
-              _this2.props.onRunQuery();
-            }
-          },
-
           // Editor improvements
           'Ctrl-Left': 'goSubwordLeft',
           'Ctrl-Right': 'goSubwordRight',
@@ -24754,8 +25570,6 @@ var VariableEditor = exports.VariableEditor = function (_React$Component) {
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps) {
-      var CodeMirror = require('codemirror');
-
       // Ensure the changes caused by this update are not interpretted as
       // user-input changes which could otherwise result in an infinite
       // event loop.
@@ -24763,7 +25577,7 @@ var VariableEditor = exports.VariableEditor = function (_React$Component) {
       if (this.props.variableToType !== prevProps.variableToType) {
         this.editor.options.lint.variableToType = this.props.variableToType;
         this.editor.options.hintOptions.variableToType = this.props.variableToType;
-        CodeMirror.signal(this.editor, 'change', this.editor);
+        _codemirror2.default.signal(this.editor, 'change', this.editor);
       }
       if (this.props.value !== prevProps.value && this.props.value !== this.cachedValue) {
         this.cachedValue = this.props.value;
@@ -24804,10 +25618,9 @@ VariableEditor.propTypes = {
   variableToType: _react.PropTypes.object,
   value: _react.PropTypes.string,
   onEdit: _react.PropTypes.func,
-  onHintInformationRender: _react.PropTypes.func,
-  onRunQuery: _react.PropTypes.func
+  onHintInformationRender: _react.PropTypes.func
 };
-},{"../utility/onHasCompletion":85,"codemirror":38,"codemirror-graphql/variables/hint":25,"codemirror-graphql/variables/lint":26,"codemirror-graphql/variables/mode":27,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/keymap/sublime":37,"react":331,"react-dom":176}],76:[function(require,module,exports){
+},{"../utility/onHasCompletion":85,"codemirror":37,"codemirror-graphql/variables/hint":24,"codemirror-graphql/variables/lint":25,"codemirror-graphql/variables/mode":26,"codemirror/addon/edit/closebrackets":28,"codemirror/addon/edit/matchbrackets":29,"codemirror/addon/fold/brace-fold":30,"codemirror/addon/fold/foldgutter":32,"codemirror/addon/hint/show-hint":33,"codemirror/addon/lint/lint":34,"codemirror/keymap/sublime":36,"react":331,"react-dom":176}],76:[function(require,module,exports){
 'use strict';
 
 /**
@@ -24847,6 +25660,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * When a containing DOM node's height has been altered, trigger a resize of
  * the related CodeMirror instance so that it is always correctly sized.
  */
+
 var CodeMirrorSizer = function () {
   function CodeMirrorSizer() {
     _classCallCheck(this, CodeMirrorSizer);
@@ -25300,6 +26114,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = onHasCompletion;
 
+var _codemirror = require('codemirror');
+
+var _codemirror2 = _interopRequireDefault(_codemirror);
+
 var _graphql = require('graphql');
 
 var _marked = require('marked');
@@ -25312,23 +26130,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Render a custom UI for CodeMirror's hint which includes additional info
  * about the type and description for the selected context.
  */
-/**
- *  Copyright (c) 2015, Facebook, Inc.
- *  All rights reserved.
- *
- *  This source code is licensed under the BSD-style license found in the
- *  LICENSE file in the root directory of this source tree. An additional grant
- *  of patent rights can be found in the PATENTS file in the same directory.
- */
-
 function onHasCompletion(cm, data, onHintInformationRender) {
-  var CodeMirror = require('codemirror');
-
   var wrapper = void 0;
   var information = void 0;
 
   // When a hint result is selected, we touch the UI.
-  CodeMirror.on(data, 'select', function (ctx, el) {
+  _codemirror2.default.on(data, 'select', function (ctx, el) {
     // Only the first time (usually when the hint UI is first displayed)
     // do we create the wrapping node.
     if (!wrapper) {
@@ -25400,7 +26207,14 @@ function onHasCompletion(cm, data, onHintInformationRender) {
       onHintInformationRender(information);
     }
   });
-}
+} /**
+   *  Copyright (c) 2015, Facebook, Inc.
+   *  All rights reserved.
+   *
+   *  This source code is licensed under the BSD-style license found in the
+   *  LICENSE file in the root directory of this source tree. An additional grant
+   *  of patent rights can be found in the PATENTS file in the same directory.
+   */
 
 function renderType(type) {
   if (type instanceof _graphql.GraphQLNonNull) {
@@ -25411,7 +26225,7 @@ function renderType(type) {
   }
   return '<a class="typeName">' + type.name + '</a>';
 }
-},{"codemirror":38,"graphql":95,"marked":167}],86:[function(require,module,exports){
+},{"codemirror":37,"graphql":95,"marked":167}],86:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
