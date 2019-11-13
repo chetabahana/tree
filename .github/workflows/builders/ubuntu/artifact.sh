@@ -13,6 +13,7 @@ gcloud info
 python --version
 
 echo -e "\n$hr\nHOME PROFILES\n$hr"
+echo $HOME
 ls -al $HOME
 
 echo -e "$hr\nROOT PROFILES\n$hr"
