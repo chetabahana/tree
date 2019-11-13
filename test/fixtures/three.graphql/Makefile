@@ -1,7 +1,8 @@
+
 default: build
 
 node_modules:
-	npm i -f
+	npm install
 
 build: node_modules
 	npm run build
