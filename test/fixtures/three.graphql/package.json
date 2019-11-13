@@ -25,7 +25,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chetabahana/node.git"
+    "url": "https://github.com/chetabahana/node.git",
+    "source": "https://github.com/jwerle/three.graphql"
   },
   "scripts": {
     "test": "budo test -p 3000 -s --- -t brfs",
