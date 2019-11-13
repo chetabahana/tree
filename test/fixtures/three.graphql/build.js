@@ -267,7 +267,7 @@ ready(() => {
   }
 })
 
-},{"./":3,"domready":44,"graphiql":173,"react":535,"react-dom":380,"vm":543}],3:[function(require,module,exports){
+},{"./":3,"domready":44,"graphiql":173,"react":531,"react-dom":376,"vm":539}],3:[function(require,module,exports){
 'use strict'
 
 /**
@@ -335,7 +335,7 @@ function createWrapper(opts, ctx) {
   }
 }
 
-},{"./context":1,"./schema":548,"domready":44,"graphql":218}],4:[function(require,module,exports){
+},{"./context":1,"./schema":544,"domready":44,"graphql":214}],4:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -845,7 +845,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"object-assign":370,"util/":7}],5:[function(require,module,exports){
+},{"object-assign":366,"util/":7}],5:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -1467,7 +1467,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":6,"_process":372,"inherits":5}],8:[function(require,module,exports){
+},{"./support/isBuffer":6,"_process":368,"inherits":5}],8:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -3424,7 +3424,7 @@ var hexSliceLookupTable = (function () {
 })()
 
 }).call(this,require("buffer").Buffer)
-},{"base64-js":8,"buffer":9,"ieee754":308}],10:[function(require,module,exports){
+},{"base64-js":8,"buffer":9,"ieee754":304}],10:[function(require,module,exports){
 
 /**
  * slice() reference.
@@ -3747,7 +3747,7 @@ _codemirror2.default.registerHelper('hint', 'graphql', function (editor, options
 
   return results;
 });
-},{"codemirror":40,"graphql-language-service-interface":193}],12:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-interface":194}],12:[function(require,module,exports){
 'use strict';
 
 var _graphql = require('graphql');
@@ -3940,7 +3940,7 @@ function text(into, content, className, options, ref) {
     into.appendChild(document.createTextNode(content));
   }
 }
-},{"./utils/SchemaReference":17,"./utils/getTypeInfo":19,"./utils/info-addon":21,"codemirror":40,"graphql":218}],13:[function(require,module,exports){
+},{"./utils/SchemaReference":17,"./utils/getTypeInfo":19,"./utils/info-addon":21,"codemirror":40,"graphql":214}],13:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -4061,7 +4061,7 @@ _codemirror2.default.registerHelper('lint', 'graphql', function (text, options) 
 
   return results;
 });
-},{"codemirror":40,"graphql-language-service-interface":193}],15:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-interface":194}],15:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -4133,7 +4133,7 @@ function indent(state, textAfter) {
   var level = !levels || levels.length === 0 ? state.indentLevel : levels[levels.length - 1] - (this.electricInput.test(textAfter) ? 1 : 0);
   return level * this.config.indentUnit;
 }
-},{"codemirror":40,"graphql-language-service-parser":202}],16:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-parser":198}],16:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -4246,7 +4246,7 @@ var ParseRules = {
   ObjectValue: [(0, _graphqlLanguageServiceParser.p)('{'), (0, _graphqlLanguageServiceParser.list)('ObjectField', (0, _graphqlLanguageServiceParser.p)(',')), (0, _graphqlLanguageServiceParser.p)('}')],
   ObjectField: [(0, _graphqlLanguageServiceParser.t)('String', 'property'), (0, _graphqlLanguageServiceParser.p)(':'), 'Value']
 };
-},{"codemirror":40,"graphql-language-service-parser":202}],17:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-parser":198}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4321,7 +4321,7 @@ function getTypeReference(typeInfo, type) {
 function isMetaField(fieldDef) {
   return fieldDef.name.slice(0, 2) === '__';
 }
-},{"graphql":218}],18:[function(require,module,exports){
+},{"graphql":214}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4489,7 +4489,7 @@ function find(array, predicate) {
     }
   }
 }
-},{"./forEachState":18,"graphql":218,"graphql/type/introspection":250}],20:[function(require,module,exports){
+},{"./forEachState":18,"graphql":214,"graphql/type/introspection":246}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5399,7 +5399,7 @@ function getTypeInfo(variableToType, tokenState) {
 
   return info;
 }
-},{"../utils/forEachState":18,"../utils/hintList":20,"codemirror":40,"graphql":218}],25:[function(require,module,exports){
+},{"../utils/forEachState":18,"../utils/hintList":20,"codemirror":40,"graphql":214}],25:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -5577,7 +5577,7 @@ function isNullish(value) {
 function mapCat(array, mapper) {
   return Array.prototype.concat.apply([], array.map(mapper));
 }
-},{"../utils/jsonParse":22,"codemirror":40,"graphql":218}],26:[function(require,module,exports){
+},{"../utils/jsonParse":22,"codemirror":40,"graphql":214}],26:[function(require,module,exports){
 'use strict';
 
 var _codemirror = require('codemirror');
@@ -5703,7 +5703,7 @@ function namedKey(style) {
     }
   };
 }
-},{"codemirror":40,"graphql-language-service-parser":202}],27:[function(require,module,exports){
+},{"codemirror":40,"graphql-language-service-parser":198}],27:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
@@ -19581,7 +19581,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 module.exports = factory;
 
 }).call(this,require('_process'))
-},{"_process":372,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":370}],42:[function(require,module,exports){
+},{"_process":368,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":366}],42:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -19770,7 +19770,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":43,"_process":372}],43:[function(require,module,exports){
+},{"./debug":43,"_process":368}],43:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -19974,7 +19974,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":369}],44:[function(require,module,exports){
+},{"ms":365}],44:[function(require,module,exports){
 /*!
   * domready (c) Dustin Diaz 2014 - License MIT
   */
@@ -20085,7 +20085,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":53,"_process":372}],47:[function(require,module,exports){
+},{"./emptyFunction":53,"_process":368}],47:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20352,7 +20352,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 }).call(this,require('_process'))
-},{"./invariant":61,"_process":372}],52:[function(require,module,exports){
+},{"./invariant":61,"_process":368}],52:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -20436,7 +20436,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":47,"./createArrayFromMixed":51,"./getMarkupWrap":57,"./invariant":61,"_process":372}],53:[function(require,module,exports){
+},{"./ExecutionEnvironment":47,"./createArrayFromMixed":51,"./getMarkupWrap":57,"./invariant":61,"_process":368}],53:[function(require,module,exports){
 "use strict";
 
 /**
@@ -20493,7 +20493,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":372}],55:[function(require,module,exports){
+},{"_process":368}],55:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20650,7 +20650,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":47,"./invariant":61,"_process":372}],58:[function(require,module,exports){
+},{"./ExecutionEnvironment":47,"./invariant":61,"_process":368}],58:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20811,7 +20811,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":372}],62:[function(require,module,exports){
+},{"_process":368}],62:[function(require,module,exports){
 'use strict';
 
 /**
@@ -21069,7 +21069,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":53,"_process":372}],69:[function(require,module,exports){
+},{"./emptyFunction":53,"_process":368}],69:[function(require,module,exports){
 /**
  * Module Dependencies
  */
@@ -35197,10 +35197,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -35404,7 +35403,7 @@ var DocExplorer = exports.DocExplorer = function (_React$Component) {
 DocExplorer.propTypes = {
   schema: _propTypes2.default.instanceOf(_graphql.GraphQLSchema)
 };
-},{"./DocExplorer/FieldDoc":155,"./DocExplorer/SchemaDoc":157,"./DocExplorer/SearchBox":158,"./DocExplorer/SearchResults":159,"./DocExplorer/TypeDoc":160,"graphql":218,"prop-types":377,"react":535}],153:[function(require,module,exports){
+},{"./DocExplorer/FieldDoc":155,"./DocExplorer/SchemaDoc":157,"./DocExplorer/SearchBox":158,"./DocExplorer/SearchResults":159,"./DocExplorer/TypeDoc":160,"graphql":214,"prop-types":373,"react":531}],153:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35431,10 +35430,9 @@ var _DefaultValue2 = _interopRequireDefault(_DefaultValue);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -35462,7 +35460,7 @@ Argument.propTypes = {
   onClickType: _propTypes2.default.func.isRequired,
   showDefaultValue: _propTypes2.default.bool
 };
-},{"./DefaultValue":154,"./TypeLink":161,"prop-types":377,"react":535}],154:[function(require,module,exports){
+},{"./DefaultValue":154,"./TypeLink":161,"prop-types":373,"react":531}],154:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35502,17 +35500,16 @@ function DefaultValue(_ref) {
 
   return null;
 } /**
-   *  Copyright (c) Facebook, Inc.
-   *  All rights reserved.
+   *  Copyright (c) Facebook, Inc. and its affiliates.
    *
-   *  This source code is licensed under the license found in the
+   *  This source code is licensed under the MIT license found in the
    *  LICENSE file in the root directory of this source tree.
    */
 
 DefaultValue.propTypes = {
   field: _propTypes2.default.object.isRequired
 };
-},{"graphql":218,"prop-types":377,"react":535}],155:[function(require,module,exports){
+},{"graphql":214,"prop-types":373,"react":531}],155:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35548,10 +35545,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -35638,7 +35634,7 @@ FieldDoc.propTypes = {
   onClickType: _propTypes2.default.func
 };
 exports.default = FieldDoc;
-},{"./Argument":153,"./MarkdownContent":156,"./TypeLink":161,"prop-types":377,"react":535}],156:[function(require,module,exports){
+},{"./Argument":153,"./MarkdownContent":156,"./TypeLink":161,"prop-types":373,"react":531}],156:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35666,10 +35662,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -35712,7 +35707,7 @@ MarkdownContent.propTypes = {
   className: _propTypes2.default.string
 };
 exports.default = MarkdownContent;
-},{"markdown-it":312,"prop-types":377,"react":535}],157:[function(require,module,exports){
+},{"markdown-it":308,"prop-types":373,"react":531}],157:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35744,10 +35739,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -35838,7 +35832,7 @@ SchemaDoc.propTypes = {
   onClickType: _propTypes2.default.func
 };
 exports.default = SchemaDoc;
-},{"./MarkdownContent":156,"./TypeLink":161,"prop-types":377,"react":535}],158:[function(require,module,exports){
+},{"./MarkdownContent":156,"./TypeLink":161,"prop-types":373,"react":531}],158:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35866,10 +35860,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -35927,7 +35920,7 @@ SearchBox.propTypes = {
   onSearch: _propTypes2.default.func
 };
 exports.default = SearchBox;
-},{"../../utility/debounce":177,"prop-types":377,"react":535}],159:[function(require,module,exports){
+},{"../../utility/debounce":177,"prop-types":373,"react":531}],159:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35959,10 +35952,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -36160,7 +36152,7 @@ function isMatch(sourceText, searchValue) {
     return sourceText.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
   }
 }
-},{"./Argument":153,"./TypeLink":161,"prop-types":377,"react":535}],160:[function(require,module,exports){
+},{"./Argument":153,"./TypeLink":161,"prop-types":373,"react":531}],160:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36202,10 +36194,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -36471,7 +36462,7 @@ function EnumValue(_ref2) {
 EnumValue.propTypes = {
   value: _propTypes2.default.object
 };
-},{"./Argument":153,"./DefaultValue":154,"./MarkdownContent":156,"./TypeLink":161,"graphql":218,"prop-types":377,"react":535}],161:[function(require,module,exports){
+},{"./Argument":153,"./DefaultValue":154,"./MarkdownContent":156,"./TypeLink":161,"graphql":214,"prop-types":373,"react":531}],161:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36497,10 +36488,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -36561,7 +36551,7 @@ function renderType(type, _onClick) {
     type.name
   );
 }
-},{"graphql":218,"prop-types":377,"react":535}],162:[function(require,module,exports){
+},{"graphql":214,"prop-types":373,"react":531}],162:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36586,10 +36576,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -36669,7 +36658,7 @@ var ExecuteButton = exports.ExecuteButton = function (_React$Component) {
               'li',
               {
                 key: operation.name ? operation.name.value : '*',
-                className: operation === highlight && 'selected' || null,
+                className: operation === highlight ? 'selected' : undefined,
                 onMouseOver: function onMouseOver() {
                   return _this2.setState({ highlight: operation });
                 },
@@ -36732,7 +36721,7 @@ ExecuteButton.propTypes = {
   isRunning: _propTypes2.default.bool,
   operations: _propTypes2.default.array
 };
-},{"prop-types":377,"react":535}],163:[function(require,module,exports){
+},{"prop-types":373,"react":531}],163:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -36809,6 +36798,8 @@ var _fillLeafs2 = require('../utility/fillLeafs');
 
 var _elementPosition = require('../utility/elementPosition');
 
+var _mergeAst = require('../utility/mergeAst');
+
 var _introspectionQueries = require('../utility/introspectionQueries');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -36818,10 +36809,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -37007,6 +36997,11 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
           label: 'Prettify'
         }),
         _react2.default.createElement(_ToolbarButton.ToolbarButton, {
+          onClick: this.handleMergeQuery,
+          title: 'Merge Query (Shift-Ctrl-M)',
+          label: 'Merge'
+        }),
+        _react2.default.createElement(_ToolbarButton.ToolbarButton, {
           onClick: this.handleToggleHistory,
           title: 'Show History',
           label: 'History'
@@ -37109,6 +37104,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
                 onHintInformationRender: this.handleHintInformationRender,
                 onClickReference: this.handleClickReference,
                 onPrettifyQuery: this.handlePrettifyQuery,
+                onMergeQuery: this.handleMergeQuery,
                 onRunQuery: this.handleEditorRunQuery,
                 editorTheme: this.props.editorTheme
               }),
@@ -37132,6 +37128,7 @@ var GraphiQL = exports.GraphiQL = function (_React$Component) {
                   onEdit: this.handleEditVariables,
                   onHintInformationRender: this.handleHintInformationRender,
                   onPrettifyQuery: this.handlePrettifyQuery,
+                  onMergeQuery: this.handleMergeQuery,
                   onRunQuery: this.handleEditorRunQuery,
                   editorTheme: this.props.editorTheme
                 })
@@ -37539,6 +37536,18 @@ var _initialiseProps = function _initialiseProps() {
     editor.setValue((0, _graphql.print)((0, _graphql.parse)(editor.getValue())));
   };
 
+  this.handleMergeQuery = function () {
+    var editor = _this6.getQueryEditor();
+    var query = editor.getValue();
+
+    if (!query) {
+      return;
+    }
+
+    var ast = (0, _graphql.parse)(query);
+    editor.setValue((0, _graphql.print)((0, _mergeAst.mergeAst)(ast)));
+  };
+
   this.handleEditQuery = (0, _debounce2.default)(100, function (value) {
     var queryFacts = _this6._updateQueryFacts(value, _this6.state.operationName, _this6.state.operations, _this6.state.schema);
     _this6.setState(_extends({
@@ -37844,7 +37853,7 @@ GraphiQL.Footer = function GraphiQLFooter(props) {
   );
 };
 
-var defaultQuery = '# Welcome to GraphiQL\n#\n# GraphiQL is an in-browser tool for writing, validating, and\n# testing GraphQL queries.\n#\n# Type queries into this side of the screen, and you will see intelligent\n# typeaheads aware of the current GraphQL type schema and live syntax and\n# validation errors highlighted within the text.\n#\n# GraphQL queries typically start with a "{" character. Lines that starts\n# with a # are ignored.\n#\n# An example GraphQL query might look like:\n#\n#     {\n#       field(arg: "value") {\n#         subField\n#       }\n#     }\n#\n# Keyboard shortcuts:\n#\n#  Prettify Query:  Shift-Ctrl-P (or press the prettify button above)\n#\n#       Run Query:  Ctrl-Enter (or press the play button above)\n#\n#   Auto Complete:  Ctrl-Space (or just start typing)\n#\n\n';
+var defaultQuery = '# Welcome to GraphiQL\n#\n# GraphiQL is an in-browser tool for writing, validating, and\n# testing GraphQL queries.\n#\n# Type queries into this side of the screen, and you will see intelligent\n# typeaheads aware of the current GraphQL type schema and live syntax and\n# validation errors highlighted within the text.\n#\n# GraphQL queries typically start with a "{" character. Lines that starts\n# with a # are ignored.\n#\n# An example GraphQL query might look like:\n#\n#     {\n#       field(arg: "value") {\n#         subField\n#       }\n#     }\n#\n# Keyboard shortcuts:\n#\n#  Prettify Query:  Shift-Ctrl-P (or press the prettify button above)\n#\n#     Merge Query:  Shift-Ctrl-M (or press the merge button above)\n#\n#       Run Query:  Ctrl-Enter (or press the play button above)\n#\n#   Auto Complete:  Ctrl-Space (or just start typing)\n#\n\n';
 
 // Duck-type promise detection.
 function isPromise(value) {
@@ -37871,7 +37880,7 @@ function isObservable(value) {
   return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && typeof value.subscribe === 'function';
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../utility/CodeMirrorSizer":174,"../utility/StorageAPI":176,"../utility/debounce":177,"../utility/elementPosition":178,"../utility/fillLeafs":179,"../utility/find":180,"../utility/getQueryFacts":181,"../utility/getSelectedOperationName":182,"../utility/introspectionQueries":183,"./DocExplorer":152,"./ExecuteButton":162,"./QueryEditor":165,"./QueryHistory":166,"./ResultViewer":167,"./ToolbarButton":168,"./ToolbarGroup":169,"./ToolbarMenu":170,"./ToolbarSelect":171,"./VariableEditor":172,"graphql":218,"prop-types":377,"react":535,"react-dom":380}],164:[function(require,module,exports){
+},{"../utility/CodeMirrorSizer":174,"../utility/StorageAPI":176,"../utility/debounce":177,"../utility/elementPosition":178,"../utility/fillLeafs":179,"../utility/find":180,"../utility/getQueryFacts":181,"../utility/getSelectedOperationName":182,"../utility/introspectionQueries":183,"../utility/mergeAst":184,"./DocExplorer":152,"./ExecuteButton":162,"./QueryEditor":165,"./QueryHistory":166,"./ResultViewer":167,"./ToolbarButton":168,"./ToolbarGroup":169,"./ToolbarMenu":170,"./ToolbarSelect":171,"./VariableEditor":172,"graphql":214,"prop-types":373,"react":531,"react-dom":376}],164:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -37895,10 +37904,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -37910,35 +37918,57 @@ var HistoryQuery = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (HistoryQuery.__proto__ || Object.getPrototypeOf(HistoryQuery)).call(this, props));
 
-    var starVisibility = _this.props.favorite ? 'visible' : 'hidden';
-    _this.state = { starVisibility: starVisibility };
+    _this.editField = null;
+
+    _this.state = {
+      showButtons: false,
+      editable: false
+    };
     return _this;
   }
 
   _createClass(HistoryQuery, [{
     key: 'render',
     value: function render() {
-      if (this.props.favorite && this.state.starVisibility === 'hidden') {
-        this.setState({ starVisibility: 'visible' });
-      }
-      var starStyles = {
-        float: 'right',
-        visibility: this.state.starVisibility
+      var _this2 = this;
+
+      var editStyles = {
+        display: this.state.showButtons ? '' : 'none',
+        marginLeft: '10px'
       };
-      var displayName = this.props.operationName || this.props.query.split('\n').filter(function (line) {
+      var starStyles = {
+        display: this.props.favorite || this.state.showButtons ? '' : 'none',
+        marginLeft: '10px'
+      };
+      var displayName = this.props.label || this.props.operationName || this.props.query.split('\n').filter(function (line) {
         return line.indexOf('#') !== 0;
       }).join('');
       var starIcon = this.props.favorite ? '\u2605' : '\u2606';
       return _react2.default.createElement(
         'p',
         {
+          className: this.state.editable ? 'editable' : undefined,
           onClick: this.handleClick.bind(this),
           onMouseEnter: this.handleMouseEnter.bind(this),
           onMouseLeave: this.handleMouseLeave.bind(this) },
+        this.state.editable ? _react2.default.createElement('input', {
+          type: 'text',
+          defaultValue: this.props.label,
+          ref: function ref(c) {
+            return _this2.editField = c;
+          },
+          onBlur: this.handleFieldBlur.bind(this),
+          onKeyDown: this.handleFieldKeyDown.bind(this),
+          placeholder: 'Type a label'
+        }) : _react2.default.createElement(
+          'span',
+          { className: 'history-label' },
+          displayName
+        ),
         _react2.default.createElement(
           'span',
-          null,
-          displayName
+          { onClick: this.handleEditClick.bind(this), style: editStyles },
+          '\u270E'
         ),
         _react2.default.createElement(
           'span',
@@ -37950,27 +37980,51 @@ var HistoryQuery = function (_React$Component) {
   }, {
     key: 'handleMouseEnter',
     value: function handleMouseEnter() {
-      if (!this.props.favorite) {
-        this.setState({ starVisibility: 'visible' });
-      }
+      this.setState({ showButtons: true });
     }
   }, {
     key: 'handleMouseLeave',
     value: function handleMouseLeave() {
-      if (!this.props.favorite) {
-        this.setState({ starVisibility: 'hidden' });
-      }
+      this.setState({ showButtons: false });
     }
   }, {
     key: 'handleClick',
     value: function handleClick() {
-      this.props.onSelect(this.props.query, this.props.variables, this.props.operationName);
+      this.props.onSelect(this.props.query, this.props.variables, this.props.operationName, this.props.label);
     }
   }, {
     key: 'handleStarClick',
     value: function handleStarClick(e) {
       e.stopPropagation();
-      this.props.handleToggleFavorite(this.props.query, this.props.variables, this.props.operationName, this.props.favorite);
+      this.props.handleToggleFavorite(this.props.query, this.props.variables, this.props.operationName, this.props.label, this.props.favorite);
+    }
+  }, {
+    key: 'handleFieldBlur',
+    value: function handleFieldBlur(e) {
+      e.stopPropagation();
+      this.setState({ editable: false });
+      this.props.handleEditLabel(this.props.query, this.props.variables, this.props.operationName, e.target.value, this.props.favorite);
+    }
+  }, {
+    key: 'handleFieldKeyDown',
+    value: function handleFieldKeyDown(e) {
+      if (e.keyCode === 13) {
+        e.stopPropagation();
+        this.setState({ editable: false });
+        this.props.handleEditLabel(this.props.query, this.props.variables, this.props.operationName, e.target.value, this.props.favorite);
+      }
+    }
+  }, {
+    key: 'handleEditClick',
+    value: function handleEditClick(e) {
+      var _this3 = this;
+
+      e.stopPropagation();
+      this.setState({ editable: true }, function () {
+        if (_this3.editField) {
+          _this3.editField.focus();
+        }
+      });
     }
   }]);
 
@@ -37980,14 +38034,16 @@ var HistoryQuery = function (_React$Component) {
 HistoryQuery.propTypes = {
   favorite: _propTypes2.default.bool,
   favoriteSize: _propTypes2.default.number,
+  handleEditLabel: _propTypes2.default.func,
   handleToggleFavorite: _propTypes2.default.func,
   operationName: _propTypes2.default.string,
   onSelect: _propTypes2.default.func,
   query: _propTypes2.default.string,
-  variables: _propTypes2.default.string
+  variables: _propTypes2.default.string,
+  label: _propTypes2.default.string
 };
 exports.default = HistoryQuery;
-},{"prop-types":377,"react":535}],165:[function(require,module,exports){
+},{"prop-types":373,"react":531}],165:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38024,10 +38080,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -38177,6 +38232,12 @@ var QueryEditor = exports.QueryEditor = function (_React$Component) {
             }
           },
 
+          'Shift-Ctrl-M': function ShiftCtrlM() {
+            if (_this2.props.onMergeQuery) {
+              _this2.props.onMergeQuery();
+            }
+          },
+
           // Persistent search box in Query Editor
           'Cmd-F': 'findPersistent',
           'Ctrl-F': 'findPersistent',
@@ -38285,10 +38346,11 @@ QueryEditor.propTypes = {
   onHintInformationRender: _propTypes2.default.func,
   onClickReference: _propTypes2.default.func,
   onPrettifyQuery: _propTypes2.default.func,
+  onMergeQuery: _propTypes2.default.func,
   onRunQuery: _propTypes2.default.func,
   editorTheme: _propTypes2.default.string
 };
-},{"../utility/normalizeWhitespace":184,"../utility/onHasCompletion":185,"codemirror":40,"codemirror-graphql/hint":11,"codemirror-graphql/info":12,"codemirror-graphql/jump":13,"codemirror-graphql/lint":14,"codemirror-graphql/mode":15,"codemirror/addon/comment/comment":27,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"graphql":218,"markdown-it":312,"prop-types":377,"react":535}],166:[function(require,module,exports){
+},{"../utility/normalizeWhitespace":185,"../utility/onHasCompletion":186,"codemirror":40,"codemirror-graphql/hint":11,"codemirror-graphql/info":12,"codemirror-graphql/jump":13,"codemirror-graphql/lint":14,"codemirror-graphql/mode":15,"codemirror/addon/comment/comment":27,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"graphql":214,"markdown-it":308,"prop-types":373,"react":531}],166:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38359,7 +38421,37 @@ var QueryHistory = exports.QueryHistory = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (QueryHistory.__proto__ || Object.getPrototypeOf(QueryHistory)).call(this, props));
 
-    _initialiseProps.call(_this);
+    _this.toggleFavorite = function (query, variables, operationName, label, favorite) {
+      var item = {
+        query: query,
+        variables: variables,
+        operationName: operationName,
+        label: label
+      };
+      if (!_this.favoriteStore.contains(item)) {
+        item.favorite = true;
+        _this.favoriteStore.push(item);
+      } else if (favorite) {
+        item.favorite = false;
+        _this.favoriteStore.delete(item);
+      }
+      _this.setState(_extends({}, _this.historyStore.items, _this.favoriteStore.items));
+    };
+
+    _this.editLabel = function (query, variables, operationName, label, favorite) {
+      var item = {
+        query: query,
+        variables: variables,
+        operationName: operationName,
+        label: label
+      };
+      if (favorite) {
+        _this.favoriteStore.edit(_extends({}, item, { favorite: favorite }));
+      } else {
+        _this.historyStore.edit(item);
+      }
+      _this.setState(_extends({}, _this.historyStore.items, _this.favoriteStore.items));
+    };
 
     _this.historyStore = new _QueryStore2.default('queries', props.storage);
     _this.favoriteStore = new _QueryStore2.default('favorites', props.storage);
@@ -38399,6 +38491,7 @@ var QueryHistory = exports.QueryHistory = function (_React$Component) {
       var queries = this.state.queries.slice().reverse();
       var queryNodes = queries.map(function (query, i) {
         return _react2.default.createElement(_HistoryQuery2.default, _extends({
+          handleEditLabel: _this2.editLabel,
           handleToggleFavorite: _this2.toggleFavorite,
           key: i,
           onSelect: _this2.props.onSelectQuery
@@ -38441,30 +38534,7 @@ QueryHistory.propTypes = {
   onSelectQuery: _propTypes2.default.func,
   storage: _propTypes2.default.object
 };
-
-var _initialiseProps = function _initialiseProps() {
-  var _this3 = this;
-
-  this.toggleFavorite = function (query, variables, operationName, favorite) {
-    var item = {
-      query: query,
-      variables: variables,
-      operationName: operationName
-    };
-    if (!_this3.favoriteStore.contains(item)) {
-      item.favorite = true;
-      _this3.favoriteStore.push(item);
-    } else if (favorite) {
-      item.favorite = false;
-      _this3.favoriteStore.delete(item);
-    }
-    var historyQueries = _this3.historyStore.items;
-    var favoriteQueries = _this3.favoriteStore.items;
-    var queries = historyQueries.concat(favoriteQueries);
-    _this3.setState({ queries: queries });
-  };
-};
-},{"../utility/QueryStore":175,"./HistoryQuery":164,"graphql":218,"prop-types":377,"react":535}],167:[function(require,module,exports){
+},{"../utility/QueryStore":175,"./HistoryQuery":164,"graphql":214,"prop-types":373,"react":531}],167:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38493,10 +38563,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -38629,7 +38698,7 @@ ResultViewer.propTypes = {
   editorTheme: _propTypes2.default.string,
   ResultsTooltip: _propTypes2.default.any
 };
-},{"codemirror":40,"codemirror-graphql/results/mode":16,"codemirror-graphql/utils/info-addon":21,"codemirror/addon/dialog/dialog":28,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":377,"react":535,"react-dom":380}],168:[function(require,module,exports){
+},{"codemirror":40,"codemirror-graphql/results/mode":16,"codemirror-graphql/utils/info-addon":21,"codemirror/addon/dialog/dialog":28,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/search":37,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":373,"react":531,"react-dom":376}],168:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38654,10 +38723,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -38718,7 +38786,7 @@ ToolbarButton.propTypes = {
 function preventDefault(e) {
   e.preventDefault();
 }
-},{"prop-types":377,"react":535}],169:[function(require,module,exports){
+},{"prop-types":373,"react":531}],169:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38746,13 +38814,12 @@ function ToolbarGroup(_ref) {
     children
   );
 } /**
-   *  Copyright (c) Facebook, Inc.
-   *  All rights reserved.
+   *  Copyright (c) Facebook, Inc. and its affiliates.
    *
-   *  This source code is licensed under the license found in the
+   *  This source code is licensed under the MIT license found in the
    *  LICENSE file in the root directory of this source tree.
    */
-},{"react":535}],170:[function(require,module,exports){
+},{"react":531}],170:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38779,10 +38846,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -38907,7 +38973,7 @@ ToolbarMenuItem.propTypes = {
 function preventDefault(e) {
   e.preventDefault();
 }
-},{"prop-types":377,"react":535}],171:[function(require,module,exports){
+},{"prop-types":373,"react":531}],171:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38936,10 +39002,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -39081,7 +39146,7 @@ ToolbarSelectOption.propTypes = {
 function preventDefault(e) {
   e.preventDefault();
 }
-},{"prop-types":377,"react":535}],172:[function(require,module,exports){
+},{"prop-types":373,"react":531}],172:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39110,10 +39175,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  All rights reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  Copyright (c) Facebook, Inc. and its affiliates.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the license found in the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  This source code is licensed under the MIT license found in the
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *  LICENSE file in the root directory of this source tree.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
@@ -39245,6 +39309,12 @@ var VariableEditor = exports.VariableEditor = function (_React$Component) {
             }
           },
 
+          'Shift-Ctrl-M': function ShiftCtrlM() {
+            if (_this2.props.onMergeQuery) {
+              _this2.props.onMergeQuery();
+            }
+          },
+
           // Persistent search box in Query Editor
           'Cmd-F': 'findPersistent',
           'Ctrl-F': 'findPersistent',
@@ -39276,8 +39346,9 @@ var VariableEditor = exports.VariableEditor = function (_React$Component) {
         CodeMirror.signal(this.editor, 'change', this.editor);
       }
       if (this.props.value !== prevProps.value && this.props.value !== this.cachedValue) {
-        this.cachedValue = this.props.value;
-        this.editor.setValue(this.props.value);
+        var thisValue = this.props.value || '';
+        this.cachedValue = thisValue;
+        this.editor.setValue(thisValue);
       }
       this.ignoreChangeEvent = false;
     }
@@ -39334,17 +39405,17 @@ VariableEditor.propTypes = {
   readOnly: _propTypes2.default.bool,
   onHintInformationRender: _propTypes2.default.func,
   onPrettifyQuery: _propTypes2.default.func,
+  onMergeQuery: _propTypes2.default.func,
   onRunQuery: _propTypes2.default.func,
   editorTheme: _propTypes2.default.string
 };
-},{"../utility/onHasCompletion":185,"codemirror":40,"codemirror-graphql/variables/hint":24,"codemirror-graphql/variables/lint":25,"codemirror-graphql/variables/mode":26,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":377,"react":535}],173:[function(require,module,exports){
+},{"../utility/onHasCompletion":186,"codemirror":40,"codemirror-graphql/variables/hint":24,"codemirror-graphql/variables/lint":25,"codemirror-graphql/variables/mode":26,"codemirror/addon/dialog/dialog":28,"codemirror/addon/edit/closebrackets":29,"codemirror/addon/edit/matchbrackets":30,"codemirror/addon/fold/brace-fold":31,"codemirror/addon/fold/foldgutter":33,"codemirror/addon/hint/show-hint":34,"codemirror/addon/lint/lint":35,"codemirror/addon/search/jump-to-line":36,"codemirror/addon/search/searchcursor":38,"codemirror/keymap/sublime":39,"prop-types":373,"react":531}],173:[function(require,module,exports){
 'use strict';
 
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39362,10 +39433,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39429,13 +39499,24 @@ var QueryStore = function () {
       });
     }
   }, {
-    key: "delete",
-    value: function _delete(item) {
-      var index = this.items.findIndex(function (x) {
+    key: "edit",
+    value: function edit(item) {
+      var itemIndex = this.items.findIndex(function (x) {
         return x.query === item.query && x.variables === item.variables && x.operationName === item.operationName;
       });
-      if (index !== -1) {
-        this.items.splice(index, 1);
+      if (itemIndex !== -1) {
+        this.items.splice(itemIndex, 1, item);
+        this.save();
+      }
+    }
+  }, {
+    key: "delete",
+    value: function _delete(item) {
+      var itemIndex = this.items.findIndex(function (x) {
+        return x.query === item.query && x.variables === item.variables && x.operationName === item.operationName;
+      });
+      if (itemIndex !== -1) {
+        this.items.splice(itemIndex, 1);
         this.save();
       }
     }
@@ -39493,10 +39574,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39570,10 +39650,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = debounce;
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39603,10 +39682,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.getLeft = getLeft;
 exports.getTop = getTop;
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39700,10 +39778,9 @@ function fillLeafs(schema, docString, getDefaultFieldNames) {
 // This function first looks for some common patterns, and falls back to
 // including all leaf-type fields.
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39815,7 +39892,7 @@ function getIndentation(str, index) {
   }
   return str.substring(indentStart, indentEnd);
 }
-},{"graphql":218}],180:[function(require,module,exports){
+},{"graphql":214}],180:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39825,10 +39902,9 @@ exports.default = find;
 
 /* eslint-disable no-undef */
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39885,10 +39961,9 @@ function getQueryFacts(schema, documentStr) {
  * Provided a schema and a document, produces a `variableToType` Object.
  */
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39912,7 +39987,7 @@ function collectVariables(schema, documentAST) {
   });
   return variableToType;
 }
-},{"graphql":218}],182:[function(require,module,exports){
+},{"graphql":214}],182:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39920,10 +39995,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = getSelectedOperationName;
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -39980,7 +40054,59 @@ Object.defineProperty(exports, 'introspectionQuery', {
 // query which includes the `subscriptionType` field as the stock introspection
 // query does. This backup query removes that field.
 var introspectionQuerySansSubscriptions = exports.introspectionQuerySansSubscriptions = '\n  query IntrospectionQuery {\n    __schema {\n      queryType { name }\n      mutationType { name }\n      types {\n        ...FullType\n      }\n      directives {\n        name\n        description\n        locations\n        args {\n          ...InputValue\n        }\n      }\n    }\n  }\n\n  fragment FullType on __Type {\n    kind\n    name\n    description\n    fields(includeDeprecated: true) {\n      name\n      description\n      args {\n        ...InputValue\n      }\n      type {\n        ...TypeRef\n      }\n      isDeprecated\n      deprecationReason\n    }\n    inputFields {\n      ...InputValue\n    }\n    interfaces {\n      ...TypeRef\n    }\n    enumValues(includeDeprecated: true) {\n      name\n      description\n      isDeprecated\n      deprecationReason\n    }\n    possibleTypes {\n      ...TypeRef\n    }\n  }\n\n  fragment InputValue on __InputValue {\n    name\n    description\n    type { ...TypeRef }\n    defaultValue\n  }\n\n  fragment TypeRef on __Type {\n    kind\n    name\n    ofType {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n';
-},{"graphql":218}],184:[function(require,module,exports){
+},{"graphql":214}],184:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mergeAst = mergeAst;
+
+var _kinds = require('graphql/language/kinds');
+
+function resolveDefinition(fragments, obj) {
+  var definition = obj;
+  if (definition.kind === _kinds.Kind.FRAGMENT_SPREAD) {
+    definition = fragments[definition.name.value];
+  }
+
+  if (definition.selectionSet) {
+    definition.selectionSet.selections = definition.selectionSet.selections.filter(function (selection, idx, self) {
+      return selection.kind !== _kinds.Kind.FRAGMENT_SPREAD || idx === self.findIndex(function (_selection) {
+        return _selection.kind === _kinds.Kind.FRAGMENT_SPREAD && selection.name.value === _selection.name.value;
+      });
+    }).map(function (selection) {
+      return resolveDefinition(fragments, selection);
+    });
+  }
+
+  return definition;
+} /**
+   *  Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   *  This source code is licensed under the MIT license found in the
+   *  LICENSE file in the root directory of this source tree.
+   */
+function mergeAst(queryAst) {
+  var fragments = {};
+  queryAst.definitions.filter(function (elem) {
+    return elem.kind === _kinds.Kind.FRAGMENT_DEFINITION;
+  }).forEach(function (frag) {
+    var copyFragment = Object.assign({}, frag);
+    copyFragment.kind = _kinds.Kind.INLINE_FRAGMENT;
+    fragments[frag.name.value] = copyFragment;
+  });
+
+  var copyAst = Object.assign({}, queryAst);
+  copyAst.definitions = queryAst.definitions.filter(function (elem) {
+    return elem.kind !== _kinds.Kind.FRAGMENT_DEFINITION;
+  }).map(function (op) {
+    return resolveDefinition(fragments, op);
+  });
+
+  return copyAst;
+}
+},{"graphql/language/kinds":233}],185:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39988,10 +40114,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.normalizeWhitespace = normalizeWhitespace;
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -40001,12 +40126,12 @@ var invalidCharacters = exports.invalidCharacters = Array.from({ length: 11 }, f
   return String.fromCharCode(0x2000 + i);
 }).concat(['\u2028', '\u2029', '\u202F']);
 
-var sanitizeRegex = new RegExp('[' + invalidCharacters.join('|') + ']', 'g');
+var sanitizeRegex = new RegExp('[' + invalidCharacters.join('') + ']', 'g');
 
 function normalizeWhitespace(line) {
   return line.replace(sanitizeRegex, ' ');
 }
-},{}],185:[function(require,module,exports){
+},{}],186:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40023,10 +40148,9 @@ var _markdownIt2 = _interopRequireDefault(_markdownIt);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
+ *  Copyright (c) Facebook, Inc. and its affiliates.
  *
- *  This source code is licensed under the license found in the
+ *  This source code is licensed under the MIT license found in the
  *  LICENSE file in the root directory of this source tree.
  */
 
@@ -40103,7 +40227,7 @@ function renderType(type) {
   }
   return '<a class="typeName">' + type.name + '</a>';
 }
-},{"codemirror":40,"graphql":218,"markdown-it":312}],186:[function(require,module,exports){
+},{"codemirror":40,"graphql":214,"markdown-it":308}],187:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40486,7 +40610,7 @@ var GraphQLLanguageService = exports.GraphQLLanguageService = function () {
 
   return GraphQLLanguageService;
 }();
-},{"./getAutocompleteSuggestions":188,"./getDefinition":189,"./getDiagnostics":190,"./getHoverInformation":191,"graphql":218,"graphql-language-service-utils":206}],187:[function(require,module,exports){
+},{"./getAutocompleteSuggestions":189,"./getDefinition":190,"./getDiagnostics":191,"./getHoverInformation":192,"graphql":214,"graphql-language-service-utils":202}],188:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40676,7 +40800,7 @@ function lexicalDistance(a, b) {
 
   return d[aLength][bLength];
 }
-},{"graphql":218,"graphql/type/introspection":250}],188:[function(require,module,exports){
+},{"graphql":214,"graphql/type/introspection":246}],189:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41212,7 +41336,7 @@ function find(array, predicate) {
   }
   return null;
 }
-},{"./autocompleteUtils":187,"graphql":218,"graphql-language-service-parser":197}],189:[function(require,module,exports){
+},{"./autocompleteUtils":188,"graphql":214,"graphql-language-service-parser":198}],190:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -41375,7 +41499,7 @@ function getDefinitionForNodeDefinition(path, text, definition) {
   };
 }
 }).call(this,require('_process'))
-},{"_process":372,"assert":4,"graphql-language-service-utils":206}],190:[function(require,module,exports){
+},{"_process":368,"assert":4,"graphql-language-service-utils":202}],191:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41523,7 +41647,7 @@ function getLocation(node) {
   (0, _assert2.default)(location, 'Expected ASTNode to have a location.');
   return location;
 }
-},{"assert":4,"graphql":218,"graphql-language-service-parser":197,"graphql-language-service-utils":206}],191:[function(require,module,exports){
+},{"assert":4,"graphql":214,"graphql-language-service-parser":198,"graphql-language-service-utils":202}],192:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41696,7 +41820,7 @@ function renderDeprecation(into, options, def) {
 function text(into, content) {
   into.push(content);
 }
-},{"./getAutocompleteSuggestions":188,"graphql":218}],192:[function(require,module,exports){
+},{"./getAutocompleteSuggestions":189,"graphql":214}],193:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41816,7 +41940,7 @@ function concatMap(arr, fn) {
   }
   return res;
 }
-},{"graphql":218,"graphql-language-service-utils":206}],193:[function(require,module,exports){
+},{"graphql":214,"graphql-language-service-utils":202}],194:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41927,7 +42051,7 @@ Object.defineProperty(exports, 'GraphQLLanguageService', {
     return _GraphQLLanguageService.GraphQLLanguageService;
   }
 });
-},{"./GraphQLLanguageService":186,"./autocompleteUtils":187,"./getAutocompleteSuggestions":188,"./getDefinition":189,"./getDiagnostics":190,"./getHoverInformation":191,"./getOutline":192}],194:[function(require,module,exports){
+},{"./GraphQLLanguageService":187,"./autocompleteUtils":188,"./getAutocompleteSuggestions":189,"./getDefinition":190,"./getDiagnostics":191,"./getHoverInformation":192,"./getOutline":193}],195:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class CharacterStream {
@@ -42047,7 +42171,7 @@ class CharacterStream {
 }
 exports.default = CharacterStream;
 
-},{}],195:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function opt(ofRule) {
@@ -42083,7 +42207,7 @@ function p(value, style) {
 }
 exports.p = p;
 
-},{}],196:[function(require,module,exports){
+},{}],197:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const RuleHelpers_1 = require("./RuleHelpers");
@@ -42350,7 +42474,7 @@ function type(style) {
     };
 }
 
-},{"./RuleHelpers":195}],197:[function(require,module,exports){
+},{"./RuleHelpers":196}],198:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var CharacterStream_1 = require("./CharacterStream");
@@ -42368,7 +42492,7 @@ exports.t = RuleHelpers_1.t;
 var onlineParser_1 = require("./onlineParser");
 exports.onlineParser = onlineParser_1.default;
 
-},{"./CharacterStream":194,"./RuleHelpers":195,"./Rules":196,"./onlineParser":198}],198:[function(require,module,exports){
+},{"./CharacterStream":195,"./RuleHelpers":196,"./Rules":197,"./onlineParser":199}],199:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Rules_1 = require("./Rules");
@@ -42573,853 +42697,7 @@ function lex(lexRules, stream) {
     }
 }
 
-},{"./Rules":196}],199:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var CharacterStream = function () {
-  function CharacterStream(sourceText) {
-    var _this = this;
-
-    _classCallCheck(this, CharacterStream);
-
-    this.getStartOfToken = function () {
-      return _this._start;
-    };
-
-    this.getCurrentPosition = function () {
-      return _this._pos;
-    };
-
-    this.eol = function () {
-      return _this._sourceText.length === _this._pos;
-    };
-
-    this.sol = function () {
-      return _this._pos === 0;
-    };
-
-    this.peek = function () {
-      return _this._sourceText.charAt(_this._pos) ? _this._sourceText.charAt(_this._pos) : null;
-    };
-
-    this.next = function () {
-      var char = _this._sourceText.charAt(_this._pos);
-      _this._pos++;
-      return char;
-    };
-
-    this.eat = function (pattern) {
-      var isMatched = _this._testNextCharacter(pattern);
-      if (isMatched) {
-        _this._start = _this._pos;
-        _this._pos++;
-        return _this._sourceText.charAt(_this._pos - 1);
-      }
-      return undefined;
-    };
-
-    this.eatWhile = function (match) {
-      var isMatched = _this._testNextCharacter(match);
-      var didEat = false;
-
-      // If a match, treat the total upcoming matches as one token
-      if (isMatched) {
-        didEat = isMatched;
-        _this._start = _this._pos;
-      }
-
-      while (isMatched) {
-        _this._pos++;
-        isMatched = _this._testNextCharacter(match);
-        didEat = true;
-      }
-
-      return didEat;
-    };
-
-    this.eatSpace = function () {
-      return _this.eatWhile(/[\s\u00a0]/);
-    };
-
-    this.skipToEnd = function () {
-      _this._pos = _this._sourceText.length;
-    };
-
-    this.skipTo = function (position) {
-      _this._pos = position;
-    };
-
-    this.match = function (pattern) {
-      var consume = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-      var caseFold = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-      var token = null;
-      var match = null;
-
-      if (typeof pattern === 'string') {
-        var regex = new RegExp(pattern, caseFold ? 'i' : 'g');
-        match = regex.test(_this._sourceText.substr(_this._pos, pattern.length));
-        token = pattern;
-      } else if (pattern instanceof RegExp) {
-        match = _this._sourceText.slice(_this._pos).match(pattern);
-        token = match && match[0];
-      }
-
-      if (match != null) {
-        if (typeof pattern === 'string' || match instanceof Array &&
-        // String.match returns 'index' property, which flow fails to detect
-        // for some reason. The below is a workaround, but an easier solution
-        // is just checking if `match.index === 0`
-        _this._sourceText.startsWith(match[0], _this._pos)) {
-          if (consume) {
-            _this._start = _this._pos;
-            if (token && token.length) {
-              _this._pos += token.length;
-            }
-          }
-          return match;
-        }
-      }
-
-      // No match available.
-      return false;
-    };
-
-    this.backUp = function (num) {
-      _this._pos -= num;
-    };
-
-    this.column = function () {
-      return _this._pos;
-    };
-
-    this.indentation = function () {
-      var match = _this._sourceText.match(/\s*/);
-      var indent = 0;
-      if (match && match.length === 0) {
-        var whitespaces = match[0];
-        var pos = 0;
-        while (whitespaces.length > pos) {
-          if (whitespaces.charCodeAt(pos) === 9) {
-            indent += 2;
-          } else {
-            indent++;
-          }
-          pos++;
-        }
-      }
-
-      return indent;
-    };
-
-    this.current = function () {
-      return _this._sourceText.slice(_this._start, _this._pos);
-    };
-
-    this._start = 0;
-    this._pos = 0;
-    this._sourceText = sourceText;
-  }
-
-  CharacterStream.prototype._testNextCharacter = function _testNextCharacter(pattern) {
-    var character = this._sourceText.charAt(this._pos);
-    var isMatched = false;
-    if (typeof pattern === 'string') {
-      isMatched = character === pattern;
-    } else {
-      isMatched = pattern instanceof RegExp ? pattern.test(character) : pattern(character);
-    }
-    return isMatched;
-  };
-
-  return CharacterStream;
-}(); /**
-      *  Copyright (c) Facebook, Inc.
-      *  All rights reserved.
-      *
-      *  This source code is licensed under the license found in the
-      *  LICENSE file in the root directory of this source tree.
-      *
-      *  
-      */
-
-/**
- * CharacterStream implements a stream of character tokens given a source text.
- * The API design follows that of CodeMirror.StringStream.
- *
- * Required:
- *
- *      sourceText: (string), A raw GraphQL source text. Works best if a line
- *        is supplied.
- *
- */
-
-exports.default = CharacterStream;
-},{}],200:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.opt = opt;
-exports.list = list;
-exports.butNot = butNot;
-exports.t = t;
-exports.p = p;
-
-
-// An optional rule.
-function opt(ofRule) {
-  return { ofRule: ofRule };
-}
-
-// A list of another rule.
-/**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
- *
- *  This source code is licensed under the license found in the
- *  LICENSE file in the root directory of this source tree.
- *
- *  
- */
-
-// These functions help build matching rules for ParseRules.
-
-function list(ofRule, separator) {
-  return { ofRule: ofRule, isList: true, separator: separator };
-}
-
-// An constraint described as `but not` in the GraphQL spec.
-function butNot(rule, exclusions) {
-  var ruleMatch = rule.match;
-  rule.match = function (token) {
-    var check = false;
-    if (ruleMatch) {
-      check = ruleMatch(token);
-    }
-    return check && exclusions.every(function (exclusion) {
-      return exclusion.match && !exclusion.match(token);
-    });
-  };
-  return rule;
-}
-
-// Token of a kind
-function t(kind, style) {
-  return { style: style, match: function match(token) {
-      return token.kind === kind;
-    } };
-}
-
-// Punctuator
-function p(value, style) {
-  return {
-    style: style || 'punctuation',
-    match: function match(token) {
-      return token.kind === 'Punctuation' && token.value === value;
-    }
-  };
-}
-},{}],201:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ParseRules = exports.LexRules = exports.isIgnored = undefined;
-
-var _RuleHelpers = require('./RuleHelpers');
-
-/**
-  * Whitespace tokens defined in GraphQL spec.
-  */
-/**
- *  Copyright (c) Facebook, Inc.
- *  All rights reserved.
- *
- *  This source code is licensed under the license found in the
- *  LICENSE file in the root directory of this source tree.
- *
- *  
- */
-
-var isIgnored = exports.isIgnored = function isIgnored(ch) {
-  return ch === ' ' || ch === '\t' || ch === ',' || ch === '\n' || ch === '\r' || ch === '\uFEFF';
-};
-
-/**
- * The lexer rules. These are exactly as described by the spec.
- */
-var LexRules = exports.LexRules = {
-  // The Name token.
-  Name: /^[_A-Za-z][_0-9A-Za-z]*/,
-
-  // All Punctuation used in GraphQL
-  Punctuation: /^(?:!|\$|\(|\)|\.\.\.|:|=|@|\[|]|\{|\||\})/,
-
-  // Combines the IntValue and FloatValue tokens.
-  Number: /^-?(?:0|(?:[1-9][0-9]*))(?:\.[0-9]*)?(?:[eE][+-]?[0-9]+)?/,
-
-  // Note the closing quote is made optional as an IDE experience improvment.
-  String: /^"(?:[^"\\]|\\(?:"|\/|\\|b|f|n|r|t|u[0-9a-fA-F]{4}))*"?/,
-
-  // Comments consume entire lines.
-  Comment: /^#.*/
-};
-
-/**
- * The parser rules. These are very close to, but not exactly the same as the
- * spec. Minor deviations allow for a simpler implementation. The resulting
- * parser can parse everything the spec declares possible.
- */
-var ParseRules = exports.ParseRules = {
-  Document: [(0, _RuleHelpers.list)('Definition')],
-  Definition: function Definition(token) {
-    switch (token.value) {
-      case '{':
-        return 'ShortQuery';
-      case 'query':
-        return 'Query';
-      case 'mutation':
-        return 'Mutation';
-      case 'subscription':
-        return 'Subscription';
-      case 'fragment':
-        return 'FragmentDefinition';
-      case 'schema':
-        return 'SchemaDef';
-      case 'scalar':
-        return 'ScalarDef';
-      case 'type':
-        return 'ObjectTypeDef';
-      case 'interface':
-        return 'InterfaceDef';
-      case 'union':
-        return 'UnionDef';
-      case 'enum':
-        return 'EnumDef';
-      case 'input':
-        return 'InputDef';
-      case 'extend':
-        return 'ExtendDef';
-      case 'directive':
-        return 'DirectiveDef';
-    }
-  },
-
-  // Note: instead of "Operation", these rules have been separated out.
-  ShortQuery: ['SelectionSet'],
-  Query: [word('query'), (0, _RuleHelpers.opt)(name('def')), (0, _RuleHelpers.opt)('VariableDefinitions'), (0, _RuleHelpers.list)('Directive'), 'SelectionSet'],
-  Mutation: [word('mutation'), (0, _RuleHelpers.opt)(name('def')), (0, _RuleHelpers.opt)('VariableDefinitions'), (0, _RuleHelpers.list)('Directive'), 'SelectionSet'],
-  Subscription: [word('subscription'), (0, _RuleHelpers.opt)(name('def')), (0, _RuleHelpers.opt)('VariableDefinitions'), (0, _RuleHelpers.list)('Directive'), 'SelectionSet'],
-  VariableDefinitions: [(0, _RuleHelpers.p)('('), (0, _RuleHelpers.list)('VariableDefinition'), (0, _RuleHelpers.p)(')')],
-  VariableDefinition: ['Variable', (0, _RuleHelpers.p)(':'), 'Type', (0, _RuleHelpers.opt)('DefaultValue')],
-  Variable: [(0, _RuleHelpers.p)('$', 'variable'), name('variable')],
-  DefaultValue: [(0, _RuleHelpers.p)('='), 'Value'],
-  SelectionSet: [(0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('Selection'), (0, _RuleHelpers.p)('}')],
-  Selection: function Selection(token, stream) {
-    return token.value === '...' ? stream.match(/[\s\u00a0,]*(on\b|@|{)/, false) ? 'InlineFragment' : 'FragmentSpread' : stream.match(/[\s\u00a0,]*:/, false) ? 'AliasedField' : 'Field';
-  },
-
-  // Note: this minor deviation of "AliasedField" simplifies the lookahead.
-  AliasedField: [name('property'), (0, _RuleHelpers.p)(':'), name('qualifier'), (0, _RuleHelpers.opt)('Arguments'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.opt)('SelectionSet')],
-  Field: [name('property'), (0, _RuleHelpers.opt)('Arguments'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.opt)('SelectionSet')],
-  Arguments: [(0, _RuleHelpers.p)('('), (0, _RuleHelpers.list)('Argument'), (0, _RuleHelpers.p)(')')],
-  Argument: [name('attribute'), (0, _RuleHelpers.p)(':'), 'Value'],
-  FragmentSpread: [(0, _RuleHelpers.p)('...'), name('def'), (0, _RuleHelpers.list)('Directive')],
-  InlineFragment: [(0, _RuleHelpers.p)('...'), (0, _RuleHelpers.opt)('TypeCondition'), (0, _RuleHelpers.list)('Directive'), 'SelectionSet'],
-  FragmentDefinition: [word('fragment'), (0, _RuleHelpers.opt)((0, _RuleHelpers.butNot)(name('def'), [word('on')])), 'TypeCondition', (0, _RuleHelpers.list)('Directive'), 'SelectionSet'],
-  TypeCondition: [word('on'), 'NamedType'],
-  // Variables could be parsed in cases where only Const is expected by spec.
-  Value: function Value(token) {
-    switch (token.kind) {
-      case 'Number':
-        return 'NumberValue';
-      case 'String':
-        return 'StringValue';
-      case 'Punctuation':
-        switch (token.value) {
-          case '[':
-            return 'ListValue';
-          case '{':
-            return 'ObjectValue';
-          case '$':
-            return 'Variable';
-        }
-        return null;
-      case 'Name':
-        switch (token.value) {
-          case 'true':
-          case 'false':
-            return 'BooleanValue';
-        }
-        if (token.value === 'null') {
-          return 'NullValue';
-        }
-        return 'EnumValue';
-    }
-  },
-
-  NumberValue: [(0, _RuleHelpers.t)('Number', 'number')],
-  StringValue: [(0, _RuleHelpers.t)('String', 'string')],
-  BooleanValue: [(0, _RuleHelpers.t)('Name', 'builtin')],
-  NullValue: [(0, _RuleHelpers.t)('Name', 'keyword')],
-  EnumValue: [name('string-2')],
-  ListValue: [(0, _RuleHelpers.p)('['), (0, _RuleHelpers.list)('Value'), (0, _RuleHelpers.p)(']')],
-  ObjectValue: [(0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('ObjectField'), (0, _RuleHelpers.p)('}')],
-  ObjectField: [name('attribute'), (0, _RuleHelpers.p)(':'), 'Value'],
-  Type: function Type(token) {
-    return token.value === '[' ? 'ListType' : 'NonNullType';
-  },
-
-  // NonNullType has been merged into ListType to simplify.
-  ListType: [(0, _RuleHelpers.p)('['), 'Type', (0, _RuleHelpers.p)(']'), (0, _RuleHelpers.opt)((0, _RuleHelpers.p)('!'))],
-  NonNullType: ['NamedType', (0, _RuleHelpers.opt)((0, _RuleHelpers.p)('!'))],
-  NamedType: [type('atom')],
-  Directive: [(0, _RuleHelpers.p)('@', 'meta'), name('meta'), (0, _RuleHelpers.opt)('Arguments')],
-  // GraphQL schema language
-  SchemaDef: [word('schema'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('OperationTypeDef'), (0, _RuleHelpers.p)('}')],
-  OperationTypeDef: [name('keyword'), (0, _RuleHelpers.p)(':'), name('atom')],
-  ScalarDef: [word('scalar'), name('atom'), (0, _RuleHelpers.list)('Directive')],
-  ObjectTypeDef: [word('type'), name('atom'), (0, _RuleHelpers.opt)('Implements'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('FieldDef'), (0, _RuleHelpers.p)('}')],
-  Implements: [word('implements'), (0, _RuleHelpers.list)('NamedType')],
-  FieldDef: [name('property'), (0, _RuleHelpers.opt)('ArgumentsDef'), (0, _RuleHelpers.p)(':'), 'Type', (0, _RuleHelpers.list)('Directive')],
-  ArgumentsDef: [(0, _RuleHelpers.p)('('), (0, _RuleHelpers.list)('InputValueDef'), (0, _RuleHelpers.p)(')')],
-  InputValueDef: [name('attribute'), (0, _RuleHelpers.p)(':'), 'Type', (0, _RuleHelpers.opt)('DefaultValue'), (0, _RuleHelpers.list)('Directive')],
-  InterfaceDef: [word('interface'), name('atom'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('FieldDef'), (0, _RuleHelpers.p)('}')],
-  UnionDef: [word('union'), name('atom'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.p)('='), (0, _RuleHelpers.list)('UnionMember', (0, _RuleHelpers.p)('|'))],
-  UnionMember: ['NamedType'],
-  EnumDef: [word('enum'), name('atom'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('EnumValueDef'), (0, _RuleHelpers.p)('}')],
-  EnumValueDef: [name('string-2'), (0, _RuleHelpers.list)('Directive')],
-  InputDef: [word('input'), name('atom'), (0, _RuleHelpers.list)('Directive'), (0, _RuleHelpers.p)('{'), (0, _RuleHelpers.list)('InputValueDef'), (0, _RuleHelpers.p)('}')],
-  ExtendDef: [word('extend'), 'ObjectTypeDef'],
-  DirectiveDef: [word('directive'), (0, _RuleHelpers.p)('@', 'meta'), name('meta'), (0, _RuleHelpers.opt)('ArgumentsDef'), word('on'), (0, _RuleHelpers.list)('DirectiveLocation', (0, _RuleHelpers.p)('|'))],
-  DirectiveLocation: [name('string-2')]
-};
-
-// A keyword Token.
-function word(value) {
-  return {
-    style: 'keyword',
-    match: function match(token) {
-      return token.kind === 'Name' && token.value === value;
-    }
-  };
-}
-
-// A Name Token which will decorate the state with a `name`.
-function name(style) {
-  return {
-    style: style,
-    match: function match(token) {
-      return token.kind === 'Name';
-    },
-    update: function update(state, token) {
-      state.name = token.value;
-    }
-  };
-}
-
-// A Name Token which will decorate the previous state with a `type`.
-function type(style) {
-  return {
-    style: style,
-    match: function match(token) {
-      return token.kind === 'Name';
-    },
-    update: function update(state, token) {
-      if (state.prevState && state.prevState.prevState) {
-        state.name = token.value;
-        state.prevState.prevState.type = token.value;
-      }
-    }
-  };
-}
-},{"./RuleHelpers":200}],202:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _CharacterStream = require('./CharacterStream');
-
-Object.defineProperty(exports, 'CharacterStream', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_CharacterStream).default;
-  }
-});
-
-var _Rules = require('./Rules');
-
-Object.defineProperty(exports, 'LexRules', {
-  enumerable: true,
-  get: function get() {
-    return _Rules.LexRules;
-  }
-});
-Object.defineProperty(exports, 'ParseRules', {
-  enumerable: true,
-  get: function get() {
-    return _Rules.ParseRules;
-  }
-});
-Object.defineProperty(exports, 'isIgnored', {
-  enumerable: true,
-  get: function get() {
-    return _Rules.isIgnored;
-  }
-});
-
-var _RuleHelpers = require('./RuleHelpers');
-
-Object.defineProperty(exports, 'butNot', {
-  enumerable: true,
-  get: function get() {
-    return _RuleHelpers.butNot;
-  }
-});
-Object.defineProperty(exports, 'list', {
-  enumerable: true,
-  get: function get() {
-    return _RuleHelpers.list;
-  }
-});
-Object.defineProperty(exports, 'opt', {
-  enumerable: true,
-  get: function get() {
-    return _RuleHelpers.opt;
-  }
-});
-Object.defineProperty(exports, 'p', {
-  enumerable: true,
-  get: function get() {
-    return _RuleHelpers.p;
-  }
-});
-Object.defineProperty(exports, 't', {
-  enumerable: true,
-  get: function get() {
-    return _RuleHelpers.t;
-  }
-});
-
-var _onlineParser = require('./onlineParser');
-
-Object.defineProperty(exports, 'onlineParser', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_onlineParser).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./CharacterStream":199,"./RuleHelpers":200,"./Rules":201,"./onlineParser":203}],203:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
-                                                                                                                                                                                                                                                                   *  Copyright (c) Facebook, Inc.
-                                                                                                                                                                                                                                                                   *  All rights reserved.
-                                                                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                                                                   *  This source code is licensed under the license found in the
-                                                                                                                                                                                                                                                                   *  LICENSE file in the root directory of this source tree.
-                                                                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                                                                   *  
-                                                                                                                                                                                                                                                                   */
-
-/**
- * Builds an online immutable parser, designed to be used as part of a syntax
- * highlighting and code intelligence tools.
- *
- * Options:
- *
- *     eatWhitespace: (
- *       stream: Stream | CodeMirror.StringStream | CharacterStream
- *     ) => boolean
- *       Use CodeMirror API.
- *
- *     LexRules: { [name: string]: RegExp }, Includes `Punctuation`, `Comment`.
- *
- *     ParseRules: { [name: string]: Array<Rule> }, Includes `Document`.
- *
- *     editorConfig: { [name: string]: any }, Provides an editor-specific
- *       configurations set.
- *
- */
-
-exports.default = onlineParser;
-
-var _Rules = require('./Rules');
-
-function onlineParser() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-    eatWhitespace: function eatWhitespace(stream) {
-      return stream.eatWhile(_Rules.isIgnored);
-    },
-    lexRules: _Rules.LexRules,
-    parseRules: _Rules.ParseRules,
-    editorConfig: {}
-  };
-
-  return {
-    startState: function startState() {
-      var initialState = {
-        level: 0,
-        step: 0,
-        name: null,
-        kind: null,
-        type: null,
-        rule: null,
-        needsSeperator: false,
-        prevState: null
-      };
-      pushRule(options.parseRules, initialState, 'Document');
-      return initialState;
-    },
-    token: function token(stream, state) {
-      return getToken(stream, state, options);
-    }
-  };
-}
-
-function getToken(stream, state, options) {
-  var lexRules = options.lexRules,
-      parseRules = options.parseRules,
-      eatWhitespace = options.eatWhitespace,
-      editorConfig = options.editorConfig;
-  // Restore state after an empty-rule.
-
-  if (state.rule && state.rule.length === 0) {
-    popRule(state);
-  } else if (state.needsAdvance) {
-    state.needsAdvance = false;
-    advanceRule(state, true);
-  }
-
-  // Remember initial indentation
-  if (stream.sol()) {
-    var tabSize = editorConfig && editorConfig.tabSize || 2;
-    state.indentLevel = Math.floor(stream.indentation() / tabSize);
-  }
-
-  // Consume spaces and ignored characters
-  if (eatWhitespace(stream)) {
-    return 'ws';
-  }
-
-  // Get a matched token from the stream, using lex
-  var token = lex(lexRules, stream);
-
-  // If there's no matching token, skip ahead.
-  if (!token) {
-    stream.match(/\S+/);
-    pushRule(SpecialParseRules, state, 'Invalid');
-    return 'invalidchar';
-  }
-
-  // If the next token is a Comment, insert a Comment parsing rule.
-  if (token.kind === 'Comment') {
-    pushRule(SpecialParseRules, state, 'Comment');
-    return 'comment';
-  }
-
-  // Save state before continuing.
-  var backupState = assign({}, state);
-
-  // Handle changes in expected indentation level
-  if (token.kind === 'Punctuation') {
-    if (/^[{([]/.test(token.value)) {
-      // Push on the stack of levels one level deeper than the current level.
-      state.levels = (state.levels || []).concat(state.indentLevel + 1);
-    } else if (/^[})\]]/.test(token.value)) {
-      // Pop from the stack of levels.
-      // If the top of the stack is lower than the current level, lower the
-      // current level to match.
-      var levels = state.levels = (state.levels || []).slice(0, -1);
-      if (state.indentLevel) {
-        if (levels.length > 0 && levels[levels.length - 1] < state.indentLevel) {
-          state.indentLevel = levels[levels.length - 1];
-        }
-      }
-    }
-  }
-
-  while (state.rule) {
-    // If this is a forking rule, determine what rule to use based on
-    var expected = typeof state.rule === 'function' ? state.step === 0 ? state.rule(token, stream) : null : state.rule[state.step];
-
-    // Seperator between list elements if necessary.
-    if (state.needsSeperator) {
-      expected = expected && expected.separator;
-    }
-
-    if (expected) {
-      // Un-wrap optional/list parseRules.
-      if (expected.ofRule) {
-        expected = expected.ofRule;
-      }
-
-      // A string represents a Rule
-      if (typeof expected === 'string') {
-        pushRule(parseRules, state, expected);
-        continue;
-      }
-
-      // Otherwise, match a Terminal.
-      if (expected.match && expected.match(token)) {
-        if (expected.update) {
-          expected.update(state, token);
-        }
-
-        // If this token was a punctuator, advance the parse rule, otherwise
-        // mark the state to be advanced before the next token. This ensures
-        // that tokens which can be appended to keep the appropriate state.
-        if (token.kind === 'Punctuation') {
-          advanceRule(state, true);
-        } else {
-          state.needsAdvance = true;
-        }
-
-        return expected.style;
-      }
-    }
-    unsuccessful(state);
-  }
-
-  // The parser does not know how to interpret this token, do not affect state.
-  assign(state, backupState);
-  pushRule(SpecialParseRules, state, 'Invalid');
-  return 'invalidchar';
-}
-
-// Utility function to assign from object to another object.
-function assign(to, from) {
-  var keys = Object.keys(from);
-  for (var i = 0; i < keys.length; i++) {
-    to[keys[i]] = from[keys[i]];
-  }
-  return to;
-}
-
-// A special rule set for parsing comment tokens.
-var SpecialParseRules = {
-  Invalid: [],
-  Comment: []
-};
-
-// Push a new rule onto the state.
-function pushRule(rules, state, ruleKind) {
-  if (!rules[ruleKind]) {
-    throw new TypeError('Unknown rule: ' + ruleKind);
-  }
-  state.prevState = _extends({}, state);
-  state.kind = ruleKind;
-  state.name = null;
-  state.type = null;
-  state.rule = rules[ruleKind];
-  state.step = 0;
-  state.needsSeperator = false;
-}
-
-// Pop the current rule from the state.
-function popRule(state) {
-  // Check if there's anything to pop
-  if (!state.prevState) {
-    return;
-  }
-  state.kind = state.prevState.kind;
-  state.name = state.prevState.name;
-  state.type = state.prevState.type;
-  state.rule = state.prevState.rule;
-  state.step = state.prevState.step;
-  state.needsSeperator = state.prevState.needsSeperator;
-  state.prevState = state.prevState.prevState;
-}
-
-// Advance the step of the current rule.
-function advanceRule(state, successful) {
-  // If this is advancing successfully and the current state is a list, give
-  // it an opportunity to repeat itself.
-  if (isList(state)) {
-    if (state.rule && state.rule[state.step].separator) {
-      var separator = state.rule[state.step].separator;
-      state.needsSeperator = !state.needsSeperator;
-      // If the separator was optional, then give it an opportunity to repeat.
-      if (!state.needsSeperator && separator.ofRule) {
-        return;
-      }
-    }
-    // If this was a successful list parse, then allow it to repeat itself.
-    if (successful) {
-      return;
-    }
-  }
-
-  // Advance the step in the rule. If the rule is completed, pop
-  // the rule and advance the parent rule as well (recursively).
-  state.needsSeperator = false;
-  state.step++;
-
-  // While the current rule is completed.
-  while (state.rule && !(Array.isArray(state.rule) && state.step < state.rule.length)) {
-    popRule(state);
-
-    if (state.rule) {
-      // Do not advance a List step so it has the opportunity to repeat itself.
-      if (isList(state)) {
-        if (state.rule && state.rule[state.step].separator) {
-          state.needsSeperator = !state.needsSeperator;
-        }
-      } else {
-        state.needsSeperator = false;
-        state.step++;
-      }
-    }
-  }
-}
-
-function isList(state) {
-  return Array.isArray(state.rule) && typeof state.rule[state.step] !== 'string' && state.rule[state.step].isList;
-}
-
-// Unwind the state after an unsuccessful match.
-function unsuccessful(state) {
-  // Fall back to the parent rule until you get to an optional or list rule or
-  // until the entire stack of rules is empty.
-  while (state.rule && !(Array.isArray(state.rule) && state.rule[state.step].ofRule)) {
-    popRule(state);
-  }
-
-  // If there is still a rule, it must be an optional or list rule.
-  // Consider this rule a success so that we may move past it.
-  if (state.rule) {
-    advanceRule(state, false);
-  }
-}
-
-// Given a stream, returns a { kind, value } pair, or null.
-function lex(lexRules, stream) {
-  var kinds = Object.keys(lexRules);
-  for (var i = 0; i < kinds.length; i++) {
-    var match = stream.match(lexRules[kinds[i]]);
-    if (match && match instanceof Array) {
-      return { kind: kinds[i], value: match[0] };
-    }
-  }
-}
-},{"./Rules":201}],204:[function(require,module,exports){
+},{"./Rules":197}],200:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43509,7 +42787,7 @@ function locToRange(text, loc) {
   var end = offsetToPosition(text, loc.end);
   return new Range(start, end);
 }
-},{}],205:[function(require,module,exports){
+},{}],201:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43560,7 +42838,7 @@ function pointToOffset(text, point) {
     return a + b;
   }, 0);
 }
-},{"./Range":204,"graphql":218}],206:[function(require,module,exports){
+},{"./Range":200,"graphql":214}],202:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43617,7 +42895,7 @@ Object.defineProperty(exports, 'validateWithCustomRules', {
     return _validateWithCustomRules.validateWithCustomRules;
   }
 });
-},{"./Range":204,"./getASTNodeAtPosition":205,"./validateWithCustomRules":207}],207:[function(require,module,exports){
+},{"./Range":200,"./getASTNodeAtPosition":201,"./validateWithCustomRules":203}],203:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43679,7 +42957,7 @@ function validateWithCustomRules(schema, ast, customRules, isRelayCompatMode) {
    *
    *  
    */
-},{"graphql":218,"graphql/validation/rules/ExecutableDefinitions":279,"graphql/validation/rules/KnownFragmentNames":284,"graphql/validation/rules/NoUnusedFragments":289}],208:[function(require,module,exports){
+},{"graphql":214,"graphql/validation/rules/ExecutableDefinitions":275,"graphql/validation/rules/KnownFragmentNames":280,"graphql/validation/rules/NoUnusedFragments":285}],204:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43816,7 +43094,7 @@ GraphQLError.prototype = Object.create(Error.prototype, {
     }
   }
 });
-},{"../language/location":239,"./printError":212}],209:[function(require,module,exports){
+},{"../language/location":235,"./printError":208}],205:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43852,7 +43130,7 @@ function formatError(error) {
     path: error.path
   });
 }
-},{"../jsutils/invariant":221}],210:[function(require,module,exports){
+},{"../jsutils/invariant":217}],206:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43903,7 +43181,7 @@ Object.defineProperty(exports, 'formatError', {
     return _formatError.formatError;
   }
 });
-},{"./GraphQLError":208,"./formatError":209,"./locatedError":211,"./printError":212,"./syntaxError":213}],211:[function(require,module,exports){
+},{"./GraphQLError":204,"./formatError":205,"./locatedError":207,"./printError":208,"./syntaxError":209}],207:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43935,7 +43213,7 @@ function locatedError(originalError, nodes, path) {
    *
    *  strict
    */
-},{"./GraphQLError":208}],212:[function(require,module,exports){
+},{"./GraphQLError":204}],208:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44006,7 +43284,7 @@ function whitespace(len) {
 function lpad(len, str) {
   return whitespace(len - str.length) + str;
 }
-},{"../language/location":239}],213:[function(require,module,exports){
+},{"../language/location":235}],209:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44032,7 +43310,7 @@ var _GraphQLError = require('./GraphQLError');
 function syntaxError(source, position, description) {
   return new _GraphQLError.GraphQLError('Syntax Error: ' + description, undefined, source, [position]);
 }
-},{"./GraphQLError":208}],214:[function(require,module,exports){
+},{"./GraphQLError":204}],210:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44906,7 +44184,7 @@ function getFieldDef(schema, parentType, fieldName) {
   }
   return parentType.getFields()[fieldName];
 }
-},{"../error":210,"../jsutils/invariant":221,"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/isPromise":224,"../jsutils/memoize3":227,"../jsutils/promiseForObject":230,"../jsutils/promiseReduce":231,"../language/kinds":237,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/schema":252,"../type/validate":253,"../utilities/typeFromAST":274,"./values":216,"iterall":309}],215:[function(require,module,exports){
+},{"../error":206,"../jsutils/invariant":217,"../jsutils/isInvalid":218,"../jsutils/isNullish":219,"../jsutils/isPromise":220,"../jsutils/memoize3":223,"../jsutils/promiseForObject":226,"../jsutils/promiseReduce":227,"../language/kinds":233,"../type/definition":243,"../type/directives":244,"../type/introspection":246,"../type/schema":248,"../type/validate":249,"../utilities/typeFromAST":270,"./values":212,"iterall":305}],211:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44942,7 +44220,7 @@ Object.defineProperty(exports, 'getDirectiveValues', {
     return _values.getDirectiveValues;
   }
 });
-},{"./execute":214,"./values":216}],216:[function(require,module,exports){
+},{"./execute":210,"./values":212}],212:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -45112,7 +44390,7 @@ function getDirectiveValues(directiveDef, node, variableValues) {
     return getArgumentValues(directiveDef, directiveNode, variableValues);
   }
 }
-},{"../error":210,"../jsutils/find":219,"../jsutils/isInvalid":222,"../jsutils/keyMap":225,"../language/kinds":237,"../language/printer":241,"../type/definition":247,"../utilities/coerceValue":259,"../utilities/typeFromAST":274,"../utilities/valueFromAST":275}],217:[function(require,module,exports){
+},{"../error":206,"../jsutils/find":215,"../jsutils/isInvalid":218,"../jsutils/keyMap":221,"../language/kinds":233,"../language/printer":237,"../type/definition":243,"../utilities/coerceValue":255,"../utilities/typeFromAST":270,"../utilities/valueFromAST":271}],213:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -45226,7 +44504,7 @@ function graphqlImpl(schema, source, rootValue, contextValue, variableValues, op
   // Execute
   return (0, _execute.execute)(schema, document, rootValue, contextValue, variableValues, operationName, fieldResolver);
 }
-},{"./execution/execute":214,"./language/parser":240,"./type/validate":253,"./validation/validate":307}],218:[function(require,module,exports){
+},{"./execution/execute":210,"./language/parser":236,"./type/validate":249,"./validation/validate":303}],214:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46240,7 +45518,7 @@ Object.defineProperty(exports, 'findDeprecatedUsages', {
     return _utilities.findDeprecatedUsages;
   }
 });
-},{"./error":210,"./execution":215,"./graphql":217,"./language":236,"./subscription":244,"./type":249,"./utilities":265,"./validation":278}],219:[function(require,module,exports){
+},{"./error":206,"./execution":211,"./graphql":213,"./language":232,"./subscription":240,"./type":245,"./utilities":261,"./validation":274}],215:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46263,7 +45541,7 @@ function find(list, predicate) {
     }
   }
 }
-},{}],220:[function(require,module,exports){
+},{}],216:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -46300,7 +45578,7 @@ function instanceOf(value, constructor) {
  * constructors are detected.
  */
 }).call(this,require('_process'))
-},{"_process":372}],221:[function(require,module,exports){
+},{"_process":368}],217:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46322,7 +45600,7 @@ function invariant(condition, message) {
     throw new Error(message);
   }
 }
-},{}],222:[function(require,module,exports){
+},{}],218:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46344,7 +45622,7 @@ exports.default = isInvalid;
 function isInvalid(value) {
   return value === undefined || value !== value;
 }
-},{}],223:[function(require,module,exports){
+},{}],219:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46366,7 +45644,7 @@ exports.default = isNullish;
 function isNullish(value) {
   return value === null || value === undefined || value !== value;
 }
-},{}],224:[function(require,module,exports){
+},{}],220:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46391,7 +45669,7 @@ function isPromise(value) {
  * Returns true if the value acts like a Promise, i.e. has a "then" function,
  * otherwise returns false.
  */
-},{}],225:[function(require,module,exports){
+},{}],221:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46435,7 +45713,7 @@ function keyMap(list, keyFn) {
    *
    *  strict
    */
-},{}],226:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46473,7 +45751,7 @@ function keyValMap(list, keyFn, valFn) {
    *
    *  strict
    */
-},{}],227:[function(require,module,exports){
+},{}],223:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46522,7 +45800,7 @@ function memoize3(fn) {
   }
   return memoized;
 }
-},{}],228:[function(require,module,exports){
+},{}],224:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46547,7 +45825,7 @@ var objectValues = Object.values || function (obj) {
   });
 };
 exports.default = objectValues;
-},{}],229:[function(require,module,exports){
+},{}],225:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46574,7 +45852,7 @@ function orList(items) {
     return list + (selected.length > 2 ? ', ' : ' ') + (index === selected.length - 1 ? 'or ' : '') + quoted;
   });
 }
-},{}],230:[function(require,module,exports){
+},{}],226:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46609,7 +45887,7 @@ function promiseForObject(object) {
    *
    *  strict
    */
-},{}],231:[function(require,module,exports){
+},{}],227:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46644,7 +45922,7 @@ function promiseReduce(values, callback, initialValue) {
    *
    *  strict
    */
-},{"./isPromise":224}],232:[function(require,module,exports){
+},{"./isPromise":220}],228:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46673,7 +45951,7 @@ function quotedOrList(items) {
    *
    *  strict
    */
-},{"./orList":229}],233:[function(require,module,exports){
+},{"./orList":225}],229:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46767,7 +46045,7 @@ function lexicalDistance(aStr, bStr) {
 
   return d[aLength][bLength];
 }
-},{}],234:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46835,7 +46113,7 @@ function leadingWhitespace(str) {
 function isBlank(str) {
   return leadingWhitespace(str) === str.length;
 }
-},{}],235:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46879,7 +46157,7 @@ var DirectiveLocation = exports.DirectiveLocation = Object.freeze({
 /**
  * The enum type representing the directive location values.
  */
-},{}],236:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -46999,7 +46277,7 @@ Object.defineProperty(exports, 'DirectiveLocation', {
     return _directiveLocation.DirectiveLocation;
   }
 });
-},{"./directiveLocation":235,"./kinds":237,"./lexer":238,"./location":239,"./parser":240,"./printer":241,"./source":242,"./visitor":243}],237:[function(require,module,exports){
+},{"./directiveLocation":231,"./kinds":233,"./lexer":234,"./location":235,"./parser":236,"./printer":237,"./source":238,"./visitor":239}],233:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47084,7 +46362,7 @@ var Kind = exports.Kind = Object.freeze({
 /**
  * The enum type representing the possible kind values of AST nodes.
  */
-},{}],238:[function(require,module,exports){
+},{}],234:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47685,7 +46963,7 @@ function readName(source, start, line, col, prev) {
   }
   return new Tok(TokenKind.NAME, start, position, line, col, prev, slice.call(body, start, position));
 }
-},{"../error":210,"./blockStringValue":234}],239:[function(require,module,exports){
+},{"../error":206,"./blockStringValue":230}],235:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47722,7 +47000,7 @@ function getLocation(source, position) {
 /**
  * Represents a location in a Source.
  */
-},{}],240:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49076,7 +48354,7 @@ function many(lexer, openKind, parseFn, closeKind) {
   }
   return nodes;
 }
-},{"../error":210,"./directiveLocation":235,"./kinds":237,"./lexer":238,"./source":242}],241:[function(require,module,exports){
+},{"../error":206,"./directiveLocation":231,"./kinds":233,"./lexer":234,"./source":238}],237:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49416,7 +48694,7 @@ function printBlockString(value, isDescription) {
   var escaped = value.replace(/"""/g, '\\"""');
   return (value[0] === ' ' || value[0] === '\t') && value.indexOf('\n') === -1 ? '"""' + escaped.replace(/"$/, '"\n') + '"""' : '"""\n' + (isDescription ? escaped : indent(escaped)) + '\n"""';
 }
-},{"./visitor":243}],242:[function(require,module,exports){
+},{"./visitor":239}],238:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49456,7 +48734,7 @@ var Source = exports.Source = function Source(body, name, locationOffset) {
   !(this.locationOffset.line > 0) ? (0, _invariant2.default)(0, 'line in locationOffset is 1-indexed and must be positive') : void 0;
   !(this.locationOffset.column > 0) ? (0, _invariant2.default)(0, 'column in locationOffset is 1-indexed and must be positive') : void 0;
 };
-},{"../jsutils/invariant":221}],243:[function(require,module,exports){
+},{"../jsutils/invariant":217}],239:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49875,7 +49153,7 @@ function getVisitFn(visitor, kind, isLeaving) {
     }
   }
 }
-},{}],244:[function(require,module,exports){
+},{}],240:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49896,7 +49174,7 @@ Object.defineProperty(exports, 'createSourceEventStream', {
     return _subscribe.createSourceEventStream;
   }
 });
-},{"./subscribe":246}],245:[function(require,module,exports){
+},{"./subscribe":242}],241:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49977,7 +49255,7 @@ function asyncMapValue(value, callback) {
 function iteratorResult(value) {
   return { value: value, done: false };
 }
-},{"iterall":309}],246:[function(require,module,exports){
+},{"iterall":305}],242:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -50151,7 +49429,7 @@ function createSourceEventStream(schema, document, rootValue, contextValue, vari
     return Promise.reject(error);
   }
 }
-},{"../error/GraphQLError":208,"../error/locatedError":211,"../execution/execute":214,"../type/schema":252,"./mapAsyncIterator":245,"iterall":309}],247:[function(require,module,exports){
+},{"../error/GraphQLError":204,"../error/locatedError":207,"../execution/execute":210,"../type/schema":248,"./mapAsyncIterator":241,"iterall":305}],243:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -51017,7 +50295,7 @@ var GraphQLInputObjectType = exports.GraphQLInputObjectType = function () {
 
 GraphQLInputObjectType.prototype.toJSON = GraphQLInputObjectType.prototype.toString;
 GraphQLInputObjectType.prototype.inspect = GraphQLInputObjectType.prototype.toString;
-},{"../jsutils/instanceOf":220,"../jsutils/invariant":221,"../jsutils/isInvalid":222,"../language/kinds":237,"../utilities/valueFromASTUntyped":276}],248:[function(require,module,exports){
+},{"../jsutils/instanceOf":216,"../jsutils/invariant":217,"../jsutils/isInvalid":218,"../language/kinds":233,"../utilities/valueFromASTUntyped":272}],244:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -51156,7 +50434,7 @@ function isSpecifiedDirective(directive) {
     return specifiedDirective.name === directive.name;
   });
 }
-},{"../jsutils/instanceOf":220,"../jsutils/invariant":221,"../language/directiveLocation":235,"./definition":247,"./scalars":251}],249:[function(require,module,exports){
+},{"../jsutils/instanceOf":216,"../jsutils/invariant":217,"../language/directiveLocation":231,"./definition":243,"./scalars":247}],245:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -51642,7 +50920,7 @@ Object.defineProperty(exports, 'assertValidSchema', {
     return _validate.assertValidSchema;
   }
 });
-},{"./definition":247,"./directives":248,"./introspection":250,"./scalars":251,"./schema":252,"./validate":253}],250:[function(require,module,exports){
+},{"./definition":243,"./directives":244,"./introspection":246,"./scalars":247,"./schema":248,"./validate":249}],246:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -52105,7 +51383,7 @@ function isIntrospectionType(type) {
   // a simple expression.
   type.name === __Schema.name || type.name === __Directive.name || type.name === __DirectiveLocation.name || type.name === __Type.name || type.name === __Field.name || type.name === __InputValue.name || type.name === __EnumValue.name || type.name === __TypeKind.name);
 }
-},{"../jsutils/isInvalid":222,"../jsutils/objectValues":228,"../language/directiveLocation":235,"../language/printer":241,"../utilities/astFromValue":256,"./definition":247,"./scalars":251}],251:[function(require,module,exports){
+},{"../jsutils/isInvalid":218,"../jsutils/objectValues":224,"../language/directiveLocation":231,"../language/printer":237,"../utilities/astFromValue":252,"./definition":243,"./scalars":247}],247:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -52232,7 +51510,7 @@ function isSpecifiedScalarType(type) {
   // a simple expression.
   type.name === GraphQLString.name || type.name === GraphQLInt.name || type.name === GraphQLFloat.name || type.name === GraphQLBoolean.name || type.name === GraphQLID.name);
 }
-},{"../language/kinds":237,"./definition":247}],252:[function(require,module,exports){
+},{"../language/kinds":233,"./definition":243}],248:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -52493,7 +51771,7 @@ function typeMapDirectiveReducer(map, directive) {
     return typeMapReducer(_map, arg.type);
   }, map);
 }
-},{"../jsutils/find":219,"../jsutils/instanceOf":220,"../jsutils/invariant":221,"../jsutils/objectValues":228,"./definition":247,"./directives":248,"./introspection":250}],253:[function(require,module,exports){
+},{"../jsutils/find":215,"../jsutils/instanceOf":216,"../jsutils/invariant":217,"../jsutils/objectValues":224,"./definition":243,"./directives":244,"./introspection":246}],249:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53010,7 +52288,7 @@ function getEnumValueNodes(enumType, valueName) {
     return value.name.value === valueName;
   });
 }
-},{"../error/GraphQLError":208,"../jsutils/find":219,"../jsutils/invariant":221,"../jsutils/objectValues":228,"../utilities/assertValidName":255,"../utilities/typeComparators":273,"./definition":247,"./directives":248,"./introspection":250,"./schema":252}],254:[function(require,module,exports){
+},{"../error/GraphQLError":204,"../jsutils/find":215,"../jsutils/invariant":217,"../jsutils/objectValues":224,"../utilities/assertValidName":251,"../utilities/typeComparators":269,"./definition":243,"./directives":244,"./introspection":246,"./schema":248}],250:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53271,7 +52549,7 @@ function getFieldDef(schema, parentType, fieldNode) {
     return parentType.getFields()[name];
   }
 }
-},{"../jsutils/find":219,"../language/kinds":237,"../type/definition":247,"../type/introspection":250,"./typeFromAST":274}],255:[function(require,module,exports){
+},{"../jsutils/find":215,"../language/kinds":233,"../type/definition":243,"../type/introspection":246,"./typeFromAST":270}],251:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53322,7 +52600,7 @@ function isValidNameError(name, node) {
     return new _GraphQLError.GraphQLError('Names must match /^[_a-zA-Z][_a-zA-Z0-9]*$/ but "' + name + '" does not.', node);
   }
 }
-},{"../error/GraphQLError":208,"../jsutils/invariant":221}],256:[function(require,module,exports){
+},{"../error/GraphQLError":204,"../jsutils/invariant":217}],252:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53485,7 +52763,7 @@ function astFromValue(value, type) {
  *   - NegativeSign? NonZeroDigit ( Digit+ )?
  */
 var integerStringRegExp = /^-?(0|[1-9][0-9]*)$/;
-},{"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/objectValues":228,"../language/kinds":237,"../type/definition":247,"../type/scalars":251,"iterall":309}],257:[function(require,module,exports){
+},{"../jsutils/isInvalid":218,"../jsutils/isNullish":219,"../jsutils/objectValues":224,"../language/kinds":233,"../type/definition":243,"../type/scalars":247,"iterall":305}],253:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53934,7 +53212,7 @@ function getLeadingCommentBlock(node) {
 function buildSchema(source, options) {
   return buildASTSchema((0, _parser.parse)(source, options), options);
 }
-},{"../execution/values":216,"../jsutils/keyMap":225,"../jsutils/keyValMap":226,"../language/blockStringValue":234,"../language/kinds":237,"../language/lexer":238,"../language/parser":240,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252,"./valueFromAST":275}],258:[function(require,module,exports){
+},{"../execution/values":212,"../jsutils/keyMap":221,"../jsutils/keyValMap":222,"../language/blockStringValue":230,"../language/kinds":233,"../language/lexer":234,"../language/parser":236,"../type/definition":243,"../type/directives":244,"../type/introspection":246,"../type/scalars":247,"../type/schema":248,"./valueFromAST":271}],254:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54243,7 +53521,7 @@ function buildClientSchema(introspection, options) {
    *
    *  strict
    */
-},{"../jsutils/invariant":221,"../jsutils/keyMap":225,"../jsutils/keyValMap":226,"../language/directiveLocation":235,"../language/parser":240,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252,"./valueFromAST":275}],259:[function(require,module,exports){
+},{"../jsutils/invariant":217,"../jsutils/keyMap":221,"../jsutils/keyValMap":222,"../language/directiveLocation":231,"../language/parser":236,"../type/definition":243,"../type/directives":244,"../type/introspection":246,"../type/scalars":247,"../type/schema":248,"./valueFromAST":271}],255:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54437,7 +53715,7 @@ function printPath(path) {
 }
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
-},{"../error":210,"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/orList":229,"../jsutils/suggestionList":233,"../type/definition":247,"iterall":309}],260:[function(require,module,exports){
+},{"../error":206,"../jsutils/isInvalid":218,"../jsutils/isNullish":219,"../jsutils/orList":225,"../jsutils/suggestionList":229,"../type/definition":243,"iterall":305}],256:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54471,7 +53749,7 @@ function concatAST(asts) {
    *
    *  strict
    */
-},{}],261:[function(require,module,exports){
+},{}],257:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54801,7 +54079,7 @@ function checkExtensionNode(type, node) {
       break;
   }
 }
-},{"../error/GraphQLError":208,"../jsutils/invariant":221,"../jsutils/keyMap":225,"../jsutils/objectValues":228,"../language/kinds":237,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/schema":252,"./buildASTSchema":257}],262:[function(require,module,exports){
+},{"../error/GraphQLError":204,"../jsutils/invariant":217,"../jsutils/keyMap":221,"../jsutils/objectValues":224,"../language/kinds":233,"../type/definition":243,"../type/directives":244,"../type/introspection":246,"../type/schema":248,"./buildASTSchema":253}],258:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55495,7 +54773,7 @@ function getArgumentMapForDirective(directive) {
     return arg.name;
   });
 }
-},{"../jsutils/keyMap":225,"../type/definition":247,"../type/directives":248,"../type/schema":252}],263:[function(require,module,exports){
+},{"../jsutils/keyMap":221,"../type/definition":243,"../type/directives":244,"../type/schema":248}],259:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55554,7 +54832,7 @@ function findDeprecatedUsages(schema, ast) {
    *
    *  strict
    */
-},{"../error/GraphQLError":208,"../language/visitor":243,"../type/definition":247,"../type/schema":252,"./TypeInfo":254}],264:[function(require,module,exports){
+},{"../error/GraphQLError":204,"../language/visitor":239,"../type/definition":243,"../type/schema":248,"./TypeInfo":250}],260:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55596,7 +54874,7 @@ function getOperationAST(documentAST, operationName) {
    *
    *  strict
    */
-},{"../language/kinds":237}],265:[function(require,module,exports){
+},{"../language/kinds":233}],261:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55866,7 +55144,7 @@ Object.defineProperty(exports, 'findDeprecatedUsages', {
     return _findDeprecatedUsages.findDeprecatedUsages;
   }
 });
-},{"./TypeInfo":254,"./assertValidName":255,"./astFromValue":256,"./buildASTSchema":257,"./buildClientSchema":258,"./coerceValue":259,"./concatAST":260,"./extendSchema":261,"./findBreakingChanges":262,"./findDeprecatedUsages":263,"./getOperationAST":264,"./introspectionFromSchema":266,"./introspectionQuery":267,"./isValidJSValue":268,"./isValidLiteralValue":269,"./lexicographicSortSchema":270,"./schemaPrinter":271,"./separateOperations":272,"./typeComparators":273,"./typeFromAST":274,"./valueFromAST":275,"./valueFromASTUntyped":276}],266:[function(require,module,exports){
+},{"./TypeInfo":250,"./assertValidName":251,"./astFromValue":252,"./buildASTSchema":253,"./buildClientSchema":254,"./coerceValue":255,"./concatAST":256,"./extendSchema":257,"./findBreakingChanges":258,"./findDeprecatedUsages":259,"./getOperationAST":260,"./introspectionFromSchema":262,"./introspectionQuery":263,"./isValidJSValue":264,"./isValidLiteralValue":265,"./lexicographicSortSchema":266,"./schemaPrinter":267,"./separateOperations":268,"./typeComparators":269,"./typeFromAST":270,"./valueFromAST":271,"./valueFromASTUntyped":272}],262:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55910,7 +55188,7 @@ function introspectionFromSchema(schema, options) {
    *
    *  strict
    */
-},{"../execution/execute":214,"../jsutils/invariant":221,"../language/parser":240,"../type/schema":252,"./introspectionQuery":267}],267:[function(require,module,exports){
+},{"../execution/execute":210,"../jsutils/invariant":217,"../language/parser":236,"../type/schema":248,"./introspectionQuery":263}],263:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55932,7 +55210,7 @@ function getIntrospectionQuery(options) {
 }
 
 var introspectionQuery = exports.introspectionQuery = getIntrospectionQuery();
-},{}],268:[function(require,module,exports){
+},{}],264:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55958,7 +55236,7 @@ function isValidJSValue(value, type) {
    *
    *  strict
    */
-},{"./coerceValue":259}],269:[function(require,module,exports){
+},{"./coerceValue":255}],265:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56005,7 +55283,7 @@ function isValidLiteralValue(type, valueNode) {
   (0, _visitor.visit)(valueNode, (0, _visitor.visitWithTypeInfo)(typeInfo, visitor));
   return context.getErrors();
 }
-},{"../language/kinds":237,"../language/visitor":243,"../type/schema":252,"../validation/ValidationContext":277,"../validation/rules/ValuesOfCorrectType":302,"./TypeInfo":254}],270:[function(require,module,exports){
+},{"../language/kinds":233,"../language/visitor":239,"../type/schema":248,"../validation/ValidationContext":273,"../validation/rules/ValuesOfCorrectType":298,"./TypeInfo":250}],266:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56249,7 +55527,7 @@ function sortBy(array, mapToKey) {
     return key1.localeCompare(key2);
   });
 }
-},{"../jsutils/keyValMap":226,"../jsutils/objectValues":228,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../type/schema":252}],271:[function(require,module,exports){
+},{"../jsutils/keyValMap":222,"../jsutils/objectValues":224,"../type/definition":243,"../type/directives":244,"../type/introspection":246,"../type/scalars":247,"../type/schema":248}],267:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56570,7 +55848,7 @@ function breakLine(line, maxLen) {
   }
   return sublines;
 }
-},{"../jsutils/isInvalid":222,"../jsutils/isNullish":223,"../jsutils/objectValues":228,"../language/printer":241,"../type/definition":247,"../type/directives":248,"../type/introspection":250,"../type/scalars":251,"../utilities/astFromValue":256}],272:[function(require,module,exports){
+},{"../jsutils/isInvalid":218,"../jsutils/isNullish":219,"../jsutils/objectValues":224,"../language/printer":237,"../type/definition":243,"../type/directives":244,"../type/introspection":246,"../type/scalars":247,"../utilities/astFromValue":252}],268:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56664,7 +55942,7 @@ function collectTransitiveDependencies(collected, depGraph, fromName) {
     });
   }
 }
-},{"../language/visitor":243}],273:[function(require,module,exports){
+},{"../language/visitor":239}],269:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56787,7 +56065,7 @@ function doTypesOverlap(schema, typeA, typeB) {
   // Otherwise the types do not overlap.
   return false;
 }
-},{"../type/definition":247}],274:[function(require,module,exports){
+},{"../type/definition":243}],270:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56833,7 +56111,7 @@ function typeFromAST(schema, typeNode) {
   /* istanbul ignore next */
   throw new Error('Unexpected type kind: ' + typeNode.kind + '.');
 }
-},{"../language/kinds":237,"../type/definition":247}],275:[function(require,module,exports){
+},{"../language/kinds":233,"../type/definition":243}],271:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57014,7 +56292,7 @@ function valueFromAST(valueNode, type, variables) {
 function isMissingVariable(valueNode, variables) {
   return valueNode.kind === _kinds.Kind.VARIABLE && (!variables || (0, _isInvalid2.default)(variables[valueNode.name.value]));
 }
-},{"../jsutils/isInvalid":222,"../jsutils/keyMap":225,"../jsutils/objectValues":228,"../language/kinds":237,"../type/definition":247}],276:[function(require,module,exports){
+},{"../jsutils/isInvalid":218,"../jsutils/keyMap":221,"../jsutils/objectValues":224,"../language/kinds":233,"../type/definition":243}],272:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57086,7 +56364,7 @@ function valueFromASTUntyped(valueNode, variables) {
    *
    *  strict
    */
-},{"../jsutils/isInvalid":222,"../jsutils/keyValMap":226,"../language/kinds":237}],277:[function(require,module,exports){
+},{"../jsutils/isInvalid":218,"../jsutils/keyValMap":222,"../language/kinds":233}],273:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57271,7 +56549,7 @@ var ValidationContext = function () {
 }();
 
 exports.default = ValidationContext;
-},{"../error":210,"../language/kinds":237,"../language/visitor":243,"../type/schema":252,"../utilities/TypeInfo":254}],278:[function(require,module,exports){
+},{"../error":206,"../language/kinds":233,"../language/visitor":239,"../type/schema":248,"../utilities/TypeInfo":250}],274:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57540,7 +56818,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.ValidationContext = _ValidationContext2.default;
 
 // https://github.com/tc39/proposal-export-default-from
-},{"./ValidationContext":277,"./rules/FieldsOnCorrectType":280,"./rules/FragmentsOnCompositeTypes":281,"./rules/KnownArgumentNames":282,"./rules/KnownDirectives":283,"./rules/KnownFragmentNames":284,"./rules/KnownTypeNames":285,"./rules/LoneAnonymousOperation":286,"./rules/NoFragmentCycles":287,"./rules/NoUndefinedVariables":288,"./rules/NoUnusedFragments":289,"./rules/NoUnusedVariables":290,"./rules/OverlappingFieldsCanBeMerged":291,"./rules/PossibleFragmentSpreads":292,"./rules/ProvidedNonNullArguments":293,"./rules/ScalarLeafs":294,"./rules/SingleFieldSubscriptions":295,"./rules/UniqueArgumentNames":296,"./rules/UniqueDirectivesPerLocation":297,"./rules/UniqueFragmentNames":298,"./rules/UniqueInputFieldNames":299,"./rules/UniqueOperationNames":300,"./rules/UniqueVariableNames":301,"./rules/ValuesOfCorrectType":302,"./rules/VariablesAreInputTypes":303,"./rules/VariablesDefaultValueAllowed":304,"./rules/VariablesInAllowedPosition":305,"./specifiedRules":306,"./validate":307}],279:[function(require,module,exports){
+},{"./ValidationContext":273,"./rules/FieldsOnCorrectType":276,"./rules/FragmentsOnCompositeTypes":277,"./rules/KnownArgumentNames":278,"./rules/KnownDirectives":279,"./rules/KnownFragmentNames":280,"./rules/KnownTypeNames":281,"./rules/LoneAnonymousOperation":282,"./rules/NoFragmentCycles":283,"./rules/NoUndefinedVariables":284,"./rules/NoUnusedFragments":285,"./rules/NoUnusedVariables":286,"./rules/OverlappingFieldsCanBeMerged":287,"./rules/PossibleFragmentSpreads":288,"./rules/ProvidedNonNullArguments":289,"./rules/ScalarLeafs":290,"./rules/SingleFieldSubscriptions":291,"./rules/UniqueArgumentNames":292,"./rules/UniqueDirectivesPerLocation":293,"./rules/UniqueFragmentNames":294,"./rules/UniqueInputFieldNames":295,"./rules/UniqueOperationNames":296,"./rules/UniqueVariableNames":297,"./rules/ValuesOfCorrectType":298,"./rules/VariablesAreInputTypes":299,"./rules/VariablesDefaultValueAllowed":300,"./rules/VariablesInAllowedPosition":301,"./specifiedRules":302,"./validate":303}],275:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57584,7 +56862,7 @@ function ExecutableDefinitions(context) {
     }
   };
 }
-},{"../../error":210,"../../language/kinds":237}],280:[function(require,module,exports){
+},{"../../error":206,"../../language/kinds":233}],276:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57706,7 +56984,7 @@ function getSuggestedFieldNames(schema, type, fieldName) {
   // Otherwise, must be a Union type, which does not define fields.
   return [];
 }
-},{"../../error":210,"../../jsutils/quotedOrList":232,"../../jsutils/suggestionList":233,"../../type/definition":247}],281:[function(require,module,exports){
+},{"../../error":206,"../../jsutils/quotedOrList":228,"../../jsutils/suggestionList":229,"../../type/definition":243}],277:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57765,7 +57043,7 @@ function FragmentsOnCompositeTypes(context) {
     }
   };
 }
-},{"../../error":210,"../../language/printer":241,"../../type/definition":247,"../../utilities/typeFromAST":274}],282:[function(require,module,exports){
+},{"../../error":206,"../../language/printer":237,"../../type/definition":243,"../../utilities/typeFromAST":270}],278:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57844,7 +57122,7 @@ function KnownArgumentNames(context) {
     }
   };
 }
-},{"../../error":210,"../../jsutils/quotedOrList":232,"../../jsutils/suggestionList":233,"../../language/kinds":237}],283:[function(require,module,exports){
+},{"../../error":206,"../../jsutils/quotedOrList":228,"../../jsutils/suggestionList":229,"../../language/kinds":233}],279:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57957,7 +57235,7 @@ function getDirectiveLocationForASTPath(ancestors) {
     }
   }
 }
-},{"../../error":210,"../../jsutils/find":219,"../../language/directiveLocation":235,"../../language/kinds":237}],284:[function(require,module,exports){
+},{"../../error":206,"../../jsutils/find":215,"../../language/directiveLocation":231,"../../language/kinds":233}],280:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -57998,7 +57276,7 @@ function KnownFragmentNames(context) {
     }
   };
 }
-},{"../../error":210}],285:[function(require,module,exports){
+},{"../../error":206}],281:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58069,7 +57347,7 @@ function KnownTypeNames(context) {
     }
   };
 }
-},{"../../error":210,"../../jsutils/quotedOrList":232,"../../jsutils/suggestionList":233}],286:[function(require,module,exports){
+},{"../../error":206,"../../jsutils/quotedOrList":228,"../../jsutils/suggestionList":229}],282:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58116,7 +57394,7 @@ function LoneAnonymousOperation(context) {
     }
   };
 }
-},{"../../error":210,"../../language/kinds":237}],287:[function(require,module,exports){
+},{"../../error":206,"../../language/kinds":233}],283:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58203,7 +57481,7 @@ function NoFragmentCycles(context) {
     spreadPathIndexByName[fragmentName] = undefined;
   }
 }
-},{"../../error":210}],288:[function(require,module,exports){
+},{"../../error":206}],284:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58259,7 +57537,7 @@ function NoUndefinedVariables(context) {
     }
   };
 }
-},{"../../error":210}],289:[function(require,module,exports){
+},{"../../error":206}],285:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58322,7 +57600,7 @@ function NoUnusedFragments(context) {
     }
   };
 }
-},{"../../error":210}],290:[function(require,module,exports){
+},{"../../error":206}],286:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58384,7 +57662,7 @@ function NoUnusedVariables(context) {
     }
   };
 }
-},{"../../error":210}],291:[function(require,module,exports){
+},{"../../error":206}],287:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -58957,7 +58235,7 @@ function _pairSetAdd(data, a, b, areMutuallyExclusive) {
   }
   map[b] = areMutuallyExclusive;
 }
-},{"../../error":210,"../../jsutils/find":219,"../../language/kinds":237,"../../language/printer":241,"../../type/definition":247,"../../utilities/typeFromAST":274}],292:[function(require,module,exports){
+},{"../../error":206,"../../jsutils/find":215,"../../language/kinds":233,"../../language/printer":237,"../../type/definition":243,"../../utilities/typeFromAST":270}],288:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59026,7 +58304,7 @@ function getFragmentType(context, name) {
     }
   }
 }
-},{"../../error":210,"../../type/definition":247,"../../utilities/typeComparators":273,"../../utilities/typeFromAST":274}],293:[function(require,module,exports){
+},{"../../error":206,"../../type/definition":243,"../../utilities/typeComparators":269,"../../utilities/typeFromAST":270}],289:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59114,7 +58392,7 @@ function ProvidedNonNullArguments(context) {
     }
   };
 }
-},{"../../error":210,"../../jsutils/keyMap":225,"../../type/definition":247}],294:[function(require,module,exports){
+},{"../../error":206,"../../jsutils/keyMap":221,"../../type/definition":243}],290:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59166,7 +58444,7 @@ function ScalarLeafs(context) {
     }
   };
 }
-},{"../../error":210,"../../type/definition":247}],295:[function(require,module,exports){
+},{"../../error":206,"../../type/definition":243}],291:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59206,7 +58484,7 @@ function SingleFieldSubscriptions(context) {
     }
   };
 }
-},{"../../error":210}],296:[function(require,module,exports){
+},{"../../error":206}],292:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59256,7 +58534,7 @@ function UniqueArgumentNames(context) {
     }
   };
 }
-},{"../../error":210}],297:[function(require,module,exports){
+},{"../../error":206}],293:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59308,7 +58586,7 @@ function UniqueDirectivesPerLocation(context) {
     }
   };
 }
-},{"../../error":210}],298:[function(require,module,exports){
+},{"../../error":206}],294:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59354,7 +58632,7 @@ function UniqueFragmentNames(context) {
     }
   };
 }
-},{"../../error":210}],299:[function(require,module,exports){
+},{"../../error":206}],295:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59409,7 +58687,7 @@ function UniqueInputFieldNames(context) {
     }
   };
 }
-},{"../../error":210}],300:[function(require,module,exports){
+},{"../../error":206}],296:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59458,7 +58736,7 @@ function UniqueOperationNames(context) {
     }
   };
 }
-},{"../../error":210}],301:[function(require,module,exports){
+},{"../../error":206}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59503,7 +58781,7 @@ function UniqueVariableNames(context) {
     }
   };
 }
-},{"../../error":210}],302:[function(require,module,exports){
+},{"../../error":206}],298:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59675,7 +58953,7 @@ function enumTypeSuggestion(type, node) {
     }
   }
 }
-},{"../../error":210,"../../jsutils/isInvalid":222,"../../jsutils/keyMap":225,"../../jsutils/orList":229,"../../jsutils/suggestionList":233,"../../language/printer":241,"../../type/definition":247}],303:[function(require,module,exports){
+},{"../../error":206,"../../jsutils/isInvalid":218,"../../jsutils/keyMap":221,"../../jsutils/orList":225,"../../jsutils/suggestionList":229,"../../language/printer":237,"../../type/definition":243}],299:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59724,7 +59002,7 @@ function VariablesAreInputTypes(context) {
     }
   };
 }
-},{"../../error":210,"../../language/printer":241,"../../type/definition":247,"../../utilities/typeFromAST":274}],304:[function(require,module,exports){
+},{"../../error":206,"../../language/printer":237,"../../type/definition":243,"../../utilities/typeFromAST":270}],300:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59776,7 +59054,7 @@ function VariablesDefaultValueAllowed(context) {
     }
   };
 }
-},{"../../error":210,"../../type/definition":247}],305:[function(require,module,exports){
+},{"../../error":206,"../../type/definition":243}],301:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59851,7 +59129,7 @@ function VariablesInAllowedPosition(context) {
 function effectiveType(varType, varDef) {
   return !varDef.defaultValue || (0, _definition.isNonNullType)(varType) ? varType : (0, _definition.GraphQLNonNull)(varType);
 }
-},{"../../error":210,"../../type/definition":247,"../../utilities/typeComparators":273,"../../utilities/typeFromAST":274}],306:[function(require,module,exports){
+},{"../../error":206,"../../type/definition":243,"../../utilities/typeComparators":269,"../../utilities/typeFromAST":270}],302:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -60007,7 +59285,7 @@ var specifiedRules = exports.specifiedRules = [_ExecutableDefinitions.Executable
  */
 
 // Spec Section: "Executable Definitions"
-},{"./rules/ExecutableDefinitions":279,"./rules/FieldsOnCorrectType":280,"./rules/FragmentsOnCompositeTypes":281,"./rules/KnownArgumentNames":282,"./rules/KnownDirectives":283,"./rules/KnownFragmentNames":284,"./rules/KnownTypeNames":285,"./rules/LoneAnonymousOperation":286,"./rules/NoFragmentCycles":287,"./rules/NoUndefinedVariables":288,"./rules/NoUnusedFragments":289,"./rules/NoUnusedVariables":290,"./rules/OverlappingFieldsCanBeMerged":291,"./rules/PossibleFragmentSpreads":292,"./rules/ProvidedNonNullArguments":293,"./rules/ScalarLeafs":294,"./rules/SingleFieldSubscriptions":295,"./rules/UniqueArgumentNames":296,"./rules/UniqueDirectivesPerLocation":297,"./rules/UniqueFragmentNames":298,"./rules/UniqueInputFieldNames":299,"./rules/UniqueOperationNames":300,"./rules/UniqueVariableNames":301,"./rules/ValuesOfCorrectType":302,"./rules/VariablesAreInputTypes":303,"./rules/VariablesDefaultValueAllowed":304,"./rules/VariablesInAllowedPosition":305}],307:[function(require,module,exports){
+},{"./rules/ExecutableDefinitions":275,"./rules/FieldsOnCorrectType":276,"./rules/FragmentsOnCompositeTypes":277,"./rules/KnownArgumentNames":278,"./rules/KnownDirectives":279,"./rules/KnownFragmentNames":280,"./rules/KnownTypeNames":281,"./rules/LoneAnonymousOperation":282,"./rules/NoFragmentCycles":283,"./rules/NoUndefinedVariables":284,"./rules/NoUnusedFragments":285,"./rules/NoUnusedVariables":286,"./rules/OverlappingFieldsCanBeMerged":287,"./rules/PossibleFragmentSpreads":288,"./rules/ProvidedNonNullArguments":289,"./rules/ScalarLeafs":290,"./rules/SingleFieldSubscriptions":291,"./rules/UniqueArgumentNames":292,"./rules/UniqueDirectivesPerLocation":293,"./rules/UniqueFragmentNames":294,"./rules/UniqueInputFieldNames":295,"./rules/UniqueOperationNames":296,"./rules/UniqueVariableNames":297,"./rules/ValuesOfCorrectType":298,"./rules/VariablesAreInputTypes":299,"./rules/VariablesDefaultValueAllowed":300,"./rules/VariablesInAllowedPosition":301}],303:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -60084,7 +59362,7 @@ function visitUsingRules(schema, typeInfo, documentAST, rules) {
   (0, _visitor.visit)(documentAST, (0, _visitor.visitWithTypeInfo)(typeInfo, (0, _visitor.visitInParallel)(visitors)));
   return context.getErrors();
 }
-},{"../error":210,"../jsutils/invariant":221,"../language/visitor":243,"../type/schema":252,"../type/validate":253,"../utilities/TypeInfo":254,"./ValidationContext":277,"./specifiedRules":306}],308:[function(require,module,exports){
+},{"../error":206,"../jsutils/invariant":217,"../language/visitor":239,"../type/schema":248,"../type/validate":249,"../utilities/TypeInfo":250,"./ValidationContext":273,"./specifiedRules":302}],304:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -60170,7 +59448,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],309:[function(require,module,exports){
+},{}],305:[function(require,module,exports){
 'use strict';
 
 exports.isIterable = isIterable;
@@ -60352,7 +59630,7 @@ function forAwaitEach(source, callback, thisArg) {
 }
 
 
-},{}],310:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 'use strict';
 
 
@@ -60990,7 +60268,7 @@ LinkifyIt.prototype.onCompile = function onCompile() {
 
 module.exports = LinkifyIt;
 
-},{"./lib/re":311}],311:[function(require,module,exports){
+},{"./lib/re":307}],307:[function(require,module,exports){
 'use strict';
 
 
@@ -61171,13 +60449,13 @@ module.exports = function (opts) {
   return re;
 };
 
-},{"uc.micro/categories/Cc/regex":537,"uc.micro/categories/P/regex":539,"uc.micro/categories/Z/regex":540,"uc.micro/properties/Any/regex":542}],312:[function(require,module,exports){
+},{"uc.micro/categories/Cc/regex":533,"uc.micro/categories/P/regex":535,"uc.micro/categories/Z/regex":536,"uc.micro/properties/Any/regex":538}],308:[function(require,module,exports){
 'use strict';
 
 
 module.exports = require('./lib/');
 
-},{"./lib/":321}],313:[function(require,module,exports){
+},{"./lib/":317}],309:[function(require,module,exports){
 // HTML5 entities map: { name -> utf16string }
 //
 'use strict';
@@ -61185,7 +60463,7 @@ module.exports = require('./lib/');
 /*eslint quotes:0*/
 module.exports = require('entities/maps/entities.json');
 
-},{"entities/maps/entities.json":45}],314:[function(require,module,exports){
+},{"entities/maps/entities.json":45}],310:[function(require,module,exports){
 // List of valid html blocks names, accorting to commonmark spec
 // http://jgm.github.io/CommonMark/spec.html#html-blocks
 
@@ -61258,7 +60536,7 @@ module.exports = [
   'ul'
 ];
 
-},{}],315:[function(require,module,exports){
+},{}],311:[function(require,module,exports){
 // Regexps to match html elements
 
 'use strict';
@@ -61288,7 +60566,7 @@ var HTML_OPEN_CLOSE_TAG_RE = new RegExp('^(?:' + open_tag + '|' + close_tag + ')
 module.exports.HTML_TAG_RE = HTML_TAG_RE;
 module.exports.HTML_OPEN_CLOSE_TAG_RE = HTML_OPEN_CLOSE_TAG_RE;
 
-},{}],316:[function(require,module,exports){
+},{}],312:[function(require,module,exports){
 // Utilities
 //
 'use strict';
@@ -61565,7 +60843,7 @@ exports.isPunctChar         = isPunctChar;
 exports.escapeRE            = escapeRE;
 exports.normalizeReference  = normalizeReference;
 
-},{"./entities":313,"mdurl":367,"uc.micro":541,"uc.micro/categories/P/regex":539}],317:[function(require,module,exports){
+},{"./entities":309,"mdurl":363,"uc.micro":537,"uc.micro/categories/P/regex":535}],313:[function(require,module,exports){
 // Just a shortcut for bulk export
 'use strict';
 
@@ -61574,7 +60852,7 @@ exports.parseLinkLabel       = require('./parse_link_label');
 exports.parseLinkDestination = require('./parse_link_destination');
 exports.parseLinkTitle       = require('./parse_link_title');
 
-},{"./parse_link_destination":318,"./parse_link_label":319,"./parse_link_title":320}],318:[function(require,module,exports){
+},{"./parse_link_destination":314,"./parse_link_label":315,"./parse_link_title":316}],314:[function(require,module,exports){
 // Parse link destination
 //
 'use strict';
@@ -61656,7 +60934,7 @@ module.exports = function parseLinkDestination(str, pos, max) {
   return result;
 };
 
-},{"../common/utils":316}],319:[function(require,module,exports){
+},{"../common/utils":312}],315:[function(require,module,exports){
 // Parse link label
 //
 // this function assumes that first character ("[") already matches;
@@ -61706,7 +60984,7 @@ module.exports = function parseLinkLabel(state, start, disableNested) {
   return labelEnd;
 };
 
-},{}],320:[function(require,module,exports){
+},{}],316:[function(require,module,exports){
 // Parse link title
 //
 'use strict';
@@ -61761,7 +61039,7 @@ module.exports = function parseLinkTitle(str, pos, max) {
   return result;
 };
 
-},{"../common/utils":316}],321:[function(require,module,exports){
+},{"../common/utils":312}],317:[function(require,module,exports){
 // Main parser class
 
 'use strict';
@@ -62344,7 +61622,7 @@ MarkdownIt.prototype.renderInline = function (src, env) {
 
 module.exports = MarkdownIt;
 
-},{"./common/utils":316,"./helpers":317,"./parser_block":322,"./parser_core":323,"./parser_inline":324,"./presets/commonmark":325,"./presets/default":326,"./presets/zero":327,"./renderer":328,"linkify-it":310,"mdurl":367,"punycode":379}],322:[function(require,module,exports){
+},{"./common/utils":312,"./helpers":313,"./parser_block":318,"./parser_core":319,"./parser_inline":320,"./presets/commonmark":321,"./presets/default":322,"./presets/zero":323,"./renderer":324,"linkify-it":306,"mdurl":363,"punycode":375}],318:[function(require,module,exports){
 /** internal
  * class ParserBlock
  *
@@ -62468,7 +61746,7 @@ ParserBlock.prototype.State = require('./rules_block/state_block');
 
 module.exports = ParserBlock;
 
-},{"./ruler":329,"./rules_block/blockquote":330,"./rules_block/code":331,"./rules_block/fence":332,"./rules_block/heading":333,"./rules_block/hr":334,"./rules_block/html_block":335,"./rules_block/lheading":336,"./rules_block/list":337,"./rules_block/paragraph":338,"./rules_block/reference":339,"./rules_block/state_block":340,"./rules_block/table":341}],323:[function(require,module,exports){
+},{"./ruler":325,"./rules_block/blockquote":326,"./rules_block/code":327,"./rules_block/fence":328,"./rules_block/heading":329,"./rules_block/hr":330,"./rules_block/html_block":331,"./rules_block/lheading":332,"./rules_block/list":333,"./rules_block/paragraph":334,"./rules_block/reference":335,"./rules_block/state_block":336,"./rules_block/table":337}],319:[function(require,module,exports){
 /** internal
  * class Core
  *
@@ -62528,7 +61806,7 @@ Core.prototype.State = require('./rules_core/state_core');
 
 module.exports = Core;
 
-},{"./ruler":329,"./rules_core/block":342,"./rules_core/inline":343,"./rules_core/linkify":344,"./rules_core/normalize":345,"./rules_core/replacements":346,"./rules_core/smartquotes":347,"./rules_core/state_core":348}],324:[function(require,module,exports){
+},{"./ruler":325,"./rules_core/block":338,"./rules_core/inline":339,"./rules_core/linkify":340,"./rules_core/normalize":341,"./rules_core/replacements":342,"./rules_core/smartquotes":343,"./rules_core/state_core":344}],320:[function(require,module,exports){
 /** internal
  * class ParserInline
  *
@@ -62707,7 +61985,7 @@ ParserInline.prototype.State = require('./rules_inline/state_inline');
 
 module.exports = ParserInline;
 
-},{"./ruler":329,"./rules_inline/autolink":349,"./rules_inline/backticks":350,"./rules_inline/balance_pairs":351,"./rules_inline/emphasis":352,"./rules_inline/entity":353,"./rules_inline/escape":354,"./rules_inline/html_inline":355,"./rules_inline/image":356,"./rules_inline/link":357,"./rules_inline/newline":358,"./rules_inline/state_inline":359,"./rules_inline/strikethrough":360,"./rules_inline/text":361,"./rules_inline/text_collapse":362}],325:[function(require,module,exports){
+},{"./ruler":325,"./rules_inline/autolink":345,"./rules_inline/backticks":346,"./rules_inline/balance_pairs":347,"./rules_inline/emphasis":348,"./rules_inline/entity":349,"./rules_inline/escape":350,"./rules_inline/html_inline":351,"./rules_inline/image":352,"./rules_inline/link":353,"./rules_inline/newline":354,"./rules_inline/state_inline":355,"./rules_inline/strikethrough":356,"./rules_inline/text":357,"./rules_inline/text_collapse":358}],321:[function(require,module,exports){
 // Commonmark default options
 
 'use strict';
@@ -62789,7 +62067,7 @@ module.exports = {
   }
 };
 
-},{}],326:[function(require,module,exports){
+},{}],322:[function(require,module,exports){
 // markdown-it default options
 
 'use strict';
@@ -62832,7 +62110,7 @@ module.exports = {
   }
 };
 
-},{}],327:[function(require,module,exports){
+},{}],323:[function(require,module,exports){
 // "Zero" preset, with nothing enabled. Useful for manual configuring of simple
 // modes. For example, to parse bold/italic only.
 
@@ -62896,7 +62174,7 @@ module.exports = {
   }
 };
 
-},{}],328:[function(require,module,exports){
+},{}],324:[function(require,module,exports){
 /**
  * class Renderer
  *
@@ -63233,7 +62511,7 @@ Renderer.prototype.render = function (tokens, options, env) {
 
 module.exports = Renderer;
 
-},{"./common/utils":316}],329:[function(require,module,exports){
+},{"./common/utils":312}],325:[function(require,module,exports){
 /**
  * class Ruler
  *
@@ -63587,7 +62865,7 @@ Ruler.prototype.getRules = function (chainName) {
 
 module.exports = Ruler;
 
-},{}],330:[function(require,module,exports){
+},{}],326:[function(require,module,exports){
 // Block quotes
 
 'use strict';
@@ -63874,7 +63152,7 @@ module.exports = function blockquote(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":316}],331:[function(require,module,exports){
+},{"../common/utils":312}],327:[function(require,module,exports){
 // Code block (4 spaces padded)
 
 'use strict';
@@ -63910,7 +63188,7 @@ module.exports = function code(state, startLine, endLine/*, silent*/) {
   return true;
 };
 
-},{}],332:[function(require,module,exports){
+},{}],328:[function(require,module,exports){
 // fences (``` lang, ~~~ lang)
 
 'use strict';
@@ -64006,7 +63284,7 @@ module.exports = function fence(state, startLine, endLine, silent) {
   return true;
 };
 
-},{}],333:[function(require,module,exports){
+},{}],329:[function(require,module,exports){
 // heading (#, ##, ...)
 
 'use strict';
@@ -64063,7 +63341,7 @@ module.exports = function heading(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":316}],334:[function(require,module,exports){
+},{"../common/utils":312}],330:[function(require,module,exports){
 // Horizontal rule
 
 'use strict';
@@ -64110,7 +63388,7 @@ module.exports = function hr(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":316}],335:[function(require,module,exports){
+},{"../common/utils":312}],331:[function(require,module,exports){
 // HTML block
 
 'use strict';
@@ -64186,7 +63464,7 @@ module.exports = function html_block(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/html_blocks":314,"../common/html_re":315}],336:[function(require,module,exports){
+},{"../common/html_blocks":310,"../common/html_re":311}],332:[function(require,module,exports){
 // lheading (---, ===)
 
 'use strict';
@@ -64271,7 +63549,7 @@ module.exports = function lheading(state, startLine, endLine/*, silent*/) {
   return true;
 };
 
-},{}],337:[function(require,module,exports){
+},{}],333:[function(require,module,exports){
 // Lists
 
 'use strict';
@@ -64609,7 +63887,7 @@ module.exports = function list(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":316}],338:[function(require,module,exports){
+},{"../common/utils":312}],334:[function(require,module,exports){
 // Paragraph
 
 'use strict';
@@ -64663,7 +63941,7 @@ module.exports = function paragraph(state, startLine/*, endLine*/) {
   return true;
 };
 
-},{}],339:[function(require,module,exports){
+},{}],335:[function(require,module,exports){
 'use strict';
 
 
@@ -64863,7 +64141,7 @@ module.exports = function reference(state, startLine, _endLine, silent) {
   return true;
 };
 
-},{"../common/utils":316}],340:[function(require,module,exports){
+},{"../common/utils":312}],336:[function(require,module,exports){
 // Parser state class
 
 'use strict';
@@ -65095,7 +64373,7 @@ StateBlock.prototype.Token = Token;
 
 module.exports = StateBlock;
 
-},{"../common/utils":316,"../token":363}],341:[function(require,module,exports){
+},{"../common/utils":312,"../token":359}],337:[function(require,module,exports){
 // GFM table, non-standard
 
 'use strict';
@@ -65293,7 +64571,7 @@ module.exports = function table(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":316}],342:[function(require,module,exports){
+},{"../common/utils":312}],338:[function(require,module,exports){
 'use strict';
 
 
@@ -65311,7 +64589,7 @@ module.exports = function block(state) {
   }
 };
 
-},{}],343:[function(require,module,exports){
+},{}],339:[function(require,module,exports){
 'use strict';
 
 module.exports = function inline(state) {
@@ -65326,7 +64604,7 @@ module.exports = function inline(state) {
   }
 };
 
-},{}],344:[function(require,module,exports){
+},{}],340:[function(require,module,exports){
 // Replace link-like texts with link nodes.
 //
 // Currently restricted by `md.validateLink()` to http/https/ftp
@@ -65461,7 +64739,7 @@ module.exports = function linkify(state) {
   }
 };
 
-},{"../common/utils":316}],345:[function(require,module,exports){
+},{"../common/utils":312}],341:[function(require,module,exports){
 // Normalize input string
 
 'use strict';
@@ -65483,7 +64761,7 @@ module.exports = function inline(state) {
   state.src = str;
 };
 
-},{}],346:[function(require,module,exports){
+},{}],342:[function(require,module,exports){
 // Simple typographyc replacements
 //
 // (c) (C) → ©
@@ -65592,7 +64870,7 @@ module.exports = function replace(state) {
   }
 };
 
-},{}],347:[function(require,module,exports){
+},{}],343:[function(require,module,exports){
 // Convert straight quotation marks to typographic ones
 //
 'use strict';
@@ -65789,7 +65067,7 @@ module.exports = function smartquotes(state) {
   }
 };
 
-},{"../common/utils":316}],348:[function(require,module,exports){
+},{"../common/utils":312}],344:[function(require,module,exports){
 // Core state object
 //
 'use strict';
@@ -65811,7 +65089,7 @@ StateCore.prototype.Token = Token;
 
 module.exports = StateCore;
 
-},{"../token":363}],349:[function(require,module,exports){
+},{"../token":359}],345:[function(require,module,exports){
 // Process autolinks '<protocol:...>'
 
 'use strict';
@@ -65885,7 +65163,7 @@ module.exports = function autolink(state, silent) {
   return false;
 };
 
-},{}],350:[function(require,module,exports){
+},{}],346:[function(require,module,exports){
 // Parse backticks
 
 'use strict';
@@ -65930,7 +65208,7 @@ module.exports = function backtick(state, silent) {
   return true;
 };
 
-},{}],351:[function(require,module,exports){
+},{}],347:[function(require,module,exports){
 // For each opening emphasis-like marker find a matching closing one
 //
 'use strict';
@@ -65976,7 +65254,7 @@ module.exports = function link_pairs(state) {
   }
 };
 
-},{}],352:[function(require,module,exports){
+},{}],348:[function(require,module,exports){
 // Process *this* and _that_
 //
 'use strict';
@@ -66105,7 +65383,7 @@ module.exports.postProcess = function emphasis(state) {
   }
 };
 
-},{}],353:[function(require,module,exports){
+},{}],349:[function(require,module,exports){
 // Process html entity - &#123;, &#xAF;, &quot;, ...
 
 'use strict';
@@ -66155,7 +65433,7 @@ module.exports = function entity(state, silent) {
   return true;
 };
 
-},{"../common/entities":313,"../common/utils":316}],354:[function(require,module,exports){
+},{"../common/entities":309,"../common/utils":312}],350:[function(require,module,exports){
 // Process escaped chars and hardbreaks
 
 'use strict';
@@ -66209,7 +65487,7 @@ module.exports = function escape(state, silent) {
   return true;
 };
 
-},{"../common/utils":316}],355:[function(require,module,exports){
+},{"../common/utils":312}],351:[function(require,module,exports){
 // Process html tags
 
 'use strict';
@@ -66258,7 +65536,7 @@ module.exports = function html_inline(state, silent) {
   return true;
 };
 
-},{"../common/html_re":315}],356:[function(require,module,exports){
+},{"../common/html_re":311}],352:[function(require,module,exports){
 // Process ![image](<src> "title")
 
 'use strict';
@@ -66412,7 +65690,7 @@ module.exports = function image(state, silent) {
   return true;
 };
 
-},{"../common/utils":316}],357:[function(require,module,exports){
+},{"../common/utils":312}],353:[function(require,module,exports){
 // Process [link](<to> "stuff")
 
 'use strict';
@@ -66564,7 +65842,7 @@ module.exports = function link(state, silent) {
   return true;
 };
 
-},{"../common/utils":316}],358:[function(require,module,exports){
+},{"../common/utils":312}],354:[function(require,module,exports){
 // Proceess '\n'
 
 'use strict';
@@ -66608,7 +65886,7 @@ module.exports = function newline(state, silent) {
   return true;
 };
 
-},{"../common/utils":316}],359:[function(require,module,exports){
+},{"../common/utils":312}],355:[function(require,module,exports){
 // Inline parser state
 
 'use strict';
@@ -66740,7 +66018,7 @@ StateInline.prototype.Token = Token;
 
 module.exports = StateInline;
 
-},{"../common/utils":316,"../token":363}],360:[function(require,module,exports){
+},{"../common/utils":312,"../token":359}],356:[function(require,module,exports){
 // ~~strike through~~
 //
 'use strict';
@@ -66859,7 +66137,7 @@ module.exports.postProcess = function strikethrough(state) {
   }
 };
 
-},{}],361:[function(require,module,exports){
+},{}],357:[function(require,module,exports){
 // Skip text characters for text token, place those to pending buffer
 // and increment current pos
 
@@ -66950,7 +66228,7 @@ module.exports = function text(state, silent) {
   return true;
 };*/
 
-},{}],362:[function(require,module,exports){
+},{}],358:[function(require,module,exports){
 // Merge adjacent text nodes into one, and re-calculate all token levels
 //
 'use strict';
@@ -66985,7 +66263,7 @@ module.exports = function text_collapse(state) {
   }
 };
 
-},{}],363:[function(require,module,exports){
+},{}],359:[function(require,module,exports){
 // Token class
 
 'use strict';
@@ -67184,7 +66462,7 @@ Token.prototype.attrJoin = function attrJoin(name, value) {
 
 module.exports = Token;
 
-},{}],364:[function(require,module,exports){
+},{}],360:[function(require,module,exports){
 
 'use strict';
 
@@ -67308,7 +66586,7 @@ decode.componentChars = '';
 
 module.exports = decode;
 
-},{}],365:[function(require,module,exports){
+},{}],361:[function(require,module,exports){
 
 'use strict';
 
@@ -67408,7 +66686,7 @@ encode.componentChars = "-_.!~*'()";
 
 module.exports = encode;
 
-},{}],366:[function(require,module,exports){
+},{}],362:[function(require,module,exports){
 
 'use strict';
 
@@ -67435,7 +66713,7 @@ module.exports = function format(url) {
   return result;
 };
 
-},{}],367:[function(require,module,exports){
+},{}],363:[function(require,module,exports){
 'use strict';
 
 
@@ -67444,7 +66722,7 @@ module.exports.decode = require('./decode');
 module.exports.format = require('./format');
 module.exports.parse  = require('./parse');
 
-},{"./decode":364,"./encode":365,"./format":366,"./parse":368}],368:[function(require,module,exports){
+},{"./decode":360,"./encode":361,"./format":362,"./parse":364}],364:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -67758,7 +67036,7 @@ Url.prototype.parseHost = function(host) {
 
 module.exports = urlParse;
 
-},{}],369:[function(require,module,exports){
+},{}],365:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -67912,7 +67190,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],370:[function(require,module,exports){
+},{}],366:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -68004,7 +67282,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],371:[function(require,module,exports){
+},{}],367:[function(require,module,exports){
 (function (process){
 // .dirname, .basename, and .extname methods are extracted from Node.js v8.11.1,
 // backported and transplited with Babel, with backwards-compat fixes
@@ -68310,7 +67588,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":372}],372:[function(require,module,exports){
+},{"_process":368}],368:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -68496,7 +67774,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],373:[function(require,module,exports){
+},{}],369:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -68602,7 +67880,7 @@ checkPropTypes.resetWarningCache = function() {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":378,"_process":372}],374:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":374,"_process":368}],370:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -68623,7 +67901,7 @@ module.exports = function(isValidElement) {
   return factory(isValidElement, throwOnDirectAccess);
 };
 
-},{"./factoryWithTypeCheckers":376}],375:[function(require,module,exports){
+},{"./factoryWithTypeCheckers":372}],371:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -68689,7 +67967,7 @@ module.exports = function() {
   return ReactPropTypes;
 };
 
-},{"./lib/ReactPropTypesSecret":378}],376:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":374}],372:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -69284,7 +68562,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 };
 
 }).call(this,require('_process'))
-},{"./checkPropTypes":373,"./lib/ReactPropTypesSecret":378,"_process":372,"object-assign":370,"react-is":509}],377:[function(require,module,exports){
+},{"./checkPropTypes":369,"./lib/ReactPropTypesSecret":374,"_process":368,"object-assign":366,"react-is":505}],373:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -69307,7 +68585,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./factoryWithThrowingShims":375,"./factoryWithTypeCheckers":376,"_process":372,"react-is":509}],378:[function(require,module,exports){
+},{"./factoryWithThrowingShims":371,"./factoryWithTypeCheckers":372,"_process":368,"react-is":505}],374:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -69321,7 +68599,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],379:[function(require,module,exports){
+},{}],375:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root) {
@@ -69858,12 +69136,12 @@ module.exports = ReactPropTypesSecret;
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],380:[function(require,module,exports){
+},{}],376:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/ReactDOM');
 
-},{"./lib/ReactDOM":410}],381:[function(require,module,exports){
+},{"./lib/ReactDOM":406}],377:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -69935,7 +69213,7 @@ var ARIADOMPropertyConfig = {
 };
 
 module.exports = ARIADOMPropertyConfig;
-},{}],382:[function(require,module,exports){
+},{}],378:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -69957,7 +69235,7 @@ var AutoFocusUtils = {
 };
 
 module.exports = AutoFocusUtils;
-},{"./ReactDOMComponentTree":413,"fbjs/lib/focusNode":55}],383:[function(require,module,exports){
+},{"./ReactDOMComponentTree":409,"fbjs/lib/focusNode":55}],379:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -70339,7 +69617,7 @@ var BeforeInputEventPlugin = {
 };
 
 module.exports = BeforeInputEventPlugin;
-},{"./EventPropagators":399,"./FallbackCompositionState":400,"./SyntheticCompositionEvent":464,"./SyntheticInputEvent":468,"fbjs/lib/ExecutionEnvironment":47}],384:[function(require,module,exports){
+},{"./EventPropagators":395,"./FallbackCompositionState":396,"./SyntheticCompositionEvent":460,"./SyntheticInputEvent":464,"fbjs/lib/ExecutionEnvironment":47}],380:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -70492,7 +69770,7 @@ var CSSProperty = {
 };
 
 module.exports = CSSProperty;
-},{}],385:[function(require,module,exports){
+},{}],381:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -70707,7 +69985,7 @@ var CSSPropertyOperations = {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
-},{"./CSSProperty":384,"./ReactInstrumentation":442,"./dangerousStyleValue":481,"_process":372,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/camelizeStyleName":49,"fbjs/lib/hyphenateStyleName":60,"fbjs/lib/memoizeStringOnly":64,"fbjs/lib/warning":68}],386:[function(require,module,exports){
+},{"./CSSProperty":380,"./ReactInstrumentation":438,"./dangerousStyleValue":477,"_process":368,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/camelizeStyleName":49,"fbjs/lib/hyphenateStyleName":60,"fbjs/lib/memoizeStringOnly":64,"fbjs/lib/warning":68}],382:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -70826,7 +70104,7 @@ var CallbackQueue = function () {
 
 module.exports = PooledClass.addPoolingTo(CallbackQueue);
 }).call(this,require('_process'))
-},{"./PooledClass":404,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],387:[function(require,module,exports){
+},{"./PooledClass":400,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],383:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -71136,7 +70414,7 @@ var ChangeEventPlugin = {
 };
 
 module.exports = ChangeEventPlugin;
-},{"./EventPluginHub":396,"./EventPropagators":399,"./ReactDOMComponentTree":413,"./ReactUpdates":457,"./SyntheticEvent":466,"./getEventTarget":489,"./inputValueTracking":495,"./isEventSupported":497,"./isTextInputElement":498,"fbjs/lib/ExecutionEnvironment":47}],388:[function(require,module,exports){
+},{"./EventPluginHub":392,"./EventPropagators":395,"./ReactDOMComponentTree":409,"./ReactUpdates":453,"./SyntheticEvent":462,"./getEventTarget":485,"./inputValueTracking":491,"./isEventSupported":493,"./isTextInputElement":494,"fbjs/lib/ExecutionEnvironment":47}],384:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -71362,7 +70640,7 @@ var DOMChildrenOperations = {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":389,"./Danger":393,"./ReactDOMComponentTree":413,"./ReactInstrumentation":442,"./createMicrosoftUnsafeLocalFunction":480,"./setInnerHTML":502,"./setTextContent":503,"_process":372}],389:[function(require,module,exports){
+},{"./DOMLazyTree":385,"./Danger":389,"./ReactDOMComponentTree":409,"./ReactInstrumentation":438,"./createMicrosoftUnsafeLocalFunction":476,"./setInnerHTML":498,"./setTextContent":499,"_process":368}],385:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -71478,7 +70756,7 @@ DOMLazyTree.queueHTML = queueHTML;
 DOMLazyTree.queueText = queueText;
 
 module.exports = DOMLazyTree;
-},{"./DOMNamespaces":390,"./createMicrosoftUnsafeLocalFunction":480,"./setInnerHTML":502,"./setTextContent":503}],390:[function(require,module,exports){
+},{"./DOMNamespaces":386,"./createMicrosoftUnsafeLocalFunction":476,"./setInnerHTML":498,"./setTextContent":499}],386:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -71496,7 +70774,7 @@ var DOMNamespaces = {
 };
 
 module.exports = DOMNamespaces;
-},{}],391:[function(require,module,exports){
+},{}],387:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -71705,7 +70983,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],392:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],388:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -71940,7 +71218,7 @@ var DOMPropertyOperations = {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
-},{"./DOMProperty":391,"./ReactDOMComponentTree":413,"./ReactInstrumentation":442,"./quoteAttributeValueForBrowser":499,"_process":372,"fbjs/lib/warning":68}],393:[function(require,module,exports){
+},{"./DOMProperty":387,"./ReactDOMComponentTree":409,"./ReactInstrumentation":438,"./quoteAttributeValueForBrowser":495,"_process":368,"fbjs/lib/warning":68}],389:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -71986,7 +71264,7 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":389,"./reactProdInvariant":500,"_process":372,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/createNodesFromMarkup":52,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61}],394:[function(require,module,exports){
+},{"./DOMLazyTree":385,"./reactProdInvariant":496,"_process":368,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/createNodesFromMarkup":52,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61}],390:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -72010,7 +71288,7 @@ module.exports = Danger;
 var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'TapEventPlugin', 'EnterLeaveEventPlugin', 'ChangeEventPlugin', 'SelectEventPlugin', 'BeforeInputEventPlugin'];
 
 module.exports = DefaultEventPluginOrder;
-},{}],395:[function(require,module,exports){
+},{}],391:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -72106,7 +71384,7 @@ var EnterLeaveEventPlugin = {
 };
 
 module.exports = EnterLeaveEventPlugin;
-},{"./EventPropagators":399,"./ReactDOMComponentTree":413,"./SyntheticMouseEvent":470}],396:[function(require,module,exports){
+},{"./EventPropagators":395,"./ReactDOMComponentTree":409,"./SyntheticMouseEvent":466}],392:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -72380,7 +71658,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":397,"./EventPluginUtils":398,"./ReactErrorUtils":433,"./accumulateInto":477,"./forEachAccumulated":485,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],397:[function(require,module,exports){
+},{"./EventPluginRegistry":393,"./EventPluginUtils":394,"./ReactErrorUtils":429,"./accumulateInto":473,"./forEachAccumulated":481,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],393:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -72633,7 +71911,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],398:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],394:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -72859,7 +72137,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
-},{"./ReactErrorUtils":433,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],399:[function(require,module,exports){
+},{"./ReactErrorUtils":429,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],395:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -72993,7 +72271,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
-},{"./EventPluginHub":396,"./EventPluginUtils":398,"./accumulateInto":477,"./forEachAccumulated":485,"_process":372,"fbjs/lib/warning":68}],400:[function(require,module,exports){
+},{"./EventPluginHub":392,"./EventPluginUtils":394,"./accumulateInto":473,"./forEachAccumulated":481,"_process":368,"fbjs/lib/warning":68}],396:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -73086,7 +72364,7 @@ _assign(FallbackCompositionState.prototype, {
 PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
-},{"./PooledClass":404,"./getTextContentAccessor":493,"object-assign":370}],401:[function(require,module,exports){
+},{"./PooledClass":400,"./getTextContentAccessor":489,"object-assign":366}],397:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -73321,7 +72599,7 @@ var HTMLDOMPropertyConfig = {
 };
 
 module.exports = HTMLDOMPropertyConfig;
-},{"./DOMProperty":391}],402:[function(require,module,exports){
+},{"./DOMProperty":387}],398:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -73378,7 +72656,7 @@ var KeyEscapeUtils = {
 };
 
 module.exports = KeyEscapeUtils;
-},{}],403:[function(require,module,exports){
+},{}],399:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -73516,7 +72794,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
-},{"./ReactPropTypesSecret":450,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"prop-types/factory":374,"react/lib/React":512}],404:[function(require,module,exports){
+},{"./ReactPropTypesSecret":446,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"prop-types/factory":370,"react/lib/React":508}],400:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -73628,7 +72906,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],405:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],401:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -73950,7 +73228,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 });
 
 module.exports = ReactBrowserEventEmitter;
-},{"./EventPluginRegistry":397,"./ReactEventEmitterMixin":434,"./ViewportMetrics":476,"./getVendorPrefixedEventName":494,"./isEventSupported":497,"object-assign":370}],406:[function(require,module,exports){
+},{"./EventPluginRegistry":393,"./ReactEventEmitterMixin":430,"./ViewportMetrics":472,"./getVendorPrefixedEventName":490,"./isEventSupported":493,"object-assign":366}],402:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -74103,7 +73381,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":402,"./ReactReconciler":452,"./instantiateReactComponent":496,"./shouldUpdateReactComponent":504,"./traverseAllChildren":505,"_process":372,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":515}],407:[function(require,module,exports){
+},{"./KeyEscapeUtils":398,"./ReactReconciler":448,"./instantiateReactComponent":492,"./shouldUpdateReactComponent":500,"./traverseAllChildren":501,"_process":368,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":511}],403:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -74129,7 +73407,7 @@ var ReactComponentBrowserEnvironment = {
 };
 
 module.exports = ReactComponentBrowserEnvironment;
-},{"./DOMChildrenOperations":388,"./ReactDOMIDOperations":417}],408:[function(require,module,exports){
+},{"./DOMChildrenOperations":384,"./ReactDOMIDOperations":413}],404:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -74173,7 +73451,7 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],409:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],405:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -75073,7 +74351,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
-},{"./ReactComponentEnvironment":408,"./ReactErrorUtils":433,"./ReactInstanceMap":441,"./ReactInstrumentation":442,"./ReactNodeTypes":447,"./ReactReconciler":452,"./checkReactTypeSpec":479,"./reactProdInvariant":500,"./shouldUpdateReactComponent":504,"_process":372,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"fbjs/lib/shallowEqual":67,"fbjs/lib/warning":68,"object-assign":370,"react/lib/React":512,"react/lib/ReactCurrentOwner":516}],410:[function(require,module,exports){
+},{"./ReactComponentEnvironment":404,"./ReactErrorUtils":429,"./ReactInstanceMap":437,"./ReactInstrumentation":438,"./ReactNodeTypes":443,"./ReactReconciler":448,"./checkReactTypeSpec":475,"./reactProdInvariant":496,"./shouldUpdateReactComponent":500,"_process":368,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"fbjs/lib/shallowEqual":67,"fbjs/lib/warning":68,"object-assign":366,"react/lib/React":508,"react/lib/ReactCurrentOwner":512}],406:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -75184,7 +74462,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactDOM;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":413,"./ReactDOMInvalidARIAHook":419,"./ReactDOMNullInputValuePropHook":420,"./ReactDOMUnknownPropertyHook":427,"./ReactDefaultInjection":430,"./ReactInstrumentation":442,"./ReactMount":445,"./ReactReconciler":452,"./ReactUpdates":457,"./ReactVersion":458,"./findDOMNode":483,"./getHostComponentFromComposite":490,"./renderSubtreeIntoContainer":501,"_process":372,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/warning":68}],411:[function(require,module,exports){
+},{"./ReactDOMComponentTree":409,"./ReactDOMInvalidARIAHook":415,"./ReactDOMNullInputValuePropHook":416,"./ReactDOMUnknownPropertyHook":423,"./ReactDefaultInjection":426,"./ReactInstrumentation":438,"./ReactMount":441,"./ReactReconciler":448,"./ReactUpdates":453,"./ReactVersion":454,"./findDOMNode":479,"./getHostComponentFromComposite":486,"./renderSubtreeIntoContainer":497,"_process":368,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/warning":68}],407:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -76198,7 +75476,7 @@ _assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mi
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
-},{"./AutoFocusUtils":382,"./CSSPropertyOperations":385,"./DOMLazyTree":389,"./DOMNamespaces":390,"./DOMProperty":391,"./DOMPropertyOperations":392,"./EventPluginHub":396,"./EventPluginRegistry":397,"./ReactBrowserEventEmitter":405,"./ReactDOMComponentFlags":412,"./ReactDOMComponentTree":413,"./ReactDOMInput":418,"./ReactDOMOption":421,"./ReactDOMSelect":422,"./ReactDOMTextarea":425,"./ReactInstrumentation":442,"./ReactMultiChild":446,"./ReactServerRenderingTransaction":454,"./escapeTextContentForBrowser":482,"./inputValueTracking":495,"./isEventSupported":497,"./reactProdInvariant":500,"./validateDOMNesting":506,"_process":372,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61,"fbjs/lib/shallowEqual":67,"fbjs/lib/warning":68,"object-assign":370}],412:[function(require,module,exports){
+},{"./AutoFocusUtils":378,"./CSSPropertyOperations":381,"./DOMLazyTree":385,"./DOMNamespaces":386,"./DOMProperty":387,"./DOMPropertyOperations":388,"./EventPluginHub":392,"./EventPluginRegistry":393,"./ReactBrowserEventEmitter":401,"./ReactDOMComponentFlags":408,"./ReactDOMComponentTree":409,"./ReactDOMInput":414,"./ReactDOMOption":417,"./ReactDOMSelect":418,"./ReactDOMTextarea":421,"./ReactInstrumentation":438,"./ReactMultiChild":442,"./ReactServerRenderingTransaction":450,"./escapeTextContentForBrowser":478,"./inputValueTracking":491,"./isEventSupported":493,"./reactProdInvariant":496,"./validateDOMNesting":502,"_process":368,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61,"fbjs/lib/shallowEqual":67,"fbjs/lib/warning":68,"object-assign":366}],408:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -76214,7 +75492,7 @@ var ReactDOMComponentFlags = {
 };
 
 module.exports = ReactDOMComponentFlags;
-},{}],413:[function(require,module,exports){
+},{}],409:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -76409,7 +75687,7 @@ var ReactDOMComponentTree = {
 
 module.exports = ReactDOMComponentTree;
 }).call(this,require('_process'))
-},{"./DOMProperty":391,"./ReactDOMComponentFlags":412,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],414:[function(require,module,exports){
+},{"./DOMProperty":387,"./ReactDOMComponentFlags":408,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],410:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -76442,7 +75720,7 @@ function ReactDOMContainerInfo(topLevelWrapper, node) {
 
 module.exports = ReactDOMContainerInfo;
 }).call(this,require('_process'))
-},{"./validateDOMNesting":506,"_process":372}],415:[function(require,module,exports){
+},{"./validateDOMNesting":502,"_process":368}],411:[function(require,module,exports){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -76500,7 +75778,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 });
 
 module.exports = ReactDOMEmptyComponent;
-},{"./DOMLazyTree":389,"./ReactDOMComponentTree":413,"object-assign":370}],416:[function(require,module,exports){
+},{"./DOMLazyTree":385,"./ReactDOMComponentTree":409,"object-assign":366}],412:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -76517,7 +75795,7 @@ var ReactDOMFeatureFlags = {
 };
 
 module.exports = ReactDOMFeatureFlags;
-},{}],417:[function(require,module,exports){
+},{}],413:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -76548,7 +75826,7 @@ var ReactDOMIDOperations = {
 };
 
 module.exports = ReactDOMIDOperations;
-},{"./DOMChildrenOperations":388,"./ReactDOMComponentTree":413}],418:[function(require,module,exports){
+},{"./DOMChildrenOperations":384,"./ReactDOMComponentTree":409}],414:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -76835,7 +76113,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
-},{"./DOMPropertyOperations":392,"./LinkedValueUtils":403,"./ReactDOMComponentTree":413,"./ReactUpdates":457,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":370}],419:[function(require,module,exports){
+},{"./DOMPropertyOperations":388,"./LinkedValueUtils":399,"./ReactDOMComponentTree":409,"./ReactUpdates":453,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":366}],415:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -76928,7 +76206,7 @@ var ReactDOMInvalidARIAHook = {
 
 module.exports = ReactDOMInvalidARIAHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":391,"_process":372,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":515}],420:[function(require,module,exports){
+},{"./DOMProperty":387,"_process":368,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":511}],416:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -76971,7 +76249,7 @@ var ReactDOMNullInputValuePropHook = {
 
 module.exports = ReactDOMNullInputValuePropHook;
 }).call(this,require('_process'))
-},{"_process":372,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":515}],421:[function(require,module,exports){
+},{"_process":368,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":511}],417:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -77093,7 +76371,7 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":413,"./ReactDOMSelect":422,"_process":372,"fbjs/lib/warning":68,"object-assign":370,"react/lib/React":512}],422:[function(require,module,exports){
+},{"./ReactDOMComponentTree":409,"./ReactDOMSelect":418,"_process":368,"fbjs/lib/warning":68,"object-assign":366,"react/lib/React":508}],418:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -77293,7 +76571,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":403,"./ReactDOMComponentTree":413,"./ReactUpdates":457,"_process":372,"fbjs/lib/warning":68,"object-assign":370}],423:[function(require,module,exports){
+},{"./LinkedValueUtils":399,"./ReactDOMComponentTree":409,"./ReactUpdates":453,"_process":368,"fbjs/lib/warning":68,"object-assign":366}],419:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -77503,7 +76781,7 @@ var ReactDOMSelection = {
 };
 
 module.exports = ReactDOMSelection;
-},{"./getNodeForCharacterOffset":492,"./getTextContentAccessor":493,"fbjs/lib/ExecutionEnvironment":47}],424:[function(require,module,exports){
+},{"./getNodeForCharacterOffset":488,"./getTextContentAccessor":489,"fbjs/lib/ExecutionEnvironment":47}],420:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -77665,7 +76943,7 @@ _assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":388,"./DOMLazyTree":389,"./ReactDOMComponentTree":413,"./escapeTextContentForBrowser":482,"./reactProdInvariant":500,"./validateDOMNesting":506,"_process":372,"fbjs/lib/invariant":61,"object-assign":370}],425:[function(require,module,exports){
+},{"./DOMChildrenOperations":384,"./DOMLazyTree":385,"./ReactDOMComponentTree":409,"./escapeTextContentForBrowser":478,"./reactProdInvariant":496,"./validateDOMNesting":502,"_process":368,"fbjs/lib/invariant":61,"object-assign":366}],421:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -77825,7 +77103,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":403,"./ReactDOMComponentTree":413,"./ReactUpdates":457,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":370}],426:[function(require,module,exports){
+},{"./LinkedValueUtils":399,"./ReactDOMComponentTree":409,"./ReactUpdates":453,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":366}],422:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -77961,7 +77239,7 @@ module.exports = {
   traverseEnterLeave: traverseEnterLeave
 };
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],427:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],423:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -78073,7 +77351,7 @@ var ReactDOMUnknownPropertyHook = {
 
 module.exports = ReactDOMUnknownPropertyHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":391,"./EventPluginRegistry":397,"_process":372,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":515}],428:[function(require,module,exports){
+},{"./DOMProperty":387,"./EventPluginRegistry":393,"_process":368,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":511}],424:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -78434,7 +77712,7 @@ if (/[?&]react_perf\b/.test(url)) {
 
 module.exports = ReactDebugTool;
 }).call(this,require('_process'))
-},{"./ReactHostOperationHistoryHook":438,"./ReactInvalidSetStateWarningHook":443,"_process":372,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/performanceNow":66,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":515}],429:[function(require,module,exports){
+},{"./ReactHostOperationHistoryHook":434,"./ReactInvalidSetStateWarningHook":439,"_process":368,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/performanceNow":66,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":511}],425:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -78500,7 +77778,7 @@ var ReactDefaultBatchingStrategy = {
 };
 
 module.exports = ReactDefaultBatchingStrategy;
-},{"./ReactUpdates":457,"./Transaction":475,"fbjs/lib/emptyFunction":53,"object-assign":370}],430:[function(require,module,exports){
+},{"./ReactUpdates":453,"./Transaction":471,"fbjs/lib/emptyFunction":53,"object-assign":366}],426:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -78584,7 +77862,7 @@ function inject() {
 module.exports = {
   inject: inject
 };
-},{"./ARIADOMPropertyConfig":381,"./BeforeInputEventPlugin":383,"./ChangeEventPlugin":387,"./DefaultEventPluginOrder":394,"./EnterLeaveEventPlugin":395,"./HTMLDOMPropertyConfig":401,"./ReactComponentBrowserEnvironment":407,"./ReactDOMComponent":411,"./ReactDOMComponentTree":413,"./ReactDOMEmptyComponent":415,"./ReactDOMTextComponent":424,"./ReactDOMTreeTraversal":426,"./ReactDefaultBatchingStrategy":429,"./ReactEventListener":435,"./ReactInjection":439,"./ReactReconcileTransaction":451,"./SVGDOMPropertyConfig":459,"./SelectEventPlugin":460,"./SimpleEventPlugin":461}],431:[function(require,module,exports){
+},{"./ARIADOMPropertyConfig":377,"./BeforeInputEventPlugin":379,"./ChangeEventPlugin":383,"./DefaultEventPluginOrder":390,"./EnterLeaveEventPlugin":391,"./HTMLDOMPropertyConfig":397,"./ReactComponentBrowserEnvironment":403,"./ReactDOMComponent":407,"./ReactDOMComponentTree":409,"./ReactDOMEmptyComponent":411,"./ReactDOMTextComponent":420,"./ReactDOMTreeTraversal":422,"./ReactDefaultBatchingStrategy":425,"./ReactEventListener":431,"./ReactInjection":435,"./ReactReconcileTransaction":447,"./SVGDOMPropertyConfig":455,"./SelectEventPlugin":456,"./SimpleEventPlugin":457}],427:[function(require,module,exports){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -78602,7 +77880,7 @@ module.exports = {
 var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol['for']('react.element') || 0xeac7;
 
 module.exports = REACT_ELEMENT_TYPE;
-},{}],432:[function(require,module,exports){
+},{}],428:[function(require,module,exports){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -78630,7 +77908,7 @@ var ReactEmptyComponent = {
 ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 
 module.exports = ReactEmptyComponent;
-},{}],433:[function(require,module,exports){
+},{}],429:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -78708,7 +77986,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
-},{"_process":372}],434:[function(require,module,exports){
+},{"_process":368}],430:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -78738,7 +78016,7 @@ var ReactEventEmitterMixin = {
 };
 
 module.exports = ReactEventEmitterMixin;
-},{"./EventPluginHub":396}],435:[function(require,module,exports){
+},{"./EventPluginHub":392}],431:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -78891,7 +78169,7 @@ var ReactEventListener = {
 };
 
 module.exports = ReactEventListener;
-},{"./PooledClass":404,"./ReactDOMComponentTree":413,"./ReactUpdates":457,"./getEventTarget":489,"fbjs/lib/EventListener":46,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/getUnboundedScrollPosition":58,"object-assign":370}],436:[function(require,module,exports){
+},{"./PooledClass":400,"./ReactDOMComponentTree":409,"./ReactUpdates":453,"./getEventTarget":485,"fbjs/lib/EventListener":46,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/getUnboundedScrollPosition":58,"object-assign":366}],432:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -78911,7 +78189,7 @@ var ReactFeatureFlags = {
 };
 
 module.exports = ReactFeatureFlags;
-},{}],437:[function(require,module,exports){
+},{}],433:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -78979,7 +78257,7 @@ var ReactHostComponent = {
 
 module.exports = ReactHostComponent;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],438:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],434:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -79011,7 +78289,7 @@ var ReactHostOperationHistoryHook = {
 };
 
 module.exports = ReactHostOperationHistoryHook;
-},{}],439:[function(require,module,exports){
+},{}],435:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -79043,7 +78321,7 @@ var ReactInjection = {
 };
 
 module.exports = ReactInjection;
-},{"./DOMProperty":391,"./EventPluginHub":396,"./EventPluginUtils":398,"./ReactBrowserEventEmitter":405,"./ReactComponentEnvironment":408,"./ReactEmptyComponent":432,"./ReactHostComponent":437,"./ReactUpdates":457}],440:[function(require,module,exports){
+},{"./DOMProperty":387,"./EventPluginHub":392,"./EventPluginUtils":394,"./ReactBrowserEventEmitter":401,"./ReactComponentEnvironment":404,"./ReactEmptyComponent":428,"./ReactHostComponent":433,"./ReactUpdates":453}],436:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -79164,7 +78442,7 @@ var ReactInputSelection = {
 };
 
 module.exports = ReactInputSelection;
-},{"./ReactDOMSelection":423,"fbjs/lib/containsNode":50,"fbjs/lib/focusNode":55,"fbjs/lib/getActiveElement":56}],441:[function(require,module,exports){
+},{"./ReactDOMSelection":419,"fbjs/lib/containsNode":50,"fbjs/lib/focusNode":55,"fbjs/lib/getActiveElement":56}],437:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -79208,7 +78486,7 @@ var ReactInstanceMap = {
 };
 
 module.exports = ReactInstanceMap;
-},{}],442:[function(require,module,exports){
+},{}],438:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -79232,7 +78510,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = { debugTool: debugTool };
 }).call(this,require('_process'))
-},{"./ReactDebugTool":428,"_process":372}],443:[function(require,module,exports){
+},{"./ReactDebugTool":424,"_process":368}],439:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -79269,7 +78547,7 @@ var ReactInvalidSetStateWarningHook = {
 
 module.exports = ReactInvalidSetStateWarningHook;
 }).call(this,require('_process'))
-},{"_process":372,"fbjs/lib/warning":68}],444:[function(require,module,exports){
+},{"_process":368,"fbjs/lib/warning":68}],440:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -79317,7 +78595,7 @@ var ReactMarkupChecksum = {
 };
 
 module.exports = ReactMarkupChecksum;
-},{"./adler32":478}],445:[function(require,module,exports){
+},{"./adler32":474}],441:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -79855,7 +79133,7 @@ var ReactMount = {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":389,"./DOMProperty":391,"./ReactBrowserEventEmitter":405,"./ReactDOMComponentTree":413,"./ReactDOMContainerInfo":414,"./ReactDOMFeatureFlags":416,"./ReactFeatureFlags":436,"./ReactInstanceMap":441,"./ReactInstrumentation":442,"./ReactMarkupChecksum":444,"./ReactReconciler":452,"./ReactUpdateQueue":456,"./ReactUpdates":457,"./instantiateReactComponent":496,"./reactProdInvariant":500,"./setInnerHTML":502,"./shouldUpdateReactComponent":504,"_process":372,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/React":512,"react/lib/ReactCurrentOwner":516}],446:[function(require,module,exports){
+},{"./DOMLazyTree":385,"./DOMProperty":387,"./ReactBrowserEventEmitter":401,"./ReactDOMComponentTree":409,"./ReactDOMContainerInfo":410,"./ReactDOMFeatureFlags":412,"./ReactFeatureFlags":432,"./ReactInstanceMap":437,"./ReactInstrumentation":438,"./ReactMarkupChecksum":440,"./ReactReconciler":448,"./ReactUpdateQueue":452,"./ReactUpdates":453,"./instantiateReactComponent":492,"./reactProdInvariant":496,"./setInnerHTML":498,"./shouldUpdateReactComponent":500,"_process":368,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/React":508,"react/lib/ReactCurrentOwner":512}],442:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -80301,7 +79579,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
-},{"./ReactChildReconciler":406,"./ReactComponentEnvironment":408,"./ReactInstanceMap":441,"./ReactInstrumentation":442,"./ReactReconciler":452,"./flattenChildren":484,"./reactProdInvariant":500,"_process":372,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61,"react/lib/ReactCurrentOwner":516}],447:[function(require,module,exports){
+},{"./ReactChildReconciler":402,"./ReactComponentEnvironment":404,"./ReactInstanceMap":437,"./ReactInstrumentation":438,"./ReactReconciler":448,"./flattenChildren":480,"./reactProdInvariant":496,"_process":368,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61,"react/lib/ReactCurrentOwner":512}],443:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -80341,7 +79619,7 @@ var ReactNodeTypes = {
 
 module.exports = ReactNodeTypes;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"react/lib/React":512}],448:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"react/lib/React":508}],444:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -80434,7 +79712,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],449:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],445:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -80459,7 +79737,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
-},{"_process":372}],450:[function(require,module,exports){
+},{"_process":368}],446:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -80474,7 +79752,7 @@ module.exports = ReactPropTypeLocationNames;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-},{}],451:[function(require,module,exports){
+},{}],447:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -80652,7 +79930,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 }).call(this,require('_process'))
-},{"./CallbackQueue":386,"./PooledClass":404,"./ReactBrowserEventEmitter":405,"./ReactInputSelection":440,"./ReactInstrumentation":442,"./ReactUpdateQueue":456,"./Transaction":475,"_process":372,"object-assign":370}],452:[function(require,module,exports){
+},{"./CallbackQueue":382,"./PooledClass":400,"./ReactBrowserEventEmitter":401,"./ReactInputSelection":436,"./ReactInstrumentation":438,"./ReactUpdateQueue":452,"./Transaction":471,"_process":368,"object-assign":366}],448:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -80818,7 +80096,7 @@ var ReactReconciler = {
 
 module.exports = ReactReconciler;
 }).call(this,require('_process'))
-},{"./ReactInstrumentation":442,"./ReactRef":453,"_process":372,"fbjs/lib/warning":68}],453:[function(require,module,exports){
+},{"./ReactInstrumentation":438,"./ReactRef":449,"_process":368,"fbjs/lib/warning":68}],449:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -80905,7 +80183,7 @@ ReactRef.detachRefs = function (instance, element) {
 };
 
 module.exports = ReactRef;
-},{"./ReactOwner":448}],454:[function(require,module,exports){
+},{"./ReactOwner":444}],450:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -80995,7 +80273,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 }).call(this,require('_process'))
-},{"./PooledClass":404,"./ReactInstrumentation":442,"./ReactServerUpdateQueue":455,"./Transaction":475,"_process":372,"object-assign":370}],455:[function(require,module,exports){
+},{"./PooledClass":400,"./ReactInstrumentation":438,"./ReactServerUpdateQueue":451,"./Transaction":471,"_process":368,"object-assign":366}],451:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -81134,7 +80412,7 @@ var ReactServerUpdateQueue = function () {
 
 module.exports = ReactServerUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":456,"_process":372,"fbjs/lib/warning":68}],456:[function(require,module,exports){
+},{"./ReactUpdateQueue":452,"_process":368,"fbjs/lib/warning":68}],452:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -81368,7 +80646,7 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactInstanceMap":441,"./ReactInstrumentation":442,"./ReactUpdates":457,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactCurrentOwner":516}],457:[function(require,module,exports){
+},{"./ReactInstanceMap":437,"./ReactInstrumentation":438,"./ReactUpdates":453,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactCurrentOwner":512}],453:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -81619,7 +80897,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
-},{"./CallbackQueue":386,"./PooledClass":404,"./ReactFeatureFlags":436,"./ReactReconciler":452,"./Transaction":475,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"object-assign":370}],458:[function(require,module,exports){
+},{"./CallbackQueue":382,"./PooledClass":400,"./ReactFeatureFlags":432,"./ReactReconciler":448,"./Transaction":471,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"object-assign":366}],454:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -81631,7 +80909,7 @@ module.exports = ReactUpdates;
 'use strict';
 
 module.exports = '15.6.2';
-},{}],459:[function(require,module,exports){
+},{}],455:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -81931,7 +81209,7 @@ Object.keys(ATTRS).forEach(function (key) {
 });
 
 module.exports = SVGDOMPropertyConfig;
-},{}],460:[function(require,module,exports){
+},{}],456:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82117,7 +81395,7 @@ var SelectEventPlugin = {
 };
 
 module.exports = SelectEventPlugin;
-},{"./EventPropagators":399,"./ReactDOMComponentTree":413,"./ReactInputSelection":440,"./SyntheticEvent":466,"./isTextInputElement":498,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/getActiveElement":56,"fbjs/lib/shallowEqual":67}],461:[function(require,module,exports){
+},{"./EventPropagators":395,"./ReactDOMComponentTree":409,"./ReactInputSelection":436,"./SyntheticEvent":462,"./isTextInputElement":494,"fbjs/lib/ExecutionEnvironment":47,"fbjs/lib/getActiveElement":56,"fbjs/lib/shallowEqual":67}],457:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -82343,7 +81621,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
-},{"./EventPropagators":399,"./ReactDOMComponentTree":413,"./SyntheticAnimationEvent":462,"./SyntheticClipboardEvent":463,"./SyntheticDragEvent":465,"./SyntheticEvent":466,"./SyntheticFocusEvent":467,"./SyntheticKeyboardEvent":469,"./SyntheticMouseEvent":470,"./SyntheticTouchEvent":471,"./SyntheticTransitionEvent":472,"./SyntheticUIEvent":473,"./SyntheticWheelEvent":474,"./getEventCharCode":486,"./reactProdInvariant":500,"_process":372,"fbjs/lib/EventListener":46,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61}],462:[function(require,module,exports){
+},{"./EventPropagators":395,"./ReactDOMComponentTree":409,"./SyntheticAnimationEvent":458,"./SyntheticClipboardEvent":459,"./SyntheticDragEvent":461,"./SyntheticEvent":462,"./SyntheticFocusEvent":463,"./SyntheticKeyboardEvent":465,"./SyntheticMouseEvent":466,"./SyntheticTouchEvent":467,"./SyntheticTransitionEvent":468,"./SyntheticUIEvent":469,"./SyntheticWheelEvent":470,"./getEventCharCode":482,"./reactProdInvariant":496,"_process":368,"fbjs/lib/EventListener":46,"fbjs/lib/emptyFunction":53,"fbjs/lib/invariant":61}],458:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82380,7 +81658,7 @@ function SyntheticAnimationEvent(dispatchConfig, dispatchMarker, nativeEvent, na
 SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 
 module.exports = SyntheticAnimationEvent;
-},{"./SyntheticEvent":466}],463:[function(require,module,exports){
+},{"./SyntheticEvent":462}],459:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82416,7 +81694,7 @@ function SyntheticClipboardEvent(dispatchConfig, dispatchMarker, nativeEvent, na
 SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
-},{"./SyntheticEvent":466}],464:[function(require,module,exports){
+},{"./SyntheticEvent":462}],460:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82450,7 +81728,7 @@ function SyntheticCompositionEvent(dispatchConfig, dispatchMarker, nativeEvent, 
 SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface);
 
 module.exports = SyntheticCompositionEvent;
-},{"./SyntheticEvent":466}],465:[function(require,module,exports){
+},{"./SyntheticEvent":462}],461:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82484,7 +81762,7 @@ function SyntheticDragEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeE
 SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
-},{"./SyntheticMouseEvent":470}],466:[function(require,module,exports){
+},{"./SyntheticMouseEvent":466}],462:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -82755,7 +82033,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
   }
 }
 }).call(this,require('_process'))
-},{"./PooledClass":404,"_process":372,"fbjs/lib/emptyFunction":53,"fbjs/lib/warning":68,"object-assign":370}],467:[function(require,module,exports){
+},{"./PooledClass":400,"_process":368,"fbjs/lib/emptyFunction":53,"fbjs/lib/warning":68,"object-assign":366}],463:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82789,7 +82067,7 @@ function SyntheticFocusEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
-},{"./SyntheticUIEvent":473}],468:[function(require,module,exports){
+},{"./SyntheticUIEvent":469}],464:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82824,7 +82102,7 @@ function SyntheticInputEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 
 module.exports = SyntheticInputEvent;
-},{"./SyntheticEvent":466}],469:[function(require,module,exports){
+},{"./SyntheticEvent":462}],465:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82906,7 +82184,7 @@ function SyntheticKeyboardEvent(dispatchConfig, dispatchMarker, nativeEvent, nat
 SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
-},{"./SyntheticUIEvent":473,"./getEventCharCode":486,"./getEventKey":487,"./getEventModifierState":488}],470:[function(require,module,exports){
+},{"./SyntheticUIEvent":469,"./getEventCharCode":482,"./getEventKey":483,"./getEventModifierState":484}],466:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -82976,7 +82254,7 @@ function SyntheticMouseEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
-},{"./SyntheticUIEvent":473,"./ViewportMetrics":476,"./getEventModifierState":488}],471:[function(require,module,exports){
+},{"./SyntheticUIEvent":469,"./ViewportMetrics":472,"./getEventModifierState":484}],467:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83019,7 +82297,7 @@ function SyntheticTouchEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
-},{"./SyntheticUIEvent":473,"./getEventModifierState":488}],472:[function(require,module,exports){
+},{"./SyntheticUIEvent":469,"./getEventModifierState":484}],468:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83056,7 +82334,7 @@ function SyntheticTransitionEvent(dispatchConfig, dispatchMarker, nativeEvent, n
 SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 
 module.exports = SyntheticTransitionEvent;
-},{"./SyntheticEvent":466}],473:[function(require,module,exports){
+},{"./SyntheticEvent":462}],469:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83113,7 +82391,7 @@ function SyntheticUIEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEve
 SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
-},{"./SyntheticEvent":466,"./getEventTarget":489}],474:[function(require,module,exports){
+},{"./SyntheticEvent":462,"./getEventTarget":485}],470:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83162,7 +82440,7 @@ function SyntheticWheelEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
-},{"./SyntheticMouseEvent":470}],475:[function(require,module,exports){
+},{"./SyntheticMouseEvent":466}],471:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -83390,7 +82668,7 @@ var TransactionImpl = {
 
 module.exports = TransactionImpl;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],476:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],472:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83413,7 +82691,7 @@ var ViewportMetrics = {
 };
 
 module.exports = ViewportMetrics;
-},{}],477:[function(require,module,exports){
+},{}],473:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -83471,7 +82749,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61}],478:[function(require,module,exports){
+},{"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61}],474:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83513,7 +82791,7 @@ function adler32(data) {
 }
 
 module.exports = adler32;
-},{}],479:[function(require,module,exports){
+},{}],475:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -83600,7 +82878,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactPropTypeLocationNames":449,"./ReactPropTypesSecret":450,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":515}],480:[function(require,module,exports){
+},{"./ReactPropTypeLocationNames":445,"./ReactPropTypesSecret":446,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":511}],476:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83630,7 +82908,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 };
 
 module.exports = createMicrosoftUnsafeLocalFunction;
-},{}],481:[function(require,module,exports){
+},{}],477:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -83709,7 +82987,7 @@ function dangerousStyleValue(name, value, component, isCustomProperty) {
 
 module.exports = dangerousStyleValue;
 }).call(this,require('_process'))
-},{"./CSSProperty":384,"_process":372,"fbjs/lib/warning":68}],482:[function(require,module,exports){
+},{"./CSSProperty":380,"_process":368,"fbjs/lib/warning":68}],478:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -83829,7 +83107,7 @@ function escapeTextContentForBrowser(text) {
 }
 
 module.exports = escapeTextContentForBrowser;
-},{}],483:[function(require,module,exports){
+},{}],479:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -83889,7 +83167,7 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":413,"./ReactInstanceMap":441,"./getHostComponentFromComposite":490,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactCurrentOwner":516}],484:[function(require,module,exports){
+},{"./ReactDOMComponentTree":409,"./ReactInstanceMap":437,"./getHostComponentFromComposite":486,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactCurrentOwner":512}],480:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -83965,7 +83243,7 @@ function flattenChildren(children, selfDebugID) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":402,"./traverseAllChildren":505,"_process":372,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":515}],485:[function(require,module,exports){
+},{"./KeyEscapeUtils":398,"./traverseAllChildren":501,"_process":368,"fbjs/lib/warning":68,"react/lib/ReactComponentTreeHook":511}],481:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -83994,7 +83272,7 @@ function forEachAccumulated(arr, cb, scope) {
 }
 
 module.exports = forEachAccumulated;
-},{}],486:[function(require,module,exports){
+},{}],482:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84042,7 +83320,7 @@ function getEventCharCode(nativeEvent) {
 }
 
 module.exports = getEventCharCode;
-},{}],487:[function(require,module,exports){
+},{}],483:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84152,7 +83430,7 @@ function getEventKey(nativeEvent) {
 }
 
 module.exports = getEventKey;
-},{"./getEventCharCode":486}],488:[function(require,module,exports){
+},{"./getEventCharCode":482}],484:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84193,7 +83471,7 @@ function getEventModifierState(nativeEvent) {
 }
 
 module.exports = getEventModifierState;
-},{}],489:[function(require,module,exports){
+},{}],485:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84226,7 +83504,7 @@ function getEventTarget(nativeEvent) {
 }
 
 module.exports = getEventTarget;
-},{}],490:[function(require,module,exports){
+},{}],486:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84254,7 +83532,7 @@ function getHostComponentFromComposite(inst) {
 }
 
 module.exports = getHostComponentFromComposite;
-},{"./ReactNodeTypes":447}],491:[function(require,module,exports){
+},{"./ReactNodeTypes":443}],487:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84293,7 +83571,7 @@ function getIteratorFn(maybeIterable) {
 }
 
 module.exports = getIteratorFn;
-},{}],492:[function(require,module,exports){
+},{}],488:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84365,7 +83643,7 @@ function getNodeForCharacterOffset(root, offset) {
 }
 
 module.exports = getNodeForCharacterOffset;
-},{}],493:[function(require,module,exports){
+},{}],489:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84396,7 +83674,7 @@ function getTextContentAccessor() {
 }
 
 module.exports = getTextContentAccessor;
-},{"fbjs/lib/ExecutionEnvironment":47}],494:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":47}],490:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84495,7 +83773,7 @@ function getVendorPrefixedEventName(eventName) {
 }
 
 module.exports = getVendorPrefixedEventName;
-},{"fbjs/lib/ExecutionEnvironment":47}],495:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":47}],491:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84616,7 +83894,7 @@ var inputValueTracking = {
 };
 
 module.exports = inputValueTracking;
-},{"./ReactDOMComponentTree":413}],496:[function(require,module,exports){
+},{"./ReactDOMComponentTree":409}],492:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -84745,7 +84023,7 @@ _assign(ReactCompositeComponentWrapper.prototype, ReactCompositeComponent, {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
-},{"./ReactCompositeComponent":409,"./ReactEmptyComponent":432,"./ReactHostComponent":437,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":370,"react/lib/getNextDebugID":530}],497:[function(require,module,exports){
+},{"./ReactCompositeComponent":405,"./ReactEmptyComponent":428,"./ReactHostComponent":433,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"object-assign":366,"react/lib/getNextDebugID":526}],493:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84803,7 +84081,7 @@ function isEventSupported(eventNameSuffix, capture) {
 }
 
 module.exports = isEventSupported;
-},{"fbjs/lib/ExecutionEnvironment":47}],498:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":47}],494:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84852,7 +84130,7 @@ function isTextInputElement(elem) {
 }
 
 module.exports = isTextInputElement;
-},{}],499:[function(require,module,exports){
+},{}],495:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84876,7 +84154,7 @@ function quoteAttributeValueForBrowser(value) {
 }
 
 module.exports = quoteAttributeValueForBrowser;
-},{"./escapeTextContentForBrowser":482}],500:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":478}],496:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84913,7 +84191,7 @@ function reactProdInvariant(code) {
 }
 
 module.exports = reactProdInvariant;
-},{}],501:[function(require,module,exports){
+},{}],497:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -84927,7 +84205,7 @@ module.exports = reactProdInvariant;
 var ReactMount = require('./ReactMount');
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
-},{"./ReactMount":445}],502:[function(require,module,exports){
+},{"./ReactMount":441}],498:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -85023,7 +84301,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setInnerHTML;
-},{"./DOMNamespaces":390,"./createMicrosoftUnsafeLocalFunction":480,"fbjs/lib/ExecutionEnvironment":47}],503:[function(require,module,exports){
+},{"./DOMNamespaces":386,"./createMicrosoftUnsafeLocalFunction":476,"fbjs/lib/ExecutionEnvironment":47}],499:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -85073,7 +84351,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setTextContent;
-},{"./escapeTextContentForBrowser":482,"./setInnerHTML":502,"fbjs/lib/ExecutionEnvironment":47}],504:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":478,"./setInnerHTML":498,"fbjs/lib/ExecutionEnvironment":47}],500:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -85113,7 +84391,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 }
 
 module.exports = shouldUpdateReactComponent;
-},{}],505:[function(require,module,exports){
+},{}],501:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -85289,7 +84567,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":402,"./ReactElementSymbol":431,"./getIteratorFn":491,"./reactProdInvariant":500,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactCurrentOwner":516}],506:[function(require,module,exports){
+},{"./KeyEscapeUtils":398,"./ReactElementSymbol":427,"./getIteratorFn":487,"./reactProdInvariant":496,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68,"react/lib/ReactCurrentOwner":512}],502:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -85660,7 +84938,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
-},{"_process":372,"fbjs/lib/emptyFunction":53,"fbjs/lib/warning":68,"object-assign":370}],507:[function(require,module,exports){
+},{"_process":368,"fbjs/lib/emptyFunction":53,"fbjs/lib/warning":68,"object-assign":366}],503:[function(require,module,exports){
 (function (process){
 /** @license React v16.11.0
  * react-is.development.js
@@ -85900,7 +85178,7 @@ exports.isSuspense = isSuspense;
 }
 
 }).call(this,require('_process'))
-},{"_process":372}],508:[function(require,module,exports){
+},{"_process":368}],504:[function(require,module,exports){
 /** @license React v16.11.0
  * react-is.production.min.js
  *
@@ -85917,7 +85195,7 @@ exports.typeOf=y;exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextCon
 exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===v||a.$$typeof===w||a.$$typeof===x)};exports.isAsyncMode=function(a){return z(a)||y(a)===l};exports.isConcurrentMode=z;exports.isContextConsumer=function(a){return y(a)===k};exports.isContextProvider=function(a){return y(a)===h};
 exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return y(a)===n};exports.isFragment=function(a){return y(a)===e};exports.isLazy=function(a){return y(a)===t};exports.isMemo=function(a){return y(a)===r};exports.isPortal=function(a){return y(a)===d};exports.isProfiler=function(a){return y(a)===g};exports.isStrictMode=function(a){return y(a)===f};exports.isSuspense=function(a){return y(a)===p};
 
-},{}],509:[function(require,module,exports){
+},{}],505:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -85928,11 +85206,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react-is.development.js":507,"./cjs/react-is.production.min.js":508,"_process":372}],510:[function(require,module,exports){
-arguments[4][402][0].apply(exports,arguments)
-},{"dup":402}],511:[function(require,module,exports){
-arguments[4][404][0].apply(exports,arguments)
-},{"./reactProdInvariant":533,"_process":372,"dup":404,"fbjs/lib/invariant":61}],512:[function(require,module,exports){
+},{"./cjs/react-is.development.js":503,"./cjs/react-is.production.min.js":504,"_process":368}],506:[function(require,module,exports){
+arguments[4][398][0].apply(exports,arguments)
+},{"dup":398}],507:[function(require,module,exports){
+arguments[4][400][0].apply(exports,arguments)
+},{"./reactProdInvariant":529,"_process":368,"dup":400,"fbjs/lib/invariant":61}],508:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -86064,7 +85342,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./ReactBaseClasses":513,"./ReactChildren":514,"./ReactDOMFactories":517,"./ReactElement":518,"./ReactElementValidator":520,"./ReactPropTypes":523,"./ReactVersion":525,"./canDefineProperty":526,"./createClass":528,"./lowPriorityWarning":531,"./onlyChild":532,"_process":372,"object-assign":370}],513:[function(require,module,exports){
+},{"./ReactBaseClasses":509,"./ReactChildren":510,"./ReactDOMFactories":513,"./ReactElement":514,"./ReactElementValidator":516,"./ReactPropTypes":519,"./ReactVersion":521,"./canDefineProperty":522,"./createClass":524,"./lowPriorityWarning":527,"./onlyChild":528,"_process":368,"object-assign":366}],509:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -86207,7 +85485,7 @@ module.exports = {
   PureComponent: ReactPureComponent
 };
 }).call(this,require('_process'))
-},{"./ReactNoopUpdateQueue":521,"./canDefineProperty":526,"./lowPriorityWarning":531,"./reactProdInvariant":533,"_process":372,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"object-assign":370}],514:[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":517,"./canDefineProperty":522,"./lowPriorityWarning":527,"./reactProdInvariant":529,"_process":368,"fbjs/lib/emptyObject":54,"fbjs/lib/invariant":61,"object-assign":366}],510:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -86396,7 +85674,7 @@ var ReactChildren = {
 };
 
 module.exports = ReactChildren;
-},{"./PooledClass":511,"./ReactElement":518,"./traverseAllChildren":534,"fbjs/lib/emptyFunction":53}],515:[function(require,module,exports){
+},{"./PooledClass":507,"./ReactElement":514,"./traverseAllChildren":530,"fbjs/lib/emptyFunction":53}],511:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -86775,7 +86053,7 @@ var ReactComponentTreeHook = {
 
 module.exports = ReactComponentTreeHook;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":516,"./reactProdInvariant":533,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],516:[function(require,module,exports){
+},{"./ReactCurrentOwner":512,"./reactProdInvariant":529,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],512:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -86802,7 +86080,7 @@ var ReactCurrentOwner = {
 };
 
 module.exports = ReactCurrentOwner;
-},{}],517:[function(require,module,exports){
+},{}],513:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -86971,7 +86249,7 @@ var ReactDOMFactories = {
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
-},{"./ReactElement":518,"./ReactElementValidator":520,"_process":372}],518:[function(require,module,exports){
+},{"./ReactElement":514,"./ReactElementValidator":516,"_process":368}],514:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -87312,9 +86590,9 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":516,"./ReactElementSymbol":519,"./canDefineProperty":526,"_process":372,"fbjs/lib/warning":68,"object-assign":370}],519:[function(require,module,exports){
-arguments[4][431][0].apply(exports,arguments)
-},{"dup":431}],520:[function(require,module,exports){
+},{"./ReactCurrentOwner":512,"./ReactElementSymbol":515,"./canDefineProperty":522,"_process":368,"fbjs/lib/warning":68,"object-assign":366}],515:[function(require,module,exports){
+arguments[4][427][0].apply(exports,arguments)
+},{"dup":427}],516:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -87569,7 +86847,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":515,"./ReactCurrentOwner":516,"./ReactElement":518,"./canDefineProperty":526,"./checkReactTypeSpec":527,"./getIteratorFn":529,"./lowPriorityWarning":531,"_process":372,"fbjs/lib/warning":68}],521:[function(require,module,exports){
+},{"./ReactComponentTreeHook":511,"./ReactCurrentOwner":512,"./ReactElement":514,"./canDefineProperty":522,"./checkReactTypeSpec":523,"./getIteratorFn":525,"./lowPriorityWarning":527,"_process":368,"fbjs/lib/warning":68}],517:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -87664,9 +86942,9 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
-},{"_process":372,"fbjs/lib/warning":68}],522:[function(require,module,exports){
-arguments[4][449][0].apply(exports,arguments)
-},{"_process":372,"dup":449}],523:[function(require,module,exports){
+},{"_process":368,"fbjs/lib/warning":68}],518:[function(require,module,exports){
+arguments[4][445][0].apply(exports,arguments)
+},{"_process":368,"dup":445}],519:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -87683,11 +86961,11 @@ var _require = require('./ReactElement'),
 var factory = require('prop-types/factory');
 
 module.exports = factory(isValidElement);
-},{"./ReactElement":518,"prop-types/factory":374}],524:[function(require,module,exports){
-arguments[4][450][0].apply(exports,arguments)
-},{"dup":450}],525:[function(require,module,exports){
-arguments[4][458][0].apply(exports,arguments)
-},{"dup":458}],526:[function(require,module,exports){
+},{"./ReactElement":514,"prop-types/factory":370}],520:[function(require,module,exports){
+arguments[4][446][0].apply(exports,arguments)
+},{"dup":446}],521:[function(require,module,exports){
+arguments[4][454][0].apply(exports,arguments)
+},{"dup":454}],522:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -87713,7 +86991,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
-},{"_process":372}],527:[function(require,module,exports){
+},{"_process":368}],523:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -87800,7 +87078,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":515,"./ReactPropTypeLocationNames":522,"./ReactPropTypesSecret":524,"./reactProdInvariant":533,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],528:[function(require,module,exports){
+},{"./ReactComponentTreeHook":511,"./ReactPropTypeLocationNames":518,"./ReactPropTypesSecret":520,"./reactProdInvariant":529,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],524:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -87821,9 +87099,9 @@ var ReactNoopUpdateQueue = require('./ReactNoopUpdateQueue');
 var factory = require('create-react-class/factory');
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
-},{"./ReactBaseClasses":513,"./ReactElement":518,"./ReactNoopUpdateQueue":521,"create-react-class/factory":41}],529:[function(require,module,exports){
-arguments[4][491][0].apply(exports,arguments)
-},{"dup":491}],530:[function(require,module,exports){
+},{"./ReactBaseClasses":509,"./ReactElement":514,"./ReactNoopUpdateQueue":517,"create-react-class/factory":41}],525:[function(require,module,exports){
+arguments[4][487][0].apply(exports,arguments)
+},{"dup":487}],526:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -87842,7 +87120,7 @@ function getNextDebugID() {
 }
 
 module.exports = getNextDebugID;
-},{}],531:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -87907,7 +87185,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = lowPriorityWarning;
 }).call(this,require('_process'))
-},{"_process":372}],532:[function(require,module,exports){
+},{"_process":368}],528:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -87945,9 +87223,9 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
-},{"./ReactElement":518,"./reactProdInvariant":533,"_process":372,"fbjs/lib/invariant":61}],533:[function(require,module,exports){
-arguments[4][500][0].apply(exports,arguments)
-},{"dup":500}],534:[function(require,module,exports){
+},{"./ReactElement":514,"./reactProdInvariant":529,"_process":368,"fbjs/lib/invariant":61}],529:[function(require,module,exports){
+arguments[4][496][0].apply(exports,arguments)
+},{"dup":496}],530:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -88123,12 +87401,12 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":510,"./ReactCurrentOwner":516,"./ReactElementSymbol":519,"./getIteratorFn":529,"./reactProdInvariant":533,"_process":372,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],535:[function(require,module,exports){
+},{"./KeyEscapeUtils":506,"./ReactCurrentOwner":512,"./ReactElementSymbol":515,"./getIteratorFn":525,"./reactProdInvariant":529,"_process":368,"fbjs/lib/invariant":61,"fbjs/lib/warning":68}],531:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/React');
 
-},{"./lib/React":512}],536:[function(require,module,exports){
+},{"./lib/React":508}],532:[function(require,module,exports){
 // File:src/Three.js
 
 /**
@@ -129891,15 +129169,15 @@ THREE.MorphBlendMesh.prototype.update = function ( delta ) {
 };
 
 
-},{}],537:[function(require,module,exports){
+},{}],533:[function(require,module,exports){
 module.exports=/[\0-\x1F\x7F-\x9F]/
-},{}],538:[function(require,module,exports){
+},{}],534:[function(require,module,exports){
 module.exports=/[\xAD\u0600-\u0605\u061C\u06DD\u070F\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F]/
-},{}],539:[function(require,module,exports){
+},{}],535:[function(require,module,exports){
 module.exports=/[!-#%-\*,-\/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4E\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD803[\uDF55-\uDF59]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC8\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9]|\uD805[\uDC4B-\uDC4F\uDC5B\uDC5D\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDE60-\uDE6C\uDF3C-\uDF3E]|\uD806[\uDC3B\uDE3F-\uDE46\uDE9A-\uDE9C\uDE9E-\uDEA2]|\uD807[\uDC41-\uDC45\uDC70\uDC71\uDEF7\uDEF8]|\uD809[\uDC70-\uDC74]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD81B[\uDE97-\uDE9A]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]|\uD83A[\uDD5E\uDD5F]/
-},{}],540:[function(require,module,exports){
+},{}],536:[function(require,module,exports){
 module.exports=/[ \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/
-},{}],541:[function(require,module,exports){
+},{}],537:[function(require,module,exports){
 'use strict';
 
 exports.Any = require('./properties/Any/regex');
@@ -129908,9 +129186,9 @@ exports.Cf  = require('./categories/Cf/regex');
 exports.P   = require('./categories/P/regex');
 exports.Z   = require('./categories/Z/regex');
 
-},{"./categories/Cc/regex":537,"./categories/Cf/regex":538,"./categories/P/regex":539,"./categories/Z/regex":540,"./properties/Any/regex":542}],542:[function(require,module,exports){
+},{"./categories/Cc/regex":533,"./categories/Cf/regex":534,"./categories/P/regex":535,"./categories/Z/regex":536,"./properties/Any/regex":538}],538:[function(require,module,exports){
 module.exports=/[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/
-},{}],543:[function(require,module,exports){
+},{}],539:[function(require,module,exports){
 var indexOf = function (xs, item) {
     if (xs.indexOf) return xs.indexOf(item);
     else for (var i = 0; i < xs.length; i++) {
@@ -130061,7 +129339,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{}],544:[function(require,module,exports){
+},{}],540:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130117,7 +129395,7 @@ implementation.setScale = (context, args) => {
   Object.assign(context.scale, args)
 }
 
-},{"../../context":1,"../objects":562,"three":536}],545:[function(require,module,exports){
+},{"../../context":1,"../objects":558,"three":532}],541:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130126,7 +129404,7 @@ implementation.setScale = (context, args) => {
 
 exports.PerspectiveCamera = require('./PerspectiveCamera').PerspectiveCamera
 
-},{"./PerspectiveCamera":544}],546:[function(require,module,exports){
+},{"./PerspectiveCamera":540}],542:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130167,7 +129445,7 @@ const implementation = exports.BoxGeometry = (context, args) => {
   return geometry
 }
 
-},{"../../context":1,"three":536}],547:[function(require,module,exports){
+},{"../../context":1,"three":532}],543:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130176,7 +129454,7 @@ const implementation = exports.BoxGeometry = (context, args) => {
 
 exports.BoxGeometry = require('./BoxGeometry').BoxGeometry
 
-},{"./BoxGeometry":546}],548:[function(require,module,exports){
+},{"./BoxGeometry":542}],544:[function(require,module,exports){
 (function (Buffer,__dirname){
 'use strict'
 
@@ -130289,7 +129567,7 @@ const implementations = Object
 module.exports = createSchema(String(buffer), implementations).schema
 
 }).call(this,require("buffer").Buffer,"/schema")
-},{"./cameras":545,"./geometries":547,"./materials":551,"./math":559,"./objects":562,"./queries":564,"./renderers":566,"./scalars":567,"./scenes":569,"buffer":9,"graph.ql":70,"path":371}],549:[function(require,module,exports){
+},{"./cameras":541,"./geometries":543,"./materials":547,"./math":555,"./objects":558,"./queries":560,"./renderers":562,"./scalars":563,"./scenes":565,"buffer":9,"graph.ql":70,"path":367}],545:[function(require,module,exports){
 'use strict'
 
 const three = require('three')
@@ -130304,7 +129582,7 @@ const implementation = exports.Material = new class {
   }
 }
 
-},{"three":536}],550:[function(require,module,exports){
+},{"three":532}],546:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130337,7 +129615,7 @@ const implementation = exports.MeshBasicMaterial = (context, args) => {
   return commit(context, name, material)
 }
 
-},{"../../context":1,"three":536}],551:[function(require,module,exports){
+},{"../../context":1,"three":532}],547:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130352,7 +129630,7 @@ exports.Material = require('./Material').Material
 
 exports.MeshBasicMaterial = require('./MeshBasicMaterial').MeshBasicMaterial
 
-},{"./Material":549,"./MeshBasicMaterial":550}],552:[function(require,module,exports){
+},{"./Material":545,"./MeshBasicMaterial":546}],548:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130366,7 +129644,7 @@ exports.Euler = {
   z(root) { return root.z },
 }
 
-},{}],553:[function(require,module,exports){
+},{}],549:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130376,7 +129654,7 @@ exports.Euler = {
 exports.Matrix3 = {
 }
 
-},{}],554:[function(require,module,exports){
+},{}],550:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130386,7 +129664,7 @@ exports.Matrix3 = {
 exports.Matrix4 = {
 }
 
-},{}],555:[function(require,module,exports){
+},{}],551:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130400,7 +129678,7 @@ exports.Quaternion = {
   w(root) { return root.w },
 }
 
-},{}],556:[function(require,module,exports){
+},{}],552:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130412,7 +129690,7 @@ exports.Vector2 = {
   y(root) { return root.y },
 }
 
-},{}],557:[function(require,module,exports){
+},{}],553:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130425,7 +129703,7 @@ exports.Vector3 = {
   z(root) { return root.z },
 }
 
-},{}],558:[function(require,module,exports){
+},{}],554:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130439,7 +129717,7 @@ exports.Vector4 = {
   w(root) { return root.w },
 }
 
-},{}],559:[function(require,module,exports){
+},{}],555:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130484,7 +129762,7 @@ exports.Vector4 = require('./Vector4').Vector4
 
 exports.Quaternion = require('./Quaternion').Quaternion
 
-},{"./Euler":552,"./Matrix3":553,"./Matrix4":554,"./Quaternion":555,"./Vector2":556,"./Vector3":557,"./Vector4":558}],560:[function(require,module,exports){
+},{"./Euler":548,"./Matrix3":549,"./Matrix4":550,"./Quaternion":551,"./Vector2":552,"./Vector3":553,"./Vector4":554}],556:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130530,7 +129808,7 @@ implementation.setScale = (context, args) => {
   Object.assign(context.scale, args)
 }
 
-},{"../../context":1,"../geometries":547,"../materials":551,"three":536}],561:[function(require,module,exports){
+},{"../../context":1,"../geometries":543,"../materials":547,"three":532}],557:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130551,7 +129829,7 @@ const implementation = exports.Object3D = new class {
   }
 }
 
-},{"../../context":1,"three":536}],562:[function(require,module,exports){
+},{"../../context":1,"three":532}],558:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130566,7 +129844,7 @@ exports.Object3D = require('./Object3D').Object3D
 
 exports.Mesh = require('./Mesh').Mesh
 
-},{"./Mesh":560,"./Object3D":561}],563:[function(require,module,exports){
+},{"./Mesh":556,"./Object3D":557}],559:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130585,7 +129863,7 @@ exports.Query = {
   WebGLRenderer
 }
 
-},{"../renderers/WebGLRenderer":565}],564:[function(require,module,exports){
+},{"../renderers/WebGLRenderer":561}],560:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130594,7 +129872,7 @@ exports.Query = {
 
 exports.Query = require('./Query').Query
 
-},{"./Query":563}],565:[function(require,module,exports){
+},{"./Query":559}],561:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130639,7 +129917,7 @@ implementation.setSize = (self, args) => {
   return self
 }
 
-},{"../../context":1,"../cameras":545,"../scenes":569,"three":536}],566:[function(require,module,exports){
+},{"../../context":1,"../cameras":541,"../scenes":565,"three":532}],562:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130648,7 +129926,7 @@ implementation.setSize = (self, args) => {
 
 exports.WebGLRenderer = require('./WebGLRenderer').WebGLRenderer
 
-},{"./WebGLRenderer":565}],567:[function(require,module,exports){
+},{"./WebGLRenderer":561}],563:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130665,7 +129943,7 @@ exports.Color = {
   }
 }
 
-},{}],568:[function(require,module,exports){
+},{}],564:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130705,7 +129983,7 @@ implementation.setScale = (context, args) => {
   Object.assign(context.scale, args)
 }
 
-},{"../../context":1,"../objects":562,"three":536}],569:[function(require,module,exports){
+},{"../../context":1,"../objects":558,"three":532}],565:[function(require,module,exports){
 'use strict'
 
 /**
@@ -130714,4 +129992,4 @@ implementation.setScale = (context, args) => {
 
 exports.Scene = require('./Scene').Scene
 
-},{"./Scene":568}]},{},[2]);
+},{"./Scene":564}]},{},[2]);
