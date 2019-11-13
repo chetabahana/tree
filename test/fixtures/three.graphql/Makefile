@@ -4,7 +4,7 @@ default: build
 node_modules:
 	npm i -f
 
-node_modules:
+audit: node_modules
 	npm audit fix
 
 build: node_modules
