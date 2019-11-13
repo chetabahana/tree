@@ -33,10 +33,6 @@
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   },
-  "resolutions": {
-    "**/graphql": "^0.10.5",
-    "**/**/graphql": "^0.10.5"
-  },
   "peerDependencies": {
     "graphql": "^0.10.5"
   }
