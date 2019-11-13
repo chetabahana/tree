@@ -11,6 +11,8 @@ on:
       - '!production'
       - '!development'
       - '!Chetabahana'
+    paths:
+    - test/fixtures/three.graphql/**
 
 jobs:
   build:
