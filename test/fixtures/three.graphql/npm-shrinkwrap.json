@@ -2285,6 +2285,7 @@
       "version": "0.9.1",
       "resolved": "https://registry.npmjs.org/graphql/-/graphql-0.9.1.tgz",
       "integrity": "sha1-9NFUy+wFTUpdOxvpXyNDXAmqhsg=",
+      "dev": true,
       "requires": {
         "iterall": "1.0.3"
       }
