@@ -2282,11 +2282,11 @@
       }
     },
     "graphql": {
-      "version": "0.9.6",
-      "resolved": "https://registry.npmjs.org/graphql/-/graphql-0.9.6.tgz",
-      "integrity": "sha1-UUQh6dIlwp38j9MFRZq65YgV7yw=",
+      "version": "0.9.1",
+      "resolved": "https://registry.npmjs.org/graphql/-/graphql-0.9.1.tgz",
+      "integrity": "sha1-9NFUy+wFTUpdOxvpXyNDXAmqhsg=",
       "requires": {
-        "iterall": "^1.0.0"
+        "iterall": "1.0.3"
       }
     },
     "has": {
