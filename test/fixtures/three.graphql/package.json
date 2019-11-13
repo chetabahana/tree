@@ -9,7 +9,7 @@
     "three",
     "graphql"
   ],
-   "dependencies": {
+  "dependencies": {
     "domready": "^1.0.8",
     "glob": "^7.1.6",
     "graph": "^0.2.0",
@@ -23,9 +23,9 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-  "repository" : {     
-    "type" : "git",
-    "url" : "https://github.com/chetabahana/node.git" 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chetabahana/node.git"
   },
   "scripts": {
     "test": "budo test -p 3000 -s --- -t brfs",
