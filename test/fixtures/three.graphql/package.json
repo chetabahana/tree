@@ -28,7 +28,6 @@
   "devDependencies": {
     "brfs": "^1.4.3",
     "budo": "^8.3.0",
-    "graphql": "0.9.1",
     "graphiql": "^0.7.3",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
