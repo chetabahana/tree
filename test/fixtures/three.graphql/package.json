@@ -23,7 +23,7 @@
     "glob": "^7.0.5",
     "graph": "^0.2.0",
     "graph.ql": "^2.0.0",
-    "graphql": "^0.13.2",
+    "graphql": "0.9.1",
     "three": "^0.79.0"
   },
   "devDependencies": {
