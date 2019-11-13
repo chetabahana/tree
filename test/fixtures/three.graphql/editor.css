@@ -1,0 +1,34 @@
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after { clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ **/
+
+.cf { *zoom: 1; }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#graphiql {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+#viewport {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  height: calc(100vh - 48px);
+  overflow: hidden;
+}

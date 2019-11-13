@@ -1,4 +1,4 @@
-name: Node CI
+name: Init CI
 
 on:
   push:
@@ -12,29 +12,24 @@ on:
       - '!development'
       - '!Chetabahana'
     paths:
-    - test/fixtures/three.graphql/**
+    - .*/*.yaml
+    - .*/*/*.yml
+    - .*/*/__init__
+    - .*/*/*/__init__
+    - .*/*/*/*/__init__
 
 jobs:
-  build:
+  job1:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x]
-
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: Initializing Repositories
       run: |
         bash .github/workflows/builders/__init__
       env:
-        CI: true
-        TAG_NAME: ubuntu
+        TAG_NAME: docker
         BRANCH_NAME: master
         GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         GCP_ACCOUNT: ${{ secrets.GCP_ACCOUNT }}
