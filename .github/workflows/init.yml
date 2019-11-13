@@ -29,7 +29,7 @@ jobs:
       run: |
         bash .github/workflows/builders/__init__
       env:
-        TAG_NAME: ubuntu
+        TAG_NAME: docker
         BRANCH_NAME: master
         GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         GCP_ACCOUNT: ${{ secrets.GCP_ACCOUNT }}
