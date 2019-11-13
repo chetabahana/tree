@@ -15,6 +15,7 @@
 !.flake8
 !.gitattributes
 !.github
+!.google
 !.gitignore
 !.gitkeep
 !.mailmap
