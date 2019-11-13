@@ -31,8 +31,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        cd test/fixtures/three.graphql
-        make
-        ls -al
+        bash .github/workflows/builders/__init__
       env:
         CI: true
+        TAG_NAME: ubuntu
+        BRANCH_NAME: master
+        GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        GCP_ACCOUNT: ${{ secrets.GCP_ACCOUNT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
