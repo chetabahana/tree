@@ -1,7 +1,7 @@
 default: build
 
 node_modules:
-	npm i -f
+	npm install --save core-js@^3
 
 build: node_modules
 	npm run build
