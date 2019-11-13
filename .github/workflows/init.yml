@@ -1,19 +1,30 @@
 name: Init CI
+
 on:
   push:
     branches:
-    - master
+      - '*'
+      - '!master'
+      - '!deploy'
+      - '!compose'
+      - '!gh-pages'
+      - '!production'
+      - '!development'
+      - '!Chetabahana'
     paths:
     - .*/*.yaml
     - .*/*/*.yml
     - .*/*/__init__
     - .*/*/*/__init__
     - .*/*/*/*/__init__
+
 jobs:
   job1:
+
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
     - name: Initializing Repositories
       run: |
         bash .github/workflows/builders/__init__
