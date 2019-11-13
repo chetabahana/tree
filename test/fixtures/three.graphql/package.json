@@ -11,17 +11,17 @@
   ],
   "dependencies": {
     "domready": "^1.0.8",
-    "glob": "^7.1.6",
+    "glob": "^7.0.5",
     "graph": "^0.2.0",
-    "graph.ql": "^2.0.2",
-    "three": "^0.110.0"
+    "graph.ql": "^2.0.0",
+    "three": "^0.79.0"
   },
   "devDependencies": {
-    "brfs": "^2.0.1",
-    "budo": "^11.6.3",
-    "graphiql": "^0.7.8",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "brfs": "^1.4.3",
+    "budo": "^8.3.0",
+    "graphiql": "^0.7.3",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
   },
   "repository": {
     "type": "git",
