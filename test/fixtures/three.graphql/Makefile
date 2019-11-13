@@ -2,7 +2,10 @@
 default: build
 
 node_modules:
-	npm i -f && npm audit fix
+	npm i -f
+
+node_modules:
+	npm audit fix
 
 build: node_modules
 	npm run build
