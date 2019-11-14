@@ -10,10 +10,7 @@ test: build
 	npm test
 
 copy:
-	cp -f node_modules/graphiql/graphiql.css .
-
-clean:
-	rm -rf node_modules
+	npm copy
 
 list:
-	ls -al
+	npm list
