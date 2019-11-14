@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Run audit
+npm i --package-lock-only
 npm audit fix
 
 # Resolving: Cannot use GraphQLSchema "[object Object]" from another module or realm.
