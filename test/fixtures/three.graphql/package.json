@@ -33,13 +33,12 @@
     "source": "https://github.com/jwerle/three.graphql"
   },
   "scripts": {
+    "preinstall": "bash pre.sh",
     "install": "bash install.sh",
     "build": "npm run build:editor",
     "editor": "npm run build:editor && budo",
     "build:editor": "browserify editor.js -t brfs -o build.js",
-    "copy": "cp -f node_modules/graphiql/graphiql.css .",
     "test": "budo test -p 3000 -s --- -t brfs",
-    "start": "budo -s . -p 3000",
-    "list": "ls -al"
+    "start": "budo -s . -p 3000"
   }
 }

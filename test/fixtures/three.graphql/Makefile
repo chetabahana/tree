@@ -8,9 +8,3 @@ build: node_modules
 
 test: build
 	npm test
-
-copy:
-	npm copy
-
-list:
-	npm list
