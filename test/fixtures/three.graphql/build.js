@@ -38426,8 +38426,7 @@ function coerceInt(value) {
   }
   var num = Number(value);
   if (num !== num || num > MAX_INT || num < MIN_INT) {
-    //throw new TypeError('Int cannot represent non 32-bit signed integer value: ' + String(value));
-    return null;
+    throw new TypeError('Int cannot represent non 32-bit signed integer value: ' + String(value));
   }
   var int = Math.floor(num);
   if (int !== num) {
@@ -116943,11 +116942,11 @@ exports.WebGLRenderer = require('./WebGLRenderer').WebGLRenderer
 
 exports.Color = {
   parseValue(value) {
-    return value;
+    return parseInt(String(value))
   },
 
-  serialize(value) {console.log(value);
-    return value;
+  serialize(value) {
+    return parseInt(String(value))
   }
 }
 
