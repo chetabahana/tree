@@ -1,21 +1,14 @@
 {
   "name": "three.graphql",
-  "version": "0.0.1",
-  "description": "Query & Create THREE objects with GraphQL",
+  "version": "0.1.1",
+  "description": "Create & Query THREE objects with GraphQL",
+  "author": "Joseph Werle <werle@littlstar.com>",
+  "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "budo test -p 3000 -s --- -t brfs",
-    "editor": "npm run build:editor && budo",
-    "build": "npm run build:editor",
-    "build:editor": "browserify editor.js -t brfs -o build.js",
-    "start": "budo -s . -p 3000"
-  },
   "keywords": [
     "three",
     "graphql"
   ],
-  "author": "Joseph Werle <werle@littlstar.com>",
-  "license": "MIT",
   "dependencies": {
     "glob": "^7.1.6",
     "graph": "^0.2.0",
@@ -33,7 +26,11 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
-  "resolutions": {
-    "graphql": "^0.13.2"
+  "scripts": {
+    "test": "budo test -p 3000 -s --- -t brfs",
+    "editor": "npm run build:editor && budo",
+    "build": "npm run build:editor",
+    "build:editor": "browserify editor.js -t brfs -o build.js",
+    "start": "budo -s . -p 3000"
   }
 }
