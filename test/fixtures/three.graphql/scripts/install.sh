@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Run audit
+echo -e "\n$hr\nAUDIT\n$hr"
 npm i --package-lock-only
 npm audit fix
 
