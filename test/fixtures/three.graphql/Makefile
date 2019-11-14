@@ -1,7 +1,7 @@
 default: build
 
 node_modules:
-	npm dedupe
+	npm i -f
 
 build: node_modules
 	npm run build
