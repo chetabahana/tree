@@ -14,7 +14,7 @@ exports.Color = {
 }
 */
 
-exports.Color = ScalarType({
+exports.Color = new ScalarType({
   name: 'Color',
   description: 'Description of my custom scalar type',
   serialize(value) {
