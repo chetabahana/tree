@@ -1,33 +1,44 @@
 {
   "name": "three.graphql",
-  "version": "0.0.1",
-  "description": "Query & Create THREE objects with GraphQL",
+  "version": "0.1.1",
+  "description": "Create & Query THREE objects with GraphQL",
+  "author": "Chetabahana <chetabahana@gmail.com>",
+  "developer": "Joseph Werle <werle@littlstar.com>",
+  "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "budo test -p 3000 -s --- -t brfs",
-    "editor": "npm run build:editor && budo",
-    "build": "npm run build:editor",
-    "build:editor": "browserify editor.js -t brfs -o build.js",
-    "start": "budo -s . -p 3000"
-  },
   "keywords": [
     "three",
     "graphql"
   ],
-  "author": "Joseph Werle <werle@littlstar.com>",
-  "license": "MIT",
   "dependencies": {
-    "domready": "^1.0.8",
-    "glob": "^7.0.5",
+    "glob": "^7.1.6",
     "graph": "^0.2.0",
-    "graph.ql": "^2.0.0",
-    "three": "^0.79.0"
+    "three": "^0.110.0",
+    "core-js": "^3.4.1",
+    "graph.ql": "^2.0.2",
+    "domready": "^1.0.8",
+    "browserify": "^16.5.0"
   },
   "devDependencies": {
-    "brfs": "^1.4.3",
-    "budo": "^8.3.0",
-    "graphiql": "^0.7.3",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "brfs": "^2.0.2",
+    "budo": "^11.6.3",
+    "graphql": "^14.5.8",
+    "graphiql": "^0.15.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chetabahana/node",
+    "source": "https://github.com/jwerle/three.graphql"
+  },
+  "scripts": {
+    "preinstall": "bash pre.sh",
+    "install": "bash install.sh",
+    "build": "npm run build:editor",
+    "editor": "npm run build:editor && budo",
+    "build:editor": "browserify editor.js -t brfs -o build.js",
+    "test": "budo test -p 3000 -s --- -t brfs",
+    "start": "budo -s . -p 3000"
   }
 }
