@@ -14,3 +14,6 @@ copy:
 
 clean:
 	rm -rf node_modules
+
+list:
+	ls -al
