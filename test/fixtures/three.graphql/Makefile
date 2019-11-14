@@ -33,7 +33,7 @@ $$(TARGETS):
 endef
 
 #$(eval $(call npm_script_targets))
-echo $(call npm_script_targets)
+echo npm_script_targets
 
 default: build
 
