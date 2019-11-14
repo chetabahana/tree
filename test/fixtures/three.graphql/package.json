@@ -33,7 +33,7 @@
     "source": "https://github.com/jwerle/three.graphql"
   },
   "scripts": {
-    "install": "install.sh",
+    "install": "bash install.sh",
     "build": "npm run build:editor",
     "editor": "npm run build:editor && budo",
     "build:editor": "browserify editor.js -t brfs -o build.js",
