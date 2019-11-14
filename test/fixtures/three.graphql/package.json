@@ -17,7 +17,7 @@
   "author": "Joseph Werle <werle@littlstar.com>",
   "license": "MIT",
   "dependencies": {
-    "glob": "^7.0.5",
+    "glob": "^7.1.6",
     "graph": "^0.2.0",
     "three": "^0.110.0",
     "core-js": "^3.4.1",
