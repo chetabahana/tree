@@ -8,3 +8,9 @@ build: node_modules
 
 test: build
 	npm test
+
+copy:
+	cp -f node_modules/graphiql/graphiql.css .
+
+clean:
+	rm -rf node_modules
