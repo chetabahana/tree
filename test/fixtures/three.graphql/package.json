@@ -2,7 +2,8 @@
   "name": "three.graphql",
   "version": "0.1.1",
   "description": "Create & Query THREE objects with GraphQL",
-  "author": "Joseph Werle <werle@littlstar.com>",
+  "author": "Chetabahana <chetabahana@gmail.com>",
+  "developer": "Joseph Werle <werle@littlstar.com>",
   "license": "MIT",
   "main": "index.js",
   "keywords": [
@@ -32,5 +33,10 @@
     "build": "npm run build:editor",
     "build:editor": "browserify editor.js -t brfs -o build.js",
     "start": "budo -s . -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chetabahana/node",
+    "source": "https://github.com/jwerle/three.graphql"
   }
 }
