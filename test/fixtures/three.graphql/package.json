@@ -28,10 +28,10 @@
     "react-dom": "^16.11.0"
   },
   "scripts": {
-    "test": "budo test -p 3000 -s --- -t brfs",
-    "editor": "npm run build:editor && budo",
     "build": "npm run build:editor",
+    "editor": "npm run build:editor && budo",
     "build:editor": "browserify editor.js -t brfs -o build.js",
+    "test": "budo test -p 3000 -s --- -t brfs",
     "start": "budo -s . -p 3000"
   },
   "repository": {
