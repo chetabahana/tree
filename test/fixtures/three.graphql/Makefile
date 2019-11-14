@@ -41,6 +41,3 @@ node_modules:
 
 build: node_modules
 	npm run build
-
-test: build
-	npm test

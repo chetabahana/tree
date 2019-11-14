@@ -33,7 +33,7 @@
     "source": "https://github.com/jwerle/three.graphql"
   },
   "scripts": {
-    "preinstall": "bash scripts/pre.sh",
+    "preinstall": "bash scripts/preinstall.sh",
     "install": "bash scripts/install.sh",
     "build": "npm run build:editor",
     "editor": "npm run build:editor && budo",

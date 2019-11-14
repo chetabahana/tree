@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Run audit
+npm audit fix
+
 # Resolving: Cannot use GraphQLSchema "[object Object]" from another module or realm.
 # https://github.com/apollographql/react-apollo/issues/742#issuecomment-338366662
 find node_modules -name graphql
