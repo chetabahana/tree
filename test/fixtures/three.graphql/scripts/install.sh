@@ -14,3 +14,4 @@ rm -rf node_modules/graph.ql/node_modules/graphql
 
 # Copy graphiql.css to current directory
 cp -f node_modules/graphiql/graphiql.css .
+echo -e "\n$hr\nBUILD\n$hr"
