@@ -12,7 +12,3 @@ sed -i "s/$SED_ERROR/return null/g" build.js
 
 # Copy graphiql.css to current directory
 cp -f node_modules/graphiql/graphiql.css .
-rm -rf node_modules
-
-# List current directory
-ls -al
