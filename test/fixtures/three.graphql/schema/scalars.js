@@ -6,10 +6,10 @@
 
 exports.Color = {
   parseValue(value) {
-    return parseInt(String(value))
+    return value;
   },
 
   serialize(value) {
-    return parseInt(String(value))
+    return value;
   }
 }
