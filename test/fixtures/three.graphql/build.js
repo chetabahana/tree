@@ -116938,8 +116938,7 @@ exports.WebGLRenderer = require('./WebGLRenderer').WebGLRenderer
 
 /**
  * Color type
- */
-
+ 
 exports.Color = {
   parseValue(value) {
     return parseInt(String(value))
@@ -116949,6 +116948,7 @@ exports.Color = {
     return parseInt(String(value))
   }
 }
+*/
 
 },{}],484:[function(require,module,exports){
 'use strict'
