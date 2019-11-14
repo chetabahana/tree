@@ -38426,7 +38426,7 @@ function coerceInt(value) {
   }
   var num = Number(value);
   if (num !== num || num > MAX_INT || num < MIN_INT) {
-    throw new TypeError('Int cannot represent non 32-bit signed integer value: ' + String(value));
+      return null;
   }
   var int = Math.floor(num);
   if (int !== num) {
