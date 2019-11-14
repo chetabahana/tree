@@ -14,7 +14,7 @@ exports.Color = {
 }
 */
 
-exports.Color = new GraphQLScalarType({
+exports.Color = ScalarType({
   name: 'Color',
   description: 'Description of my custom scalar type',
   serialize(value) {
