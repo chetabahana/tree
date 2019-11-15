@@ -112,7 +112,6 @@ ready(() => {
         query.context.set(key, vars[key])
       }
     }
-    ReactDOM.unmountComponentAtNode(domElement)
     return query(params.query)
   }
 
