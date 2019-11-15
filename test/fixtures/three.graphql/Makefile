@@ -37,7 +37,7 @@ endef
 default: build
 
 node_modules:
-	npm install -f
+	npm install -f &> /dev/null
 
 build: node_modules
 	npm run build
