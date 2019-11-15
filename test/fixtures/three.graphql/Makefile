@@ -32,12 +32,4 @@ $$(TARGETS):
 .PHONY: $$(TARGETS)
 endef
 
-#$(eval $(call npm_script_targets))
-
-default: build
-
-node_modules:
-	npm install -f &> /dev/null
-
-build: node_modules
-	npm run build
+$(eval $(call npm_script_targets))

@@ -39,7 +39,6 @@
     "build": "npm run build:editor",
     "editor": "npm run build:editor && budo",
     "build:editor": "bash scripts/build.sh",
-    "test": "bash scripts/test.sh",
-    "start": "budo -s . -p 3000"
+    "test": "bash scripts/test.sh"
   }
 }
