@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo -e "\n$hr\nINSTALL\n$hr"
-npm install -f
-
 # Run browserify
 echo -e "\n$hr\nBUILD\n$hr"
 browserify editor.js -t brfs -o build.js
