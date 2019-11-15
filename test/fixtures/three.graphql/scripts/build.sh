@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Run audit
+echo -e "\n$hr\nAUDIT\n$hr"
 sleep 5 && npm audit fix
 
 # Run browserify

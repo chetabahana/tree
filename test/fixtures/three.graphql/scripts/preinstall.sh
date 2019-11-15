@@ -1,4 +1,5 @@
 #!/bin/bash
+# Update npm to the latest
 sudo npm install npm@latest -g
 
 # Delete all regenerated files
