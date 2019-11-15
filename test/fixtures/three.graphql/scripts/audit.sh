@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo -e "\n$hr\nAUDIT\n$hr"
 npm audit fix
 
 echo -e "\n$hr\nFIX\n$hr"
