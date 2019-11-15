@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run audit
-echo -e "\n$hr\nNPM AUDIT\n$hr"
+echo -e "\n$hr\nAUDIT\n$hr"
 npm i --package-lock-only
 npm audit fix
 
@@ -14,4 +14,3 @@ rm -rf node_modules/graph.ql/node_modules/graphql
 
 # Copy graphiql.css to current directory
 cp -f node_modules/graphiql/graphiql.css .
-echo -e "\n$hr\nBUILD\n$hr"

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Run browserify
+echo -e "\n$hr\nBUILD\n$hr"
 browserify editor.js -t brfs -o build.js
 npm test
 
