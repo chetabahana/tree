@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Run browserify
-echo -e "\n$hr\nBROWSERIFY\n$hr"
 browserify editor.js -t brfs -o build.js
 
 # Resolving: TypeError
