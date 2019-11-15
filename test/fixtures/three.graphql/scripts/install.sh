@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run audit
-echo -e "\n$hr\nAUDIT\n$hr"
-npm i --package-lock-only
-npm audit fix
+# echo -e "\n$hr\nAUDIT\n$hr"
+# npm i --package-lock-only
+# npm audit fix
 
 echo -e "\n$hr\nVERSION\n$hr"
 # Resolving: Cannot use GraphQLSchema "[object Object]" from another module or realm.
@@ -14,5 +14,3 @@ rm -rf node_modules/graph.ql/node_modules/graphql
 
 # Copy graphiql.css to current directory
 cp -f node_modules/graphiql/graphiql.css .
-
-make build-editor
