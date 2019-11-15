@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Run audit
+sleep 5 && npm audit fix
+
 # Run browserify
 browserify editor.js -t brfs -o build.js
 
