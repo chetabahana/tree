@@ -24,7 +24,7 @@
 #   (OSX users will have to install bash-completion http://davidalger.com/development/bash-completion-on-os-x-with-brew/)
 # - You won't have to duplicate logic, this Makefile automatically reflects the latest scripts that package.json has to offer
 
-default: build
+#default: build
 
 define npm_script_targets
 TARGETS := $(shell node -e 'for (var k in require("./package.json").scripts) {console.log(k.replace(/:/g, "-"));}')
