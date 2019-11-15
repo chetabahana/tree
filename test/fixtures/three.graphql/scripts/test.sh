@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Run test
+#budo test -p 3000 -s --- -t brfs
+
+# Debug
+# https://www.npmjs.com/package/debug
+npm install debug
+#DEBUG=http node app.js
+#node --inspect test.js
