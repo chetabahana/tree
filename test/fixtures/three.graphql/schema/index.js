@@ -106,4 +106,4 @@ const implementations = Object
 .map((key) => map[key])
 .reduce((i, type) => Object.assign(i, type.implementation), {})
 
-module.exports = buildSchema(String(buffer), implementations).schema
+//module.exports = buildSchema(String(buffer), implementations).schema
