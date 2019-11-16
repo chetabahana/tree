@@ -97,6 +97,7 @@ ready(() => {
     query: currentQuerySource || kDefaultQuery,
     fetcher: fetcher,
     variables: '',
+    response: '',
     onEditQuery: onEditQuery,
     onEditVariables: onEditVariables,
   })
@@ -128,33 +129,3 @@ ready(() => {
     }
   }
 })
-
-// Resolving: GraphQL Mutations and Form Errors
-// http://blog.rstankov.com/graphql-mutations-and-form-errors/
-class Form extends React.Component {
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        {this.props.children}
-      </form>
-    );
-  }
-
-  handleSubmit = async (formData) => {
-    // ... guards and setup
-    
-    const { response: { node, errors } } = await this.props.submit(formData);
-    
-    if (errors.length > 0) {
-      this.setState({ errors: normalizeErrors(errors) });
-    } else {
-      this.props.onSuccess(node);
-    }
-
-    // ... clean up
-    //const domElement = document.getElementById('graphiql')
-    //ReactDOM.unmountComponentAtNode(domElement)
-  };  
-
-  // ... more form code
-}
