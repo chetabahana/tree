@@ -4,7 +4,7 @@
  * Module dependendies.
  */
 
-const createSchema = require('graphql')
+const createSchema = require('graph.ql')
 const path = require('path')
 const fs = require('fs')
 
