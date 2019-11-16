@@ -97,6 +97,7 @@ ready(() => {
     query: currentQuerySource || kDefaultQuery,
     fetcher: fetcher,
     variables: '',
+    response: '',
     onEditQuery: onEditQuery,
     onEditVariables: onEditVariables,
   })
