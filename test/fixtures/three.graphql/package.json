@@ -36,7 +36,7 @@
   "scripts": {
     "preinstall": "bash scripts/preinstall.sh",
     "postinstall": "bash scripts/postinstall.sh",
-    "shrinkwrap": "bash scripts/audit.sh",
+    "audit": "bash scripts/audit.sh",
     "build": "npm run build:editor",
     "editor": "npm run build:editor && budo",
     "build:editor": "bash scripts/build.sh",
