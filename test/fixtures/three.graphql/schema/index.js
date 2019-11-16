@@ -4,7 +4,7 @@
  * Module dependendies.
  */
 
-const buildSchema = require('graphql')
+const createSchema = require('graph.ql')
 const path = require('path')
 const fs = require('fs')
 
@@ -106,4 +106,4 @@ const implementations = Object
 .map((key) => map[key])
 .reduce((i, type) => Object.assign(i, type.implementation), {})
 
-//module.exports = buildSchema(String(buffer), implementations).schema
+module.exports = createSchema(String(buffer), implementations).schema
