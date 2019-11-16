@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Run audit
 npm audit fix
 
 echo -e "\n$hr\nRESOLVE VERSION\n$hr"
