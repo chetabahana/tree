@@ -132,7 +132,7 @@ ready(() => {
 // Resolving: GraphQL Mutations and Form Errors
 // http://blog.rstankov.com/graphql-mutations-and-form-errors/
 class Form extends React.Component {
-  ReactDOM.render() {
+  render() {
     return (
       <form onSubmit={this.handleSubmit}>
         {this.props.children}
