@@ -4,7 +4,7 @@ echo -e "$hr\nWHOAMI\n$hr"
 whoami
 echo $HOME
 id
-exit 0
+
 echo -e "$hr\nPROJECT CONFIG\n$hr"
 gcloud config list --all
 
