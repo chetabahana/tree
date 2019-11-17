@@ -4,7 +4,7 @@
 browserify editor.js -t brfs -o build.js
 
 # Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps
-# https://fb.me/react-derived-state
+# Refereence: https://fb.me/react-derived-state
 npx react-codemod rename-unsafe-lifecycles
 
 # Resolving: TypeError Int cannot represent non-integer value
