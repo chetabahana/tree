@@ -26,7 +26,7 @@ options:
   
 substitutions:
   _INIT: .google/cloud/builders/__init__
-  _VERSION: v1-1911182212-47b0f3d2e56642bc890dd39f04f2a973-gcp
+  _VERSION: v1-1911182214-f68dd46750be458eadf2605767e6cb1b-gcp
 
 timeout: 300s
 tags: ['$_PR_NUMBER', '$_REPO_OWNER', '$_REPO', '$_SHA']
