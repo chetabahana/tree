@@ -12,5 +12,6 @@ find node_modules -name graphql
 grep version node_modules/graphql/package.json
 rm -rf node_modules/graph.ql/node_modules/graphql
 
-echo -e "\n$hr\LIST VERSION\n$hr"
-npm -g ls --depth=0
+echo -e "\n$hr\nLIST VERSION\n$hr"
+# https://stackoverflow.com/a/25497068/4058484
+npm list --depth=0
