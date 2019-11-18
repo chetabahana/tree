@@ -1,6 +1,6 @@
 {
   "name": "three.graphql",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Create & Query THREE objects with GraphQL",
   "author": "Chetabahana <chetabahana@gmail.com>",
   "developer": "Joseph Werle <werle@littlstar.com>",
@@ -17,7 +17,7 @@
     "domready": "^1.0.8",
     "glob": "^7.1.6",
     "graph.ql": "chetabahana/graph.ql#workflows",
-    "three": "^0.110.0"
+    "three": "^latest"
   },
   "devDependencies": {
     "brfs": "^2.0.2",
