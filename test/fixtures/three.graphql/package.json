@@ -13,7 +13,7 @@
   "dependencies": {
     "browserify": "latest",
     "core-js": "latest",
-    "debug": "latest",
+    "debug": "^4.1.1",
     "domready": "latest",
     "glob": "latest",
     "graph.ql": "chetabahana/graph.ql#workflows",
