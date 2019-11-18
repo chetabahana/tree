@@ -22,7 +22,7 @@
   "devDependencies": {
     "brfs": "latest",
     "budo": "latest",
-    "graphiql": "^0.15.1",
+    "graphiql": "latest",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
