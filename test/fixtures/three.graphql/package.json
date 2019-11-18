@@ -22,9 +22,9 @@
   "devDependencies": {
     "brfs": "^2.0.2",
     "budo": "^11.6.3",
-    "graphiql": "^0.16.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "graphiql": "^0.15.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "scripts": {
     "preinstall": "bash scripts/preinstall.sh",
