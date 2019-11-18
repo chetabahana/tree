@@ -11,17 +11,17 @@
     "graphql"
   ],
   "dependencies": {
-    "browserify": "^16.5.0",
-    "core-js": "^3.4.1",
+    "browserify": "latest",
+    "core-js": "latest",
     "debug": "latest",
     "domready": "latest",
-    "glob": "^7.1.6",
+    "glob": "latest",
     "graph.ql": "chetabahana/graph.ql#workflows",
     "three": "latest"
   },
   "devDependencies": {
-    "brfs": "^2.0.2",
-    "budo": "^11.6.3",
+    "brfs": "latest",
+    "budo": "latest",
     "graphiql": "^0.15.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
