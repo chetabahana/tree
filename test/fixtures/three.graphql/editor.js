@@ -18,8 +18,9 @@ const kDefaultQuery = `
 ## a MeshBasicMaterial
 query render($width: Float,
              $height: Float,
-             #$rotateX: Float,
-             #$rotateY: Float
+             $rotateX: Float,
+             $rotateY: Float,
+             $rotateZ: Float,
              $tickr: Float) {
   ## Describes renderer
   WebGLRenderer {
@@ -83,9 +84,15 @@ ready(() => {
 
     const width = parseFloat(style.width)
     const height = parseFloat(style.height)
+    const rotateX = parseFloat(style.rotateX)
+    const rotateY = parseFloat(style.rotateY)
+    const rotateZ = parseFloat(style.rotateZ)
 
     query.context.set('width', width)
     query.context.set('height', height)
+    query.context.set('rotateX', rotateX)
+    query.context.set('rotateY', rotateY)
+    query.context.set('rotateZ', rotateZ)
 
     query(currentQuerySource || kDefaultQuery)
     .catch((err) => console.error(err))
