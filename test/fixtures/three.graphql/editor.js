@@ -37,18 +37,22 @@ query render($width: Float,
 
       ## Describes a named Mesh
       a: Mesh(name: "box-a") {
-        setRotation(x: $rotateX)
+        setRotation(x: $tickr)
+        setRotation(y: $rotateY)
         setPosition(x: 200, y: 200)
         ...BoxWireframe
       }
 
       b: Mesh(name: "box-b") {
+        setRotation(x: $rotateX)
+        setRotation(y: $tickr)
         setPosition(x: -200, y: -200)
-        setRotation(y: $rotateY)
         ...Box
       }
 
       c: Mesh(name: "box-c") {
+        setRotation(x: $tickr)
+        setRotation(y: $tickr)
         setRotation(z: $rotateZ)
         setPosition(x: 0)
         ...Box
