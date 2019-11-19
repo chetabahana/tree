@@ -18,14 +18,13 @@ const kDefaultQuery = `
 ## a MeshBasicMaterial
 query render($width: Float,
              $height: Float,
-             #$rotateX: Float,
-             #$rotateY: Float,
-             #$rotateZ: Float,
-             $tickr: Float) {
+             $rotateX: Float,
+             $rotateY: Float,
+             $rotateZ: Float) {
   ## Describes renderer
   WebGLRenderer {
     ## set viewport width/height based on context inputs
-    setSize(width: $width, height: $height)
+    setSize(width: $width, height: $height, rotateX: $rotateX, rotateY: $rotateY, rotateZ: $rotateZ)
 
     ## Configures a PerspectiveCamera
     PerspectiveCamera(fov: 75, aspect: 1, near: 1, far: 10000) {
@@ -37,19 +36,19 @@ query render($width: Float,
 
       ## Describes a named Mesh
       a: Mesh(name: "box-a") {
-        setRotation(x: $tickr)
+        setRotation(x: $rotateX)
         setPosition(x: 200, y: 200)
         ...BoxWireframe
       }
 
       b: Mesh(name: "box-b") {
         setPosition(x: -200, y: -200)
-        setRotation(y: $tickr)
+        setRotation(y: $rotateY)
         ...Box
       }
 
       c: Mesh(name: "box-c") {
-        setRotation(z: $tickr)
+        setRotation(z: $rotateZ)
         setPosition(x: 0)
         ...Box
       }
