@@ -53,7 +53,7 @@ fragment Box on Mesh {
   BoxGeometry(width: 100, height: 100, depth: 100)
   MeshBasicMaterial(wireframe: false)
 }
-`
+`;
 
 var draw = {
 
