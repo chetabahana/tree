@@ -55,20 +55,19 @@ fragment Box on Mesh {
 }
 `
 
-var query, draw = {
+var draw = {
 
     element : function() {
 
         var cm = document.getElementById('#graphiql .queryWrap .CodeMirror')[0];
 
-        if (cm && !(cm.CodeMirror instanceof Object)) {
+        if (cm && cm.CodeMirror instanceof Object) {
  
-            window.requestAnimationFrame(draw.element);
+            cm.CodeMirror.setValue(draw.encode(Query));
 
         } else {
 
-            query = cm.CodeMirror.
-            query.setValue(draw.encode(Query));
+            window.requestAnimationFrame(draw.element);
 
         }
 
