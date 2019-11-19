@@ -10,11 +10,6 @@
     "three",
     "graphql"
   ],
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  },
   "dependencies": {
     "browserify": "latest",
     "core-js": "latest",
