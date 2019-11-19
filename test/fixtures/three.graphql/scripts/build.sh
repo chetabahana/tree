@@ -1,11 +1,7 @@
 #!/bin/bash
 
 # Run browserify
-browserify editor.js -t brfs -o build.js
-
-# Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps
-# Refereence: https://fb.me/react-derived-state
-npx react-codemod rename-unsafe-lifecycles
+browserify editor.js -t brfs -o build.js --no-babelrc
 
 # Resolving: TypeError Int cannot represent non-integer value
 SED_ERROR='throw new TypeError("\Int cannot represent non-integer value: ".concat((0, _inspect.default)(value)))'
