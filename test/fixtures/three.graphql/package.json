@@ -1,6 +1,6 @@
 {
   "name": "three.graphql",
-  "version": "0.1.6",
+  "version": "0.1.4",
   "description": "Create & Query THREE objects with GraphQL",
   "author": "Chetabahana <chetabahana@gmail.com>",
   "developer": "Joseph Werle <werle@littlstar.com>",
@@ -11,20 +11,20 @@
     "graphql"
   ],
   "dependencies": {
-    "browserify": "latest",
-    "core-js": "latest",
-    "debug": "latest",
-    "domready": "latest",
-    "glob": "latest",
+    "browserify": "^16.5.0",
+    "core-js": "^3.4.1",
+    "debug": "^4.1.1",
+    "domready": "^1.0.8",
+    "glob": "^7.1.6",
     "graph.ql": "chetabahana/graph.ql#workflows",
-    "three": "latest"
+    "three": "^0.110.0"
   },
   "devDependencies": {
-    "brfs": "latest",
-    "budo": "latest",
+    "brfs": "^2.0.2",
+    "budo": "^11.6.3",
     "graphiql": "^0.15.1",
-    "react": "latest",
-    "react-dom": "latest"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "scripts": {
     "preinstall": "bash scripts/preinstall.sh",
