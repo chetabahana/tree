@@ -90,7 +90,7 @@ const map = {
 
 // @TODO(werle) - only do this for debug
 const buffer = (Object.keys(map)
-  .map((element, index) => ({name: index, buffer: element.buffer}))
+  .map((key) => ({name: key, buffer: map[key].buffer}))
   .map((type) => Buffer.concat([
     Buffer('\n'),
     Buffer('## source: '),
@@ -102,7 +102,7 @@ const buffer = (Object.keys(map)
 )
 
 const implementations = (Object.keys(map)
-  .map((element, index) => element)
+  .map((key) => map[key])
   .reduce((i, type) => Object.assign(i, type.implementation), {})
 )
 
