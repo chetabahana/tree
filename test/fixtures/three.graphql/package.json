@@ -24,7 +24,7 @@
     "babelify": "latest",
     "brfs": "latest",
     "budo": "latest",
-    "graphiql": "^0.15.1",
+    "graphiql": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
