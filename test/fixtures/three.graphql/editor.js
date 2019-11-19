@@ -20,7 +20,8 @@ query render($width: Float,
              $height: Float,
              $rotateX: Float,
              $rotateY: Float,
-             $rotateZ: Float) {
+             $rotateZ: Float,
+             $tickr: Float) {
   ## Describes renderer
   WebGLRenderer {
     ## set viewport width/height based on context inputs
