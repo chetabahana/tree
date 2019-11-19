@@ -16,7 +16,8 @@ const kDefaultQuery = `
 ## a PerspectiveCamera and a Scene containing
 ## a Mesh constructed with a BoxGeometry and
 ## a MeshBasicMaterial
-query render($width: Float,
+query render($id: ID,
+             $width: Float,
              $height: Float,
              #$rotateX: Float,
              #$rotateY: Float
@@ -86,6 +87,7 @@ ready(() => {
 
     query.context.set('width', width)
     query.context.set('height', height)
+    query.context.set('id', shortid.generate())
 
     query(currentQuerySource || kDefaultQuery)
     .catch((err) => console.error(err))
