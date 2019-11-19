@@ -72,7 +72,6 @@ ready(() => {
   query = createQuery({canvas})
   requestAnimationFrame(tick)
   function tick() {
-    requestAnimationFrame(tick)
 
     const wrap = document.querySelector('#graphiql .resultWrap')
     const style = wrap ? getComputedStyle(wrap) : {
@@ -88,6 +87,7 @@ ready(() => {
 
     query(currentQuerySource || kDefaultQuery)
     .catch((err) => console.error(err))
+    requestAnimationFrame(tick)
   }
 })
 

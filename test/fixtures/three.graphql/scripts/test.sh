@@ -5,6 +5,5 @@
 
 # Debug
 # https://www.npmjs.com/package/debug
-npm install debug
 #DEBUG=http node app.js
 #node --inspect test.js

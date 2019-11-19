@@ -101,9 +101,9 @@ const buffer = (Object.keys(map)
   .reduce((output, input) => Buffer.concat([output, input]), Buffer(0))
 )
 
-const implementations = Object
-.keys(map)
-.map((key) => map[key])
-.reduce((i, type) => Object.assign(i, type.implementation), {})
+const implementations = (Object.keys(map)
+  .map((key) => map[key])
+  .reduce((i, type) => Object.assign(i, type.implementation), {})
+)
 
 module.exports = createSchema(String(buffer), implementations).schema

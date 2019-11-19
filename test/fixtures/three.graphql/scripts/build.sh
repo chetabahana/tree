@@ -1,16 +1,17 @@
 #!/bin/bash
 
 # Run browserify
-browserify editor.js -t brfs -o build.js
+browserify editor.js -t brfs -o build.js --no-babelrc
 
-# Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps
-# https://fb.me/react-derived-state
-npx react-codemod rename-unsafe-lifecycles
+# Resolving: Error/Warning
+REPLACE='return null'
+FIND='throw new TypeError("\Int cannot represent non-integer value: ".concat((0, _inspect.default)(value)))'
+sed -i "s|$FIND|$REPLACE|g" build.js
 
-# Resolving: TypeError Int cannot represent non-integer value
-SED_ERROR='throw new TypeError("\Int cannot represent non-integer value: ".concat((0, _inspect.default)(value)))'
-sed -i "s/$SED_ERROR/return null/g" build.js
+FIND="warning\$1(false, 'Encountered two children with the same key"
+REPLACE="// warning\$1(false, 'Encountered two children with the same key"
+sed -i "s|$FIND|$REPLACE|g" build.js
 
-# Resolving: Variable "$width" got invalid value NaN; Expected type Float. Float cannot represent non numeric value: NaN
-#SED_ERROR='throw new TypeError("Float cannot represent non numeric value: ".concat((0, _inspect.default)(value)))'
-#sed -i "s/$SED_ERROR/return null/g" build.js
+FIND="warning\$1(false, 'Invalid aria prop"
+REPLACE="// warning\$1(false, 'Invalid aria prop"
+sed -i "s|$FIND|$REPLACE|g" build.js
