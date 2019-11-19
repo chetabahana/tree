@@ -1,6 +1,6 @@
 {
   "name": "three.graphql",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Create & Query THREE objects with GraphQL",
   "author": "Chetabahana <chetabahana@gmail.com>",
   "developer": "Joseph Werle <werle@littlstar.com>",
@@ -20,8 +20,8 @@
     "three": "latest"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "babelify": "^10.0.0",
+    "@babel/core": "latest",
+    "babelify": "latest",
     "brfs": "latest",
     "budo": "latest",
     "graphiql": "latest",
