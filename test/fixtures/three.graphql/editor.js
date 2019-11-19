@@ -5,6 +5,7 @@ const GraphiQL = require('graphiql')
 const ReactDOM = require('react-dom')
 const React = require('react')
 const ready = require('domready')
+const shortid = require('shortid');
 const vm = require('vm')
 
 let query
@@ -15,7 +16,8 @@ const kDefaultQuery = `
 ## a PerspectiveCamera and a Scene containing
 ## a Mesh constructed with a BoxGeometry and
 ## a MeshBasicMaterial
-query render($width: Float,
+query render(_id: shortid.generate(),
+             $width: Float,
              $height: Float,
              #$rotateX: Float,
              #$rotateY: Float

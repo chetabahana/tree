@@ -17,6 +17,7 @@
     "domready": "latest",
     "glob": "latest",
     "graph.ql": "chetabahana/graph.ql#workflows",
+    "shortid": "latest",
     "three": "latest"
   },
   "devDependencies": {
