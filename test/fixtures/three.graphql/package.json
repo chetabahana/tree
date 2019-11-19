@@ -8,7 +8,9 @@
   "main": "index.js",
   "keywords": ["three","graphql"],
   "browserify": {
-    "transform": ["babelify"]
+    "transform": [
+      "babelify"
+    ]
   },
   "dependencies": {
     "browserify": "latest",
