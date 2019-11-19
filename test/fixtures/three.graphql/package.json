@@ -20,6 +20,8 @@
     "three": "^0.110.0"
   },
   "devDependencies": {
+    "@babel/core": "latest",
+    "babelify": "latest",
     "brfs": "^2.0.2",
     "budo": "^11.6.3",
     "graphiql": "^0.15.1",
