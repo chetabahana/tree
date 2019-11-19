@@ -17,7 +17,7 @@ rm -rf node_modules/graph.ql/node_modules/graphql
 
 # https://stackoverflow.com/a/56515445/4058484
 # https://stackoverflow.com/a/34246579/4058484
-npm list -g | grep graph
+npm list | grep "graph.ql"
 
 echo -e "\n$hr\nROOT VERSION\n$hr"
 # https://stackoverflow.com/a/37211072/4058484
