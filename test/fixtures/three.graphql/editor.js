@@ -5,7 +5,7 @@ const GraphiQL = require('graphiql')
 const ReactDOM = require('react-dom')
 const React = require('react')
 const ready = require('domready')
-const shortid = require('shortid');
+const shortid = require('shortid')
 const vm = require('vm')
 
 let query
