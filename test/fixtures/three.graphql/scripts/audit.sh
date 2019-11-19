@@ -3,7 +3,11 @@
 # Run audit
 npm audit fix
 
-echo -e "\n$hr\nRESOLVE VERSION\n$hr"
+echo -e "\n$hr\nLIST VERSION\n$hr"
+# https://stackoverflow.com/a/25497068/4058484
+npm list --depth=0
+
+echo -e "\n$hr\nFORK VERSION\n$hr"
 # Resolving: Cannot use GraphQLSchema "[object Object]" from another module or realm.
 # https://github.com/apollographql/react-apollo/issues/742#issuecomment-338366662
 # https://github.com/matthewmueller/graph.ql/blob/master/package.json
@@ -11,7 +15,4 @@ echo -e "\n$hr\nRESOLVE VERSION\n$hr"
 find node_modules -name graphql
 grep version node_modules/graphql/package.json
 rm -rf node_modules/graph.ql/node_modules/graphql
-
-echo -e "\n$hr\nLIST VERSION\n$hr"
-# https://stackoverflow.com/a/25497068/4058484
-npm list --depth=0
+npm list --depth=0 | grep graph.ql
