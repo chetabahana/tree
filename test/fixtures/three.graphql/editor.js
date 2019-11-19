@@ -5,7 +5,6 @@ const GraphiQL = require('graphiql')
 const ReactDOM = require('react-dom')
 const React = require('react')
 const ready = require('domready')
-const shortid = require('shortid')
 const vm = require('vm')
 
 let query
@@ -18,14 +17,13 @@ const kDefaultQuery = `
 ## a MeshBasicMaterial
 query render($width: Float,
              $height: Float,
-             $rotateX: Float,
-             $rotateY: Float,
-             $rotateZ: Float,
+             #$rotateX: Float,
+             #$rotateY: Float
              $tickr: Float) {
   ## Describes renderer
   WebGLRenderer {
     ## set viewport width/height based on context inputs
-    setSize(width: $width, height: $height, rotateX: $rotateX, rotateY: $rotateY, rotateZ: $rotateZ)
+    setSize(width: $width, height: $height)
 
     ## Configures a PerspectiveCamera
     PerspectiveCamera(fov: 75, aspect: 1, near: 1, far: 10000) {
@@ -38,22 +36,18 @@ query render($width: Float,
       ## Describes a named Mesh
       a: Mesh(name: "box-a") {
         setRotation(x: $tickr)
-        setRotation(y: $rotateY)
         setPosition(x: 200, y: 200)
         ...BoxWireframe
       }
 
       b: Mesh(name: "box-b") {
-        setRotation(x: $rotateX)
-        setRotation(y: $tickr)
         setPosition(x: -200, y: -200)
+        setRotation(y: $tickr)
         ...Box
       }
 
       c: Mesh(name: "box-c") {
-        setRotation(x: $tickr)
-        setRotation(y: $tickr)
-        setRotation(z: $rotateZ)
+        setRotation(z: $tickr)
         setPosition(x: 0)
         ...Box
       }
@@ -88,15 +82,9 @@ ready(() => {
 
     const width = parseFloat(style.width)
     const height = parseFloat(style.height)
-    const rotateX = parseFloat(style.rotateX)
-    const rotateY = parseFloat(style.rotateY)
-    const rotateZ = parseFloat(style.rotateZ)
 
     query.context.set('width', width)
     query.context.set('height', height)
-    query.context.set('rotateX', rotateX)
-    query.context.set('rotateY', rotateY)
-    query.context.set('rotateZ', rotateZ)
 
     query(currentQuerySource || kDefaultQuery)
     .catch((err) => console.error(err))
