@@ -11,7 +11,9 @@
     "graphql"
   ],
   "browserify": {
-    "transform": ["babelify"]
+    "transform": [
+      "babelify"
+    ]
   },
   "dependencies": {
     "browserify": "latest",
