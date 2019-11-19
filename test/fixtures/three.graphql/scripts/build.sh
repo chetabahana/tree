@@ -13,5 +13,5 @@ REPLACE="//warning$1(false, 'Encountered two children with the same key, `%s`. '
 sed -i "s/$FIND/$REPLACE/g" build.js
 
 FIND='"aria-description": error ? error.message : null'
-REPLACE='//"aria-description": error ? error.message : null'
+REPLACE='"aria-description": error ? null : null'
 sed -i "s/$FIND/$REPLACE/g" build.js
