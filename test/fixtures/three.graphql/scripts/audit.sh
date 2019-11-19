@@ -19,6 +19,14 @@ rm -rf node_modules/graph.ql/node_modules/graphql
 # https://stackoverflow.com/a/34246579/4058484
 npm list | grep "graph.ql"
 
+# https://stackoverflow.com/a/47040266/4058484
+npm view graph.ql@3.0.2 (github:chetabahana/graph.ql#56f8ebc892e756ff9781e5e8f7309375f2780863) dependencies
+npx howfat -r tree graph.ql@3.0.2 (github:chetabahana/graph.ql#56f8ebc892e756ff9781e5e8f7309375f2780863)
+
+# https://stackoverflow.com/a/26005786/4058484
+npm install -g npm-remote-ls
+npm-remote-ls graph.ql@3.0.2 (github:chetabahana/graph.ql#56f8ebc892e756ff9781e5e8f7309375f2780863)
+
 echo -e "\n$hr\nROOT VERSION\n$hr"
 # https://stackoverflow.com/a/37211072/4058484
 npm i --global qnm
