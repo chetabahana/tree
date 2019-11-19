@@ -8,8 +8,8 @@ REPLACE='return null'
 FIND='throw new TypeError("\Int cannot represent non-integer value: ".concat((0, _inspect.default)(value)))'
 sed -i "s/$FIND/$REPLACE/g" build.js
 
-REPLACE=""
-FIND="// warning$1(false, 'Encountered two children with the same key,"
+FIND="warning$1(false, 'Encountered two children with the same key,"
+REPLACE="// warning$1(false, 'Encountered two children with the same key,"
 sed -i "s/$FIND/$REPLACE/g" build.js
 
 FIND='"aria-description": error ? error.message : null'
