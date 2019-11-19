@@ -1,4 +1,4 @@
-var Query = `
+var query = `
 ## Renders a scene into a viewport with
 ## a PerspectiveCamera and a Scene containing
 ## a Mesh constructed with a BoxGeometry and
@@ -63,7 +63,7 @@ var draw = {
 
         if (cm && cm.CodeMirror instanceof Object) {
  
-            cm.CodeMirror.setValue(draw.encode(Query));
+            cm.CodeMirror.setValue(draw.encode(query));
 
         } else {
 
