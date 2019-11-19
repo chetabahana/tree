@@ -12,6 +12,6 @@ FIND="warning\$1(false, 'Encountered two children with the same key"
 REPLACE="// warning\$1(false, 'Encountered two children with the same key"
 sed -i "s|$FIND|$REPLACE|g" build.js
 
-FIND='"aria-description": error ? error.message : null'
-REPLACE='"aria-description": error ? null : null'
+FIND="warning\$1(false, 'Invalid aria prop"
+REPLACE="// warning\$1(false, 'Invalid aria prop"
 sed -i "s|$FIND|$REPLACE|g" build.js
