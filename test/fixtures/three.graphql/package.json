@@ -18,6 +18,7 @@
     "glob": "latest",
     "graph.ql": "chetabahana/graph.ql#workflows",
     "shortid": "latest",
+    "store": "latest",
     "three": "latest"
   },
   "devDependencies": {
