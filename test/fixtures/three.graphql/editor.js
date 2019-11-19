@@ -18,9 +18,9 @@ const kDefaultQuery = `
 ## a MeshBasicMaterial
 query render($width: Float,
              $height: Float,
-             $rotateX: Float,
-             $rotateY: Float,
-             $rotateZ: Float,
+             #$rotateX: Float,
+             #$rotateY: Float,
+             #$rotateZ: Float,
              $tickr: Float) {
   ## Describes renderer
   WebGLRenderer {
