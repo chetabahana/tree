@@ -16,8 +16,7 @@ const kDefaultQuery = `
 ## a PerspectiveCamera and a Scene containing
 ## a Mesh constructed with a BoxGeometry and
 ## a MeshBasicMaterial
-query render(_id: shortid.generate(),
-             $width: Float,
+query render($width: Float,
              $height: Float,
              #$rotateX: Float,
              #$rotateY: Float
