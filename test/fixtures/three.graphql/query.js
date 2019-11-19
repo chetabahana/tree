@@ -59,7 +59,7 @@ var draw = {
 
     element : function() {
 
-        var cm = document.getElementById('#graphiql .queryWrap .CodeMirror')[0];
+        var cm = document.getElementsByClassName('.CodeMirror')[0];
 
         if (cm && cm.CodeMirror instanceof Object) {
  
