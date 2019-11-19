@@ -6,7 +6,10 @@
   "developer": "Joseph Werle <werle@littlstar.com>",
   "license": "MIT",
   "main": "index.js",
-  "keywords": ["three","graphql"],
+  "keywords": [
+    "three",
+    "graphql"
+  ],
   "browserify": {
     "transform": [
       "babelify"
