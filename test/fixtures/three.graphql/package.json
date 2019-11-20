@@ -15,8 +15,8 @@
     "core-js": "latest",
     "debug": "latest",
     "domready": "latest",
-    "glob": "latest",
     "graph.ql": "chetabahana/graph.ql#workflows",
+    "redux": "latest",
     "shortid": "latest",
     "store": "latest",
     "three": "latest"
@@ -26,6 +26,7 @@
     "babelify": "latest",
     "brfs": "latest",
     "budo": "latest",
+    "glob": "latest",
     "graphiql": "latest",
     "react": "latest",
     "react-dom": "latest"
