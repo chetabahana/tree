@@ -19,7 +19,8 @@
     "redux": "latest",
     "shortid": "latest",
     "store": "latest",
-    "three": "latest"
+    "three": "latest",
+    "xml-js": "latest"
   },
   "devDependencies": {
     "@babel/core": "latest",
