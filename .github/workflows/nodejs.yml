@@ -13,6 +13,9 @@ on:
       - '!Chetabahana'
     paths:
     - test/fixtures/three.graphql/**
+    - !test/fixtures/three.graphql/build.js
+    - !test/fixtures/three.graphql/graphiql.css
+    - !test/fixtures/three.graphql/package-lock.json
 
 jobs:
   build:
