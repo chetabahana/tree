@@ -28,7 +28,7 @@
     "brfs": "latest",
     "budo": "latest",
     "glob": "latest",
-    "graphiql": "0.17.2",
+    "graphiql": "0.17.1",
     "react": "latest",
     "react-dom": "latest"
   },
