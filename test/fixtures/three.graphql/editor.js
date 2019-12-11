@@ -93,7 +93,7 @@ ready(() => {
 
 ready(() => {
   const domElement = document.getElementById('graphiql')
-  module.exports = React.createElement(GraphiQL, {
+  const reactElement = React.createElement(GraphiQL, {
     query: currentQuerySource || kDefaultQuery,
     fetcher: fetcher,
     variables: '',
