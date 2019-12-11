@@ -1,7 +1,7 @@
 'use strict'
 
 const createQuery = require('./')
-import { GraphiQL } from 'graphiql';
+const { default: GraphiQL } = require('graphiql');
 const ReactDOM = require('react-dom')
 const React = require('react')
 const ready = require('domready')
