@@ -1,6 +1,6 @@
 {
   "name": "three.graphql",
-  "version": "0.1.7",
+  "version": "0.1.6",
   "description": "Create & Query THREE objects with GraphQL",
   "author": "Chetabahana <chetabahana@gmail.com>",
   "developer": "Joseph Werle <werle@littlstar.com>",
@@ -28,7 +28,7 @@
     "brfs": "latest",
     "budo": "latest",
     "glob": "latest",
-    "graphiql": "0.16.0",
+    "graphiql": "latest",
     "react": "latest",
     "react-dom": "latest"
   },

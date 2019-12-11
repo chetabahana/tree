@@ -24,6 +24,7 @@ then
     [[ -z $TAG_NAME ]] && export TAG_NAME=ubuntu
     [[ -z $REPO_NAME ]] && export REPO_NAME=${GITHUB_REPOSITORY##*/}
     [[ -z $REPO_OWNER ]] && export REPO_OWNER=${GITHUB_REPOSITORY%/*}
+    [[ -z $BRANCH_REF_HEADS ]] && export BRANCH_REF_HEADS=${GITHUB_REF##*/}
     [[ -z $BRANCH_NAME ]] && export BRANCH_NAME=$(basename $(git name-rev --name-only HEAD))
     [[ -z $PROJECT_ID ]] && export PROJECT_ID=$(echo "$REPO_OWNER" | tr '[:upper:]' '[:lower:]')
 fi
