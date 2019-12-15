@@ -1,11 +1,11 @@
 'use strict'
 
-const createQuery = require('./')
-const { default: GraphiQL } = require('graphiql');
-const ReactDOM = require('react-dom')
+const vm = require('vm')
 const React = require('react')
 const ready = require('domready')
-const vm = require('vm')
+const createQuery = require('./')
+const ReactDOM = require('react-dom')
+const { default: GraphiQL } = require('graphiql')
 
 let query
 let currentQuerySource = null
