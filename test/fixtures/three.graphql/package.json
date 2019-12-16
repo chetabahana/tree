@@ -1,6 +1,6 @@
 {
   "name": "three.graphql",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Create & Query THREE objects with GraphQL",
   "author": "Chetabahana <chetabahana@gmail.com>",
   "developer": "Joseph Werle <werle@littlstar.com>",
@@ -23,14 +23,26 @@
     "xml-js": "latest"
   },
   "devDependencies": {
+    "@babel/cli": "latest",
     "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "@babel/register": "latest",
+    "babel-loader": "latest",
     "babelify": "latest",
     "brfs": "latest",
     "budo": "latest",
+    "css-loader": "latest",
     "glob": "latest",
     "graphiql": "latest",
+    "html-loader": "latest",
+    "html-webpack-plugin": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "style-loader": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
   },
   "scripts": {
     "preinstall": "bash scripts/preinstall.sh",
