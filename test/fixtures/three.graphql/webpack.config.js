@@ -1,9 +1,9 @@
 const path = require('path');
+const PORT = 8118;
 module.exports = {
   target: 'node',
   mode: 'production',
-  devtool: 'source-map'
-  },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -12,7 +12,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [ @babel/preset-env @babel/preset-react ]
+            presets: ['@babel/preset-env']
           }
         }
       },
@@ -30,5 +30,11 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       }
     ]
-  }
+  },
+  devServer: {
+    contentBase: 'dist',
+    liveReload: false,
+    port: PORT
+  },
+  plugins: []
 };
