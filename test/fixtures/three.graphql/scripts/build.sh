@@ -5,7 +5,7 @@
 # https://github.com/browserify/browserify-handbook#configuring-transforms
 # browserify editor.js -t brfs -o build.js --no-babelrc
 # browserify -t brfs -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ] editor.js > build.js --no-babelrc
-webpack editor.js build.js
+# webpack editor.js build.js
 
 # Resolving: Error/Warning
 REPLACE='return null'
