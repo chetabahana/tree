@@ -2,11 +2,7 @@ const path = require('path');
 module.exports = {
   target: 'node',
   mode: 'production',
-  devtool: 'source-map',
-  entry: path.join(__dirname, './editor.js'),
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'build.js'
+  devtool: 'source-map'
   },
   module: {
     rules: [
