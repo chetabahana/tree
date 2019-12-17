@@ -3,5 +3,4 @@ module.exports = {
   target: 'node',
   mode: 'production',
   devtool: 'source-map',
-  externals: [ nodeExternals() ]
 };
