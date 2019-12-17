@@ -1,5 +1,4 @@
 const path = require('path');
-const PORT = 8118;
 module.exports = {
   target: 'node',
   mode: 'production',
@@ -30,11 +29,5 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       }
     ]
-  },
-  devServer: {
-    contentBase: 'dist',
-    liveReload: false,
-    port: PORT
-  },
-  plugins: []
+  }
 };
